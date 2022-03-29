@@ -17,6 +17,7 @@
 		"noEmit": true,
 		"jsx": "react-jsx",
 		"experimentalDecorators": true,
+		"typeRoots": ["src/types"],
 		"plugins": [
 			{
 				"transform": "typescript-plugin-styled-components",

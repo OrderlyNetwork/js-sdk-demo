@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 // Global styles
-import { FlexWrapper } from 'AppStyled';
+import { FlexWrapperE } from 'AppStyled';
 
 // Import types
 import { ITradeInput } from './types';
@@ -9,14 +9,14 @@ import { ITradeInput } from './types';
 // Import styled components
 import { TradeInputWrapper, TradeLabel, TradeSubLabel, TradeInputData } from './TradeInputStyled';
 
-export const TradeInput: FC<ITradeInput> = ({ value, label, subLabel, onChange }) => {
+export const TradeInput: FC<ITradeInput> = ({ value, label, subLabel, onChange, style }) => {
 	return (
-		<TradeInputWrapper>
+		<TradeInputWrapper style={style}>
 			<TradeLabel>{label || ''}</TradeLabel>
-			<FlexWrapper>
+			<FlexWrapperE>
 				<TradeInputData value={value || ''} onChange={onChange} />
 				{subLabel && <TradeSubLabel>{subLabel || ''}</TradeSubLabel>}
-			</FlexWrapper>
+			</FlexWrapperE>
 		</TradeInputWrapper>
 	);
 };

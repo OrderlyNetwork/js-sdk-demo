@@ -1,5 +1,5 @@
 import { IWallet } from 'types';
 
 export interface IHeader {
-	contractInfo: Pick<IWallet, 'contract' | 'walletConnection' | 'currentUser' | 'nearConfig'>;
+	contractInfo?: Pick<IWallet, 'contract' | 'walletConnection' | 'currentUser' | 'nearConfig'>;
 }

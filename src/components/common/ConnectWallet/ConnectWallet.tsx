@@ -32,13 +32,9 @@ const WalletInfo: FC<Pick<IConnectWaller, 'wallet'>> = ({ wallet }) => {
 	);
 };
 
-export const ConnectWallet: FC<IConnectWaller> = ({ logo, wallet, connected }) => {
-	const connectWallet = async () => {
-		wallet.walletConnection?.requestSignIn('murano.testnet', 'orderly', '', '');
-	};
-
+export const ConnectWallet: FC<IConnectWaller> = ({ logo, wallet, connected, onClick }) => {
 	return (
-		<ConnectWrapperButton onClick={connectWallet}>
+		<ConnectWrapperButton onClick={onClick}>
 			{!connected ? (
 				<NotConnectedLabel>Connect Near</NotConnectedLabel>
 			) : (

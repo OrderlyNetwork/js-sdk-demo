@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { FlexWrapper } from 'AppStyled';
+import { FlexWrapperE } from 'AppStyled';
 
 // Import styled component
 import { AssetsInfoWrapper, AssetsInfoCurrency, AssetsInfoLabel, AssetsInfoPrice } from './AssetsInfoStyled';
@@ -12,10 +12,10 @@ export const AssetsInfo: FC<IAssetsInfo> = ({ label, price, currency }) => {
 	return (
 		<AssetsInfoWrapper>
 			<AssetsInfoLabel>{label}</AssetsInfoLabel>
-			<FlexWrapper>
+			<FlexWrapperE>
 				<AssetsInfoPrice>{price}</AssetsInfoPrice>
 				<AssetsInfoCurrency>{currency}</AssetsInfoCurrency>
-			</FlexWrapper>
+			</FlexWrapperE>
 		</AssetsInfoWrapper>
 	);
 };
