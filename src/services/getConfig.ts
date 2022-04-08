@@ -4,11 +4,13 @@ const keyStore = new keyStores.BrowserLocalStorageKeyStore(localStorage);
 
 export const getConfig = () => {
 	return {
-		networkId: 'testnet',
-		nodeUrl: 'https://rpc.testnet.near.org',
-		walletUrl: 'https://wallet.testnet.near.org',
-		contractName: 'murano.testnet',
+		networkId: 'local',
 		keyStore,
+		nodeUrl: 'http://rpc.orderly-dev.ml',
+		walletUrl: 'http://near-wallet.orderly-dev.ml',
+		helperUrl: 'http://helper.orderly-dev.ml',
+		explorerUrl: 'http://explorer.orderly-dev.ml',
+		contractName: process.env.REACT_APP_ORDERLY_CONTRACT_NAME || 'asset-manager.test.near',
 		headers: {},
 	};
 };

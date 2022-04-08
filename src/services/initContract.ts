@@ -8,7 +8,7 @@ export const InitContract = async () => {
 	const walletConnection = new nearAPI.WalletConnection(near, 'orderly');
 	const contract = new nearAPI.Contract(walletConnection.account(), nearConfig.contractName, {
 		viewMethods: ['user_token_balance'],
-		changeMethods: ['addMessage', 'user_deposit_native_token', 'user_request_withdraw'],
+		changeMethods: ['addMessage', 'user_deposit_native_token', 'user_request_withdraw', 'user_announce_key'],
 	});
 
 	return { near, walletConnection, contract };

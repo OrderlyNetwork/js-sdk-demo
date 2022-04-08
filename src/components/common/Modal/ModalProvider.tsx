@@ -1,9 +1,6 @@
 import { FC, ReactNode } from 'react';
 import Modal from 'react-modal';
 
-// Import types
-import { IChildren } from 'types/types';
-
 interface IModalProvider {
 	closeModal: () => void;
 	isOpen: boolean;
