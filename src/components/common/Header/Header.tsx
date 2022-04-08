@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import { useSelector } from 'react-redux';
 
 // Import services
@@ -18,7 +18,7 @@ import { HeaderWrapper, ComponentWrapper } from './HeaderStyled';
 
 // FIXME IHeader
 export const Header: FC<IHeader> = () => {
-	const { walletConnection } = useSelector((state) => state?.NearRPCReducer);
+	const { walletConnection } = useSelector((state: any) => state?.NearRPCReducer);
 
 	return (
 		<HeaderWrapper>

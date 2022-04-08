@@ -10,7 +10,7 @@ export const getConfig = () => {
 		walletUrl: 'http://near-wallet.orderly-dev.ml',
 		helperUrl: 'http://helper.orderly-dev.ml',
 		explorerUrl: 'http://explorer.orderly-dev.ml',
-		contractName: 'asset-manager.test.near',
+		contractName: process.env.REACT_APP_ORDERLY_CONTRACT_NAME || 'asset-manager.test.near',
 		headers: {},
 	};
 };
