@@ -14,6 +14,7 @@ import { SetWalletConnections } from 'store/actions';
 
 // Import styled components
 import { AppProvider, ContentProvider } from 'AppStyled';
+import { sendTradingKey } from 'services/sendTradingKey';
 
 export const MainPages = () => {
 	const [depositVisibleModal, setDepositVisibleModal] = useState<boolean>(false);
@@ -25,6 +26,7 @@ export const MainPages = () => {
 		(async () => {
 			const data = await InitContract();
 			dispatch(SetWalletConnections({ walletConnection: data.walletConnection }));
+			sendTradingKey();
 		})();
 	}, []);
 
