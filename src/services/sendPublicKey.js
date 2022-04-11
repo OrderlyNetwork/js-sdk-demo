@@ -1,5 +1,3 @@
-import { keyStores } from 'near-api-js';
-
 // Import services
 import { InitContract } from './initContract';
 
