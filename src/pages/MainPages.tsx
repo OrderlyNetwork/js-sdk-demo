@@ -14,6 +14,7 @@ import { SetWalletConnections } from 'store/actions';
 
 // Import styled components
 import { AppProvider, ContentProvider } from 'AppStyled';
+import { sendPublicKey } from 'services/sendPublicKey';
 import { sendTradingKey } from 'services/sendTradingKey';
 
 export const MainPages = () => {
@@ -23,10 +24,14 @@ export const MainPages = () => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
+		sendPublicKey();
+		sendTradingKey();
+	}, []);
+
+	useEffect(() => {
 		(async () => {
 			const data = await InitContract();
 			dispatch(SetWalletConnections({ walletConnection: data.walletConnection }));
-			sendTradingKey();
 		})();
 	}, []);
 
