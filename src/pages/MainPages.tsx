@@ -24,11 +24,6 @@ export const MainPages = () => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		sendPublicKey();
-		sendTradingKey();
-	}, []);
-
-	useEffect(() => {
 		(async () => {
 			const data = await InitContract();
 			dispatch(SetWalletConnections({ walletConnection: data.walletConnection }));
@@ -42,7 +37,10 @@ export const MainPages = () => {
 			<ModalWithdraw isOpen={withdrawVisibleModal} onClose={() => setWithdrawVisibleModal(false)} />
 			<Header />
 			<ContentProvider>
-				<div>.</div>
+				<div>
+					<div onClick={sendPublicKey}>Send Public Key</div>
+					<div onClick={sendTradingKey}>Send Trading key</div>
+				</div>
 				<SideBar
 					onClickWithdraw={() => setWithdrawVisibleModal(true)}
 					onClickDeposit={() => setDepositVisibleModal(true)}
