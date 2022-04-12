@@ -6,8 +6,10 @@ import { InitContract } from './initContract';
 export const sendTradingKey = async () => {
 	const { contract } = await InitContract();
 
-	const { secretKey } = KeyPair.fromRandom('ed25519');
-	localStorage.setItem('tradingKey', secretKey);
+	// const { secretKey } = KeyPair.fromRandom('ed25519');
+	// localStorage.setItem('tradingKey', secretKey);
+
+	const secretKey = 'EREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREQ==';
 
 	console.log('Start send Trade Key', secretKey);
 

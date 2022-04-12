@@ -14,8 +14,7 @@ import { SetWalletConnections } from 'store/actions';
 
 // Import styled components
 import { AppProvider, ContentProvider } from 'AppStyled';
-import { sendPublicKey } from 'services/sendPublicKey';
-import { sendTradingKey } from 'services/sendTradingKey';
+import { createUserAccount } from 'services/createUserAccount';
 
 export const MainPages = () => {
 	const [depositVisibleModal, setDepositVisibleModal] = useState<boolean>(false);
@@ -25,8 +24,21 @@ export const MainPages = () => {
 
 	useEffect(() => {
 		(async () => {
-			const data = await InitContract();
-			dispatch(SetWalletConnections({ walletConnection: data.walletConnection }));
+			const { walletConnection, contract } = await InitContract();
+
+			if (walletConnection.isSignedIn()) {
+				// Check if user exist on contract
+				const isUserExistOnContract = await contract.user_account_exists({
+					user: walletConnection.getAccountId(),
+				});
+				console.log({ isUserExistOnContract });
+
+				if (!isUserExistOnContract) {
+					createUserAccount();
+					contract.create_user_account();
+				}
+			}
+			dispatch(SetWalletConnections({ walletConnection }));
 		})();
 	}, []);
 
@@ -37,10 +49,7 @@ export const MainPages = () => {
 			<ModalWithdraw isOpen={withdrawVisibleModal} onClose={() => setWithdrawVisibleModal(false)} />
 			<Header />
 			<ContentProvider>
-				<div>
-					<div onClick={sendPublicKey}>Send Public Key</div>
-					<div onClick={sendTradingKey}>Send Trading key</div>
-				</div>
+				<div>Main block </div>
 				<SideBar
 					onClickWithdraw={() => setWithdrawVisibleModal(true)}
 					onClickDeposit={() => setDepositVisibleModal(true)}
