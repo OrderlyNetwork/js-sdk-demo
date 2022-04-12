@@ -1,10 +1,11 @@
 import { FC } from 'react';
+import { useSelector } from 'react-redux';
 
-// Import Assets
+// Import assets
 import ArrowDownIcon from 'assets/images/arrow-down.png';
 
-// Import Helpers
-import { formatAddress } from 'helper';
+// Import helper
+import { prettierBalance } from 'helper';
 
 // Import types
 import { IConnectWaller } from './types';
@@ -19,20 +20,20 @@ import {
 	NotConnectedLabel,
 } from './ConnectWalletStyled';
 
-const WalletInfo: FC<Pick<IConnectWaller, 'wallet'>> = ({ wallet }) => {
-	const { wallet_currency, wallet_address, total_balance } = wallet;
-
+const WalletInfo: FC<Pick<IConnectWaller, 'accountId' | 'walletBalance'>> = ({ walletBalance, accountId }) => {
 	return (
 		<ConnectWrapperInfo>
-			<ConnectWrapperInfoLabel isCurrensy={false}>
-				{formatAddress({ address: wallet_address || '' })}
-			</ConnectWrapperInfoLabel>
-			<ConnectWrapperInfoLabel isCurrensy>{`${total_balance} ${wallet_currency}`}</ConnectWrapperInfoLabel>
+			<ConnectWrapperInfoLabel isCurrensy={false}>{accountId || ''}</ConnectWrapperInfoLabel>
+			<ConnectWrapperInfoLabel isCurrensy>{`${prettierBalance({
+				str: `${walletBalance}`,
+			})} NEAR`}</ConnectWrapperInfoLabel>
 		</ConnectWrapperInfo>
 	);
 };
 
-export const ConnectWallet: FC<IConnectWaller> = ({ logo, wallet, connected, onClick }) => {
+export const ConnectWallet: FC<IConnectWaller> = ({ logo, connected, onClick }) => {
+	const { account } = useSelector((state: any) => state?.NearRPCReducer);
+
 	return (
 		<ConnectWrapperButton onClick={onClick}>
 			{!connected ? (
@@ -40,7 +41,7 @@ export const ConnectWallet: FC<IConnectWaller> = ({ logo, wallet, connected, onC
 			) : (
 				<>
 					<Logotype src={logo.src} alt={logo.alt} />
-					<WalletInfo wallet={wallet} />
+					<WalletInfo walletBalance={account.walletBalance || ''} accountId={account.accountId || ''} />
 					<ArrowDown src={ArrowDownIcon} />
 				</>
 			)}

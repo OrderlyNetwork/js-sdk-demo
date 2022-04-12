@@ -6,3 +6,10 @@ export const SetWalletConnections = ({ walletConnection }) => {
 		payload: { walletConnection },
 	};
 };
+
+export const SetAccountInfo = ({ accountId = '', walletBalance = '' }) => {
+	return {
+		type: NEAR_TYPE.SET_ACCOUNT_INFO,
+		payload: { accountId, walletBalance },
+	};
+};

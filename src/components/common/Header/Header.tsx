@@ -34,13 +34,6 @@ export const Header: FC<IHeader> = () => {
 						src: '',
 						alt: '',
 					}}
-					wallet={{
-						total_balance: '189.34',
-						wallet_address: '343adw321wd33v1',
-						wallet_name: 'near.name',
-						wallet_currency: 'NEAR',
-						walletConnection,
-					}}
 				/>
 			</ComponentWrapper>
 		</HeaderWrapper>

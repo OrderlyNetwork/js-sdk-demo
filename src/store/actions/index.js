@@ -1,3 +1,3 @@
-import { SetWalletConnections } from './NearRPCActions/NearRPCReducer';
+import { SetWalletConnections, SetAccountInfo } from './NearRPCActions/NearRPCReducer';
 
-export { SetWalletConnections };
+export { SetWalletConnections, SetAccountInfo };

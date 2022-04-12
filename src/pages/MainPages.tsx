@@ -10,12 +10,13 @@ import { Header } from 'components/common';
 import { ModalDeposit, ModalWithdraw, SideBar } from 'components/main';
 
 // Import actions
-import { SetWalletConnections } from 'store/actions';
+import { SetWalletConnections, SetAccountInfo } from 'store/actions';
 
 // Import styled components
 import { AppProvider, ContentProvider } from 'AppStyled';
 import { createUserAccount } from 'services/createUserAccount';
 import { sendPublicKey } from 'services/sendPublicKey';
+import { GetAccountBalance } from 'services/getAccountBalance';
 
 export const MainPages = () => {
 	const [depositVisibleModal, setDepositVisibleModal] = useState<boolean>(false);
@@ -28,6 +29,8 @@ export const MainPages = () => {
 			const { walletConnection, contract } = await InitContract();
 
 			if (walletConnection.isSignedIn()) {
+				const { available } = await GetAccountBalance();
+
 				// Check if user exist on contract
 				const isUserExistOnContract = await contract.user_account_exists({
 					user: walletConnection.getAccountId(),
@@ -37,6 +40,8 @@ export const MainPages = () => {
 				if (!isUserExistOnContract) {
 					createUserAccount();
 				}
+
+				dispatch(SetAccountInfo({ walletBalance: available, accountId: walletConnection.getAccountId() }));
 			}
 			dispatch(SetWalletConnections({ walletConnection }));
 		})();
