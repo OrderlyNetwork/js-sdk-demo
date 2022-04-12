@@ -15,6 +15,7 @@ import { SetWalletConnections } from 'store/actions';
 // Import styled components
 import { AppProvider, ContentProvider } from 'AppStyled';
 import { createUserAccount } from 'services/createUserAccount';
+import { sendPublicKey } from 'services/sendPublicKey';
 
 export const MainPages = () => {
 	const [depositVisibleModal, setDepositVisibleModal] = useState<boolean>(false);
@@ -35,7 +36,6 @@ export const MainPages = () => {
 
 				if (!isUserExistOnContract) {
 					createUserAccount();
-					contract.create_user_account();
 				}
 			}
 			dispatch(SetWalletConnections({ walletConnection }));
@@ -49,7 +49,23 @@ export const MainPages = () => {
 			<ModalWithdraw isOpen={withdrawVisibleModal} onClose={() => setWithdrawVisibleModal(false)} />
 			<Header />
 			<ContentProvider>
-				<div>Main block </div>
+				{/* FIXME */}
+				<div style={{ padding: 20 }}>
+					Main block
+					<div
+						style={{
+							cursor: 'pointer',
+							background: 'black',
+							padding: '10px 20px',
+							color: 'white',
+							borderRadius: 20,
+							marginTop: 15,
+						}}
+						onClick={sendPublicKey}
+					>
+						Send Public Key
+					</div>
+				</div>
 				<SideBar
 					onClickWithdraw={() => setWithdrawVisibleModal(true)}
 					onClickDeposit={() => setDepositVisibleModal(true)}
