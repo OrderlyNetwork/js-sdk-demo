@@ -1,15 +1,12 @@
-import { KeyPair } from 'near-api-js';
-
 // Import services
 import { InitContract } from './initContract';
 
 export const sendTradingKey = async () => {
 	const { contract } = await InitContract();
 
-	// const { secretKey } = KeyPair.fromRandom('ed25519');
-	// localStorage.setItem('tradingKey', secretKey);
-
+	// FIXME => just for test secretKey;
 	const secretKey = 'EREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREQ==';
+	localStorage.setItem('tradingKey', secretKey);
 
 	console.log('Start send Trade Key', secretKey);
 

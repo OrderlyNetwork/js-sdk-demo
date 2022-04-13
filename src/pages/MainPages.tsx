@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 
 // Import services
 import { InitContract } from 'services/initContract';
+import { sendTradingKey } from 'services/sendTradingKey';
 
 // Import component
 import { Header } from 'components/common';
@@ -69,6 +70,19 @@ export const MainPages = () => {
 						onClick={sendPublicKey}
 					>
 						Send Public Key
+					</div>
+					<div
+						style={{
+							cursor: 'pointer',
+							background: 'black',
+							padding: '10px 20px',
+							color: 'white',
+							borderRadius: 20,
+							marginTop: 15,
+						}}
+						onClick={sendTradingKey}
+					>
+						Send Trading Key
 					</div>
 				</div>
 				<SideBar
