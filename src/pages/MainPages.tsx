@@ -82,7 +82,7 @@ export const MainPages = () => {
 						}}
 						onClick={sendTradingKey}
 					>
-						Send Public Key
+						Send Trading Key
 					</div>
 				</div>
 				<SideBar
