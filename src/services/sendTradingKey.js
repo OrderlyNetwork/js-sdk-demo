@@ -1,14 +1,20 @@
 // Import services
 import { InitContract } from './initContract';
 
+const EC = require('elliptic').ec;
+
 export const sendTradingKey = async () => {
 	const { contract } = await InitContract();
 
-	// FIXME => just for test secretKey;
-	const secretKey = 'EREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREQ==';
-	localStorage.setItem('tradingKey', secretKey);
+	console.log('Start send trading key');
 
-	console.log('Start send Trade Key', secretKey);
+	// Create keyPair with elliptic
+	const ec = new EC('secp256k1');
+	const keyPair = ec.genKeyPair();
+	const privKey = keyPair.getPrivate();
 
-	contract.user_request_set_trading_key({ key: secretKey });
+	// Convert to hex and encode to BASE64
+	const normalizeTradingKey = window.btoa(privKey.toString('hex'));
+
+	contract.user_request_set_trading_key({ key: normalizeTradingKey });
 };
