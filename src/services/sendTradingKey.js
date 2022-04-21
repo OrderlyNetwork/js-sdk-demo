@@ -11,10 +11,10 @@ export const sendTradingKey = async () => {
 	// Create keyPair with elliptic
 	const ec = new EC('secp256k1');
 	const keyPair = ec.genKeyPair();
-	const privKey = keyPair.getPrivate();
+	const publicKey = keyPair.getPublic();
 
 	// Convert to hex and encode to BASE64
-	const normalizeTradingKey = window.btoa(privKey.toString('hex'));
+	const normalizeTradingKey = window.btoa(publicKey.toString('hex'));
 
 	contract.user_request_set_trading_key({ key: normalizeTradingKey });
 };
