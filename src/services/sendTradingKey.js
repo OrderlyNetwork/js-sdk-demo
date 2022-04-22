@@ -2,6 +2,7 @@
 import { InitContract } from './initContract';
 
 const EC = require('elliptic').ec;
+const keccak256 = require('keccak256');
 
 export const sendTradingKey = async () => {
 	const { contract } = await InitContract();
@@ -11,10 +12,13 @@ export const sendTradingKey = async () => {
 	// Create keyPair with elliptic
 	const ec = new EC('secp256k1');
 	const keyPair = ec.genKeyPair();
-	const publicKey = keyPair.getPublic();
 
-	// Convert to hex and encode to BASE64
-	const normalizeTradingKey = window.btoa(publicKey.toString('hex'));
+	// Get public key from keyPair
+	const publicKey = keyPair.getPublic();
+	const pubKeyAsHex = publicKey.encode('hex');
+	const normalizeTradingKey = window.btoa(keccak256(pubKeyAsHex).toString('hex'));
+
+	console.log({ pubKeyAsHex: normalizeTradingKey });
 
 	contract.user_request_set_trading_key({ key: normalizeTradingKey });
 };
