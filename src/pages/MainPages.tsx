@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Normalize } from 'styled-normalize';
 import { useDispatch } from 'react-redux';
+import { utils } from 'near-api-js';
 
 // Import services
 import { InitContract } from 'services/initContract';
 import { sendTradingKey } from 'services/sendTradingKey';
+import { calculateGas } from 'services/estimateTransactionFee';
 
 // Import component
 import { Header } from 'components/common';
@@ -83,6 +85,34 @@ export const MainPages = () => {
 						onClick={sendTradingKey}
 					>
 						Send Trading Key
+					</div>
+					<div
+						style={{
+							cursor: 'pointer',
+							background: 'black',
+							padding: '10px 20px',
+							color: 'white',
+							borderRadius: 20,
+							marginTop: 15,
+						}}
+						onClick={() => calculateGas('user_deposit_native_token')}
+					>
+						Estimate Transaction FEE for Deposit
+					</div>
+					<div
+						style={{
+							cursor: 'pointer',
+							background: 'black',
+							padding: '10px 20px',
+							color: 'white',
+							borderRadius: 20,
+							marginTop: 15,
+						}}
+						onClick={() =>
+							calculateGas('user_request_withdraw', { token: 'near', amount: utils.format.parseNearAmount('1') })
+						}
+					>
+						Estimate Transaction FEE for Withdraw
 					</div>
 				</div>
 				<SideBar

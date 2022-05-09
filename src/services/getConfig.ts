@@ -6,10 +6,10 @@ export const getConfig = () => {
 	return {
 		networkId: 'local',
 		keyStore,
-		nodeUrl: 'http://rpc.orderly-dev.ml',
-		walletUrl: 'http://near-wallet.orderly-dev.ml',
-		helperUrl: 'http://helper.orderly-dev.ml',
-		explorerUrl: 'http://explorer.orderly-dev.ml',
+		nodeUrl: 'https://rpc.orderly-dev.ml',
+		walletUrl: 'https://near-wallet.orderly-dev.ml',
+		helperUrl: 'https://helper.orderly-dev.ml',
+		explorerUrl: 'https://explorer.orderly-dev.ml',
 		contractName: process.env.REACT_APP_ORDERLY_CONTRACT_NAME || 'asset-manager.test.near',
 		headers: {},
 	};
