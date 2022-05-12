@@ -15,6 +15,7 @@ export const InitContract = async () => {
 			'user_announce_key',
 			'user_request_set_trading_key',
 			'create_user_account',
+			'set_token_allowed',
 		],
 	});
 

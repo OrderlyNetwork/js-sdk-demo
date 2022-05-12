@@ -7,6 +7,7 @@ import { utils } from 'near-api-js';
 import { InitContract } from 'services/initContract';
 import { sendTradingKey } from 'services/sendTradingKey';
 import { calculateGas } from 'services/estimateTransactionFee';
+import { SetAllowedToken } from 'services/setAllowedToken';
 
 // Import component
 import { Header } from 'components/common';
@@ -113,6 +114,19 @@ export const MainPages = () => {
 						}
 					>
 						Estimate Transaction FEE for Withdraw
+					</div>
+					<div
+						style={{
+							cursor: 'pointer',
+							background: 'black',
+							padding: '10px 20px',
+							color: 'white',
+							borderRadius: 20,
+							marginTop: 15,
+						}}
+						onClick={() => SetAllowedToken()}
+					>
+						Set Allowed Token
 					</div>
 				</div>
 				<SideBar
