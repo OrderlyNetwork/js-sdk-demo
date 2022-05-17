@@ -9,6 +9,7 @@ import { sendTradingKey } from 'services/sendTradingKey';
 import { calculateGas } from 'services/estimateTransactionFee';
 import { SetAllowedToken } from 'services/setAllowedToken';
 import { GetWhiteList } from 'services/getWhiteList';
+import { GetFaucet } from 'services/getFaucet';
 
 // Import component
 import { Header } from 'components/common';
@@ -141,6 +142,19 @@ export const MainPages = () => {
 						onClick={GetWhiteList}
 					>
 						Get White List
+					</div>
+					<div
+						style={{
+							cursor: 'pointer',
+							background: 'black',
+							padding: '10px 20px',
+							color: 'white',
+							borderRadius: 20,
+							marginTop: 15,
+						}}
+						onClick={GetFaucet}
+					>
+						Get Faucet
 					</div>
 				</div>
 				<SideBar

@@ -7,7 +7,7 @@ export const InitContract = async () => {
 	const near = await nearAPI.connect(nearConfig);
 	const walletConnection = new nearAPI.WalletConnection(near, 'orderly');
 	const contract: any = new nearAPI.Contract(walletConnection.account(), nearConfig.contractName, {
-		viewMethods: ['user_token_balance', 'user_account_exists', 'get_tokens_allowed', 'ft_token_metadata'],
+		viewMethods: ['user_token_balance', 'user_account_exists', 'ft_token_metadata'],
 		changeMethods: [
 			'addMessage',
 			'user_deposit_native_token',
@@ -16,6 +16,7 @@ export const InitContract = async () => {
 			'user_request_set_trading_key',
 			'create_user_account',
 			'set_token_allowed',
+			'get_tokens_allowed',
 		],
 	});
 
