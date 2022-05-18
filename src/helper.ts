@@ -15,3 +15,10 @@ export const FilterInputForNumber = ({ value }: { value: string }) => {
 };
 
 export const prettierBalance = ({ str }: { str: string }) => `${Math.trunc(+str * 100) / 100}`;
+
+export const formatUnicode = ({ text }: { text: string }) => {
+	return text
+		.replace(/([\u0300-\u036f]|[^0-9a-zA-Z\\.\\-])/g, ' ')
+		.split(' ')
+		.filter((item) => item);
+};
