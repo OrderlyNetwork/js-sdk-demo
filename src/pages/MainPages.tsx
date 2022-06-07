@@ -27,6 +27,8 @@ import { GetAccountBalance } from 'services/getAccountBalance';
 export const MainPages = () => {
 	const [depositVisibleModal, setDepositVisibleModal] = useState<boolean>(false);
 	const [withdrawVisibleModal, setWithdrawVisibleModal] = useState<boolean>(false);
+	const [tokensList, setTokensList] = useState<[]>([]);
+	const [isVisibleTokenList, setIsVisibleTokenList] = useState<boolean>(false);
 
 	const dispatch = useDispatch();
 
@@ -52,6 +54,12 @@ export const MainPages = () => {
 			dispatch(SetWalletConnections({ walletConnection }));
 		})();
 	}, []);
+
+	const getUsersTokens = async () => {
+		const data: any = await GetWhiteList();
+		setTokensList(data);
+		setIsVisibleTokenList(true);
+	};
 
 	return (
 		<AppProvider>
@@ -126,7 +134,7 @@ export const MainPages = () => {
 							borderRadius: 20,
 							marginTop: 15,
 						}}
-						onClick={() => SetAllowedToken()}
+						onClick={SetAllowedToken}
 					>
 						Set Allowed Token
 					</div>
@@ -139,9 +147,9 @@ export const MainPages = () => {
 							borderRadius: 20,
 							marginTop: 15,
 						}}
-						onClick={GetWhiteList}
+						onClick={getUsersTokens}
 					>
-						Get White List
+						Get Users Token
 					</div>
 					<div
 						style={{
@@ -155,6 +163,24 @@ export const MainPages = () => {
 						onClick={GetFaucet}
 					>
 						Get Faucet
+					</div>
+					<div style={{ display: 'flex', flexDirection: 'column' }}>
+						{tokensList.length > 0
+							? tokensList.map((data: any) => (
+									<div
+										style={{
+											display: 'flex',
+											justifyContent: 'space-between',
+										}}
+										key={data.id}
+									>
+										<span>{data.token_name}</span>
+										<span>
+											{data.token_name === 'near' ? utils.format.formatNearAmount(data.balance) : data.balance}
+										</span>
+									</div>
+							  ))
+							: isVisibleTokenList && 'pls deposit'}
 					</div>
 				</div>
 				<SideBar
