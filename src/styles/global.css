@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-trade-green: 63, 182, 139;
+    --color-trade-red: 255, 83, 83;
+  }
+}
+
+.semi-navigation-horizontal .semi-navigation-footer {
+  padding: 0 !important;
+}
+.order-input .semi-input {
+  text-align: right !important;
+}
+
+.active-tab {
+  position: relative;
+}
+.active-tab:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  /*background-color: rgb(var(--color-trade-green));*/
+  @apply bg-primary
+}
+
+.order-list .semi-table-wrapper{
+  font-size: 13px;
+}
+.order-list .semi-table-row-cell{
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.semi-spin-wrapper > svg{
+  display: inline-block !important;
+}
