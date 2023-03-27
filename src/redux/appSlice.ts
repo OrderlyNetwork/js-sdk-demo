@@ -13,7 +13,7 @@ interface AppState {
 }
 
 const initialState: AppState = {
-	loading: false,
+	loading: true,
 	loggedIn: false,
 	apiBaseUrl: 'https://api.orderly.org/v1',
 };
@@ -34,6 +34,7 @@ const appSlice = createSlice({
 		login(state, action) {
 			state.accountId = action.payload;
 			state.loggedIn = true;
+			state.loading = false;
 		},
 		logout(state) {
 			state.accountId = undefined;

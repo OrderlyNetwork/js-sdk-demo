@@ -12,6 +12,9 @@ export const AccountInfo: FC = () => {
 	const accountId = useSelector<RootState, string | undefined>(
 		(state) => state.app.accountId,
 	);
+
+	const loading = useSelector<RootState, boolean>((state) => state.app.loading);
+
 	const onClick = useCallback(() => {
 		OrderlyService.connect()
 			.then(() => OrderlyService.client.accountId())
@@ -52,7 +55,7 @@ export const AccountInfo: FC = () => {
 	return (
 		<div className={'h-full flex flex-row items-center'}>
 			{typeof accountId !== 'undefined' ? (
-				<AccountDropdown accountId={accountId} />
+				<AccountDropdown accountId={accountId} loading={loading} />
 			) : (
 				<Button onClick={onClick} type="primary">
 					Connect Wallet

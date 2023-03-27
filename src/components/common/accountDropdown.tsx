@@ -7,6 +7,7 @@ import { logout } from '@/redux/appSlice';
 
 interface Props {
 	accountId: string;
+	loading: boolean;
 }
 
 const AccountDropdown: FC<Props> = (props) => {
@@ -35,6 +36,8 @@ const AccountDropdown: FC<Props> = (props) => {
 			<div className={'h-full flex flex-row items-center'}>
 				<Button
 					icon={<IconCaretdown style={{ marginTop: '-7px' }} />}
+					loading={props.loading}
+					disabled={props.loading}
 					iconPosition="right"
 				>
 					<div className="flex flex-row items-center gap-2">

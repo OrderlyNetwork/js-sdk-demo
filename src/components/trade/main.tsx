@@ -9,6 +9,7 @@ import { MarketAndChartLayout } from '@/components/trade/marketAndChartLayout';
 import { OrderlyProvider } from '@/hooks/orderlyContext';
 import { store } from '@/store/store';
 import { Provider } from 'react-redux';
+import { Dev } from '@/components/dev';
 
 const TradeMain = () => {
 	return (
@@ -30,7 +31,7 @@ const TradeMain = () => {
 						</TradeBodyLayout>
 					}
 				>
-					{/* <Dev /> */}
+					{/*<Dev />*/}
 				</TradeLayout>
 			</OrderlyProvider>
 		</Provider>

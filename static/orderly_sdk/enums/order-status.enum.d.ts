@@ -1,9 +1,0 @@
-export declare enum OrderStatus {
-    NEW = "NEW",
-    CANCELLED = "CANCELLED",
-    PARTIAL_FILLED = "PARTIAL_FILLED",
-    FILLED = "FILLED",
-    REJECTED = "REJECTED",
-    INCOMPLETE = "INCOMPLETE",
-    COMPLETED = "COMPLETED"
-}

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { Form, Button, Space, Toast, Notification } from '@douyinfe/semi-ui';
 import { useOrderValidate } from './useOrderValidate';
 import { useSelector } from 'react-redux';
@@ -13,14 +13,17 @@ import { OrderFactory } from '@/service/createOrder';
 // import { useOrder } from '@/components/trade/order/form/useOrder';
 import { selectLoggedIn } from '@/redux/appSlice';
 import { useCreateOrderMutation } from '@/redux/ordersApi';
+import MaxField from '@/components/trade/order/form/maxField';
+import AvblField from '@/components/trade/order/form/avblField';
 
 export const OrderForm = () => {
-	const { validate } = useOrderValidate();
+	const { validate, base, quote } = useOrderValidate();
 	const currentTradingPair = useSelector(selectCurrentTradingPair);
 	const isLogged = useSelector(selectLoggedIn);
 	const [loading, setLoading] = React.useState(false);
 	const formRef = useRef<FormApi>();
 	const [createOrder, { isLoading }] = useCreateOrderMutation();
+
 	// const {submitOrder,lo} = useOrder({})
 	const onSubmit = (values: any) => {
 		// console.log(values, currentTradingPair);
@@ -97,6 +100,7 @@ export const OrderForm = () => {
 				getFormApi={(formApi) => {
 					formRef.current = formApi;
 				}}
+				validateFields={validate}
 			>
 				{({ formState, values, formApi }) => (
 					<>
@@ -110,11 +114,13 @@ export const OrderForm = () => {
 							value={values.type}
 							onChange={(type: OrderType): void => {
 								formApi.setValue('type', type);
-								if (type === OrderType.MARKET) {
+								if (type === OrderType.MARKET || type === OrderType.ASK) {
 									formApi.setValue('price', 0);
+									formApi.setError('price', null);
 								}
 							}}
 						/>
+						<AvblField side={values.side} quote={quote} base={base} />
 						<Form.Input
 							field="price"
 							label="价格"
@@ -151,12 +157,7 @@ export const OrderForm = () => {
 							rules={[{ required: true }]}
 							className="order-input"
 						/>
-						<div className="flex flex-row justify-between px-2">
-							<span className="text-xs text-gray-500">23.00</span>
-							<a href="" className="text-xs text-gray-500">
-								Max
-							</a>
-						</div>
+
 						<div className="py-2 mt-2">
 							<Button
 								block

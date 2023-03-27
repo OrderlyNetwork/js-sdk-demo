@@ -1,15 +1,82 @@
+import { OrderSide, OrderType } from 'orderly-sdk/lib/enums';
+import { useCallback, useMemo } from 'react';
+import { useSelector } from 'react-redux';
+import {
+	selectCurrentBaseAssets,
+	selectCurrentQuoteAssets,
+} from '@/redux/assetSlice';
+import { createSelector } from '@reduxjs/toolkit';
+import { selectTokensConfig } from '@/redux/tradingSlice';
+import { priceToFixed } from '@/utils/decimal';
+
 interface useOrderValidateReturn {
-  validate: (values: any) => any;
+	validate: (values: any) => any;
+	base: any;
+	quote: any;
 }
 
+const selectBaseAndFormat = createSelector(
+	selectCurrentBaseAssets,
+	selectTokensConfig,
+	(base, config) => {
+		if (!base) return base;
+		if (!base.balance) return base;
+		const tokenConfig = config[base.name];
+		if (!tokenConfig) {
+			return base;
+		}
+		return {
+			...base,
+			formatted: priceToFixed({
+				decimal: tokenConfig.decimals,
+				dp: tokenConfig.minimum,
+				value: base.balance.balance,
+			}),
+		};
+	},
+);
+const selectQuoteAndFormat = createSelector(
+	selectCurrentQuoteAssets,
+	selectTokensConfig,
+	(base, config) => {
+		if (!base) return base;
+		if (!base.balance) return base;
+		const tokenConfig = config[base.name];
+		if (!tokenConfig) {
+			return base;
+		}
+		return {
+			...base,
+			formatted: priceToFixed({
+				decimal: tokenConfig.decimals,
+				dp: tokenConfig.minimum,
+				value: base.balance.balance,
+			}),
+		};
+	},
+);
+
 export const useOrderValidate = (): useOrderValidateReturn => {
-  const validate = (values): any => {
-    const errors = {};
+	// const orderBookLatest = useSelector(selectOrderBookLatest);
+	const base = useSelector(selectBaseAndFormat);
+	const quote = useSelector(selectQuoteAndFormat);
 
-    console.log("values", values);
+	const validate = useCallback((values: any): any => {
+		const errors: any = {};
+		const { side, type } = values;
 
-    return errors;
-  };
+		if (type !== OrderType.MARKET && type !== OrderType.ASK) {
+			if (!values.price) {
+				errors.price = 'Price is required';
+			}
+		}
 
-  return { validate };
+		if (!values.amount) {
+			errors.amount = 'Amount is required';
+		}
+
+		return errors;
+	}, []);
+
+	return { validate, base, quote };
 };

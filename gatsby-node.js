@@ -4,9 +4,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 			fallback: {
 				buffer: require.resolve('buffer/'),
 			},
-			alias: {
-				'@/service/orderlyService': require.resolve('./static/orderly_sdk'),
-			},
+			// alias: {
+			// 	'orderly-sdk': require.resolve('./static/orderly_sdk'),
+			// 	'orderly-sdk/lib/enums': require.resolve('./static/orderly_sdk/enums'),
+			// },
 		},
 	});
 };
