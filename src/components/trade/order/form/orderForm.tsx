@@ -24,7 +24,7 @@ import MaxField from '@/components/trade/order/form/maxField';
 import AvblField from '@/components/trade/order/form/avblField';
 
 export const OrderForm = () => {
-	const { validate, base, quote } = useOrderValidate();
+	const { validatePrice, base, quote } = useOrderValidate();
 	const currentTradingPair = useSelector(selectCurrentTradingPair);
 	const isLogged = useSelector(selectLoggedIn);
 	const [loading, setLoading] = React.useState(false);
@@ -33,7 +33,7 @@ export const OrderForm = () => {
 
 	// const {submitOrder,lo} = useOrder({})
 	const onSubmit = (values: any) => {
-		// console.log(values, currentTradingPair);
+		console.log(values, currentTradingPair);
 		if (!currentTradingPair || loading) return;
 		setLoading(true);
 
@@ -63,7 +63,7 @@ export const OrderForm = () => {
 
 		createOrder(data)
 			.then((res: any) => {
-				console.log(res);
+				// console.log(res);
 				if (res.data) {
 					Toast.success({ content: 'Create Order Success', theme: 'light' });
 					formRef.current?.reset();
@@ -107,7 +107,6 @@ export const OrderForm = () => {
 				getFormApi={(formApi) => {
 					formRef.current = formApi;
 				}}
-				validateFields={validate}
 			>
 				{({ formState, values, formApi }) => (
 					<>
@@ -145,6 +144,7 @@ export const OrderForm = () => {
 								</div>
 							}
 							className="order-input"
+							validate={validatePrice}
 						/>
 						<Form.Input
 							autofocus
