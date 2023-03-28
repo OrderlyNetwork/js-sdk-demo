@@ -53,7 +53,7 @@ export const useColumns = (
 		if (status === OrderStatus.NEW) {
 			cols.push({
 				title: '',
-				dataIndex: 'order_id',
+				dataIndex: 'order_id_',
 				render: (text, record) => {
 					return (
 						<div className={'flex flex-row justify-end'}>

@@ -1,5 +1,12 @@
 import React, { useMemo, useRef } from 'react';
-import { Form, Button, Space, Toast, Notification } from '@douyinfe/semi-ui';
+import {
+	Form,
+	Button,
+	Space,
+	Toast,
+	Notification,
+	Slider,
+} from '@douyinfe/semi-ui';
 import { useOrderValidate } from './useOrderValidate';
 import { useSelector } from 'react-redux';
 import { selectCurrentTradingPair } from '@/redux/tradingSlice';
@@ -157,7 +164,9 @@ export const OrderForm = () => {
 							rules={[{ required: true }]}
 							className="order-input"
 						/>
-
+						<div>
+							<Slider showBoundary={true}></Slider>
+						</div>
 						<div className="py-2 mt-2">
 							<Button
 								block

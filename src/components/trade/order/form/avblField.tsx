@@ -9,7 +9,6 @@ interface Props {
 
 const AvblField: FC<Props> = (props) => {
 	const { base, quote } = props;
-	console.log(base, quote);
 
 	const value = useMemo(() => {
 		if (props.side === OrderSide.BUY) {
