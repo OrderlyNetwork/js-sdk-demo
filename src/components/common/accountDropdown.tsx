@@ -29,6 +29,10 @@ const AccountDropdown: FC<Props> = (props) => {
 			position={'bottomRight'}
 			render={
 				<Dropdown.Menu style={{ minWidth: '200px' }}>
+					<Dropdown.Item disabled onClick={onLogout}>
+						Unregister
+					</Dropdown.Item>
+					<Dropdown.Divider />
 					<Dropdown.Item onClick={onLogout}>disconnect wallet</Dropdown.Item>
 				</Dropdown.Menu>
 			}

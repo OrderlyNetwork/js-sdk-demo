@@ -18,10 +18,11 @@ export const TradingViewPanel = () => {
 			tvRef.current = new TradingViewWidget({
 				symbol: 'BTC/USDT',
 				interval: '1D',
+
 				// timezone: "America/New_York",
 				autosize: true,
 				container_id: TRADING_VIEW_CONTAINER_ID,
-				locale: 'zh',
+				locale: 'en',
 				// disabled_features: ["left_toolbar"],
 				enabled_features: ['hide_left_toolbar_by_default'],
 				datafeed: new DataFeed(),
@@ -41,13 +42,13 @@ export const TradingViewPanel = () => {
 		}
 
 		if (!currentTradingPair) return;
-		tvRef.current?.setSymbol(
-			currentTradingPair?.quote + ':' + currentTradingPair?.base,
-			'1D',
-			() => {
-				console.log('setSymbol success');
-			},
-		);
+		// tvRef.current?.setSymbol(
+		// 	currentTradingPair?.quote + ':' + currentTradingPair?.base,
+		// 	'1D',
+		// 	() => {
+		// 		console.log('setSymbol success');
+		// 	},
+		// );
 	}, [currentTradingPair]);
 
 	useEffect(() => {

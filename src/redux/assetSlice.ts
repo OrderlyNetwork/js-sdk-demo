@@ -6,9 +6,15 @@ import {
 } from '@reduxjs/toolkit';
 import { selectCurrentTradingPair } from '@/redux/tradingSlice';
 
+export type StorageAsset = {
+	total: number;
+	available: number;
+};
+
 export interface AssetState {
 	total: number;
 	available: number;
+	storage: StorageAsset;
 	tokens: Token[];
 	balances: Record<string, { balance: number }>;
 	loading: boolean;
@@ -64,6 +70,7 @@ const initialState = {
 	tokens: [],
 	balances: {},
 	loading: false,
+	storage: { available: 0, total: 0 },
 } as AssetState;
 
 const assetSlice = createSlice({
@@ -71,8 +78,7 @@ const assetSlice = createSlice({
 	initialState,
 	reducers: {
 		setAsset(state, action) {
-			state.total = action.payload.total;
-			state.available = action.payload.available;
+			state.storage = action.payload;
 		},
 	},
 	extraReducers: (builder) => {

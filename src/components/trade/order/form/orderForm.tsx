@@ -164,9 +164,9 @@ export const OrderForm = () => {
 							rules={[{ required: true }]}
 							className="order-input"
 						/>
-						<div>
+						{/* <div>
 							<Slider showBoundary={true}></Slider>
-						</div>
+						</div> */}
 						<div className="py-2 mt-2">
 							<Button
 								block

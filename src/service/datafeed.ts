@@ -99,7 +99,8 @@ export class DataFeed implements IBasicDataFeed {
 			has_empty_bars: true,
 			has_no_volume: false,
 			// // volume_precision: Number(volumePrecision),
-			timezone: getTimeZoneCity() || 'Asia/Shanghai',
+			// timezone: getTimeZoneCity() || 'Asia/Shanghai',
+			timezone: 'Asia/Shanghai',
 			format: 'price',
 		};
 		setTimeout(() => {
@@ -154,16 +155,16 @@ export class DataFeed implements IBasicDataFeed {
 		listenerGuid: string,
 		onResetCacheNeededCallback: () => void,
 	): void {
-		throw new Error('Method not implemented.');
+		// throw new Error('Method not implemented.');
 	}
 	unsubscribeBars(listenerGuid: string): void {
-		throw new Error('Method not implemented.');
+		// throw new Error('Method not implemented.');
 	}
 	subscribeDepth?(symbol: string, callback: DomeCallback): string {
-		throw new Error('Method not implemented.');
+		// throw new Error('Method not implemented.');
 	}
 	unsubscribeDepth?(subscriberUID: string): void {
-		throw new Error('Method not implemented.');
+		// throw new Error('Method not implemented.');
 	}
 	onReady(callback: OnReadyCallback): void {
 		// this._onReadyCallback = callback;
