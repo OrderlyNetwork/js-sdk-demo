@@ -7,6 +7,9 @@ import { DataFeed } from '@/service/datafeed';
 import { selectCurrentTradingPair } from '@/redux/tradingSlice';
 import { useSelector } from 'react-redux';
 
+// import DataFeeds from '@/static/charting_library/datafeeds.bundle';
+// const Datafeeds = require('static/charting_library/datafeeds.bundle');
+
 export const TRADING_VIEW_CONTAINER_ID = 'trading-view-container';
 
 export const TradingViewPanel = () => {
@@ -17,15 +20,19 @@ export const TradingViewPanel = () => {
 		if (!tvRef.current) {
 			tvRef.current = new TradingViewWidget({
 				symbol: 'BTC/USDT',
-				interval: '1D',
+				interval: '15',
 
 				// timezone: "America/New_York",
 				autosize: true,
 				container_id: TRADING_VIEW_CONTAINER_ID,
 				locale: 'en',
+
 				// disabled_features: ["left_toolbar"],
 				enabled_features: ['hide_left_toolbar_by_default'],
 				datafeed: new DataFeed(),
+				// datafeed: Datafeeds.UDFCompatibleDatafeed(
+				// 	'https://demo_feed.tradingview.com',
+				// ),
 				fullscreen: false,
 				library_path: '/charting_library/',
 				// loading_screen: {
@@ -38,17 +45,20 @@ export const TradingViewPanel = () => {
 					'scalesProperties.backgroundColor': 'red',
 					'scalesProperties.lineColor': '#e0e3eb',
 				},
+				debug: true,
+				client_id: 'tradingview.com',
+				user_id: 'public_user_id',
 			});
 		}
 
 		if (!currentTradingPair) return;
-		// tvRef.current?.setSymbol(
-		// 	currentTradingPair?.quote + ':' + currentTradingPair?.base,
-		// 	'1D',
-		// 	() => {
-		// 		console.log('setSymbol success');
-		// 	},
-		// );
+		tvRef.current?.setSymbol(
+			currentTradingPair?.quote + '/' + currentTradingPair?.base,
+			'15',
+			() => {
+				console.log('setSymbol success');
+			},
+		);
 	}, [currentTradingPair]);
 
 	useEffect(() => {

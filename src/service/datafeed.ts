@@ -30,9 +30,9 @@ export const Resolutions = [
 	'180',
 	'240',
 	'480',
-	'1D',
-	'1W',
-	'1M',
+	// '1D',
+	// '1W',
+	// '1M',
 ];
 
 export class DataFeed implements IBasicDataFeed {
@@ -77,7 +77,6 @@ export class DataFeed implements IBasicDataFeed {
 		onResolve: ResolveCallback,
 		onError: ErrorCallback,
 	): void {
-		console.log('tradingview resolveSymbol ====>>>>>', symbolName);
 		const symbolInfo: LibrarySymbolInfo = {
 			name: symbolName,
 			full_name: symbolName,
@@ -86,9 +85,9 @@ export class DataFeed implements IBasicDataFeed {
 			session: '24x7',
 			exchange: '',
 			listed_exchange: '',
-			ticker: symbolName,
+			// ticker: symbolName,
 			// // pricescale: Math.pow(10, this.config.getCurrentPricePrecision?.(symbolName)),
-			pricescale: 8,
+			pricescale: 100,
 			minmov: 1,
 			supported_resolutions:
 				Resolutions as LibrarySymbolInfo['supported_resolutions'],
@@ -117,7 +116,7 @@ export class DataFeed implements IBasicDataFeed {
 		isFirstCall: boolean,
 	): void {
 		console.log('tradingview getBars ====>>>>>', symbolInfo, resolution);
-		onDataCallback([], { noData: true });
+		// onDataCallback([], { noData: true });
 		//   const { symbol, exchange } = symbolInfo;
 		//   const params = {
 		//     symbol,
@@ -169,7 +168,16 @@ export class DataFeed implements IBasicDataFeed {
 	onReady(callback: OnReadyCallback): void {
 		// this._onReadyCallback = callback;
 		const config: DatafeedConfiguration = {
-			// supported_resolutions: Resolutions,
+			supported_resolutions: Resolutions,
+			exchanges: [],
+			symbols_types: [],
+			supports_marks: false,
+			supports_timescale_marks: false,
+			// symbols_types: [
+			// 	{ name: 'All types', value: '' },
+			// 	{ name: 'Stock', value: 'stock' },
+			// 	{ name: 'Index', value: 'index' },
+			// ],
 		};
 
 		orderlyService.on('connected', () => {
