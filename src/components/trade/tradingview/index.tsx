@@ -52,7 +52,13 @@ export const TradingViewPanel = () => {
 
 		if (!currentTradingPair) return;
 
-		tvRef.current.activeChart().setSymbol(currentTradingPair.symbol);
+		const activeChart = tvRef.current.activeChart();
+
+		if (activeChart) {
+			activeChart.setSymbol(currentTradingPair.symbol);
+		}
+
+		// tvRef.current.activeChart().setSymbol(currentTradingPair.symbol);
 
 		// tvRef.current?.setSymbol(
 		// 	// currentTradingPair?.quote + '/' + currentTradingPair?.base,

@@ -26,31 +26,31 @@ export const AccountInfo: FC = () => {
 			});
 	}, []);
 
-	useEffect(() => {
-		// console.log("***** start connect to wallet *****");
-		OrderlyService.connect()
-			.then(() => OrderlyService.client.accountId())
-			.then(
-				(accountId) => {
-					// console.log("获取 AccountId 成功", accountId);
-					if (accountId) {
-						dispatch(login(accountId));
-					}
-					return OrderlyService.api.account.getInformation();
-				},
-				(error) => {
-					console.log('get account id failed:', error);
-				},
-			)
-			.then((res) => {
-				// console.log("get account infomation:::", res);
-				// return OrderlyService.assetManager.getUserTokenBalance();
-				// return OrderlyService.api.account.getCurrentHolding();
-			});
-		// .then((res) => {
-		//   console.log("get current holding:::", res);
-		// });
-	}, []);
+	// useEffect(() => {
+	// 	// console.log("***** start connect to wallet *****");
+	// 	OrderlyService.connect()
+	// 		.then(() => OrderlyService.client.accountId())
+	// 		.then(
+	// 			(accountId) => {
+	// 				// console.log("获取 AccountId 成功", accountId);
+	// 				if (accountId) {
+	// 					dispatch(login(accountId));
+	// 				}
+	// 				return OrderlyService.api.account.getInformation();
+	// 			},
+	// 			(error) => {
+	// 				console.log('get account id failed:', error);
+	// 			},
+	// 		)
+	// 		.then((res) => {
+	// 			// console.log("get account infomation:::", res);
+	// 			// return OrderlyService.assetManager.getUserTokenBalance();
+	// 			// return OrderlyService.api.account.getCurrentHolding();
+	// 		});
+	// 	// .then((res) => {
+	// 	//   console.log("get current holding:::", res);
+	// 	// });
+	// }, []);
 
 	return (
 		<div className={'h-full flex flex-row items-center'}>
