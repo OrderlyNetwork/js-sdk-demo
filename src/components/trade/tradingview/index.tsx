@@ -1,14 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import {
+import type {
 	IChartingLibraryWidget,
-	widget as TradingViewWidget,
-} from '@/static/charting_library/charting_library.min';
+	ResolutionString,
+} from '@/static/charting_library/charting_library';
+
 import { DataFeed } from '@/service/datafeed';
 import { selectCurrentTradingPair } from '@/redux/tradingSlice';
 import { useSelector } from 'react-redux';
-
-// import DataFeeds from '@/static/charting_library/datafeeds.bundle';
-// const Datafeeds = require('static/charting_library/datafeeds.bundle');
 
 export const TRADING_VIEW_CONTAINER_ID = 'trading-view-container';
 
@@ -17,17 +15,18 @@ export const TradingViewPanel = () => {
 
 	const tvRef = useRef<IChartingLibraryWidget>();
 	useEffect(() => {
+		if (typeof window === 'undefined' || !window.TradingView) return;
 		if (!tvRef.current) {
-			tvRef.current = new TradingViewWidget({
-				symbol: 'BTC/USDT',
-				interval: '15',
+			tvRef.current = new window.TradingView.widget({
+				symbol: 'SPOT_NEAR_USDC',
+				interval: 'D' as ResolutionString,
 
 				// timezone: "America/New_York",
 				autosize: true,
-				container_id: TRADING_VIEW_CONTAINER_ID,
+				container: TRADING_VIEW_CONTAINER_ID,
 				locale: 'en',
 
-				// disabled_features: ["left_toolbar"],
+				disabled_features: ['header_widget'],
 				enabled_features: ['hide_left_toolbar_by_default'],
 				datafeed: new DataFeed(),
 				// datafeed: Datafeeds.UDFCompatibleDatafeed(
@@ -52,27 +51,17 @@ export const TradingViewPanel = () => {
 		}
 
 		if (!currentTradingPair) return;
-		tvRef.current?.setSymbol(
-			currentTradingPair?.quote + '/' + currentTradingPair?.base,
-			'15',
-			() => {
-				console.log('setSymbol success');
-			},
-		);
-	}, [currentTradingPair]);
 
-	useEffect(() => {
-		if (tvRef.current && currentTradingPair) {
-			tvRef.current.onChartReady(() => {
-				tvRef.current?.setSymbol(
-					`${currentTradingPair!.quote}/${currentTradingPair!.base}}`,
-					'1D',
-					() => {
-						console.log('setSymbol success');
-					},
-				);
-			});
-		}
+		tvRef.current.activeChart().setSymbol(currentTradingPair.symbol);
+
+		// tvRef.current?.setSymbol(
+		// 	// currentTradingPair?.quote + '/' + currentTradingPair?.base,
+		// 	currentTradingPair.symbol,
+		// 	'15' as ResolutionString,
+		// 	() => {
+		// 		console.log('setSymbol success');
+		// 	},
+		// );
 	}, [currentTradingPair]);
 
 	return (

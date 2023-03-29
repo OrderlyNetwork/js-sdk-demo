@@ -22,4 +22,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Orderly SDK Demo</title>;
+export const Head: HeadFC = () => (
+	<>
+		<title>Orderly SDK Demo</title>
+		<script src="/charting_library/charting_library.standalone.js"></script>
+	</>
+);

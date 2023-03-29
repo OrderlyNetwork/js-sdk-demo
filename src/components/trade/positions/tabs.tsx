@@ -18,7 +18,7 @@ interface Props {
 
 export const PositionTabs: FC<Props> = (props) => {
 	return (
-		<div className="flex flex-row gap-3 px-4 border-b border-solid text-xs">
+		<div className="flex flex-row gap-3 px-4 border-b border-t border-solid text-xs">
 			{Object.keys(OrderStatus).map((key) => {
 				return (
 					<button
