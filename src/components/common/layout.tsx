@@ -42,7 +42,7 @@ export const TradeLayout: React.FC<PropsWithChildren<Props>> = ({
 									/>
 								</div>
 
-								<span className="text-xs ">{`Orderly SDK 1.1.1 / ${
+								<span className="text-xs ">{`Orderly SDK 1.1.2 / ${
 									(window as any).___webpackCompilationHash ?? '-'
 								}`}</span>
 							</div>
