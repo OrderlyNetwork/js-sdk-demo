@@ -1,4 +1,4 @@
-import { OrderSide } from 'orderly-sdk/lib/enums';
+import { OrderSide } from '@orderly.network/orderly-sdk/lib/enums';
 import React, { FC, useMemo } from 'react';
 
 interface Props {

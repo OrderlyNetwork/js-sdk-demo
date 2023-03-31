@@ -1,5 +1,5 @@
 import { Table } from '@douyinfe/semi-ui';
-import { OrderStatus } from 'orderly-sdk/lib/enums';
+import { OrderStatus } from '@orderly.network/orderly-sdk/lib/enums';
 import React, { FC, useMemo } from 'react';
 import { Empty } from './empty';
 import { useColumns } from './useColumns';

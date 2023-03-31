@@ -11,7 +11,7 @@ import { useOrderValidate } from './useOrderValidate';
 import { useSelector } from 'react-redux';
 import { selectCurrentTradingPair } from '@/redux/tradingSlice';
 import orderlyService from '@/service/orderlyService';
-import { OrderSide, OrderType } from 'orderly-sdk/lib/enums';
+import { OrderSide, OrderType } from '@orderly.network/orderly-sdk/lib/enums';
 import { FormApi } from '@douyinfe/semi-ui/lib/es/form';
 import { SideField } from './sideField';
 import { OrderTypeField } from './orderType';

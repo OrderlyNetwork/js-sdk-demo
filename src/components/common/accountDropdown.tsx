@@ -49,7 +49,9 @@ const AccountDropdown: FC<Props> = (props) => {
 							style={{ height: '18px' }}
 							src={orderlyService.assetManager.wallet?.wallet?.metadata.iconUrl}
 						/>
-						<span>{props.accountId}</span>
+						<span className="max-w-[120px] inline-block text-ellipsis overflow-hidden">
+							{props.accountId}
+						</span>
 					</div>
 				</Button>
 			</div>

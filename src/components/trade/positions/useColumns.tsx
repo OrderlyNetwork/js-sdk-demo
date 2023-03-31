@@ -1,4 +1,4 @@
-import { OrderStatus } from 'orderly-sdk/lib/enums';
+import { OrderStatus } from '@orderly.network/orderly-sdk/lib/enums';
 import { useMemo } from 'react';
 import { Button } from '@douyinfe/semi-ui';
 import React from 'react';

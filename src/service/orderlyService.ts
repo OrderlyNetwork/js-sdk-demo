@@ -1,4 +1,4 @@
-import { RestClient, AuthClient } from 'orderly-sdk';
+import { RestClient, AuthClient } from '@orderly.network/orderly-sdk';
 import mitt from 'mitt';
 
 type NearNetworkId = 'testnet' | 'mainnet';
@@ -31,10 +31,11 @@ class OrderlyService {
 
 	async isSignedIn() {
 		if (typeof window == 'undefined') return false;
-		const isSignedIn = await this._authClient.isSignedIn();
-		if (isSignedIn) {
-			return true;
-		}
+		return this._authClient.isSignedIn();
+		// const isSignedIn = await this._authClient.isSignedIn();
+		// if (isSignedIn) {
+		// 	return true;
+		// }
 	}
 
 	get account() {

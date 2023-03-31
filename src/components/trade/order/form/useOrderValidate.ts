@@ -1,4 +1,4 @@
-import { OrderSide, OrderType } from 'orderly-sdk/lib/enums';
+import { OrderSide, OrderType } from '@orderly.network/orderly-sdk/lib/enums';
 import { useCallback, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import {
