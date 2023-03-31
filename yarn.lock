@@ -1652,10 +1652,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@orderly.network/orderly-sdk@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@orderly.network/orderly-sdk/-/orderly-sdk-1.1.2.tgz#b5108117f74e7c07ab00ad34b0a9751c5b946b53"
-  integrity sha512-N04qAlYZbMrfkrPEWJQR64x2J7LI9kPJbzJp0mVcyYvGp2O8xdyZHQqlB4PnLy4Jq6rxmuKhY4abOYLX4YHwnw==
+"@orderly.network/orderly-sdk@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@orderly.network/orderly-sdk/-/orderly-sdk-1.1.3.tgz#8457e3c1909d47c032b85787dd0e1d9dc0f33abb"
+  integrity sha512-/bf08K3gNyDL8Gyn43mwaLizT4ED7dOfV29Ph1dXDjQO74pl1RFtzXb70UgeleIxFbJCBlmBpQZhTCJWjevZlA==
   dependencies:
     "@near-wallet-selector/core" "^7.9.0"
     "@near-wallet-selector/modal-ui-js" "^7.9.0"
