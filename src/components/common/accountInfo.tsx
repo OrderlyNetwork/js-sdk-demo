@@ -30,7 +30,7 @@ export const AccountInfo: FC = () => {
 		// console.log("***** start connect to wallet *****");
 		OrderlyService.isSignedIn()
 			.then((isLogged) => {
-				console.log('-------', isLogged);
+				// console.log('-------', isLogged);
 				return OrderlyService.connect();
 			})
 			.then(() => OrderlyService.client.accountId())

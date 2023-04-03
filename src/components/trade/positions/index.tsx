@@ -17,7 +17,7 @@ export const PositionsGroupPanel = () => {
 
 	const { data, isFetching, isLoading } = useGetOrdersQuery(
 		{
-			symbol: currentTradingPair?.symbol,
+			// symbol: currentTradingPair?.symbol,
 			status: status,
 			size: 10,
 		},
