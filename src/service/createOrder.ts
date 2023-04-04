@@ -28,6 +28,16 @@ abstract class OrderCreator {
 	}
 }
 
+export class GeneralOrderCreator extends OrderCreator {
+	createOrder(data: OrderFormData): OrderDTO {
+		return {
+			...this.baseOrder(data),
+			order_price: data.price,
+			order_quantity: data.amount,
+		};
+	}
+}
+
 export class LimitOrderCreator extends OrderCreator {
 	createOrder(data: OrderFormData): OrderDTO {
 		return {
@@ -114,7 +124,7 @@ export class OrderFactory {
 				return new PostOnlyOrderCreator();
 
 			default:
-				return null;
+				return new GeneralOrderCreator();
 		}
 	}
 }
