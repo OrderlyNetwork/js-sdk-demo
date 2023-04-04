@@ -1,6 +1,5 @@
 import { selectAssets } from '@/redux/assetSlice';
 import orderlyService from '@/service/orderlyService';
-import { RootState } from '@/store/store';
 import { Button, Form, Modal, Toast } from '@douyinfe/semi-ui';
 import clsx from 'clsx';
 import React, { FC } from 'react';
