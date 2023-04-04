@@ -133,18 +133,18 @@ export const OrderForm = () => {
 							noLabel
 							prefix="Price"
 							autoComplete="off"
-							disabled={
-								values.type === OrderType.MARKET ||
-								values.type === OrderType.ASK ||
-								!currentTradingPair
-							}
+							// disabled={
+							// 	values.type === OrderType.MARKET ||
+							// 	values.type === OrderType.ASK ||
+							// 	!currentTradingPair
+							// }
 							suffix={
 								<div className="w-[60px] pr-2 text-right">
 									{currentTradingPair?.base}
 								</div>
 							}
 							className="order-input"
-							validate={validatePrice}
+							// validate={validatePrice}
 						/>
 						<Form.Input
 							autofocus
