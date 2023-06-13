@@ -4,7 +4,7 @@ import {
 	selectTokensConfig,
 	setOrderBooksLatest,
 } from '@/redux/tradingSlice';
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { OrderBookHeader } from './header';
 import { OrderBookItem } from './orderbook';
@@ -13,17 +13,42 @@ import { Spin } from '@douyinfe/semi-ui';
 
 import { useOrderbook } from './useOrderbook';
 import { useOrderBookWS } from './useOrderBookWS';
+import { usePublicWS } from '@/hooks/usePublicWS';
 
 export const OrderBook = () => {
 	// const { bids, asks, isLoading } = useOrderbook();
 	const currentTradingPair = useSelector(selectCurrentTradingPair);
 	const [asks, bids, max] = useOrderBookWS(currentTradingPair?.symbol);
 
+	const markPrice = usePublicWS(
+		() => ({
+			id: 'clientID8',
+			topic: `${currentTradingPair!.symbol}@markprice`,
+			event: 'subscribe',
+		}),
+		{
+			dataFilter: (data) => {
+				return data['topic'] === `${currentTradingPair!.symbol}@markprice`;
+			},
+			dataMap: (data) => {
+				return data['data']['price'];
+			},
+		},
+	);
+
 	// broadcast: the order-book data is updated
 	useEffect(() => {
 		if (bids.length === 0 || asks.length === 0) return;
 		// dispatch(setOrderBooksLatest([bids[0], asks[asks.length - 1]]));
 	}, [bids, asks]);
+
+	const tickerPrice = useMemo(() => {
+		const bid1 = bids[0]?.price;
+		const ask1 = asks[0]?.price;
+		if (!bid1 || !ask1) return markPrice ?? 0;
+
+		return [bid1, ask1, markPrice].sort((a, b) => b - a)[1];
+	}, [markPrice, asks, bids]);
 
 	return (
 		<div>
@@ -35,7 +60,7 @@ export const OrderBook = () => {
 			</div>
 			<OrderBookHeader />
 			<OrderBookItem dataSource={asks} type="ask" max={max} />
-			<Ticker />
+			<Ticker price={tickerPrice} />
 			<OrderBookItem dataSource={bids} type="bid" max={max} />
 		</div>
 	);

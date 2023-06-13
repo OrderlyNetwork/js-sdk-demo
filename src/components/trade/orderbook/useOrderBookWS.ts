@@ -15,17 +15,45 @@ import {
 
 const paddingFn = (len: number): string[] => Array(len).fill(['-', '-', '-']);
 
-const dataMap = (data: any[]) => {
+type dataMapDir = 'up' | 'down';
+
+const dataMap = (data: any[], dir: dataMapDir = 'down') => {
 	let total = 0;
 
-	return data.map((item) => {
-		total += item[1];
-		return [item[0], item[1], total];
-	});
+	// const result = [];
+
+	if (dir === 'up') {
+		// return data.map((item) => {
+		// 	total += item[1];
+		// 	return [item[0], item[1], total];
+		// });
+		for (let i = data.length - 1; i >= 0; i--) {
+			total += data[i][1];
+			data[i][2] = total;
+		}
+		return data;
+	} else {
+		return data.map((item) => {
+			total += item[1];
+			return [item[0], item[1], total];
+		});
+	}
+
+	// for (let i = 0; i < data.length; i++) {
+	// 	total += data[i][1];
+	// 	result.push([data[i][0], data[i][1], total]);
+	// }
+
+	// return data.map((item) => {
+	// 	total += item[1];
+	// 	return [item[0], item[1], total];
+	// });
+
+	// return result;
 };
 
-const mergeData = (prev: any[], current: any[]) => {
-	if (prev.length === 0) return current;
+const mergeData = (prev: any[], current: any[], sortFn) => {
+	if (prev.length === 0) return current.sort(sortFn);
 
 	const data = [...prev];
 
@@ -43,9 +71,11 @@ const mergeData = (prev: any[], current: any[]) => {
 		}
 	});
 
-	data.sort((a, b) => {
-		return a[0] - b[0];
-	});
+	// data.sort((a, b) => {
+	// 	return a[0] - b[0];
+	// });
+
+	data.sort(sortFn);
 
 	return data;
 };
@@ -91,17 +121,23 @@ export const useOrderBookWS = (symbol?: string): any[] => {
 				scan(
 					(acc, value, index) => {
 						// console.log('------orderbook', acc, value, index);
-						let asks = mergeData(acc.asks, value.asks).slice(0, level);
-						let bids = mergeData(acc.bids, value.bids).slice(0, level);
+						let asks = mergeData(acc.asks, value.asks, (a: any, b: any) => {
+							return b[0] - a[0];
+						}).slice(0, level);
+						let bids = mergeData(acc.bids, value.bids, (a: any, b: any) => {
+							// console.log('------*******------', a, b);
+							return b[0] - a[0];
+						}).slice(0, level);
 
 						// if (index === 0) {
 						// let asks = value.asks.slice(0, level);
-						asks = dataMap(asks);
+						asks = dataMap(asks, 'up');
 
-						asks.reverse();
+						// asks.reverse();
 						// let bids = value.bids.slice(0, level);
 						// bids.reduce(accFun, [0, 0, 0]);
 						bids = dataMap(bids);
+						// bids.reverse();
 
 						const max = new Decimal(asks[0][2])
 							.add(bids[bids.length - 1][2])
