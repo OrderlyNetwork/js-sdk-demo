@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch } from '@douyinfe/semi-ui';
+import orderlyService from '@/service/orderlyService';
 
 export const Dev = () => {
 	return (
@@ -26,6 +27,37 @@ export const Dev = () => {
 						<td>Disable frontend validation</td>
 						<td className="text-right">
 							<Switch size={'small'} />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input
+								id="ws_topic"
+								type="text"
+								placeholder="topic"
+								value="tickers"
+								className="w-full p-1 text-black"
+							/>
+						</td>
+						<td className="text-right">
+							<button
+								className="border border-white/50 rounded-md px-2 py-1 text-xs"
+								onClick={() => {
+									const value = (
+										document.getElementById('ws_topic') as HTMLInputElement
+									).value;
+									if (!!value) {
+										orderlyService.privateWs.sendSubscription({
+											// id: 'client_id1',
+											event: 'subscribe',
+											// topic: 'SPOT_WOO_USDC@trade',
+											topic: value,
+										});
+									}
+								}}
+							>
+								subscribe
+							</button>
 						</td>
 					</tr>
 				</tbody>

@@ -12,9 +12,12 @@ import { Ticker } from './ticker';
 import { Spin } from '@douyinfe/semi-ui';
 
 import { useOrderbook } from './useOrderbook';
+import { useOrderBookWS } from './useOrderBookWS';
 
 export const OrderBook = () => {
-	const { bids, asks, isLoading } = useOrderbook();
+	// const { bids, asks, isLoading } = useOrderbook();
+	const currentTradingPair = useSelector(selectCurrentTradingPair);
+	const [asks, bids, max] = useOrderBookWS(currentTradingPair?.symbol);
 
 	// broadcast: the order-book data is updated
 	useEffect(() => {
@@ -27,13 +30,13 @@ export const OrderBook = () => {
 			<div className="px-3 py-2 border-b border-solid flex flex-row justify-between items-center text-sm">
 				<div>Order book</div>
 				<div>
-					<Spin spinning={isLoading} />
+					<Spin spinning={false} />
 				</div>
 			</div>
 			<OrderBookHeader />
-			<OrderBookItem dataSource={asks} type="ask" />
+			<OrderBookItem dataSource={asks} type="ask" max={max} />
 			<Ticker />
-			<OrderBookItem dataSource={bids} type="bid" />
+			<OrderBookItem dataSource={bids} type="bid" max={max} />
 		</div>
 	);
 };

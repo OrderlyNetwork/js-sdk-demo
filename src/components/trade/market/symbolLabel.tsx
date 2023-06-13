@@ -33,7 +33,9 @@ export const SymbolLabel: FC<Props> = (props) => {
 				}
 			>
 				<div className="flex flex-row justify-center pr-2">
-					<strong className={'text-xl'}>{`${tradingPair?.quote}`}</strong>
+					<strong
+						className={'text-xl'}
+					>{`${tradingPair?.quote}-${tradingPair?.type}`}</strong>
 					<strong
 						className={'text-xl text-gray-400'}
 					>{`/${tradingPair?.base}`}</strong>
