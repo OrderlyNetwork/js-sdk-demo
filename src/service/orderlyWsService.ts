@@ -13,7 +13,7 @@ export class OrderlyWsService {
 	subject = new BehaviorSubject({});
 
 	constructor(wsClient: any) {
-		console.log(wsClient);
+		// console.log(wsClient);
 
 		this.wsClient = wsClient;
 		this.ws = wsClient.websocket as WebSocket;

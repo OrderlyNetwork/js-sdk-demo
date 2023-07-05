@@ -1,12 +1,13 @@
 import { RestClient, AuthClient } from '@orderly.network/orderly-sdk';
 import mitt from 'mitt';
 import { OrderlyWsService } from './orderlyWsService';
+import { PublicType } from '@orderly.network/orderly-sdk/lib/rest/clients/public.client';
 
 type NearNetworkId = 'testnet' | 'mainnet';
 interface SdkConfigurationOptionsClient {
 	contractId: string;
 	networkId?: NearNetworkId; // "testnet" or "mainnet"
-	// debug?: boolean; // For debug logs. Can be skipped.
+	debug?: boolean; // For debug logs. Can be skipped.
 }
 
 class OrderlyService {
@@ -57,6 +58,10 @@ class OrderlyService {
 
 	get client(): AuthClient {
 		return this._authClient;
+	}
+
+	get publicApi(): PublicType {
+		return this._authClient.publicClient();
 	}
 
 	get api() {
@@ -113,4 +118,5 @@ const handler = {
 export default new OrderlyService({
 	contractId: 'asset-manager.orderly.testnet',
 	networkId: 'testnet',
+	debug: false,
 });

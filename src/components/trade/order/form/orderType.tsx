@@ -41,7 +41,7 @@ export const OrderTypeField: FC<Props> = (props) => {
 	}, [value]);
 
 	return (
-		<div className="mt-2">
+		<div>
 			<div className="flex flex-row gap-1">
 				<Button
 					theme="borderless"

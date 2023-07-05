@@ -4,19 +4,25 @@ import { MainHeader } from './mainHeader';
 import { Layout, Nav, Button, Space } from '@douyinfe/semi-ui';
 import { AccountInfo } from '@/components/common/accountInfo';
 import { GetToken } from './getToken';
+import { Link } from 'gatsby';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectTradingType, setTradingType } from '@/redux/tradingSlice';
 
 const { Header, Footer, Sider, Content } = Layout;
 
 interface Props {
-	left: React.ReactNode;
+	right: React.ReactNode;
 	content: React.ReactNode;
 }
 
 export const TradeLayout: React.FC<PropsWithChildren<Props>> = ({
 	children,
-	left,
+	right: left,
 	content,
 }) => {
+	const dispatch = useDispatch();
+	const tradeType = useSelector(selectTradingType);
+
 	return (
 		<>
 			<Layout>
@@ -30,6 +36,15 @@ export const TradeLayout: React.FC<PropsWithChildren<Props>> = ({
 							</Space>
 						}
 						style={{ height: '48px' }}
+						selectedKeys={[tradeType]}
+						items={[
+							{ itemKey: 'SPOT', text: 'Spot' },
+							{ itemKey: 'PERP', text: 'Futures' },
+						]}
+						onSelect={(key) => {
+							// console.log(key);
+							dispatch(setTradingType(key.itemKey));
+						}}
 					>
 						<Nav.Header>
 							<div className="flex flex-row gap-1 items-center text-gray-500">
@@ -47,6 +62,22 @@ export const TradeLayout: React.FC<PropsWithChildren<Props>> = ({
 								}`}</span>
 							</div>
 						</Nav.Header>
+						{/* <Nav.Item itemKey="Spot" text="Spot" link="/" /> */}
+						{/* <Link
+							to="/"
+							activeClassName="text-blue-600"
+							className="px-2 font-bold"
+						>
+							Spot
+						</Link>
+						<Link
+							to="/futures"
+							activeClassName="text-blue-600"
+							className="px-2 font-bold"
+						>
+							Futures
+						</Link> */}
+						{/* <Nav.Item itemKey="Futures" text="Futures" link="/futures" /> */}
 					</Nav>
 				</Header>
 				<Layout>

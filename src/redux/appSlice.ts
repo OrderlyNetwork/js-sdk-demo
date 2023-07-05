@@ -1,7 +1,12 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import {
+	createAsyncThunk,
+	createSelector,
+	createSlice,
+} from '@reduxjs/toolkit';
 
 import type { RootState } from '@/store/store';
 import orderlyService from '@/service/orderlyService';
+import { AccountInfo } from '@/types/account';
 
 interface AppState {
 	loading: boolean;
@@ -10,6 +15,7 @@ interface AppState {
 	loggedIn: boolean;
 
 	apiBaseUrl: string;
+	accountInfo?: AccountInfo;
 }
 
 const initialState: AppState = {
@@ -40,12 +46,27 @@ const appSlice = createSlice({
 			state.accountId = undefined;
 			state.loggedIn = false;
 		},
+		setAccountInfo(state, action) {
+			state.accountInfo = action.payload;
+			state.accountId = action.payload.account_id;
+			state.loggedIn = true;
+			state.loading = false;
+		},
 	},
 });
 
-export const { login, logout } = appSlice.actions;
+export const { login, logout, setAccountInfo } = appSlice.actions;
 
 export const selectLoggedIn = (state: RootState) => state.app.loggedIn;
+
+export const selectAccountInfo = (state: RootState) => state.app.accountInfo;
+
+export const selectAccountLeverage = createSelector(
+	selectAccountInfo,
+	(accountInfo) => {
+		return accountInfo?.max_leverage;
+	},
+);
 
 // export const isLogged = useSelector<RootState,boolean>((state) => state.app.loggedIn));
 

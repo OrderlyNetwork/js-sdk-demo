@@ -3,6 +3,7 @@ import {
 	selectCurrentTradingPair,
 	selectTokensConfig,
 	setOrderBooksLatest,
+	setTickerPrice,
 } from '@/redux/tradingSlice';
 import React, { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,6 +20,7 @@ export const OrderBook = () => {
 	// const { bids, asks, isLoading } = useOrderbook();
 	const currentTradingPair = useSelector(selectCurrentTradingPair);
 	const [asks, bids, max] = useOrderBookWS(currentTradingPair?.symbol);
+	const dispatch = useDispatch();
 
 	const markPrice = usePublicWS(
 		() => ({
@@ -50,6 +52,10 @@ export const OrderBook = () => {
 		return [bid1, ask1, markPrice].sort((a, b) => b - a)[1];
 	}, [markPrice, asks, bids]);
 
+	useEffect(() => {
+		dispatch(setTickerPrice(tickerPrice));
+	}, [tickerPrice]);
+
 	return (
 		<div>
 			<div className="px-3 py-2 border-b border-solid flex flex-row justify-between items-center text-sm">
@@ -60,7 +66,7 @@ export const OrderBook = () => {
 			</div>
 			<OrderBookHeader />
 			<OrderBookItem dataSource={asks} type="ask" max={max} />
-			<Ticker price={tickerPrice} />
+			<Ticker price={tickerPrice} markPrice={markPrice as number} />
 			<OrderBookItem dataSource={bids} type="bid" max={max} />
 		</div>
 	);

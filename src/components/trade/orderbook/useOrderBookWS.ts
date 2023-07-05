@@ -38,18 +38,6 @@ const dataMap = (data: any[], dir: dataMapDir = 'down') => {
 			return [item[0], item[1], total];
 		});
 	}
-
-	// for (let i = 0; i < data.length; i++) {
-	// 	total += data[i][1];
-	// 	result.push([data[i][0], data[i][1], total]);
-	// }
-
-	// return data.map((item) => {
-	// 	total += item[1];
-	// 	return [item[0], item[1], total];
-	// });
-
-	// return result;
 };
 
 const mergeData = (prev: any[], current: any[], sortFn) => {
@@ -139,7 +127,7 @@ export const useOrderBookWS = (symbol?: string): any[] => {
 						bids = dataMap(bids);
 						// bids.reverse();
 
-						const max = new Decimal(asks[0][2])
+						const max = new Decimal(asks[0]?.[2] ?? 0)
 							.add(bids[bids.length - 1][2])
 							.toNumber();
 

@@ -3,7 +3,7 @@ import { FC, useCallback, useContext } from 'react';
 import { Button, Toast } from '@douyinfe/semi-ui';
 import OrderlyService from '@/service/orderlyService';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '@/redux/appSlice';
+import { login, setAccountInfo } from '@/redux/appSlice';
 import { RootState } from '@/store/store';
 import AccountDropdown from '@/components/common/accountDropdown';
 
@@ -37,9 +37,9 @@ export const AccountInfo: FC = () => {
 			.then(
 				(accountId) => {
 					// console.log("获取 AccountId 成功", accountId);
-					if (accountId) {
-						dispatch(login(accountId));
-					}
+					// if (accountId) {
+					// 	dispatch(login(accountId));
+					// }
 					return OrderlyService.api.account.getInformation();
 				},
 				(error) => {
@@ -47,9 +47,8 @@ export const AccountInfo: FC = () => {
 				},
 			)
 			.then((res) => {
-				// console.log("get account infomation:::", res);
-				// return OrderlyService.assetManager.getUserTokenBalance();
-				// return OrderlyService.api.account.getCurrentHolding();
+				// console.log('get account infomation:::', res);
+				dispatch(setAccountInfo(res));
 			});
 		// .then((res) => {
 		//   console.log("get current holding:::", res);

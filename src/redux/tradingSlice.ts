@@ -9,6 +9,8 @@ import {
 } from '@reduxjs/toolkit';
 import { OrderBookItem } from '@/components/trade/orderbook/useOrderbook';
 
+export type TradingPairType = 'SPOT' | 'PERP';
+
 export interface TradingPair {
 	symbol: string;
 	base: string;
@@ -16,6 +18,7 @@ export interface TradingPair {
 	type: string;
 	base_min: number;
 	base_mxn: number;
+	base_tick: number;
 	price_range: number;
 }
 
@@ -34,6 +37,9 @@ export interface TradingConfigState {
 	tokensInfo: Record<string, TokenInfo>;
 	// 买一卖一
 	orderBooksLatest: OrderBookItem[];
+	// 当前交易类型,spot or futures
+	tradingType: TradingPairType;
+	tickerPrice: number;
 }
 
 // fetch trading pairs thunk;
@@ -95,7 +101,16 @@ const initialState = {
 	loading: false,
 	tokensInfo: {},
 	orderBooksLatest: [],
+	tradingType: 'SPOT',
+	currentTradingPair: undefined,
+	tickerPrice: 0,
 } as TradingConfigState;
+
+const setTradingPairToLocalStorage = (tradingPair: string) => {
+	if (typeof window !== 'undefined') {
+		localStorage.setItem('currentTradingPair', tradingPair);
+	}
+};
 
 const tradingSlice = createSlice({
 	name: 'tradingConfig',
@@ -103,10 +118,39 @@ const tradingSlice = createSlice({
 	reducers: {
 		setCurrentTradingPair(state, action) {
 			state.currentTradingPair = action.payload;
+
+			setTradingPairToLocalStorage(action.payload.symbol);
+		},
+
+		setCurrentTradingPairBySymbol(state, action) {
+			const tradingPair = state.tradingPairs.find(
+				(item) => item.symbol === action.payload,
+			);
+			if (tradingPair) {
+				state.currentTradingPair = tradingPair;
+				setTradingPairToLocalStorage(tradingPair.symbol);
+			}
 		},
 
 		setOrderBooksLatest(state, action) {
 			state.orderBooksLatest = action.payload;
+		},
+		setTradingType(state, action) {
+			state.tradingType = action.payload;
+			// reset current trading pair
+			if (state.tradingType === 'SPOT') {
+				state.currentTradingPair = state.tradingPairs.find(
+					(item) => item.type === 'SPOT',
+				);
+			} else {
+				state.currentTradingPair = state.tradingPairs.find(
+					(item) => item.type === 'PERP',
+				);
+			}
+		},
+
+		setTickerPrice(state, action) {
+			state.tickerPrice = action.payload;
 		},
 	},
 	extraReducers: (builder) => {
@@ -117,11 +161,31 @@ const tradingSlice = createSlice({
 			//   console.log(action.payload);
 			state.tradingPairs = action.payload;
 			if (action.payload.length > 0) {
-				const near = action.payload.find((item) => item.quote === 'NEAR');
-				if (near) {
-					state.currentTradingPair = near;
+				//check if current trading pair is in the list
+				if (typeof window !== 'undefined') {
+					const tradingPairKey = localStorage.getItem('currentTradingPair');
+					console.log('==========', tradingPairKey);
+					if (typeof tradingPairKey === 'string') {
+						// 	const tradingPairObj = JSON.parse(tradingPair);
+						const currentTradingPair = action.payload.find(
+							(item) => item.symbol === tradingPairKey,
+						);
+
+						if (currentTradingPair) {
+							state.currentTradingPair = currentTradingPair;
+							return;
+						}
+					}
+				}
+				// 根据当前是Spot或者Futures来设置交易对
+				if (state.tradingType === 'SPOT') {
+					state.currentTradingPair = action.payload.find(
+						(item) => item.type === 'SPOT',
+					);
 				} else {
-					state.currentTradingPair = action.payload[0];
+					state.currentTradingPair = action.payload.find(
+						(item) => item.type === 'PERP',
+					);
 				}
 			}
 		});
@@ -137,11 +201,19 @@ const tradingSlice = createSlice({
 	},
 });
 
-export const { setCurrentTradingPair, setOrderBooksLatest } =
-	tradingSlice.actions;
+export const {
+	setCurrentTradingPair,
+	setOrderBooksLatest,
+	setTradingType,
+	setCurrentTradingPairBySymbol,
+	setTickerPrice,
+} = tradingSlice.actions;
 
 export const selectTradingPairs = (state: RootState) =>
 	state.trading.tradingPairs;
+
+export const selectTradingType = (state: RootState): TradingPairType =>
+	state.trading.tradingType;
 
 export const selectCurrentTradingPair = (state: RootState) =>
 	state.trading.currentTradingPair;
@@ -151,6 +223,9 @@ export const selectTokensConfig = (state: RootState) =>
 
 export const selectOrderBookLatest = (state: RootState) =>
 	state.trading.orderBooksLatest;
+
+export const selectTickerPrice = (state: RootState) =>
+	state.trading.tickerPrice;
 
 export const selectCurrentTokenConfig = createSelector(
 	selectTokensConfig,
@@ -162,5 +237,24 @@ export const selectCurrentTokenConfig = createSelector(
 		return null;
 	},
 );
+
+export const selectCurrentTradingPairConfig = createSelector(
+	selectTradingPairs,
+	selectCurrentTradingPair,
+	(tradingPairs, currentTradingPair) => {
+		return tradingPairs.find(
+			(item) => item.symbol === currentTradingPair?.symbol,
+		);
+	},
+);
+
+export const selectTradingPairConfigBySymbol = createSelector(
+	[selectTradingPairs, (state: RootState, symbol: string) => symbol],
+	(tradingPairs, symbol) => {
+		return tradingPairs.find((item) => item.symbol === symbol);
+	},
+);
+
+// export const selectTradingPairByType = createSelector()
 
 export default tradingSlice.reducer;

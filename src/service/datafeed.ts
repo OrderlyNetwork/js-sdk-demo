@@ -90,6 +90,7 @@ export class DataFeed implements IBasicDataFeed {
 		onResolve: ResolveCallback,
 		onError: ErrorCallback,
 	): void {
+		console.log('resolveSymbol ====>>>>>', symbolName);
 		const symbolArr = symbolName.split('_');
 		const symbolInfo: LibrarySymbolInfo = {
 			// name: `${symbolArr[1]}/${symbolArr[2]}`,

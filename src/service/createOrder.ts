@@ -17,6 +17,8 @@ export interface OrderFormData {
 	symbol: string;
 }
 
+const isPERP = (symbol: string): boolean => symbol.startsWith('PERP');
+
 abstract class OrderCreator {
 	abstract createOrder(formData: OrderFormData): OrderDTO;
 	baseOrder(data: OrderFormData): OrderDTO {
@@ -51,8 +53,10 @@ export class LimitOrderCreator extends OrderCreator {
 abstract class QuantitySwitchOrderCreator extends OrderCreator {
 	createOrder(data: OrderFormData): OrderDTO {
 		// 卖单时
+		// if the order is PERP or sell order, use order_quantity
+		// important: if the order is PERP then use order_quantity instead of order_amount
 		const _data =
-			data.side === OrderSide.SELL
+			isPERP(data.symbol) || data.side === OrderSide.SELL
 				? {
 						order_quantity: Number(data.amount),
 				  }

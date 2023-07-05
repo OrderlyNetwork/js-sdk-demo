@@ -2,12 +2,17 @@ import React from 'react';
 import { usePublicWS } from '@/hooks/usePublicWS';
 import { Dropdown } from '@douyinfe/semi-ui';
 import { SymbolCell } from './symbolCell';
-import { TradingPair, setCurrentTradingPair } from '@/redux/tradingSlice';
+import {
+	TradingPair,
+	TradingPairType,
+	setCurrentTradingPair,
+} from '@/redux/tradingSlice';
 import { useDispatch } from 'react-redux';
 
-export const MarketListView: React.FC<{ tradingPair?: TradingPair }> = (
-	props,
-) => {
+export const MarketListView: React.FC<{
+	tradingPair?: TradingPair;
+	type: TradingPairType;
+}> = (props) => {
 	const { tradingPair: currentTradingPair } = props;
 	const dispatch = useDispatch();
 	const tradingPairs = usePublicWS<any[]>(
@@ -19,15 +24,17 @@ export const MarketListView: React.FC<{ tradingPair?: TradingPair }> = (
 		{
 			dataMap: (data) =>
 				data
-					? data.data?.map((item: any) => {
-							const arr = item.symbol.split('_');
-							return {
-								...item,
-								base: arr[2],
-								quote: arr[1],
-								type: arr[0],
-							};
-					  })
+					? data.data
+							?.filter((item: any) => item.symbol.startsWith(props.type))
+							.map((item: any) => {
+								const arr = item.symbol.split('_');
+								return {
+									...item,
+									base: arr[2],
+									quote: arr[1],
+									type: arr[0],
+								};
+							})
 					: [],
 			dataFilter: (data) => {
 				return data['topic'] === 'tickers';

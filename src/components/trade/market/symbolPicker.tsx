@@ -6,18 +6,28 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
 	selectCurrentTradingPair,
 	selectTradingPairs,
+	selectTradingType,
 	setCurrentTradingPair,
 	TradingPair,
+	TradingPairType,
 } from '@/redux/tradingSlice';
 import { SymbolLabel } from './symbolLabel';
 import { usePublicWS } from '@/hooks/usePublicWS';
 import { MarketListView } from './marketListView';
+import type { RootState } from '@/store/store';
+
+interface Props {
+	// type: SymbolType;
+}
 
 export const SymbolPicker = () => {
 	const [visible, setVisible] = useState(false);
 
 	// const tradingPairs = useSelector(selectTradingPairs);
 	const currentTradingPair = useSelector(selectCurrentTradingPair);
+	const currentTradingType = useSelector<RootState, TradingPairType>(
+		selectTradingType,
+	);
 
 	return (
 		<Dropdown
@@ -28,9 +38,10 @@ export const SymbolPicker = () => {
 				setVisible(visible);
 			}}
 			render={
-				<div>
-					<MarketListView tradingPair={currentTradingPair} />
-				</div>
+				<MarketListView
+					tradingPair={currentTradingPair}
+					type={currentTradingType}
+				/>
 			}
 		>
 			<div className="h-full">

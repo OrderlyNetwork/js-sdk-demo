@@ -81,48 +81,5 @@ export const usePublicWS = <T>(
 		};
 	}, [_topic?.topic, _topic?.event]);
 
-	// const data = useObservable(
-	// 	(_, input$) =>
-	// 		input$.pipe(
-	// 			filter(([isLoggedIn, _]) => isLoggedIn),
-	// 			filter(([_, topic]) => {
-	// 				try {
-	// 					if (typeof topic === 'function') {
-	// 						const _topic = topic();
-	// 						console.log('???????', _topic, !!_topic);
-
-	// 						return !!_topic;
-	// 					}
-	// 					return true;
-	// 				} catch (e) {
-	// 					return false;
-	// 				}
-	// 			}),
-	// 			map(([_, topic, options]) => [
-	// 				typeof topic === 'function' ? topic() : topic,
-	// 				options,
-	// 			]),
-	// 			throttleTime(1000),
-	// 			switchMap(([topic, options]) => {
-	// 				// const _topic = typeof topic === 'function' ? topic() : topic;
-	// 				// console.log('+++++++', topic);
-	// 				return orderlyService.ws.subscribe(topic).pipe(
-	// 					filter((data: any) => data['event'] !== 'ping'),
-	// 					filter((data) =>
-	// 						options && options.dataFilter
-	// 							? options!.dataFilter?.(data)
-	// 							: _defaultDataFilter(topic),
-	// 					),
-	// 					map((data) =>
-	// 						options && options.dataMap ? options!.dataMap?.(data) : data,
-	// 					),
-	// 				);
-	// 			}),
-	// 		),
-
-	// 	null,
-	// 	[isLoggedIn, topic, options],
-	// );
-
 	return data as T;
 };

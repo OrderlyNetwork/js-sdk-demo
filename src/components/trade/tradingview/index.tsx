@@ -1,25 +1,31 @@
-import React, { useEffect, useRef } from 'react';
+import React, { FC, useEffect, useRef } from 'react';
 import type {
 	IChartingLibraryWidget,
 	ResolutionString,
 } from '@/static/charting_library/charting_library';
 
 import { DataFeed } from '@/service/datafeed';
-import { selectCurrentTradingPair } from '@/redux/tradingSlice';
+import {
+	TradingPairType,
+	selectCurrentTradingPair,
+} from '@/redux/tradingSlice';
 import { useSelector } from 'react-redux';
 
 export const TRADING_VIEW_CONTAINER_ID = 'trading-view-container';
 
-export const TradingViewPanel = () => {
+interface Props {}
+
+export const TradingViewPanel: FC<Props> = (props) => {
 	const currentTradingPair = useSelector(selectCurrentTradingPair);
 
 	const tvRef = useRef<IChartingLibraryWidget>();
 	useEffect(() => {
 		if (typeof window === 'undefined' || !window.TradingView) return;
 		if (!tvRef.current) {
+			console.log('tradingView 初始化', currentTradingPair);
 			tvRef.current = new window.TradingView.widget({
-				symbol: 'SPOT_NEAR_USDC',
-				interval: 'D' as ResolutionString,
+				symbol: currentTradingPair?.symbol ?? 'PERP_NEAR_USDC',
+				interval: '1h' as ResolutionString,
 
 				// timezone: "America/New_York",
 				autosize: true,
@@ -47,15 +53,30 @@ export const TradingViewPanel = () => {
 				debug: true,
 				client_id: 'tradingview.com',
 				user_id: 'public_user_id',
+				// load_last_chart: true,
 			});
 		}
 
-		if (!currentTradingPair) return;
+		if (!currentTradingPair || !tvRef.current) return;
 
-		const activeChart = tvRef.current.activeChart();
+		try {
+			const activeChart = tvRef.current.activeChart();
 
-		if (activeChart) {
-			activeChart.setSymbol(currentTradingPair.symbol);
+			// console.log(tvRef.current);
+
+			// tvRef.current.setSymbol(
+			// 	currentTradingPair.symbol,
+			// 	'1h' as ResolutionString,
+			// 	() => {
+			// 		console.log('-----------------------');
+			// 	},
+			// );
+
+			if (activeChart) {
+				activeChart.setSymbol(currentTradingPair.symbol);
+			}
+		} catch (e) {
+			console.log(e);
 		}
 
 		// tvRef.current.activeChart().setSymbol(currentTradingPair.symbol);
@@ -68,7 +89,20 @@ export const TradingViewPanel = () => {
 		// 		console.log('setSymbol success');
 		// 	},
 		// );
+
+		return () => {
+			console.log('tradingView 销毁');
+			// tvRef.current?.remove();
+			// tvRef.current = undefined;
+		};
 	}, [currentTradingPair]);
+
+	useEffect(() => {
+		return () => {
+			// tvRef.current?.remove();
+			// tvRef.current = undefined;
+		};
+	}, []);
 
 	return (
 		<div

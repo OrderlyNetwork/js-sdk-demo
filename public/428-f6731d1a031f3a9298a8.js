@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkorderly_sdk_demo=self.webpackChunkorderly_sdk_demo||[]).push([[428],{9428:function(e,r,u){u.r(r);var d=u(67294),l=u(70743),n=u(44976);r.default=()=>{(0,l.v9)(n.uj);return d.createElement("div",null)}}}]);
+//# sourceMappingURL=428-f6731d1a031f3a9298a8.js.map
