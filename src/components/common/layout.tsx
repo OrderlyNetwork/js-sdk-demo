@@ -44,6 +44,7 @@ export const TradeLayout: React.FC<PropsWithChildren<Props>> = ({
 						onSelect={(key) => {
 							// console.log(key);
 							dispatch(setTradingType(key.itemKey));
+							window.localStorage.setItem('tradingType', key.itemKey as string);
 						}}
 					>
 						<Nav.Header>

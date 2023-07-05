@@ -18,6 +18,7 @@ interface OrderlyContextState {
 	// authClient: AuthClient | undefined;
 	orders$: BehaviorSubject<any>;
 	queryOrders: (parmas: OrdersQueryParams) => void;
+	refreshOrders: () => void;
 }
 
 const OrderlyContext = createContext<OrderlyContextState>(
@@ -27,10 +28,12 @@ const OrderlyContext = createContext<OrderlyContextState>(
 export const OrderlyProvider: FC<PropsWithChildren<any>> = (props) => {
 	// const [authClient, setAuthClient] = useState<AuthClient>();
 	useInitiator();
-	const { order$, query } = useOrders();
+	const { order$, query, refresh } = useOrders();
 
 	return (
-		<OrderlyContext.Provider value={{ orders$: order$, queryOrders: query }}>
+		<OrderlyContext.Provider
+			value={{ orders$: order$, queryOrders: query, refreshOrders: refresh }}
+		>
 			<SWRConfig
 				value={{
 					onError: (error, key) => {

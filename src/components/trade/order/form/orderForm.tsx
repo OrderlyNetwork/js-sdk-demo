@@ -1,4 +1,4 @@
-import React, { FC, useLayoutEffect, useMemo, useRef } from 'react';
+import React, { FC, useContext, useLayoutEffect, useMemo, useRef } from 'react';
 import {
 	Form,
 	Button,
@@ -28,6 +28,7 @@ import MaxField from '@/components/trade/order/form/maxField';
 import AvblField from '@/components/trade/order/form/avblField';
 import { CostAndMax } from './costAndMax';
 import { Max } from './max';
+import OrderlyContext from '@/hooks/orderlyContext';
 
 const StorageKey = 'latestOrderType';
 
@@ -41,10 +42,11 @@ export const OrderForm: FC<Props> = (props) => {
 	const formRef = useRef<FormApi>();
 	const [createOrder, { isLoading }] = useCreateOrderMutation();
 	const tradeType = useSelector(selectTradingType);
+	const { refreshOrders } = useContext(OrderlyContext);
 
 	const type =
 		typeof window !== 'undefined'
-			? (localStorage.getItem(StorageKey) as OrderType)
+			? (localStorage.getItem(StorageKey) as OrderType) ?? OrderType.LIMIT
 			: OrderType.LIMIT;
 
 	// const {submitOrder,lo} = useOrder({})
@@ -83,6 +85,12 @@ export const OrderForm: FC<Props> = (props) => {
 				if (res.data) {
 					Toast.success({ content: 'Create Order Success', theme: 'light' });
 					formRef.current?.reset();
+
+					// 如果是永续合约，创建订单成功后，刷新订单列表
+					if (tradeType === 'PERP') {
+						refreshOrders();
+					}
+
 					if (typeof window !== 'undefined') {
 						localStorage.setItem(StorageKey, data.order_type);
 					}

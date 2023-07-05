@@ -36,26 +36,15 @@ export const useOrders = () => {
 	);
 
 	const query = useCallback((params: any) => {
-		ordersQueryParams$.next(params);
+		ordersQueryParams$.next({ ...ordersQueryParams$.value, ...params });
 	}, []);
 
-	// const order$ = useMemo<BehaviorSubject<any[]>>(() => {
-	// 	return ordersQueryParams$.pipe(
-	// 		switchMap((params) => {
-	// 			console.log('query params=====', params);
-	// 			return orderlyService.api.orders.getOrders(params);
-	// 		}),
-	// 	);
-	// }, []);
 	useEffect(() => {
 		if (!isLoggedIn) return;
 
 		const subscriber = ordersQueryParams$
 			.pipe(
-				// startWith(),
-
 				switchMap((params) => {
-					console.log('query params=====', params);
 					return orderlyService.api.orders.getOrders(params);
 				}),
 			)
@@ -66,5 +55,5 @@ export const useOrders = () => {
 		};
 	}, [isLoggedIn]);
 
-	return { order$, query };
+	return { order$, query, refresh: () => query({}) };
 };
