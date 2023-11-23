@@ -14,8 +14,16 @@ const tradingViewConfig: any = {
 const View = (props: Props) => {
 	return (
 		<ConnectorProvider>
-			<OrderlyAppProvider networkId="mainnet" brokerId="orderly" onlyTestnet={false} logoUrl="/woo_fi_logo.svg">
-				<TradingPage symbol={'PERP_ETH_USDC'} tradingViewConfig={tradingViewConfig} />
+			<OrderlyAppProvider
+				networkId="mainnet"
+				brokerId="woofi_pro"
+				onlyTestnet={false}
+				logoUrl="/orderly_logo.svg"
+			>
+				<TradingPage
+					symbol={'PERP_ETH_USDC'}
+					tradingViewConfig={tradingViewConfig}
+				/>
 			</OrderlyAppProvider>
 		</ConnectorProvider>
 	);

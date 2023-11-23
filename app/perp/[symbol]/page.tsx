@@ -12,5 +12,7 @@ export default function PerpPage({ params }: { params: { slug: string } }) {
 	// const router = useRouter()
 	console.log('params', params);
 
-	return <MainView symbol="" onSymbolChange={(symbol) => {}} />;
+	return <MainView symbol="" onSymbolChange={(symbol) => {
+		console.log('update symbol', symbol);
+	}} />;
 }
