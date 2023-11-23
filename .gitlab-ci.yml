@@ -1,0 +1,8 @@
+include:
+  - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
+    ref: main
+    file: '/common-orderly-network-testnet.yaml'
+
+variables:
+  SERVICE_NAME: sdk-demo
+  IMAGE_NAME: sdk-demo
