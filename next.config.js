@@ -16,6 +16,15 @@ const nextConfig = {
 		// Dangerously allow production builds to successfully complete even if your project has type errors.
 		ignoreBuildErrors: true,
 	},
+	async redirects() {
+		return [
+			{
+				source: '/',
+				destination: '/perp/PERP_ETH_USDC',
+				permanent: false,
+			},
+		];
+	},
 };
 
 module.exports = nextConfig;
