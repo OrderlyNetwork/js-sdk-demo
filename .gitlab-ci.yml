@@ -1,7 +1,7 @@
 include:
   - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
     ref: main
-    file: '/common-orderly-network-iap.yaml'
+    file: '/common-orderly-network-evm-iap.yaml'
 
 variables:
   SERVICE_NAME: sdk-demo
