@@ -15,14 +15,15 @@ const View = (props: Props) => {
 	return (
 		<ConnectorProvider>
 			<OrderlyAppProvider
-				networkId="mainnet"
+				networkId="testnet"
 				brokerId="woofi_pro"
 				onlyTestnet={false}
 				logoUrl="/orderly_logo.svg"
 			>
 				<TradingPage
-					symbol={'PERP_ETH_USDC'}
+					symbol={props.symbol}
 					tradingViewConfig={tradingViewConfig}
+					onSymbolChange={props.onSymbolChange}
 				/>
 			</OrderlyAppProvider>
 		</ConnectorProvider>
