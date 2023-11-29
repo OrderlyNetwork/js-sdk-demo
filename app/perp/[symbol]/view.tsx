@@ -17,7 +17,7 @@ const View = (props: Props) => {
 			<OrderlyAppProvider
 				networkId="testnet"
 				brokerId="woofi_pro"
-				onlyTestnet={false}
+				onlyTestnet={true}
 				logoUrl="/orderly_logo.svg"
 			>
 				<TradingPage
