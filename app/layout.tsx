@@ -12,6 +12,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
+      <head>
+        <link rel='icon' type='image/png' sizes='16x16' href='/apple-touch-icon.png' />
+        <link rel='apple-touch-icon' type='image/png' sizes='16x16' href='/apple-touch-icon.png' />
+
+      </head>
 			<body className={inter.className}>{children}</body>
 		</html>
 	);
