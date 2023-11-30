@@ -1,5 +1,6 @@
 import { ConnectorProvider } from '@orderly.network/web3-onboard';
 import { OrderlyAppProvider, TradingPage } from '@orderly.network/react';
+import { useState } from 'react';
 
 interface Props {
 	onSymbolChange: (symbol: string) => void;
@@ -12,13 +13,23 @@ const tradingViewConfig: any = {
 };
 
 const View = (props: Props) => {
+
+	const networkId = localStorage.getItem('orderly-networkId') ?? 'testnet';
 	return (
 		<ConnectorProvider>
 			<OrderlyAppProvider
-				networkId="testnet"
+				networkId={networkId}
 				brokerId="woofi_pro"
-				onlyTestnet={true}
+				// onlyTestnet={true}
 				logoUrl="/orderly_logo.svg"
+				onChainChanged={(chainId, isTestnet) => {
+					// console.log('chain changed', chainId, isTestnet);
+					localStorage.setItem('orderly-networkId', isTestnet ? 'testnet' : 'mainnet');
+					// realod page
+					setTimeout(() => {
+						window.location.reload();
+					}, 50);
+				}}
 			>
 				<TradingPage
 					symbol={props.symbol}
