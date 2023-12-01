@@ -2,7 +2,7 @@ import { ConnectorProvider } from '@orderly.network/web3-onboard';
 import { OrderlyAppProvider, TradingPage } from '@orderly.network/react';
 import injectedModule from "@web3-onboard/injected-wallets";
 import ledgerModule from '@web3-onboard/ledger'
-import trezorModule from '@web3-onboard/trezor'
+// import trezorModule from '@web3-onboard/trezor'
 import walletConnectModule from '@web3-onboard/walletconnect';
 
 interface Props {
@@ -34,14 +34,19 @@ const View = (props: Props) => {
 	const ledger = ledgerModule(ledgerInitOptions);
 
 
-	const trezor = trezorModule({
-		email: '<EMAIL_CONTACT>',
-		appUrl: '<APP_URL>'
-	  })
+	// const trezor = trezorModule({
+	// 	email: '<EMAIL_CONTACT>',
+	// 	appUrl: '<APP_URL>'
+	//   })
 
 	return (
 		<ConnectorProvider options={{
-			wallets: [injectedModule(), walletConnect, ledger, trezor],
+			wallets: [
+				injectedModule(), 
+				walletConnect, 
+				ledger, 
+				// trezor,
+			],
 		}}>
 			<OrderlyAppProvider
 				networkId={networkId}
