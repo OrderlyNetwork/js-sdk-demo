@@ -17,7 +17,7 @@ const tradingViewConfig: any = {
 
 const View = (props: Props) => {
 
-	const networkId = localStorage.getItem('orderly-networkId') ?? 'testnet';
+	const networkId = localStorage.getItem('orderly-networkId') ?? 'mainnet';
 
 	const wcV2InitOptions = {
 		version: 2,
