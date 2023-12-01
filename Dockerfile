@@ -1,11 +1,10 @@
-FROM node:18-alpine AS base
+FROM node:18 AS base
 
 FROM base AS deps
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
-RUN npm install -g pnpm@8.6.5 && pnpm install --frozen-lockfile
-
+RUN npm install -g pnpm@8.6.5 && pnpm install 
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
