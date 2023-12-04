@@ -50,7 +50,7 @@ const View = (props: Props) => {
 		}}>
 			<OrderlyAppProvider
 				networkId={networkId}
-				brokerId="woofi_pro"
+				brokerId="orderly"
 				// onlyTestnet={true}
 				logoUrl="/orderly_logo.svg"
 				onChainChanged={(chainId, isTestnet) => {
