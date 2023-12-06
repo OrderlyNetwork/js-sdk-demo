@@ -79,7 +79,7 @@ const View = (props: Props) => {
 					// realod page
 					setTimeout(() => {
 						window.location.reload();
-					}, 50);
+					}, 100);
 				}}
 			>
 				<TradingPage
