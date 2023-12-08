@@ -4,16 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  '@orderly.network/react': file:/Users/mark/orderly/orderly-web/packages/component
-  '@orderly.network/hooks': file:/Users/mark/orderly/orderly-web/packages/hooks
-  '@orderly.network/net': file:/Users/mark/orderly/orderly-web/packages/net
-  '@orderly.network/types': file:/Users/mark/orderly/orderly-web/packages/types
-  '@orderly.network/perp': file:/Users/mark/orderly/orderly-web/packages/perp
-  '@orderly.network/core': file:/Users/mark/orderly/orderly-web/packages/core
-  '@orderly.network/utils': file:/Users/mark/orderly/orderly-web/packages/utils
-  '@orderly.network/web3-onboard': file:/Users/mark/orderly/orderly-web/packages/onboard
-
 dependencies:
   '@orderly.network/react':
     specifier: ^0.1.23
@@ -3383,17 +3373,69 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
+  /@orderly.network/core@0.1.19:
+    resolution: {integrity: sha512-j1z5p6HSXKP3QBiXaNLMKy05bKRnNlg2i0q9WZe0G9TxvB0vGW0Dm5WPxIaeRNDOf/Vn02oCnmPtbyWSNQrc5w==}
+    dependencies:
+      '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.9.0)
+      '@noble/ed25519': 2.0.0
+      '@orderly.network/types': 0.1.19
+      bs58: 5.0.0
+      ethers: 6.9.0
+      eventemitter3: 5.0.1
+      lodash.merge: 4.6.2
+      typescript: 5.3.2
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: false
+
+  /@orderly.network/hooks@1.0.20(@orderly.network/types@0.1.19)(axios@1.6.2)(react@18.2.0):
+    resolution: {integrity: sha512-EiJ6zldNb+1XQ74IiQynvvQgLbINpqZpR6Gxip8frrAg/7hI/XymSgJ+wk8jmDYJzWwRSAsc1Z0mm8OIwLYXWQ==}
+    peerDependencies:
+      '@orderly.network/types': 0.1.19
+      react: ^18.2.0
+    dependencies:
+      '@layerzerolabs/scan-client': 0.0.6(axios@1.6.2)
+      '@orderly.network/core': 0.1.19
+      '@orderly.network/net': 1.0.106
+      '@orderly.network/perp': 1.0.19(@orderly.network/types@0.1.19)
+      '@orderly.network/types': 0.1.19
+      '@orderly.network/utils': 0.0.75
+      ramda: 0.29.1
+      react: 18.2.0
+      swr: 2.2.4(react@18.2.0)
+      use-constant: 1.1.1(react@18.2.0)
+      use-debounce: 9.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - axios
+      - bufferutil
+      - utf-8-validate
+    dev: false
+
+  /@orderly.network/net@1.0.106:
+    resolution: {integrity: sha512-dPkOnTaCWGpS7qFPmzEqy5tGQqvMU1fAziooNxvmzf9vP9C87x4HveMN9Ox8U/wQB5MldqGkyRCNETaBWMoMTg==}
+    dev: false
+
+  /@orderly.network/perp@1.0.19(@orderly.network/types@0.1.19):
+    resolution: {integrity: sha512-yepe4mwFwC3ax5bcakcuZyDpj/Ls7sIpr0Yrs8MHL93jDcA5lNs7Db6UL3iJ634t/M4AAWxGfNUz5aQ23m7Kbw==}
+    peerDependencies:
+      '@orderly.network/types': 0.1.19
+    dependencies:
+      '@orderly.network/types': 0.1.19
+      '@orderly.network/utils': 0.0.75
+    dev: false
+
   /@orderly.network/react@0.1.23(@types/react-dom@17.0.25)(@types/react@17.0.71)(axios@1.6.2)(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
     resolution: {integrity: sha512-ys55LHhjNhYh5+emdksa4O9b0KBr4x8wcAO3q1J/nRw7V4LkfcOdj/Ozpd1FdChnW4zr/VcHn27sYp6MxfUIPw==}
     peerDependencies:
       react: ^18.2.0
       react-dom: 18.2.0
     dependencies:
-      '@orderly.network/core': file:../orderly-web/packages/core
-      '@orderly.network/hooks': file:../orderly-web/packages/hooks(@orderly.network/types@0.1.18)(axios@1.6.2)(react@18.2.0)
-      '@orderly.network/net': file:../orderly-web/packages/net
-      '@orderly.network/types': file:../orderly-web/packages/types
-      '@orderly.network/utils': file:../orderly-web/packages/utils
+      '@orderly.network/core': 0.1.19
+      '@orderly.network/hooks': 1.0.20(@orderly.network/types@0.1.19)(axios@1.6.2)(react@18.2.0)
+      '@orderly.network/net': 1.0.106
+      '@orderly.network/types': 0.1.19
+      '@orderly.network/utils': 0.0.75
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@17.0.25)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@17.0.25)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-collapsible': 1.0.3(@types/react-dom@17.0.25)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
@@ -3427,13 +3469,24 @@ packages:
       - utf-8-validate
     dev: false
 
+  /@orderly.network/types@0.1.19:
+    resolution: {integrity: sha512-ZRnndyAimsH5x94KUXaqAQbTFmzHS8uwoDYLej/CtAl6a+oBrzwwzEhPRVo86lAXF+jE1lyx5qLMYCGdN3QIOQ==}
+    dev: false
+
+  /@orderly.network/utils@0.0.75:
+    resolution: {integrity: sha512-wLSTdWSIdJndc/SJbH/cz79Ip403xSfmRpMmKAW86qfWRh/mWp42gMsKrlvTySEAyVSObPk1DcxcuTFtrKv2Kg==}
+    dependencies:
+      dayjs: 1.11.10
+      decimal.js-light: 2.5.1
+    dev: false
+
   /@orderly.network/web3-onboard@0.0.20(axios@1.6.2)(react@18.2.0):
     resolution: {integrity: sha512-Fh6qUAeAh1NsnJdpxxE8Krjq1UZcU7kUwon13tLj+fN71px4JEWCp3oAZ5wtAGVqYRUKBYyaI4Xib6WG+rgDPA==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
-      '@orderly.network/hooks': file:../orderly-web/packages/hooks(@orderly.network/types@0.1.18)(axios@1.6.2)(react@18.2.0)
-      '@orderly.network/types': file:../orderly-web/packages/types
+      '@orderly.network/hooks': 1.0.20(@orderly.network/types@0.1.19)(axios@1.6.2)(react@18.2.0)
+      '@orderly.network/types': 0.1.19
       '@web3-onboard/core': 2.21.2
       '@web3-onboard/injected-wallets': 2.10.9
       '@web3-onboard/react': 2.8.13(react@18.2.0)
@@ -16411,75 +16464,4 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-    dev: false
-
-  file:../orderly-web/packages/core:
-    resolution: {directory: ../orderly-web/packages/core, type: directory}
-    name: '@orderly.network/core'
-    dependencies:
-      '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.9.0)
-      '@noble/ed25519': 2.0.0
-      '@orderly.network/types': file:../orderly-web/packages/types
-      bs58: 5.0.0
-      ethers: 6.9.0
-      eventemitter3: 5.0.1
-      lodash.merge: 4.6.2
-      typescript: 5.3.2
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-    dev: false
-
-  file:../orderly-web/packages/hooks(@orderly.network/types@0.1.18)(axios@1.6.2)(react@18.2.0):
-    resolution: {directory: ../orderly-web/packages/hooks, type: directory}
-    id: file:../orderly-web/packages/hooks
-    name: '@orderly.network/hooks'
-    peerDependencies:
-      '@orderly.network/types': workspace:*
-      react: ^18.2.0
-    dependencies:
-      '@layerzerolabs/scan-client': 0.0.6(axios@1.6.2)
-      '@orderly.network/core': file:../orderly-web/packages/core
-      '@orderly.network/net': file:../orderly-web/packages/net
-      '@orderly.network/perp': file:../orderly-web/packages/perp(@orderly.network/types@0.1.18)
-      '@orderly.network/types': file:../orderly-web/packages/types
-      '@orderly.network/utils': file:../orderly-web/packages/utils
-      ramda: 0.29.1
-      react: 18.2.0
-      swr: 2.2.4(react@18.2.0)
-      use-constant: 1.1.1(react@18.2.0)
-      use-debounce: 9.0.4(react@18.2.0)
-    transitivePeerDependencies:
-      - axios
-      - bufferutil
-      - utf-8-validate
-    dev: false
-
-  file:../orderly-web/packages/net:
-    resolution: {directory: ../orderly-web/packages/net, type: directory}
-    name: '@orderly.network/net'
-    dev: false
-
-  file:../orderly-web/packages/perp(@orderly.network/types@0.1.18):
-    resolution: {directory: ../orderly-web/packages/perp, type: directory}
-    id: file:../orderly-web/packages/perp
-    name: '@orderly.network/perp'
-    peerDependencies:
-      '@orderly.network/types': workspace:*
-    dependencies:
-      '@orderly.network/types': file:../orderly-web/packages/types
-      '@orderly.network/utils': file:../orderly-web/packages/utils
-    dev: false
-
-  file:../orderly-web/packages/types:
-    resolution: {directory: ../orderly-web/packages/types, type: directory}
-    name: '@orderly.network/types'
-    dev: false
-
-  file:../orderly-web/packages/utils:
-    resolution: {directory: ../orderly-web/packages/utils, type: directory}
-    name: '@orderly.network/utils'
-    dependencies:
-      dayjs: 1.11.10
-      decimal.js-light: 2.5.1
     dev: false
