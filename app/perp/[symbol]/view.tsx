@@ -32,7 +32,7 @@ const tradingViewConfig: any = {
 		// text color
 		"scalesProperties.textColor": "#97969B",
 		"scalesProperties.lineColor": "#2B2833"
-	  },
+	},
 };
 
 const View = (props: Props) => {
@@ -62,9 +62,9 @@ const View = (props: Props) => {
 	return (
 		<ConnectorProvider options={{
 			wallets: [
-				injectedModule(), 
-				walletConnect, 
-				ledger, 
+				injectedModule(),
+				walletConnect,
+				ledger,
 				// trezor,
 			],
 			appMetadata: {
@@ -72,26 +72,35 @@ const View = (props: Props) => {
 				icon: '/OrderlyLogo.png',
 				description: "Orderly",
 				recommendedInjectedWallets: [
-				  { name: "Coinbase", url: "https://wallet.coinbase.com/" },
-				  { name: "MetaMask", url: "https://metamask.io" },
-				  { name: "Trezor", url: "https://trezor.io/" },
-				  { name: "Walletconnect", url: "https://walletconnect.com/"},
-				  { name: "Ledger", url: "https://www.ledger.com/"}
+					{ name: "Coinbase", url: "https://wallet.coinbase.com/" },
+					{ name: "MetaMask", url: "https://metamask.io" },
+					{ name: "Trezor", url: "https://trezor.io/" },
+					{ name: "Walletconnect", url: "https://walletconnect.com/" },
+					{ name: "Ledger", url: "https://www.ledger.com/" }
 				],
 				agreement: {
-				  version: "1.0.0",
-				  termsUrl: "https://www.blocknative.com/terms-conditions",
-				  privacyUrl: "https://www.blocknative.com/privacy-policy",
+					version: "1.0.0",
+					termsUrl: "https://www.blocknative.com/terms-conditions",
+					privacyUrl: "https://www.blocknative.com/privacy-policy",
 				},
 				gettingStartedGuide: "https://blocknative.com",
 				explore: "https://blocknative.com",
-			  }
+			}
 		}}>
 			<OrderlyAppProvider
 				networkId={networkId}
 				brokerId="orderly"
 				// onlyTestnet={true}
-				logoUrl="/orderly_logo.svg"
+				// logoUrl="/orderly_logo.svg"
+				appIcons={{
+					main: {
+						img: "/orderly-logo.svg",
+					},
+					secondary: {
+						img: "/orderly_logo.svg",
+
+					}
+				}}
 				onChainChanged={(chainId, isTestnet) => {
 					// console.log('chain changed', chainId, isTestnet);
 					localStorage.setItem('orderly-networkId', isTestnet ? 'testnet' : 'mainnet');
