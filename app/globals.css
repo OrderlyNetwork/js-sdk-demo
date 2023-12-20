@@ -10,8 +10,6 @@
 
     --orderly-color-link: 182 79 255;
 
-    --orderly-color-quaternary: 203 66 218;
-
     --orderly-color-secondary: 255 255 255;
     --orderly-color-tertiary: 218 218 218;
     --orderly-color-quaternary: 218 218 218;
@@ -32,9 +30,6 @@
     --orderly-color-warning-darken: 117 88 33;
     --orderly-color-warning-contrast: 199 68 146;
 
-    --orderly-color-background: 27 32 40;
-    --orderly-color-background-contrast: 255 255 255;
-
     --orderly-color-fill: 36 32 47;
     --orderly-color-fill-active: 40 46 58;
 
@@ -47,9 +42,6 @@
     --orderly-color-base-700: 36 32 47;
     --orderly-color-base-800: 29 26 38;
     --orderly-color-base-900: 22 20 28;
-
-    --orderly-color-popover: 43 38 56;
-    --orderly-color-popover-foreground: 255 255 255;
 
     --orderly-color-base-foreground: 255 255 255;
 
@@ -66,7 +58,18 @@
 
     --orderly-button-shadow: none;
 
+    /** custom font sizes, if only provide --orderly-font-size-base var, other font sizes will auto calc */
+    --orderly-font-size-4xs: 11px;
+    --orderly-font-size-3xs: 12px;
+    --orderly-font-size-2xs: 13px;
+    --orderly-font-size-xs: 14px;
+    --orderly-font-size-sm: 15px;
     --orderly-font-size-base: 16px;
+    --orderly-font-size-lg: 18px;
+    --orderly-font-size-xl: 20px;
+    --orderly-font-size-2xl: 24px;
+    --orderly-font-size-3xl: 30px;
+    --orderly-font-size-4xl: 36px;
 
     --orderly-color-divider: 42 46 52;
 
@@ -74,17 +77,45 @@
 
 }
 
+@media screen and (max-width: 768px) {
+	::-webkit-scrollbar {
+	  width: 4px;
+	  height: 0px;
+	}
+  
+	::-webkit-scrollbar-thumb {
+	  border-radius: 2px;
+	  border-style: dashed;
+	  border-color: transparent;
+	  border-width: 1px;
+	  background: rgba(255, 255, 255, 0.04);
+	  background-clip: padding-box;
+	}
+  
+	::-webkit-scrollbar-thumb:hover {
+	  background: rgba(255, 255, 255, 0.08);
+	  border-radius: 3px;
+	}
+  }
+  
+  @media screen and (min-width: 768px) {
+	::-webkit-scrollbar {
+	  width: 6px;
+	  height: 0px;
+	}
+  
+	::-webkit-scrollbar-thumb {
+	  border-radius: 3px;
+	  border-style: dashed;
+	  border-color: transparent;
+	  border-width: 1px;
+	  background: rgba(255, 255, 255, 0.04);
+	  background-clip: padding-box;
+	}
+  
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
-
-* {
-	font-family: 'Manrope', sans-serif;
-}
-
-body {
-	font-family: 'Manrope', sans-serif;
-}
-
-html {
-	font-family: 'Manrope', sans-serif;
-}
+	::-webkit-scrollbar-thumb:hover {
+	  background: rgba(255, 255, 255, 0.08);
+	  border-radius: 4px;
+	}
+  }
