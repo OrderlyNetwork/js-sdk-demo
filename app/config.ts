@@ -68,26 +68,26 @@ export function OrderlyConfig(ctx?: {
         tradingViewConfig: {
             scriptSRC: '/tradingview/charting_library/charting_library.js',
             library_path: '/tradingview/charting_library/',
-            overrides: {
-                "paneProperties.backgroundType": "solid",
-                "paneProperties.background": "#1D1A26",
+            // overrides: {
+                // "paneProperties.backgroundType": "solid",
+                // "paneProperties.background": "#1D1A26",
         
-                "mainSeriesProperties.candleStyle.upColor": "#00B59F",
-                "mainSeriesProperties.candleStyle.downColor": "#FF67C2",
-                "mainSeriesProperties.candleStyle.borderColor": "#00B59F",
-                "mainSeriesProperties.candleStyle.borderUpColor": "#00B59F",
-                "mainSeriesProperties.candleStyle.borderDownColor": "#FF67C2",
-                "mainSeriesProperties.candleStyle.wickUpColor": "#00B59F",
-                "mainSeriesProperties.candleStyle.wickDownColor": "#FF67C2",
+                // "mainSeriesProperties.candleStyle.upColor": "#00B59F",
+                // "mainSeriesProperties.candleStyle.downColor": "#FF67C2",
+                // "mainSeriesProperties.candleStyle.borderColor": "#00B59F",
+                // "mainSeriesProperties.candleStyle.borderUpColor": "#00B59F",
+                // "mainSeriesProperties.candleStyle.borderDownColor": "#FF67C2",
+                // "mainSeriesProperties.candleStyle.wickUpColor": "#00B59F",
+                // "mainSeriesProperties.candleStyle.wickDownColor": "#FF67C2",
         
-                // GRID lines
-                "paneProperties.vertGridProperties.color": "#26232F",
-                "paneProperties.horzGridProperties.color": "#26232F",
+                // // GRID lines
+                // "paneProperties.vertGridProperties.color": "#26232F",
+                // "paneProperties.horzGridProperties.color": "#26232F",
         
-                // text color
-                "scalesProperties.textColor": "#97969B",
-                "scalesProperties.lineColor": "#2B2833"
-            },
+                // // text color
+                // "scalesProperties.textColor": "#97969B",
+                // "scalesProperties.lineColor": "#2B2833"
+            // },
         }
     };
 }
