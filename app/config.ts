@@ -91,3 +91,6 @@ export function OrderlyConfig(ctx?: {
         }
     };
 }
+
+
+export const ORDERLY_SDK_DEMO_TITLE_KEY = "orderly_sdk_demo_title_key";

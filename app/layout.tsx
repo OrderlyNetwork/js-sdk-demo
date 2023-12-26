@@ -4,10 +4,10 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-	title: 'Orderly SDK Demo',
-	description: 'Orderly SDK Demo'
-};
+// export const metadata: Metadata = {
+// 	title: 'Orderly SDK Demo',
+// 	description: 'Orderly SDK Demo222'
+// };
 
 export const viewport = {
 	minimumScale: 1.0,
@@ -31,6 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 				<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Noto+Sans:wght@500'600'700&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet" />			</head>
+				<title id="orderly_sdk_demo_title_key">Orderly SDK Demo</title>
+				<meta name='description' content='Orderly SDK Demo'/>
 			<body className={inter.className}>{children}</body>
 		</html>
 	);
