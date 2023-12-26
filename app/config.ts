@@ -68,6 +68,7 @@ export function OrderlyConfig(ctx?: {
         tradingViewConfig: {
             scriptSRC: '/tradingview/charting_library/charting_library.js',
             library_path: '/tradingview/charting_library/',
+            customCssUrl: "/tradingview/chart.css",
             // overrides: {
                 // "paneProperties.backgroundType": "solid",
                 // "paneProperties.background": "#1D1A26",
