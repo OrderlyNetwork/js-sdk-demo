@@ -10,5 +10,10 @@ docker build -t orderly-web-demo .
 #运行：
 docker run -p 3000:3000 orderly-web-demo
 
+# 本地调试
+cd ../orderly-web
+pnpm build
+
+cd ../front-end
 pnpm i 
 pnpm dev
