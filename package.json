@@ -75,5 +75,19 @@
 		"postcss": "^8.4.31",
 		"prettier": "2.4.1",
 		"tailwindcss": "^3.3.5"
+	},
+	"pnpm": {
+		"overrides": {
+			"@orderly.network/react": "file:/Users/mark/orderly/orderly-web/packages/component",
+			"@orderly.network/web3-onboard": "file:/Users/mark/orderly/orderly-web/packages/onboard",
+			"@orderly.network/core": "file:/Users/mark/orderly/orderly-web/packages/core",
+			"@orderly.network/hooks": "file:/Users/mark/orderly/orderly-web/packages/hooks",
+			"@orderly.network/trading-view": "file:/Users/mark/orderly/orderly-web/packages/trading-view",
+			"@orderly.network/utils": "file:/Users/mark/orderly/orderly-web/packages/utils",
+			"@orderly.network/net": "file:/Users/mark/orderly/orderly-web/packages/net",
+			"@orderly.network/types": "file:/Users/mark/orderly/orderly-web/packages/types",
+			"@orderly.network/perp": "file:/Users/mark/orderly/orderly-web/packages/perp",
+			"@orderly.network/web3-modal": "file:/Users/mark/orderly/orderly-web/packages/walletconnect"
+		}
 	}
 }
