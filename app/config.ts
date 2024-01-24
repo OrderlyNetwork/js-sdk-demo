@@ -6,7 +6,7 @@ import walletConnectModule from '@web3-onboard/walletconnect';
 export function OrderlyConfig(ctx?: {
     url: string,
     domain: string,
-})  {
+}) {
 
     const wcV2InitOptions = {
         version: 2,
@@ -64,30 +64,35 @@ export function OrderlyConfig(ctx?: {
                 }
             },
             enableSwapDeposit: false,
+            footerStatusBar: {
+                xUrl: "https://twitter.com/OrderlyNetwork",
+                // telegramUrl: "https://orderly.network",
+                discordUrl: "https://discord.com/invite/orderlynetwork",
+            }
         },
         tradingViewConfig: {
             scriptSRC: '/tradingview/charting_library/charting_library.js',
             library_path: '/tradingview/charting_library/',
             customCssUrl: "/tradingview/chart.css",
             // overrides: {
-                // "paneProperties.backgroundType": "solid",
-                // "paneProperties.background": "#1D1A26",
-        
-                // "mainSeriesProperties.candleStyle.upColor": "#00B59F",
-                // "mainSeriesProperties.candleStyle.downColor": "#FF67C2",
-                // "mainSeriesProperties.candleStyle.borderColor": "#00B59F",
-                // "mainSeriesProperties.candleStyle.borderUpColor": "#00B59F",
-                // "mainSeriesProperties.candleStyle.borderDownColor": "#FF67C2",
-                // "mainSeriesProperties.candleStyle.wickUpColor": "#00B59F",
-                // "mainSeriesProperties.candleStyle.wickDownColor": "#FF67C2",
-        
-                // // GRID lines
-                // "paneProperties.vertGridProperties.color": "#26232F",
-                // "paneProperties.horzGridProperties.color": "#26232F",
-        
-                // // text color
-                // "scalesProperties.textColor": "#97969B",
-                // "scalesProperties.lineColor": "#2B2833"
+            // "paneProperties.backgroundType": "solid",
+            // "paneProperties.background": "#1D1A26",
+
+            // "mainSeriesProperties.candleStyle.upColor": "#00B59F",
+            // "mainSeriesProperties.candleStyle.downColor": "#FF67C2",
+            // "mainSeriesProperties.candleStyle.borderColor": "#00B59F",
+            // "mainSeriesProperties.candleStyle.borderUpColor": "#00B59F",
+            // "mainSeriesProperties.candleStyle.borderDownColor": "#FF67C2",
+            // "mainSeriesProperties.candleStyle.wickUpColor": "#00B59F",
+            // "mainSeriesProperties.candleStyle.wickDownColor": "#FF67C2",
+
+            // // GRID lines
+            // "paneProperties.vertGridProperties.color": "#26232F",
+            // "paneProperties.horzGridProperties.color": "#26232F",
+
+            // // text color
+            // "scalesProperties.textColor": "#97969B",
+            // "scalesProperties.lineColor": "#2B2833"
             // },
         }
     };
