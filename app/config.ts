@@ -59,7 +59,7 @@ export function OrderlyConfig(ctx?: {
                     img: "/orderly-logo.svg",
                 },
                 secondary: {
-                    img: "/orderly_logo.svg",
+                    img: "/orderly-logo-secondary.svg",
 
                 }
             },

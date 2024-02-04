@@ -46,8 +46,6 @@ const View = (props: Props) => {
 				networkId={networkId}
 				brokerId={app.brokerId}
 				brokerName={app.brokerName}
-				// onlyTestnet={true}
-				// logoUrl="/orderly_logo.svg"
 				enableSwapDeposit={app.enableSwapDeposit}
 				appIcons={app.appIcons}
 				onChainChanged={onChainChanged}
