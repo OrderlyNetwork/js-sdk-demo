@@ -1,42 +1,48 @@
+import { useCallback } from 'react';
 import { ConnectorProvider } from '@orderly.network/web3-onboard';
 import { OrderlyAppProvider, TradingPage } from '@orderly.network/react';
 import { OrderlyConfig } from '@/app/config';
-import { useCallback, useEffect, useRef } from 'react';
-import { DemoConfigStore } from './demoConfigStore';
+import { CustomConfigStore, ENV_NAME } from './CustomConfigStore';
 
 interface Props {
 	onSymbolChange: (symbol: any) => void;
 	symbol: string;
 }
 
-const View = (props: Props) => {
+export type NetworkId = 'testnet' | 'mainnet';
 
-	const networkId = localStorage.getItem('orderly-networkId') ?? 'mainnet';
+const HostEnvMap: Record<string, ENV_NAME> = {
+	'dev-sdk-demo.orderly.network': 'dev',
+	'qa-sdk-demo.orderly.network': 'qa',
+	'sdk-demo-iap.orderly.network': 'prod',
+	'localhost': 'staging',
+};
+
+const View = (props: Props) => {
+	const networkId = (localStorage.getItem('orderly-networkId') ?? 'mainnet') as NetworkId;
 
 	const { onboard, app, tradingViewConfig } = OrderlyConfig();
 
-	const onChainChanged = useCallback((chainId, isTestnet) => {
-		// console.log('chain changed', chainId, isTestnet);
-		localStorage.setItem('orderly-networkId', isTestnet ? 'testnet' : 'mainnet');
-		// realod page
-		setTimeout(() => {
-			window.location.reload();
-		}, 100);
-	}, [props.symbol]);
+	const onChainChanged = useCallback(
+		(chainId, isTestnet) => {
+			// console.log('chain changed', chainId, isTestnet);
+			localStorage.setItem('orderly-networkId', isTestnet ? 'testnet' : 'mainnet');
+			// realod page
+			setTimeout(() => {
+				window.location.reload();
+			}, 100);
+		},
+		[props.symbol],
+	);
 
-	const configStoreRef = useRef(new DemoConfigStore(networkId));
-	useEffect(() => {
-		configStoreRef.current = new DemoConfigStore(networkId);
-	}, [networkId]);
+	const env = HostEnvMap[window.location.hostname] || 'prod';
 
-
-	
-
+	const configStore = new CustomConfigStore({ networkId, env });
 
 	return (
-		<ConnectorProvider options={onboard}>
+		<ConnectorProvider options={onboard as any}>
 			<OrderlyAppProvider
-			configStore={configStoreRef.current}
+				configStore={configStore}
 				networkId={networkId}
 				brokerId={app.brokerId}
 				brokerName={app.brokerName}
