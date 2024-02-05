@@ -63,7 +63,6 @@ export function OrderlyConfig(ctx?: {
 
                 }
             },
-            enableSwapDeposit: false,
             footerStatusBar: {
                 xUrl: "https://twitter.com/OrderlyNetwork",
                 // telegramUrl: "https://orderly.network",

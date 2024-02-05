@@ -46,7 +46,6 @@ const View = (props: Props) => {
 				networkId={networkId}
 				brokerId={app.brokerId}
 				brokerName={app.brokerName}
-				enableSwapDeposit={app.enableSwapDeposit}
 				appIcons={app.appIcons}
 				onChainChanged={onChainChanged}
 				footerStatusBar={app.footerStatusBar}
