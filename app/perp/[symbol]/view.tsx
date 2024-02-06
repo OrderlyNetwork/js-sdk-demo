@@ -14,7 +14,7 @@ export type NetworkId = 'testnet' | 'mainnet';
 const HostEnvMap: Record<string, ENV_NAME> = {
 	'dev-sdk-demo.orderly.network': 'dev',
 	'qa-sdk-demo.orderly.network': 'qa',
-	'sdk-demo-iap.orderly.network': 'prod',
+	'sdk-demo-iap.orderly.network': 'staging',
 	'localhost': 'staging',
 };
 
@@ -35,7 +35,7 @@ const View = (props: Props) => {
 		[props.symbol],
 	);
 
-	const env = HostEnvMap[window.location.hostname] || 'prod';
+	const env = networkId === 'mainnet' ? 'prod' : HostEnvMap[window.location.hostname] || 'staging';
 
 	const configStore = new CustomConfigStore({ networkId, env });
 
