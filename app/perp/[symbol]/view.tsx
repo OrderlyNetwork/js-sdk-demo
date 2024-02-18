@@ -49,7 +49,7 @@ const View = (props: Props) => {
 				enableSwapDeposit={app.enableSwapDeposit}
 				appIcons={app.appIcons}
 				onChainChanged={onChainChanged}
-				footerStatusBar={app.footerStatusBar}
+				footerStatusBarProps={app.footerStatusBarProps}
 			>
 				<TradingPage
 					symbol={props.symbol}
