@@ -29,7 +29,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			],
 			appMetadata: {
 				name: 'Orderly',
-				icon: '/OrderlyLogo.png',
+				icon: '/Orderly.svg',
 				description: 'Orderly',
 				recommendedInjectedWallets: [
 					{ name: 'Coinbase', url: 'https://wallet.coinbase.com/' },
