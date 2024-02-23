@@ -48,7 +48,7 @@ const View = (props: Props) => {
 				brokerName={app.brokerName}
 				appIcons={app.appIcons}
 				onChainChanged={onChainChanged}
-				footerStatusBar={app.footerStatusBar}
+				footerStatusBarProps={app.footerStatusBarProps}
 			>
 				<TradingPage
 					symbol={props.symbol}
