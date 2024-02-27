@@ -1,6 +1,11 @@
 pnpm i @orderly.network/react@internal @orderly.network/web3-onboard@internal
 pnpm i @orderly.network/react@demo @orderly.network/web3-onboard@demo
+# alpha
 pnpm i @orderly.network/react@alpha @orderly.network/web3-onboard@alpha @orderly.network/core@alpha
+# prod
+pnpm i @orderly.network/react @orderly.network/web3-onboard @orderly.network/core
+# rc
+pnpm i @orderly.network/react@rc @orderly.network/web3-onboard@rc @orderly.network/core@rc
 pnpm dev
 
 pnpm i @web3-onboard/trezor @web3-onboard/walletconnect @web3-onboard/ledger @web3-onboard/injected-wallets
