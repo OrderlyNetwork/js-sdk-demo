@@ -2,8 +2,10 @@ pnpm i @orderly.network/react@internal @orderly.network/web3-onboard@internal
 pnpm i @orderly.network/react@demo @orderly.network/web3-onboard@demo
 # alpha
 pnpm i @orderly.network/react@alpha @orderly.network/web3-onboard@alpha @orderly.network/core@alpha
+pnpm dev
 # prod
 pnpm i @orderly.network/react @orderly.network/web3-onboard @orderly.network/core
+pnpm dev
 # rc
 pnpm i @orderly.network/react@rc @orderly.network/web3-onboard@rc @orderly.network/core@rc
 pnpm dev
