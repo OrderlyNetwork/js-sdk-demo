@@ -64,6 +64,17 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 				// telegramUrl: "https://orderly.network",
 				discordUrl: 'https://discord.com/invite/orderlynetwork',
 			},
+			shareOptions: {
+				pnl: {
+				  backgroundImages: [
+					"/images/poster_bg_1.png",
+					"/images/poster_bg_2.png",
+					"/images/poster_bg_3.png",
+					"/images/poster_bg_4.png",
+					"/images/poster_bg_5.png",
+				  ]
+				}
+			  }
 		},
 		tradingViewConfig: {
 			scriptSRC: '/tradingview/charting_library/charting_library.js',
