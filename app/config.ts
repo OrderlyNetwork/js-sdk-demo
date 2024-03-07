@@ -72,6 +72,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 					"/images/poster_bg_3.png",
 					"/images/poster_bg_4.png",
 					"/images/poster_bg_5.png",
+					"/images/poster_bg_6.png",
 				  ]
 				}
 			  }
