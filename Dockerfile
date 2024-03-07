@@ -3,7 +3,7 @@ FROM node:18 AS base
 FROM base AS deps
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml .npmrc ./
 RUN npm install -g pnpm@8.6.5 && pnpm install 
 FROM base AS builder
 WORKDIR /app
