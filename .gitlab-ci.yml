@@ -1,14 +1,11 @@
 include:
   - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
     ref: main
-    file: '/common-orderly-network-evm-iap.yaml'
-  - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
-    ref: main
     file: '/common-orderly-network-dev-v2.yaml'
   - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
     ref: main
     file: '/common-orderly-network-qa-evm.yaml'
 
 variables:
-  SERVICE_NAME: sdk-demo
-  IMAGE_NAME: sdk-demo
+  SERVICE_NAME: dmm
+  IMAGE_NAME: dmm
