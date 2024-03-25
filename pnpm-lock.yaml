@@ -6,14 +6,17 @@ settings:
 
 dependencies:
   '@orderly.network/core':
-    specifier: 0.2.5-internal.0
-    version: 0.2.5-internal.0
+    specifier: 0.2.7-internal.0
+    version: 0.2.7-internal.0
+  '@orderly.network/hooks':
+    specifier: 1.1.7-internal.0
+    version: 1.1.7-internal.0(react@18.2.0)
   '@orderly.network/react':
-    specifier: 0.2.5-internal.0
-    version: 0.2.5-internal.0(@types/react-dom@17.0.25)(@types/react@17.0.71)(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+    specifier: 0.2.7-internal.0
+    version: 0.2.7-internal.0(@types/react-dom@17.0.25)(@types/react@17.0.71)(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
   '@orderly.network/web3-onboard':
-    specifier: 0.1.5-internal.0
-    version: 0.1.5-internal.0(react@18.2.0)
+    specifier: 0.1.7-internal.0
+    version: 0.1.7-internal.0(react@18.2.0)
   '@testing-library/jest-dom':
     specifier: ^5.16.2
     version: 5.17.0
@@ -3368,12 +3371,12 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@orderly.network/core@0.2.5-internal.0:
-    resolution: {integrity: sha512-ZaIbfOjCuW9q6vlYsBHGJ2Y6o9RraDLZQbI0iMZY4zgIyaibHB/Ri6T9IRNT4ARhBr3gotHZa5iQ/0qOOHCSXw==}
+  /@orderly.network/core@0.2.7-internal.0:
+    resolution: {integrity: sha512-iqHIbYTrGc7QJfw3NAA/8iHFkr2liu8nbhtB1/HJQVBm0ZFS3G5AXPjcnnq7uz9+qk/rIiKYcznapx0AcGg2OQ==}
     dependencies:
       '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.9.0)
       '@noble/ed25519': 2.0.0
-      '@orderly.network/types': 0.2.5-internal.0
+      '@orderly.network/types': 0.2.7-internal.0
       bs58: 5.0.0
       ethers: 6.9.0
       eventemitter3: 5.0.1
@@ -3383,16 +3386,16 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/hooks@1.1.5-internal.0(react@18.2.0):
-    resolution: {integrity: sha512-Tu9CfK0bjPFbr8SxtsGzEwdr8WqO+znj6LKvL7A4IR7abUgVBI0WdQmGfTZGP04t+U1vycGOuj9c+nCwThTRYA==}
+  /@orderly.network/hooks@1.1.7-internal.0(react@18.2.0):
+    resolution: {integrity: sha512-8IzrKmc5Mhin7bWuYAnW8gWcRdtpl7SjYnhLG3/zXAxNB4+qnWIm0M+KgaCFWB0ccbw3gtsbRITWhecd5LBpTg==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
-      '@orderly.network/core': 0.2.5-internal.0
-      '@orderly.network/net': 1.1.5-internal.0
-      '@orderly.network/perp': 2.0.5-internal.0(@orderly.network/types@0.2.5-internal.0)
-      '@orderly.network/types': 0.2.5-internal.0
-      '@orderly.network/utils': 0.1.5-internal.0
+      '@orderly.network/core': 0.2.7-internal.0
+      '@orderly.network/net': 1.1.7-internal.0
+      '@orderly.network/perp': 2.0.7-internal.0(@orderly.network/types@0.2.7-internal.0)
+      '@orderly.network/types': 0.2.7-internal.0
+      '@orderly.network/utils': 0.1.7-internal.0
       ramda: 0.29.1
       react: 18.2.0
       swr: 2.2.4(react@18.2.0)
@@ -3403,31 +3406,31 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/net@1.1.5-internal.0:
-    resolution: {integrity: sha512-20ltzWZ5BDUabLKr1P49RwFMLRFLYZmbeY93hqujBZ0j/5jnFROfTCn8ivcYAtEoTP+C7WtuBGM8eBSBWRxzeQ==}
+  /@orderly.network/net@1.1.7-internal.0:
+    resolution: {integrity: sha512-93Y9M9aWwM1P85LDUmZRZzEJtQ6+iV/LlRD3uvfEb6enfid0w0RJadFottwcc1SAAG793sRtl7KoXF1/LDlI3A==}
     dev: false
 
-  /@orderly.network/perp@2.0.5-internal.0(@orderly.network/types@0.2.5-internal.0):
-    resolution: {integrity: sha512-1UqkKE/TB+6uvByIYRfQmv6rn8Q2Dn+w5qkR3aZT1VGKsJwCFeviAK3ft0nYBgGnvnHOZixVjemclX8TvrLncw==}
+  /@orderly.network/perp@2.0.7-internal.0(@orderly.network/types@0.2.7-internal.0):
+    resolution: {integrity: sha512-3vU+jBr3iSM6aDEGgi9+gvIrY9OZYOYENh07QC2hUvXTSy0+emv94ENok5qJbZMB4RVHGFNv45VhUaB8HLKxUQ==}
     peerDependencies:
-      '@orderly.network/types': 0.2.5-internal.0
+      '@orderly.network/types': 0.2.7-internal.0
     dependencies:
-      '@orderly.network/types': 0.2.5-internal.0
-      '@orderly.network/utils': 0.1.5-internal.0
+      '@orderly.network/types': 0.2.7-internal.0
+      '@orderly.network/utils': 0.1.7-internal.0
     dev: false
 
-  /@orderly.network/react@0.2.5-internal.0(@types/react-dom@17.0.25)(@types/react@17.0.71)(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
-    resolution: {integrity: sha512-Wo23ZvQQgwzLrZAi6UQCedpN6euUGW2j/QUlQEC1twFlhDwzsQ+jmrJnqAo0jpLjh3kXSmOUn2e3fL4xdR7PYA==}
+  /@orderly.network/react@0.2.7-internal.0(@types/react-dom@17.0.25)(@types/react@17.0.71)(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-J7m1pqdzVYlCQkWeJIFnlPsgdFOiQRtdAgzQEbM6K44nuwJc7XBxmbDXhP0/V9/x29FEpF4AHX2D2Kx11lxb6Q==}
     peerDependencies:
       react: ^18.2.0
       react-dom: 18.2.0
     dependencies:
-      '@orderly.network/core': 0.2.5-internal.0
-      '@orderly.network/hooks': 1.1.5-internal.0(react@18.2.0)
-      '@orderly.network/net': 1.1.5-internal.0
-      '@orderly.network/trading-view': 0.2.5-internal.0(react@18.2.0)
-      '@orderly.network/types': 0.2.5-internal.0
-      '@orderly.network/utils': 0.1.5-internal.0
+      '@orderly.network/core': 0.2.7-internal.0
+      '@orderly.network/hooks': 1.1.7-internal.0(react@18.2.0)
+      '@orderly.network/net': 1.1.7-internal.0
+      '@orderly.network/trading-view': 0.2.7-internal.0(react@18.2.0)
+      '@orderly.network/types': 0.2.7-internal.0
+      '@orderly.network/utils': 0.1.7-internal.0
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@17.0.25)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@17.0.25)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-collapsible': 1.0.3(@types/react-dom@17.0.25)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
@@ -3464,40 +3467,40 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/trading-view@0.2.5-internal.0(react@18.2.0):
-    resolution: {integrity: sha512-icrAfNefOgUpOUy7+MouDPbm0Xj1FizqBvP/Z2wrkmUsjOqDrB1kcX7ciIEHijid014gXj+yKNhjSRx1HdyCWA==}
+  /@orderly.network/trading-view@0.2.7-internal.0(react@18.2.0):
+    resolution: {integrity: sha512-lFCfeGli6NFyixsHs9p820erau+jyfcw4dk1uqt2x206wnIR9GxrZ0p+58Md1d4S7nbaWEkXhBDOM0o52+T9Mw==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
-      '@orderly.network/core': 0.2.5-internal.0
-      '@orderly.network/hooks': 1.1.5-internal.0(react@18.2.0)
-      '@orderly.network/net': 1.1.5-internal.0
-      '@orderly.network/types': 0.2.5-internal.0
-      '@orderly.network/utils': 0.1.5-internal.0
+      '@orderly.network/core': 0.2.7-internal.0
+      '@orderly.network/hooks': 1.1.7-internal.0(react@18.2.0)
+      '@orderly.network/net': 1.1.7-internal.0
+      '@orderly.network/types': 0.2.7-internal.0
+      '@orderly.network/utils': 0.1.7-internal.0
       react: 18.2.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
     dev: false
 
-  /@orderly.network/types@0.2.5-internal.0:
-    resolution: {integrity: sha512-TKG4X+kbMhixpZ50KwCCkp9Z+sU3/OY+6R68E3nUK3krgMrzKY2yKW2qxUQPzUfd7I7LlWsZPxmfdqkUbEdVRA==}
+  /@orderly.network/types@0.2.7-internal.0:
+    resolution: {integrity: sha512-10Zps07drPi415o9rNz7QKE8zpo/39CF5ig7ZoGQU23ovWijPulXlyxTRYQc7xdyCqUwrJWxrKAwkGPmBCkh5w==}
     dev: false
 
-  /@orderly.network/utils@0.1.5-internal.0:
-    resolution: {integrity: sha512-pZYMzzPP1/UQXBn3LtJ4Eybt+m++k08uG+JRlX2MJsML39mONNQ5ZTqFunoUYf8XeMZdPLVvr0jF0yimwJ2daA==}
+  /@orderly.network/utils@0.1.7-internal.0:
+    resolution: {integrity: sha512-2pZZPegRncq7VFZDk1AEwzaVUs11XNmZFUX3JKZyJm9ixNgWvYzPpAF5JN2oxXzn24dM8GgvXIV2wIYe/JzS/Q==}
     dependencies:
       dayjs: 1.11.10
       decimal.js-light: 2.5.1
     dev: false
 
-  /@orderly.network/web3-onboard@0.1.5-internal.0(react@18.2.0):
-    resolution: {integrity: sha512-SmglfqCyU1k0zDzQhd4Low2UtE+wftMdqoDNhsvdW9ARzj3o0NcxbRChhPEGOT63XuBZyiQYpo6MqmJ8I46r/A==}
+  /@orderly.network/web3-onboard@0.1.7-internal.0(react@18.2.0):
+    resolution: {integrity: sha512-t6ycdQeGfTqFSt3OEippCHLk8LAKwwxLqtM7Mr/YCL7gNv4RYoIPW9bD6MKyTZzWmdyh03WactDhanQ+sE0LGg==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
-      '@orderly.network/hooks': 1.1.5-internal.0(react@18.2.0)
-      '@orderly.network/types': 0.2.5-internal.0
+      '@orderly.network/hooks': 1.1.7-internal.0(react@18.2.0)
+      '@orderly.network/types': 0.2.7-internal.0
       '@web3-onboard/core': 2.21.2
       '@web3-onboard/injected-wallets': 2.10.10
       '@web3-onboard/react': 2.8.13(react@18.2.0)
