@@ -3,7 +3,8 @@ import { ConnectorProvider } from '@orderly.network/web3-onboard';
 import { OrderlyAppProvider, TradingPage } from '@orderly.network/react';
 import { OrderlyConfig } from '@/app/config';
 import { CustomConfigStore, ENV_NAME } from './CustomConfigStore';
-
+import { APIKey } from '../../apikey';
+ 
 interface Props {
 	onSymbolChange: (symbol: any) => void;
 	symbol: string;
@@ -50,6 +51,32 @@ const View = (props: Props) => {
 				onChainChanged={onChainChanged}
 				footerStatusBarProps={app.footerStatusBarProps}
 				shareOptions={app.shareOptions}
+				accountMenuItems={ <APIKey /> }
+				// accountMenuItems={[
+				// 	{
+				// 		icon: (<div>AD</div>),
+				// 		title: "AD",
+				// 		className: "hover:orderly-text-red-300",
+				// 		onClick: () => {
+				// 			console.log("click AD");
+							
+				// 		}
+				// 	},
+				// 	{
+				// 		icon: (<div>DA</div>),
+				// 		title: "DA",
+
+				// 		onClick: () => {
+				// 			console.log("click DA");
+
+				// 		}
+				// 	}
+				// ]}
+
+				// onClickAccountMenuItem={(item: any) => {
+				// 	console.log("click item", item);
+					
+				// }}
 			>
 				<TradingPage
 					symbol={props.symbol}
