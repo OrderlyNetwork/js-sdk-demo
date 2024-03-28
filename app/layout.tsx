@@ -26,8 +26,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					rel="stylesheet"
 				/> */}
 			</head>
-			<title id="orderly_sdk_demo_title_key">Orderly SDK Demo</title>
-			<meta name="description" content="Orderly SDK Demo" />
+			<title id="orderly_sdk_demo_title_key">Orderly DMM</title>
+			<meta name="description" content="Orderly DMM" />
 			<body>{children}</body>
 		</html>
 	);
