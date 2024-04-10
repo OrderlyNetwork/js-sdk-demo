@@ -52,6 +52,7 @@ const View = (props: Props) => {
 				shareOptions={app.shareOptions}
 				onBoundRefCode={() => {}}
 				onClickReferral={() => {}}
+				saveRefCode={(localStorage.getItem("enable_save_ref_code") || "0") === "1"}
 			>
 				<TradingPage
 					symbol={props.symbol}
