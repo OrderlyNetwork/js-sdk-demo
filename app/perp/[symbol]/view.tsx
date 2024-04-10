@@ -50,6 +50,8 @@ const View = (props: Props) => {
 				onChainChanged={onChainChanged}
 				footerStatusBarProps={app.footerStatusBarProps}
 				shareOptions={app.shareOptions}
+				onBoundRefCode={() => {}}
+				onClickReferral={() => {}}
 			>
 				<TradingPage
 					symbol={props.symbol}
