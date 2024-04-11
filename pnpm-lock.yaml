@@ -6,17 +6,17 @@ settings:
 
 dependencies:
   '@orderly.network/core':
-    specifier: 1.2.0
-    version: 1.2.0
+    specifier: 1.2.1-internal.1
+    version: 1.2.1-internal.1
   '@orderly.network/hooks':
-    specifier: 1.2.0
-    version: 1.2.0(react@18.2.0)
+    specifier: 1.2.1-internal.1
+    version: 1.2.1-internal.1(react@18.2.0)
   '@orderly.network/react':
-    specifier: 1.2.0
-    version: 1.2.0(@types/react-dom@17.0.25)(@types/react@17.0.71)(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+    specifier: 1.2.1-internal.1
+    version: 1.2.1-internal.1(@types/react-dom@17.0.25)(@types/react@17.0.71)(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
   '@orderly.network/web3-onboard':
-    specifier: 1.2.0
-    version: 1.2.0(react@18.2.0)
+    specifier: 1.2.1-internal.1
+    version: 1.2.1-internal.1(react@18.2.0)
   '@testing-library/jest-dom':
     specifier: ^5.16.2
     version: 5.17.0
@@ -3371,12 +3371,21 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
+<<<<<<< Updated upstream
   /@orderly.network/core@1.2.0:
     resolution: {integrity: sha512-vjKRdq7eV2P49mYbVlPfaQBFAmk6a0YcX5IQBfh1Zb96FL+cNRZst+8gAqKl3jZoT8b9JWwo8fr2wvE+OT3rUA==}
     dependencies:
       '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.9.0)
       '@noble/ed25519': 2.0.0
       '@orderly.network/types': 1.2.0
+=======
+  /@orderly.network/core@1.2.1-internal.1:
+    resolution: {integrity: sha512-xwniKzSlgYli4AAww7834//EP3EcOqogawSUHeX1o9QTbQxg9yqAfll8OZu7GZpPT5ZB/MbUrKMyZERLXVwVjw==}
+    dependencies:
+      '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.9.0)
+      '@noble/ed25519': 2.0.0
+      '@orderly.network/types': 1.2.1-internal.1
+>>>>>>> Stashed changes
       bs58: 5.0.0
       ethers: 6.9.0
       eventemitter3: 5.0.1
@@ -3386,6 +3395,7 @@ packages:
       - utf-8-validate
     dev: false
 
+<<<<<<< Updated upstream
   /@orderly.network/hooks@1.2.0(react@18.2.0):
     resolution: {integrity: sha512-sUiQ/O1FhH575dMQ/WwEf6Vtc5k+FqeqBtkCj+O85vLdFLwVF1TqrCny1iSzYmqy4VJe+cidlujfm+XI23Y+cg==}
     peerDependencies:
@@ -3396,6 +3406,18 @@ packages:
       '@orderly.network/perp': 3.0.0(@orderly.network/types@1.2.0)
       '@orderly.network/types': 1.2.0
       '@orderly.network/utils': 1.2.0
+=======
+  /@orderly.network/hooks@1.2.1-internal.1(react@18.2.0):
+    resolution: {integrity: sha512-nT8+BPn3j9bVZJJBierTPJaleozB+CH+L8LnNugKFmXXUgePGpUBGEgXNelAdkCYoKdLOKXUxqt78bBNy+7s4g==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      '@orderly.network/core': 1.2.1-internal.1
+      '@orderly.network/net': 1.2.1-internal.1
+      '@orderly.network/perp': 3.0.1-internal.1
+      '@orderly.network/types': 1.2.1-internal.1
+      '@orderly.network/utils': 1.2.1-internal.1
+>>>>>>> Stashed changes
       ramda: 0.29.1
       react: 18.2.0
       swr: 2.2.4(react@18.2.0)
@@ -3406,6 +3428,7 @@ packages:
       - utf-8-validate
     dev: false
 
+<<<<<<< Updated upstream
   /@orderly.network/net@1.2.0:
     resolution: {integrity: sha512-ndFYuMaCGCjgZ/luZkZ22rQtliK7tWTJT1JVSxQFc+RNFf6IDkic4KgiKIra5Dk91L7aFYN0WqFFEsYpiG3+/Q==}
     dev: false
@@ -3421,16 +3444,40 @@ packages:
 
   /@orderly.network/react@1.2.0(@types/react-dom@17.0.25)(@types/react@17.0.71)(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
     resolution: {integrity: sha512-mONngtE7BplQIlJhskwjjEpptv5gHDeMk2qSZug8VDfRoarpPE8Gi4iUY56sLZlzgvZsD1088nHhYA/BrJg/aA==}
+=======
+  /@orderly.network/net@1.2.1-internal.1:
+    resolution: {integrity: sha512-dhF/7K3Yl6qjrpvI8gn+NLuMH42aCTG+UU6LFZjWx9Uwy++hWjEcC3vitaU8DtJZjdjFvIH8u5hm2+kVV+cS+A==}
+    dev: false
+
+  /@orderly.network/perp@3.0.1-internal.1:
+    resolution: {integrity: sha512-t4wH/Ur4LqwveAA6U5M99JOOVqDNt9YOH2P84UDpUeb2zY8EsHUlOa/efhxHGT3wLVJlgiywYYr+Ek38azSAiQ==}
+    dependencies:
+      '@orderly.network/types': 1.2.1-internal.1
+      '@orderly.network/utils': 1.2.1-internal.1
+    dev: false
+
+  /@orderly.network/react@1.2.1-internal.1(@types/react-dom@17.0.25)(@types/react@17.0.71)(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-J8liLBADjKTSJYBHpXxu8c09VRpHxwhdAhDaMMjDBQZtg5zRzg1Ig9fmlzJXlBhMvchbeUqxbjotL51RU3jKzQ==}
+>>>>>>> Stashed changes
     peerDependencies:
       react: ^18.2.0
       react-dom: 18.2.0
     dependencies:
+<<<<<<< Updated upstream
       '@orderly.network/core': 1.2.0
       '@orderly.network/hooks': 1.2.0(react@18.2.0)
       '@orderly.network/net': 1.2.0
       '@orderly.network/trading-view': 1.2.0(react@18.2.0)
       '@orderly.network/types': 1.2.0
       '@orderly.network/utils': 1.2.0
+=======
+      '@orderly.network/core': 1.2.1-internal.1
+      '@orderly.network/hooks': 1.2.1-internal.1(react@18.2.0)
+      '@orderly.network/net': 1.2.1-internal.1
+      '@orderly.network/trading-view': 1.2.1-internal.1(react@18.2.0)
+      '@orderly.network/types': 1.2.1-internal.1
+      '@orderly.network/utils': 1.2.1-internal.1
+>>>>>>> Stashed changes
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@17.0.25)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@17.0.25)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-collapsible': 1.0.3(@types/react-dom@17.0.25)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
@@ -3467,6 +3514,7 @@ packages:
       - utf-8-validate
     dev: false
 
+<<<<<<< Updated upstream
   /@orderly.network/trading-view@1.2.0(react@18.2.0):
     resolution: {integrity: sha512-n8eTt77I3lNXJVOeMJZ/+on48mzVaLkxy0lrb4hMo62HO/dvhutj00Pm9ewVe4ketgo5Gze9CpBjePM74zMGNg==}
     peerDependencies:
@@ -3477,23 +3525,45 @@ packages:
       '@orderly.network/net': 1.2.0
       '@orderly.network/types': 1.2.0
       '@orderly.network/utils': 1.2.0
+=======
+  /@orderly.network/trading-view@1.2.1-internal.1(react@18.2.0):
+    resolution: {integrity: sha512-gRdJiSO+Epvjwvq3fAPZIDi/hSA/iIGyNyhv1FJLFzmBMRMBiasS+X2TGbPlo3rSZNM1LaVDFyzGnMdddpQ9KQ==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      '@orderly.network/core': 1.2.1-internal.1
+      '@orderly.network/hooks': 1.2.1-internal.1(react@18.2.0)
+      '@orderly.network/net': 1.2.1-internal.1
+      '@orderly.network/types': 1.2.1-internal.1
+      '@orderly.network/utils': 1.2.1-internal.1
+>>>>>>> Stashed changes
       react: 18.2.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
     dev: false
 
+<<<<<<< Updated upstream
   /@orderly.network/types@1.2.0:
     resolution: {integrity: sha512-z7Imba7nZf2XH8WKFrXR3syEH9fVPvw7QSvFHRE19kNyYseQnwahhUySAzEHCOESYRPMWBUEGPYFlCaPxbAxuA==}
     dev: false
 
   /@orderly.network/utils@1.2.0:
     resolution: {integrity: sha512-IICjd4ydcgbyudrzb2B/fImBVE8BD+kvIqzt//2NBe+i5C2DhkgPDbY5MQEJf+JNAypqXR+rMIJl5dGye2xBVQ==}
+=======
+  /@orderly.network/types@1.2.1-internal.1:
+    resolution: {integrity: sha512-Nd70RxLyKNL7Z9e+S9xMYHqNatItILVG+WPsBath3Et2acuBmghm6JXdbvd58n+jMD5YNRUxAHHrN4LM2Y/UQQ==}
+    dev: false
+
+  /@orderly.network/utils@1.2.1-internal.1:
+    resolution: {integrity: sha512-A2kXRSwOckiXxNAlcsi6IwMJJqemyowalZ8AwpIJSGfn/0PiqHbKEBVSs7PwPIU8tueNXLMCNMGZLhA2cvG88w==}
+>>>>>>> Stashed changes
     dependencies:
       dayjs: 1.11.10
       decimal.js-light: 2.5.1
     dev: false
 
+<<<<<<< Updated upstream
   /@orderly.network/web3-onboard@1.2.0(react@18.2.0):
     resolution: {integrity: sha512-Rb1wRS6U2H+hf+M7iAoFmLmR0hLWJHzMjYee7dqkXLg0n0wM1d737rZY0NPAI/0cvItTptCl+d05d3izHdYwqw==}
     peerDependencies:
@@ -3501,6 +3571,15 @@ packages:
     dependencies:
       '@orderly.network/hooks': 1.2.0(react@18.2.0)
       '@orderly.network/types': 1.2.0
+=======
+  /@orderly.network/web3-onboard@1.2.1-internal.1(react@18.2.0):
+    resolution: {integrity: sha512-6SI7n07XUs+dDMUZZsTVPf12Feb28PJDhL/YC2v2ylDsOo4tayPiPW70pMtT4Gdyhp6U5LQSN5Qp0MQnZ/XFMA==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      '@orderly.network/hooks': 1.2.1-internal.1(react@18.2.0)
+      '@orderly.network/types': 1.2.1-internal.1
+>>>>>>> Stashed changes
       '@web3-onboard/core': 2.21.2
       '@web3-onboard/injected-wallets': 2.10.10
       '@web3-onboard/react': 2.8.13(react@18.2.0)
