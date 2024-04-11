@@ -16,12 +16,12 @@ pnpm i @web3-onboard/trezor @web3-onboard/walletconnect @web3-onboard/ledger @we
 pnpm i @orderly.network/react@internal @orderly.network/web3-onboard@internal @orderly.network/core@internal @orderly.network/hooks@internal
 pnpm dev
 
-#编译：
+#build docket：
 docker build -t orderly-web-demo .
-#运行：
+#run docker：
 docker run -p 3000:3000 orderly-web-demo
 
-# 本地调试
+
 cd ../orderly-web
 pnpm build
 

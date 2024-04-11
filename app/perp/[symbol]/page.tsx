@@ -14,30 +14,30 @@ const _orderlySymbolKey = 'orderly-sdk-demo-symbol';
 
 export default function PerpPage({ params }: { params: { slug: string } }) {
 	const router = useRouter();
-	console.log('params', params);
+	
 
-
-	let symbol = params.symbol;
+	let symbol = params.slug;
 	if (symbol === undefined) {
 		symbol = localStorage.getItem(_orderlySymbolKey) ?? 'PERP_ETH_USDC';
 	}
 
 
 	const updateTitle = useCallback((title) => {
-		// 获取标题元素
 		var titleElement = document.getElementById(ORDERLY_SDK_DEMO_TITLE_KEY);
 		if (titleElement) {
-			// 动态更新标题
 			titleElement.textContent = title ?? symbol.toString();
 		}
 	}, []);
 
-	return <MainView symbol={symbol} onSymbolChange={(symbol) => {
-		console.log('update symbol', symbol);
-		localStorage.setItem(_orderlySymbolKey, symbol.symbol);
-		router.push(`/perp/${symbol.symbol}`);
+	return <MainView
+		symbol={symbol}
+		onSymbolChange={(symbol) => {
+			console.log('update symbol', symbol);
+			localStorage.setItem(_orderlySymbolKey, symbol.symbol);
+			router.push(`/perp/${symbol.symbol}`);
 
-		updateTitle(symbol.symbol);
+			updateTitle(symbol.symbol);
 
-	}} />;
+		}}
+	/>;
 }
