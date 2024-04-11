@@ -21,7 +21,7 @@ npm install
 npm start
 ```
 
-## See also
+## Docs
 
 For more information, please visit the following link:
 
