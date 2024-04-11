@@ -50,9 +50,9 @@ const View = (props: Props) => {
 				onChainChanged={onChainChanged}
 				footerStatusBarProps={app.footerStatusBarProps}
 				shareOptions={app.shareOptions}
-				onBoundRefCode={() => {}}
-				onClickReferral={() => {}}
-				saveRefCode={(localStorage.getItem("enable_save_ref_code") || "0") === "1"}
+				// onBoundRefCode={() => {}}
+				// onClickReferral={() => {}}
+				// saveRefCode={(localStorage.getItem("enable_save_ref_code") || "0") === "1"}
 			>
 				<TradingPage
 					symbol={props.symbol}
