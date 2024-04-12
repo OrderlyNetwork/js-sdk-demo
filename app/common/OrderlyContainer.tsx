@@ -54,7 +54,7 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 				topBarProps={{
 					left: (
 						<div className="orderly-h-[48px] orderly-p-3">
-							<img className="orderly-h-[24px]" src="/orderly-logo.svg" />
+							<img className="orderly-w-[200px] orderly-h-[24px]" src="/orderly-logo.svg" />
 						</div>
 					),
 					nav: <NavbarTab />,
