@@ -1,5 +1,5 @@
 'use client';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { ORDERLY_SDK_DEMO_TITLE_KEY } from '@/app/config';
@@ -10,11 +10,13 @@ const MainView = dynamic(() => import('./view'), { ssr: false });
 
 export default function PerpPage({ params }: { params: { slug: string } }) {
 	const router = useRouter();
+	const [symbol, setSymbol] = useState(params.slug);
 
-	let symbol = params.slug;
-	if (symbol === undefined) {
-		symbol = localStorage?.getItem(_orderlySymbolKey) ?? 'PERP_ETH_USDC';
-	}
+	useEffect(() => {
+		if (symbol === undefined) {
+			setSymbol(localStorage?.getItem(_orderlySymbolKey) ?? 'PERP_ETH_USDC');
+		}
+	}, [symbol]);
 
 	const updateTitle = useCallback((title) => {
 		var titleElement = document.getElementById(ORDERLY_SDK_DEMO_TITLE_KEY);
