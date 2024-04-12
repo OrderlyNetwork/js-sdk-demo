@@ -51,7 +51,14 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 				onChainChanged={onChainChanged}
 				footerStatusBarProps={app.footerStatusBarProps}
 				shareOptions={app.shareOptions}
-				topBarProps={{ nav: <NavbarTab /> }}
+				topBarProps={{
+					left: (
+						<div className="orderly-h-[48px] orderly-p-3">
+							<img className="orderly-h-[24px]" src="/orderly-logo.svg" />
+						</div>
+					),
+					nav: <NavbarTab />,
+				}}
 				// onBoundRefCode={() => {}}
 				// onClickReferral={() => {}}
 				// saveRefCode={(localStorage.getItem("enable_save_ref_code") || "0") === "1"}
