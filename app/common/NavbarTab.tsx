@@ -43,14 +43,16 @@ const NavbarTab: React.FC = () => {
 	}, [pathname]);
 
 	return (
-		<div className="flex items-center h-[48px] gap-x-[40px] ml-[60px]">
+		<div className="orderly-flex orderly-items-center orderly-h-[48px] orderly-gap-x-[40px] orderly-ml-[60px] orderly-text-[13px]">
 			{tabs.map((tab) => {
 				return (
 					<div
 						key={tab.value}
 						className={`${
-							activeTab === tab.value ? 'text-[rgba(255,255,255,0.98)]' : 'text-[rgba(255,255,255,0.54)]'
-						} hover:text-[rgba(255,255,255,0.98)]`}
+							activeTab === tab.value
+								? 'orderly-text-[rgba(255,255,255,0.98)]'
+								: 'orderly-text-[rgba(255,255,255,0.54)]'
+						} hover:orderly-text-[rgba(255,255,255,0.98)] orderly-cursor-pointer`}
 						onClick={() => {
 							onTabChange?.(tab);
 						}}
