@@ -16,7 +16,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 		projectId: '93dba83e8d9915dc6a65ffd3ecfd19fd',
 	};
 	const walletConnect = walletConnectModule(wcV2InitOptions);
-	// ts-ignore
+	// @ts-ignore
 	const ledger = ledgerModule(ledgerInitOptions);
 
 	return {
@@ -66,16 +66,16 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			},
 			shareOptions: {
 				pnl: {
-				  backgroundImages: [
-					"/images/poster_bg_1.png",
-					"/images/poster_bg_2.png",
-					"/images/poster_bg_3.png",
-					"/images/poster_bg_4.png",
-					"/images/poster_bg_5.png",
-					"/images/poster_bg_6.png",
-				  ]
+					backgroundImages: [
+						"/images/poster_bg_1.png",
+						"/images/poster_bg_2.png",
+						"/images/poster_bg_3.png",
+						"/images/poster_bg_4.png",
+						"/images/poster_bg_5.png",
+						"/images/poster_bg_6.png",
+					]
 				}
-			  }
+			}
 		},
 		tradingViewConfig: {
 			scriptSRC: '/tradingview/charting_library/charting_library.js',
