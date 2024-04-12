@@ -14,7 +14,7 @@ export default function PerpPage({ params }: { params: { slug: string } }) {
 
 	useEffect(() => {
 		if (symbol === undefined) {
-			setSymbol(localStorage?.getItem(_orderlySymbolKey) ?? 'PERP_ETH_USDC');
+			setSymbol(localStorage?.getItem(_orderlySymbolKey)!);
 		}
 	}, [symbol]);
 
@@ -27,7 +27,7 @@ export default function PerpPage({ params }: { params: { slug: string } }) {
 
 	return (
 		<MainView
-			symbol={symbol}
+			symbol={symbol || 'PERP_ETH_USDC'}
 			onSymbolChange={(symbol) => {
 				console.log('update symbol', symbol);
 				localStorage.setItem(_orderlySymbolKey, symbol.symbol);
