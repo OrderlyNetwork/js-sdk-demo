@@ -73,12 +73,12 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 						router.push('/referral/dashboard');
 					},
 				}}
-				chainFilter={
-					{
-						mainnet: [{ id: 42161 }, { id: 8453 }, { id: 10 }, { id: 169 }],
-						testnet: [{ id: 421614 }, { id: 421613 }],
-					} as any
-				}
+				// chainFilter={
+				// 	{
+				// 		mainnet: [{ id: 42161 }, { id: 8453 }, { id: 10 }, { id: 169 }],
+				// 		testnet: [{ id: 421614 }, { id: 421613 }],
+				// 	} as any
+				// }
 			>
 				{props.children}
 			</OrderlyAppProvider>
