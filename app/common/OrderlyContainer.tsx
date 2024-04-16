@@ -66,13 +66,19 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 					onBoundRefCode: (success: boolean, error: any) => {
 						const path = window.location.pathname;
 						if ((path.endsWith('/dashboard') || path.endsWith('/referral')) && success) {
-							router.push("/referral/dashboard");
+							router.push('/referral/dashboard');
 						}
 					},
 					onClickReferral: () => {
-						router.push("/referral/dashboard");
-					}
+						router.push('/referral/dashboard');
+					},
 				}}
+				chainFilter={
+					{
+						mainnet: [{ id: 42161 }, { id: 8453 }, { id: 10 }, { id: 169 }],
+						testnet: [{ id: 421614 }, { id: 421613 }],
+					} as any
+				}
 			>
 				{props.children}
 			</OrderlyAppProvider>
