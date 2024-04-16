@@ -38,13 +38,8 @@ const NavbarTab: React.FC = () => {
 			{
 				title: 'Referral',
 				value: 'referral',
-				path: () => '/referral'
-			},
-			{
-				title: 'Referral-Dashbaord',
-				value: 'dashboard',
 				path: () => '/referral/dashboard'
-			},
+			}
 		],
 		[],
 	);
