@@ -6,6 +6,7 @@ import { OrderlyConfig } from '@/app/config';
 import { CustomConfigStore, ENV_NAME } from './CustomConfigStore';
 import NavbarTab from './NavbarTab';
 import { _orderlySymbolKey } from '../constant';
+import { useRouter } from 'next/navigation';
 
 export type NetworkId = 'testnet' | 'mainnet';
 
@@ -21,6 +22,7 @@ type OrderlyContainerProps = PropsWithChildren<{
 
 const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 	const networkId = (localStorage.getItem('orderly-networkId') ?? 'mainnet') as NetworkId;
+	const router = useRouter();
 
 	const { onboard, app } = OrderlyConfig();
 
@@ -59,9 +61,18 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 					),
 					nav: <NavbarTab />,
 				}}
-				// onBoundRefCode={() => {}}
-				// onClickReferral={() => {}}
-				// saveRefCode={(localStorage.getItem("enable_save_ref_code") || "0") === "1"}
+				referral={{
+					saveRefCode: true,
+					onBoundRefCode: (success: boolean, error: any) => {
+						const path = window.location.pathname;
+						if ((path.endsWith('/dashboard') || path.endsWith('/referral')) && success) {
+							router.push("/referral/dashboard");
+						}
+					},
+					onClickReferral: () => {
+						router.push("/referral/dashboard");
+					}
+				}}
 			>
 				{props.children}
 			</OrderlyAppProvider>

@@ -6,6 +6,7 @@ import { _orderlySymbolKey } from '../constant';
 export type Tab = {
 	title: string;
 	value: string;
+	path: () => string;
 };
 
 export type NavbarTabProps = {
@@ -24,22 +25,39 @@ const NavbarTab: React.FC = () => {
 			{
 				title: 'Trade',
 				value: 'trade',
+				path: () => {
+					const symbol = localStorage.getItem(_orderlySymbolKey) ?? 'PERP_ETH_USDC';
+					return `/perp/${symbol}`;
+				}
 			},
 			{
 				title: 'Portfolio',
 				value: 'portfolio',
+				path: () => '/portfolio'
+			},
+			{
+				title: 'Referral',
+				value: 'referral',
+				path: () => '/referral'
+			},
+			{
+				title: 'Referral-Dashbaord',
+				value: 'dashboard',
+				path: () => '/referral/dashboard'
 			},
 		],
 		[],
 	);
 
 	const onTabChange = (tab: Tab) => {
-		const symbol = localStorage.getItem(_orderlySymbolKey) ?? 'PERP_ETH_USDC';
-		router.push(tab.value === 'trade' ? `/perp/${symbol}` : '/portfolio');
+		router.push(tab.path());
 	};
 
 	useEffect(() => {
 		setActiveTab(pathname === '/portfolio' ? 'portfolio' : 'trade');
+
+		console.log("pathname", pathname);
+		
 	}, [pathname]);
 
 	return (
