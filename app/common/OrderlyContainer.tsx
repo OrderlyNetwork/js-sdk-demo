@@ -72,8 +72,9 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 					onClickReferral: () => {
 						router.push('/referral/dashboard');
 					},
-				}}
-				// chainFilter={
+				}} 
+				theme={undefined}
+								// chainFilter={
 				// 	{
 				// 		mainnet: [{ id: 42161 }, { id: 8453 }, { id: 10 }, { id: 169 }],
 				// 		testnet: [{ id: 421614 }, { id: 421613 }],
