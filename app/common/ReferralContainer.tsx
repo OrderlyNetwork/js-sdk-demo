@@ -22,11 +22,11 @@ const ReferralContainer: React.FC = (props) => {
                     // push to referral page
                     router.push("/referral");
                 }}
-                enterAffiliatePage={(params) => {
+                onEnterAffiliatePage={(params) => {
                     // push to dashboard page
                     router.push(getFullPath("/referral/dashboard", params));
                 }}
-                enterTraderPage={(params) => {
+                onEnterTraderPage={(params) => {
                     // push to dashboard page
                     router.push(getFullPath("/referral/dashboard", params));
                 }}
