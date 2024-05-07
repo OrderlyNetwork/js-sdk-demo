@@ -2,6 +2,8 @@
 import { usePathname, useRouter } from 'next/navigation';
 import React, { useEffect, useMemo, useState } from 'react';
 import { _orderlySymbolKey } from '../constant';
+import { useLocalStorage } from '@orderly.network/hooks';
+import { NavSetting } from './navSetting';
 
 export type Tab = {
 	title: string;
@@ -43,7 +45,7 @@ const NavbarTab: React.FC = () => {
 	}, [pathname]);
 
 	return (
-		<div className="orderly-flex orderly-items-center orderly-h-[48px] orderly-text-[13px]">
+		<div className="orderly-flex orderly-items-center orderly-h-[48px] orderly-text-[13px] orderly-mr-2">
 			{tabs.map((tab) => {
 				return (
 					<div
@@ -61,6 +63,8 @@ const NavbarTab: React.FC = () => {
 					</div>
 				);
 			})}
+			<div className='orderly-w-full'></div>
+			<NavSetting />
 		</div>
 	);
 };
