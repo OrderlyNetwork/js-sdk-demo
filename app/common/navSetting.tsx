@@ -2,7 +2,7 @@ import { useLocalStorage } from '@orderly.network/hooks';
 import { Switch, Divider, DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@orderly.network/react';
 
 export const NavSetting = () => {
-	const [subOrder, setSubOrder] = useLocalStorage('orderly_subscribe_order', true);
+	const [subOrder, setSubOrder] = useLocalStorage('orderly_subscribe_order', false);
 
 	return (
 		<DropdownMenu>
@@ -11,7 +11,7 @@ export const NavSetting = () => {
                     <SettingIcon />
                 </div>
 			</DropdownMenuTrigger>
-			<DropdownMenuContent onOpenAutoFocus={(e: any) => e.preventDefault()} onCloseAutoFocus={(e: any) => e.preventDefault()} className="orderly-p-4 orderly-w-[220px] orderly-text-xs">
+			<DropdownMenuContent onCloseAutoFocus={(e: any) => e.preventDefault()} className="orderly-p-4 orderly-w-[220px] orderly-text-xs">
 				<div>
 					<div className='orderly-text-base-contrast-80'>Settings</div>
 					<Divider className='orderly-my-4'/>
