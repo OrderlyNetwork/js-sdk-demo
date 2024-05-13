@@ -21,6 +21,9 @@ type OrderlyContainerProps = PropsWithChildren<{
 }>;
 
 const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
+	if (localStorage.getItem("orderly_subscribe_order") === null) {
+		localStorage.setItem("orderly_subscribe_order", 'false');
+	}
 	const networkId = (localStorage.getItem('orderly-networkId') ?? 'mainnet') as NetworkId;
 
 	const { onboard, app } = OrderlyConfig();
