@@ -6,23 +6,23 @@ settings:
 
 dependencies:
   '@orderly.network/core':
-    specifier: 1.5.2-mantle-usdce.0
-    version: 1.5.2-mantle-usdce.0
+    specifier: 1.5.2-mantle-usdce.1
+    version: 1.5.2-mantle-usdce.1
   '@orderly.network/hooks':
-    specifier: 1.5.2-mantle-usdce.0
-    version: 1.5.2-mantle-usdce.0(react@18.2.0)
+    specifier: 1.5.2-mantle-usdce.1
+    version: 1.5.2-mantle-usdce.1(react@18.2.0)
   '@orderly.network/react':
-    specifier: 1.5.2-mantle-usdce.0
-    version: 1.5.2-mantle-usdce.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
+    specifier: 1.5.2-mantle-usdce.1
+    version: 1.5.2-mantle-usdce.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
   '@orderly.network/referral':
-    specifier: 1.5.2-mantle-usdce.0
-    version: 1.5.2-mantle-usdce.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
+    specifier: 1.5.2-mantle-usdce.1
+    version: 1.5.2-mantle-usdce.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
   '@orderly.network/types':
-    specifier: 1.5.2-mantle-usdce.0
-    version: 1.5.2-mantle-usdce.0
+    specifier: 1.5.2-mantle-usdce.1
+    version: 1.5.2-mantle-usdce.1
   '@orderly.network/web3-onboard':
-    specifier: 1.5.2-mantle-usdce.0
-    version: 1.5.2-mantle-usdce.0(react@18.2.0)
+    specifier: 1.5.2-mantle-usdce.1
+    version: 1.5.2-mantle-usdce.1(react@18.2.0)
   '@testing-library/jest-dom':
     specifier: ^5.16.2
     version: 5.16.2
@@ -3996,12 +3996,12 @@ packages:
       rimraf: 3.0.2
     dev: false
 
-  /@orderly.network/core@1.5.2-mantle-usdce.0:
-    resolution: {integrity: sha512-Pt7Aul3Iiu/W/oCVrBH/D5czsepew+gtFzmMhSnxb3d3bgroKn6jSNN2KIwXL4hZtPqDSZKP3YVnFgVtB+JVXQ==}
+  /@orderly.network/core@1.5.2-mantle-usdce.1:
+    resolution: {integrity: sha512-7VT7WSJDHusUer96QXGZYe7quF6q8bHTaLZk6VxZh4cUYh6nsLYmagJSQk5Fx4+EkbP6QqZndiG0LMxr0Z4yzA==}
     dependencies:
       '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.11.1)
       '@noble/ed25519': 2.1.0
-      '@orderly.network/types': 1.5.2-mantle-usdce.0
+      '@orderly.network/types': 1.5.2-mantle-usdce.1
       bs58: 5.0.0
       ethers: 6.11.1
       eventemitter3: 5.0.1
@@ -4011,16 +4011,16 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/hooks@1.5.2-mantle-usdce.0(react@18.2.0):
-    resolution: {integrity: sha512-fFKkxP6rWmsgk7kbV1kHsLH/trXJhTGRmZkswcHMxtSRRX5zyZYLxMhbT2HhdphQdQjxZz0K1w+E+Ib/ZAcieQ==}
+  /@orderly.network/hooks@1.5.2-mantle-usdce.1(react@18.2.0):
+    resolution: {integrity: sha512-Zbm11EYmq76QCQ1QpS0BQDI8a+XgbftCQvOlgUfs0YXDLBpXTDPpnsx+OyW8jgqnZOuhVpuzZhpKkgfo78luPw==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
-      '@orderly.network/core': 1.5.2-mantle-usdce.0
-      '@orderly.network/net': 1.5.2-mantle-usdce.0
-      '@orderly.network/perp': 3.3.2-mantle-usdce.0
-      '@orderly.network/types': 1.5.2-mantle-usdce.0
-      '@orderly.network/utils': 1.5.2-mantle-usdce.0
+      '@orderly.network/core': 1.5.2-mantle-usdce.1
+      '@orderly.network/net': 1.5.2-mantle-usdce.1
+      '@orderly.network/perp': 3.3.2-mantle-usdce.1
+      '@orderly.network/types': 1.5.2-mantle-usdce.1
+      '@orderly.network/utils': 1.5.2-mantle-usdce.1
       ramda: 0.29.1
       react: 18.2.0
       swr: 2.2.4(react@18.2.0)
@@ -4031,29 +4031,29 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/net@1.5.2-mantle-usdce.0:
-    resolution: {integrity: sha512-le6yp1ciNEr/iSskU7DtD4DyUUD5jeuA5q9tjyzTb80z0vQOXfYPIHndPRtwTcGt2nDy+MiG6tAnsFPFWq0rXQ==}
+  /@orderly.network/net@1.5.2-mantle-usdce.1:
+    resolution: {integrity: sha512-hXL9sVjzZlppSYY2WQvCpDTuHBzrJCdSgXOSeGPUGZ5EnMm9g2GbK8pFPgfJ0COzC4phRA6wT8P20wwvDP89Dg==}
     dev: false
 
-  /@orderly.network/perp@3.3.2-mantle-usdce.0:
-    resolution: {integrity: sha512-G7aX5L0DARIm2hEsWrborh11icFS48Ek2gI89erHQ+eA0Ev3paVbOS+2NIJ5+/tK11+MUecaY6RAulU0aHcLjQ==}
+  /@orderly.network/perp@3.3.2-mantle-usdce.1:
+    resolution: {integrity: sha512-UPI99TlvUX8+V+7uYHzZDYI6Wh349ZRZ1I5Whwx1yClvXubZo6HKaBdFwPOFrj78XRE3Q0RnQR75aTlvBDseLg==}
     dependencies:
-      '@orderly.network/types': 1.5.2-mantle-usdce.0
-      '@orderly.network/utils': 1.5.2-mantle-usdce.0
+      '@orderly.network/types': 1.5.2-mantle-usdce.1
+      '@orderly.network/utils': 1.5.2-mantle-usdce.1
     dev: false
 
-  /@orderly.network/react@1.5.2-mantle-usdce.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5):
-    resolution: {integrity: sha512-Jah8B6cgJBydtnZQArQBBYhh/L1MQku7j6y+jQDlHcH0Yh/vPNTjuZ+CLn7IJj1NI9mejlOtyWVRLwSoXYaJCQ==}
+  /@orderly.network/react@1.5.2-mantle-usdce.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5):
+    resolution: {integrity: sha512-0/8pA31JzCDQ0gAoYyIzoAShD6BPy7Yo9J+06QHVfumZwpwWlGqHerJsoy4i0l+w7JouqHIZj0b7d9BZYunIPQ==}
     peerDependencies:
       react: ^18.2.0
       react-dom: 18.2.0
     dependencies:
-      '@orderly.network/core': 1.5.2-mantle-usdce.0
-      '@orderly.network/hooks': 1.5.2-mantle-usdce.0(react@18.2.0)
-      '@orderly.network/net': 1.5.2-mantle-usdce.0
-      '@orderly.network/trading-view': 1.5.2-mantle-usdce.0(react@18.2.0)
-      '@orderly.network/types': 1.5.2-mantle-usdce.0
-      '@orderly.network/utils': 1.5.2-mantle-usdce.0
+      '@orderly.network/core': 1.5.2-mantle-usdce.1
+      '@orderly.network/hooks': 1.5.2-mantle-usdce.1(react@18.2.0)
+      '@orderly.network/net': 1.5.2-mantle-usdce.1
+      '@orderly.network/trading-view': 1.5.2-mantle-usdce.1(react@18.2.0)
+      '@orderly.network/types': 1.5.2-mantle-usdce.1
+      '@orderly.network/utils': 1.5.2-mantle-usdce.1
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@17.0.13)(@types/react@17.0.40)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@17.0.13)(@types/react@17.0.40)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-collapsible': 1.0.3(@types/react-dom@17.0.13)(@types/react@17.0.40)(react-dom@18.2.0)(react@18.2.0)
@@ -4092,15 +4092,15 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/referral@1.5.2-mantle-usdce.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5):
-    resolution: {integrity: sha512-6ouTnKxpI+tIN16OjSqfJQZW1ruX65hA+gxiD7Sv47yxOWAoT4jI8PdAs/gb9IJzdXFq5j32rHR4xC8feCIcBQ==}
+  /@orderly.network/referral@1.5.2-mantle-usdce.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5):
+    resolution: {integrity: sha512-Kdt146dK19jm8gl3/nxMG33cy/L+A5Rgy7BgBllw3f/WZeL81lWhSn/AMAgFZ4hZ5dqquw8Ob70yrVRf36em4w==}
     peerDependencies:
       react: ^18.2.0
       react-dom: 18.2.0
     dependencies:
-      '@orderly.network/hooks': 1.5.2-mantle-usdce.0(react@18.2.0)
-      '@orderly.network/react': 1.5.2-mantle-usdce.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
-      '@orderly.network/utils': 1.5.2-mantle-usdce.0
+      '@orderly.network/hooks': 1.5.2-mantle-usdce.1(react@18.2.0)
+      '@orderly.network/react': 1.5.2-mantle-usdce.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
+      '@orderly.network/utils': 1.5.2-mantle-usdce.1
       class-variance-authority: 0.6.1
       embla-carousel-react: 8.0.2(react@18.2.0)
       ethereum-blockies-base64: 1.0.2
@@ -4120,40 +4120,40 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/trading-view@1.5.2-mantle-usdce.0(react@18.2.0):
-    resolution: {integrity: sha512-NaYgcSpGdJh6NI1qQe9/bCfE1wwLuDG/KiJRq7X965s1BvzD5b875IAKIrL6+9vrAsEVOzA44dkjJdQ34kYQQA==}
+  /@orderly.network/trading-view@1.5.2-mantle-usdce.1(react@18.2.0):
+    resolution: {integrity: sha512-Pj2C9ZxwqT6NX1ybhsDUTq1jeoGMj4d9GLMdDhJEeo2vaIGB5wIyDVQGYFamAidFmuZ89eLDn8BQWcireC+v9w==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
-      '@orderly.network/core': 1.5.2-mantle-usdce.0
-      '@orderly.network/hooks': 1.5.2-mantle-usdce.0(react@18.2.0)
-      '@orderly.network/net': 1.5.2-mantle-usdce.0
-      '@orderly.network/types': 1.5.2-mantle-usdce.0
-      '@orderly.network/utils': 1.5.2-mantle-usdce.0
+      '@orderly.network/core': 1.5.2-mantle-usdce.1
+      '@orderly.network/hooks': 1.5.2-mantle-usdce.1(react@18.2.0)
+      '@orderly.network/net': 1.5.2-mantle-usdce.1
+      '@orderly.network/types': 1.5.2-mantle-usdce.1
+      '@orderly.network/utils': 1.5.2-mantle-usdce.1
       react: 18.2.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
     dev: false
 
-  /@orderly.network/types@1.5.2-mantle-usdce.0:
-    resolution: {integrity: sha512-N/e4vJi2Kbkexh3zm3VRMNVd9zg2KqVBADhcwqHAFcB3s1xE87WTyE5xkAp6f2S75TkmcgttSESIFjgwHGseEQ==}
+  /@orderly.network/types@1.5.2-mantle-usdce.1:
+    resolution: {integrity: sha512-wHig4JMcngUI9efn8/j23OxrryCGY2ne6eybk+TDUdfrklak4YvTSceb0ubGBgdzVbxSnxRentJ0MIlONjpe3Q==}
     dev: false
 
-  /@orderly.network/utils@1.5.2-mantle-usdce.0:
-    resolution: {integrity: sha512-mXbu0+uikrdWbNEQWhCicfpcsNv3dkV44IkOJZ40Zm7/+hQ9v6QiWGDGNIUFWwn0X+IeEUd25jLVeBhj16v8zQ==}
+  /@orderly.network/utils@1.5.2-mantle-usdce.1:
+    resolution: {integrity: sha512-dL6udmQDZ3DiRSKTLwFy7NHrWfdOGsmNlZWJQNPT9Hbg1RDwiFr4r/tcrp/BO9gbH1lkFfGBxFHX3km8SOHN8A==}
     dependencies:
       dayjs: 1.11.10
       decimal.js-light: 2.5.1
     dev: false
 
-  /@orderly.network/web3-onboard@1.5.2-mantle-usdce.0(react@18.2.0):
-    resolution: {integrity: sha512-4D8C/8ejJfcdTT3mM85cPAqs3ejW+IrMAk1QF8QqKJ1KiAFUrmOCtQaALoxHkBb3b8XZKr7rbmYcI/eWvBsoWg==}
+  /@orderly.network/web3-onboard@1.5.2-mantle-usdce.1(react@18.2.0):
+    resolution: {integrity: sha512-sAskYKfukoNUI+tpcfPDskhTzDeHiWxXsoFr7LvTiqKDGPdE5+k3d4evIcWFb8H0/MBtNPaGXsW0QCJ+dn9Wkg==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
-      '@orderly.network/hooks': 1.5.2-mantle-usdce.0(react@18.2.0)
-      '@orderly.network/types': 1.5.2-mantle-usdce.0
+      '@orderly.network/hooks': 1.5.2-mantle-usdce.1(react@18.2.0)
+      '@orderly.network/types': 1.5.2-mantle-usdce.1
       '@web3-onboard/core': 2.21.5
       '@web3-onboard/injected-wallets': 2.10.16
       '@web3-onboard/react': 2.8.16(react@18.2.0)
