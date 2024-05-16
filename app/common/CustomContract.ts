@@ -52,11 +52,11 @@ export class CustomContractManager extends BaseContractManager {
 		let vaultAddress = contracts.vaultAddress;
 
 		if (env === 'dev') {
-			vaultAddress = MantleSepolia.dev.vaultAddress;
-			verifyContractAddress = MantleSepolia.dev.verifyContractAddress;
+			vaultAddress = ArbitrumSepolia.dev.vaultAddress;
+			verifyContractAddress = ArbitrumSepolia.dev.verifyContractAddress;
 		} else if (env === 'qa') {
-			vaultAddress = MantleSepolia.qa.vaultAddress;
-			verifyContractAddress = MantleSepolia.qa.verifyContractAddress;
+			vaultAddress = ArbitrumSepolia.qa.vaultAddress;
+			verifyContractAddress = ArbitrumSepolia.qa.verifyContractAddress;
 		}
 
 		return {
