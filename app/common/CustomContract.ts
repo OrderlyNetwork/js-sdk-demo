@@ -51,12 +51,20 @@ export class CustomContractManager extends BaseContractManager {
 		let verifyContractAddress = contracts.verifyContractAddress;
 		let vaultAddress = contracts.vaultAddress;
 
+		let targetTestnet = ArbitrumSepolia;
+
+		const testnetChainId = localStorage.getItem('testnet-chain-id');
+
+		if (testnetChainId === '5003') {
+			targetTestnet = MantleSepolia;
+		}
+
 		if (env === 'dev') {
-			vaultAddress = ArbitrumSepolia.dev.vaultAddress;
-			verifyContractAddress = ArbitrumSepolia.dev.verifyContractAddress;
+			vaultAddress = targetTestnet.dev.vaultAddress;
+			verifyContractAddress = targetTestnet.dev.verifyContractAddress;
 		} else if (env === 'qa') {
-			vaultAddress = ArbitrumSepolia.qa.vaultAddress;
-			verifyContractAddress = ArbitrumSepolia.qa.verifyContractAddress;
+			vaultAddress = targetTestnet.qa.vaultAddress;
+			verifyContractAddress = targetTestnet.qa.verifyContractAddress;
 		}
 
 		return {
