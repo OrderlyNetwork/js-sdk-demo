@@ -48,7 +48,7 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 		<ConnectorProvider options={onboard as any}>
 			<OrderlyAppProvider
 				configStore={configStore}
-				contracts={contracts}
+				// contracts={contracts}
 				networkId={networkId}
 				brokerId={app.brokerId}
 				brokerName={app.brokerName}
@@ -83,10 +83,10 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 				// 		testnet: [{ id: 421614 }, { id: 421613 }],
 				// 	} as any
 				// }
-				chainFilter={{
-					mainnet: [],
-					testnet: [{ id: ARBITRUM_TESTNET_CHAINID }, { id: MANTLE_TESTNET_CHAINID }],
-				}}
+				// chainFilter={{
+				// 	mainnet: [],
+				// 	testnet: [{ id: ARBITRUM_TESTNET_CHAINID }, { id: MANTLE_TESTNET_CHAINID }],
+				// }}
 			>
 				{props.children}
 			</OrderlyAppProvider>
