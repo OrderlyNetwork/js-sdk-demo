@@ -7,7 +7,8 @@ import { CustomConfigStore, ENV_NAME } from './CustomConfigStore';
 import NavbarTab from './NavbarTab';
 import { _orderlySymbolKey } from '../constant';
 import { useRouter } from 'next/navigation';
-
+import { CustomContractManager } from './CustomContract';
+import { ARBITRUM_TESTNET_CHAINID, MANTLE_TESTNET_CHAINID } from '@orderly.network/types';
 export type NetworkId = 'testnet' | 'mainnet';
 
 const HostEnvMap: Record<string, ENV_NAME> = {
@@ -41,11 +42,13 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 	const env = networkId === 'mainnet' ? 'prod' : HostEnvMap[window.location.hostname] || 'staging';
 
 	const configStore = new CustomConfigStore({ networkId, env });
+	const contracts = new CustomContractManager(configStore);
 
 	return (
 		<ConnectorProvider options={onboard as any}>
 			<OrderlyAppProvider
 				configStore={configStore}
+				// contracts={contracts}
 				networkId={networkId}
 				brokerId={app.brokerId}
 				brokerName={app.brokerName}
@@ -72,14 +75,18 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 					onClickReferral: () => {
 						router.push('/referral/dashboard');
 					},
-				}} 
+				}}
 				theme={undefined}
-								// chainFilter={
+				// chainFilter={
 				// 	{
 				// 		mainnet: [{ id: 42161 }, { id: 8453 }, { id: 10 }, { id: 169 }],
 				// 		testnet: [{ id: 421614 }, { id: 421613 }],
 				// 	} as any
 				// }
+				// chainFilter={{
+				// 	mainnet: [],
+				// 	testnet: [{ id: ARBITRUM_TESTNET_CHAINID }, { id: MANTLE_TESTNET_CHAINID }],
+				// }}
 			>
 				{props.children}
 			</OrderlyAppProvider>
