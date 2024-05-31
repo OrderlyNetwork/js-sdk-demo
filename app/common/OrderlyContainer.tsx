@@ -56,6 +56,34 @@ const OrderlyContainer: React.FC<OrderlyContainerProps> = (props) => {
 				onChainChanged={onChainChanged}
 				footerStatusBarProps={app.footerStatusBarProps}
 				shareOptions={app.shareOptions}
+				chainFilter={{
+					mainnet: [
+						{
+							id: 5000,
+							chainInfo: {
+							  chainId: `0x${(5000).toString(16)}`,
+							  chainName: "Mantle",
+							  nativeCurrency: {
+								name: "MNT",
+								symbol: "MNT",
+								decimals: 6,
+								fix: 4,
+							  },
+							  rpcUrls: ["https://rpc.mantle.xyz/"],
+							  blockExplorerUrls: ["https://mantlescan.xyz/"],
+							},
+							minGasBalance: 0.0002,
+							minCrossGasBalance: 0.002,
+							maxPrepayCrossGas: 0.03,
+							blockExplorerName: "Mantle",
+							chainName: "Mantle",
+							chainNameShort: "Mantle",
+							requestRpc: "https://rpc.mantle.xyz/",
+							chainLogo: "",
+						  }
+					],
+					testnet: [],
+				}}
 				topBarProps={{
 					left: (
 						<div className="orderly-h-[48px] orderly-p-3">
