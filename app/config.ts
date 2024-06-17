@@ -1,3 +1,4 @@
+import { Arbitrum, Base, Ethereum, Optimism } from '@orderly.network/types';
 import injectedModule from '@web3-onboard/injected-wallets';
 import ledgerModule from '@web3-onboard/ledger';
 // import trezorModule from '@web3-onboard/trezor'
@@ -58,6 +59,7 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 					img: '/orderly-logo-secondary.svg',
 				},
 			},
+			chainFilter: { mainnet: [Arbitrum, Optimism, Base, Ethereum] },
 			enableSwapDeposit: false,
 			footerStatusBarProps: {
 				xUrl: 'https://twitter.com/OrderlyNetwork',
@@ -67,15 +69,15 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			shareOptions: {
 				pnl: {
 					backgroundImages: [
-						"/images/poster_bg_1.png",
-						"/images/poster_bg_2.png",
-						"/images/poster_bg_3.png",
-						"/images/poster_bg_4.png",
-						"/images/poster_bg_5.png",
-						"/images/poster_bg_6.png",
-					]
-				}
-			}
+						'/images/poster_bg_1.png',
+						'/images/poster_bg_2.png',
+						'/images/poster_bg_3.png',
+						'/images/poster_bg_4.png',
+						'/images/poster_bg_5.png',
+						'/images/poster_bg_6.png',
+					],
+				},
+			},
 		},
 		tradingViewConfig: {
 			scriptSRC: '/tradingview/charting_library/charting_library.js',
