@@ -6,23 +6,23 @@ settings:
 
 dependencies:
   '@orderly.network/core':
-    specifier: 1.5.9-dmm.1
-    version: 1.5.9-dmm.1
+    specifier: 1.5.13-dmm.0
+    version: 1.5.13-dmm.0
   '@orderly.network/hooks':
-    specifier: 1.5.9-dmm.1
-    version: 1.5.9-dmm.1(react@18.2.0)
+    specifier: 1.5.13-dmm.0
+    version: 1.5.13-dmm.0(react@18.2.0)
   '@orderly.network/react':
-    specifier: 1.5.9-dmm.1
-    version: 1.5.9-dmm.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
+    specifier: 1.5.13-dmm.0
+    version: 1.5.13-dmm.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
   '@orderly.network/referral':
-    specifier: 1.5.9-dmm.1
-    version: 1.5.9-dmm.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
+    specifier: 1.5.13-dmm.0
+    version: 1.5.13-dmm.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
   '@orderly.network/utils':
-    specifier: 1.5.9-dmm.1
-    version: 1.5.9-dmm.1
+    specifier: 1.5.13-dmm.0
+    version: 1.5.13-dmm.0
   '@orderly.network/web3-onboard':
-    specifier: 1.5.9-dmm.1
-    version: 1.5.9-dmm.1(react@18.2.0)
+    specifier: 1.5.13-dmm.0
+    version: 1.5.13-dmm.0(react@18.2.0)
   '@testing-library/jest-dom':
     specifier: ^5.16.2
     version: 5.16.2
@@ -1927,6 +1927,10 @@ packages:
       postcss-selector-parser: ^6.0.10
     dependencies:
       postcss-selector-parser: 6.0.16
+    dev: false
+
+  /@date-fns/utc@1.2.0:
+    resolution: {integrity: sha512-YLq+crMPJiBmIdkRmv9nZuZy1mVtMlDcUKlg4mvI0UsC/dZeIaGoGB5p/C4FrpeOhZ7zBTK03T58S0DFkRNMnw==}
     dev: false
 
   /@emotion/is-prop-valid@1.2.1:
@@ -4001,12 +4005,12 @@ packages:
       rimraf: 3.0.2
     dev: false
 
-  /@orderly.network/core@1.5.9-dmm.1:
-    resolution: {integrity: sha512-yfXoQ64oMhvv3SVGjCkJVDEyKYMLNt1eE2i5dwb8u9QnUSRfPJy5i561G79W7OTZwUGr1CChUZC5SDSSFcbjDQ==}
+  /@orderly.network/core@1.5.13-dmm.0:
+    resolution: {integrity: sha512-WvnQtHTVZW55pYzWHnyjjnHUUpr6mUvjX7+Y703k1DZ5pPCXLiRrUCxzrf9+Xxw8cY8z2QbI6gj7XiHQlWq0xg==}
     dependencies:
       '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.12.1)
       '@noble/ed25519': 2.1.0
-      '@orderly.network/types': 1.5.9-dmm.1
+      '@orderly.network/types': 1.5.13-dmm.0
       bs58: 5.0.0
       ethers: 6.12.1
       eventemitter3: 5.0.1
@@ -4016,17 +4020,17 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/hooks@1.5.9-dmm.1(react@18.2.0):
-    resolution: {integrity: sha512-gViNzezCrT07XKf9LKPgpodt1yZIOHFn33EY/GfIutg2ZDc1panbpv5bea0B8VPzsxHbFLdaoFXiesanjQeycw==}
+  /@orderly.network/hooks@1.5.13-dmm.0(react@18.2.0):
+    resolution: {integrity: sha512-ecBuEePggtLnO1yExcxqe0MxC0YbzusdfyfpvoBohcdZVBMqRK/t2l94WCOq5RnjMIMP//k9zAHANrmHWUcXSw==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
       '@akamfoad/qr': 0.4.0
-      '@orderly.network/core': 1.5.9-dmm.1
-      '@orderly.network/net': 1.5.9-dmm.1
-      '@orderly.network/perp': 3.3.9-dmm.1
-      '@orderly.network/types': 1.5.9-dmm.1
-      '@orderly.network/utils': 1.5.9-dmm.1
+      '@orderly.network/core': 1.5.13-dmm.0
+      '@orderly.network/net': 1.5.13-dmm.0
+      '@orderly.network/perp': 3.3.13-dmm.0
+      '@orderly.network/types': 1.5.13-dmm.0
+      '@orderly.network/utils': 1.5.13-dmm.0
       ramda: 0.29.1
       react: 18.2.0
       swr: 2.2.4(react@18.2.0)
@@ -4037,29 +4041,30 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/net@1.5.9-dmm.1:
-    resolution: {integrity: sha512-rNIV8aT7jfuowDvAbG+M+7wCI6dAEV2eBLJIJtjLgDaoHwyKvyaXJAWO1NF74NezSUZf9dLAd0vsOimRWz7QDg==}
+  /@orderly.network/net@1.5.13-dmm.0:
+    resolution: {integrity: sha512-W8R9zEt0k+KIogZGmaatg2M0UxCcRzRhjX7XQDSHv6uKrcCAVlcpbSrywf4z26BzCzWQ6jvpRzJqPBI+EvGgmg==}
     dev: false
 
-  /@orderly.network/perp@3.3.9-dmm.1:
-    resolution: {integrity: sha512-iZ2mR6ZP9dNAnm+Ya8BvFuG8CcHp4xy3Optpuszn7TShLMpn0IyPljO3hPyM8Hr+AYNaBXCSQDkCwf4sy5730g==}
+  /@orderly.network/perp@3.3.13-dmm.0:
+    resolution: {integrity: sha512-EsgfcuKhSGwCO4TXxMmo4379vuYVMaoMgbbUeoiQFDi8EJSx/iYX2/YCv2EkiSDPytoYrzwCo4adVeeC1GgVrg==}
     dependencies:
-      '@orderly.network/types': 1.5.9-dmm.1
-      '@orderly.network/utils': 1.5.9-dmm.1
+      '@orderly.network/types': 1.5.13-dmm.0
+      '@orderly.network/utils': 1.5.13-dmm.0
     dev: false
 
-  /@orderly.network/react@1.5.9-dmm.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5):
-    resolution: {integrity: sha512-sh+PdhS1DxptDP0AV+kqQsu1xEh6opHnGImCEB6S4JteugphNI0sIHRo2oRI3s66EmjyPkhMg/neRDEBtHC3+A==}
+  /@orderly.network/react@1.5.13-dmm.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5):
+    resolution: {integrity: sha512-xo9hs61QSY8lDaus91t7vpwUSygmorgNagw5YneUHFLtcjoLRbWR6lyfbx4HxJorgmVIdni1htt3Pia1IBWEZw==}
     peerDependencies:
       react: ^18.2.0
       react-dom: 18.2.0
     dependencies:
-      '@orderly.network/core': 1.5.9-dmm.1
-      '@orderly.network/hooks': 1.5.9-dmm.1(react@18.2.0)
-      '@orderly.network/net': 1.5.9-dmm.1
-      '@orderly.network/trading-view': 1.5.9-dmm.1(react@18.2.0)
-      '@orderly.network/types': 1.5.9-dmm.1
-      '@orderly.network/utils': 1.5.9-dmm.1
+      '@date-fns/utc': 1.2.0
+      '@orderly.network/core': 1.5.13-dmm.0
+      '@orderly.network/hooks': 1.5.13-dmm.0(react@18.2.0)
+      '@orderly.network/net': 1.5.13-dmm.0
+      '@orderly.network/trading-view': 1.5.13-dmm.0(react@18.2.0)
+      '@orderly.network/types': 1.5.13-dmm.0
+      '@orderly.network/utils': 1.5.13-dmm.0
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@17.0.13)(@types/react@17.0.40)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@17.0.13)(@types/react@17.0.40)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-collapsible': 1.0.3(@types/react-dom@17.0.13)(@types/react@17.0.40)(react-dom@18.2.0)(react@18.2.0)
@@ -4098,15 +4103,15 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/referral@1.5.9-dmm.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5):
-    resolution: {integrity: sha512-6CVe+E6evt7ISpZ2ur2/uv3Wto2D8wRrS5OtkWnwPd3n9jb8vi11uJyUdyV9Onlandju+cr1+ejNMwXFoKJYYg==}
+  /@orderly.network/referral@1.5.13-dmm.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5):
+    resolution: {integrity: sha512-/5HVbXUkrorQDm9Ayat1mmJ6llFtPT8xhf3dpNKu3CvfqVEuielYSUXC4HY8GFyQZKFI9UjCQIlPZPcN6neI1A==}
     peerDependencies:
       react: ^18.2.0
       react-dom: 18.2.0
     dependencies:
-      '@orderly.network/hooks': 1.5.9-dmm.1(react@18.2.0)
-      '@orderly.network/react': 1.5.9-dmm.1(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
-      '@orderly.network/utils': 1.5.9-dmm.1
+      '@orderly.network/hooks': 1.5.13-dmm.0(react@18.2.0)
+      '@orderly.network/react': 1.5.13-dmm.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.5.5)
+      '@orderly.network/utils': 1.5.13-dmm.0
       class-variance-authority: 0.6.1
       embla-carousel-react: 8.0.2(react@18.2.0)
       ethereum-blockies-base64: 1.0.2
@@ -4126,40 +4131,40 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@orderly.network/trading-view@1.5.9-dmm.1(react@18.2.0):
-    resolution: {integrity: sha512-ZTVpP2PCpiuxGvvVqfyuT3pTRkaWIyeTOrzMK5kdd3uMlOJr3Dbn68WrzpCLbilckvdtNUdWV/nkVrjalaDeZw==}
+  /@orderly.network/trading-view@1.5.13-dmm.0(react@18.2.0):
+    resolution: {integrity: sha512-r/9lKObD8ltvL/+scxRjpwkKezptL2QoASShvruPL5hkBKuC/CZ363XbQItdgJzKdIt8L2OHoDLe4sFERQtvLg==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
-      '@orderly.network/core': 1.5.9-dmm.1
-      '@orderly.network/hooks': 1.5.9-dmm.1(react@18.2.0)
-      '@orderly.network/net': 1.5.9-dmm.1
-      '@orderly.network/types': 1.5.9-dmm.1
-      '@orderly.network/utils': 1.5.9-dmm.1
+      '@orderly.network/core': 1.5.13-dmm.0
+      '@orderly.network/hooks': 1.5.13-dmm.0(react@18.2.0)
+      '@orderly.network/net': 1.5.13-dmm.0
+      '@orderly.network/types': 1.5.13-dmm.0
+      '@orderly.network/utils': 1.5.13-dmm.0
       react: 18.2.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
     dev: false
 
-  /@orderly.network/types@1.5.9-dmm.1:
-    resolution: {integrity: sha512-9e1uSTw7v1T0g4XZx7uVEyZqrir9fOg0o2RnW9pq5HlefXMbFRx7wm7z5E2rwgNm6xJ0GTiUo4nWER4rJuBBXA==}
+  /@orderly.network/types@1.5.13-dmm.0:
+    resolution: {integrity: sha512-fwEwGpSbSAtl6maABevIF/niurRr4PYEZOLqD8B/c1CyO43TI3wtmvxoXVxFJ4FHthsAcI/+nX63Zo8Hi1pjzg==}
     dev: false
 
-  /@orderly.network/utils@1.5.9-dmm.1:
-    resolution: {integrity: sha512-XK3QIGH/7iCM0XTr3TxpaZJhwLGBVW7PmzFzP2E7iRsPQrNYGkSegMCoZzmLEJYRh/Sq5sgpq9O9A3BSLeCGRw==}
+  /@orderly.network/utils@1.5.13-dmm.0:
+    resolution: {integrity: sha512-PgGvpkbR3ZFVUrX9iHUiuMxjId9cNjnAkUgEdr8AAwaXm8iAjFlpNZCqUgIK1eANoaEojAuAoHOAHiJerLKNxQ==}
     dependencies:
       dayjs: 1.11.10
       decimal.js-light: 2.5.1
     dev: false
 
-  /@orderly.network/web3-onboard@1.5.9-dmm.1(react@18.2.0):
-    resolution: {integrity: sha512-IG7AUmQcbSakiHusW4uQcBHXS2Dl97cX+qp1q4/NTooKT4nLWLv44pjCVymzqFqYKJcO/QD+yJHKJptdwTEfDw==}
+  /@orderly.network/web3-onboard@1.5.13-dmm.0(react@18.2.0):
+    resolution: {integrity: sha512-xdg6/dVqRUpmNWt5cEp0ZZYz3Q1WGBs02E9097QK03gn7DZgiUgoT/mwL4hGoczMYx6Z+fYOtaiSWdq3BLshsg==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
-      '@orderly.network/hooks': 1.5.9-dmm.1(react@18.2.0)
-      '@orderly.network/types': 1.5.9-dmm.1
+      '@orderly.network/hooks': 1.5.13-dmm.0(react@18.2.0)
+      '@orderly.network/types': 1.5.13-dmm.0
       '@web3-onboard/core': 2.21.5
       '@web3-onboard/injected-wallets': 2.10.16
       '@web3-onboard/react': 2.8.16(react@18.2.0)
