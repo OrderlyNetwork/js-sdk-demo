@@ -11,9 +11,9 @@ import { APIKey } from '../apikey';
 export type NetworkId = 'testnet' | 'mainnet';
 
 const HostEnvMap: Record<string, ENV_NAME> = {
-	'dev-sdk-demo.orderly.network': 'dev',
-	'qa-sdk-demo.orderly.network': 'qa',
-	'sdk-demo-iap.orderly.network': 'staging',
+	'dev-dmm-demo.orderly.network': 'dev',
+	'qa-dmm-demo.orderly.network': 'qa',
+	'dmm-demo-iap.orderly.network': 'staging',
 	'localhost': 'staging',
 };
 type OrderlyContainerProps = PropsWithChildren<{
