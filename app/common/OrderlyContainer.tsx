@@ -12,9 +12,9 @@ import { ARBITRUM_TESTNET_CHAINID, MANTLE_TESTNET_CHAINID } from '@orderly.netwo
 export type NetworkId = 'testnet' | 'mainnet';
 
 const HostEnvMap: Record<string, ENV_NAME> = {
-	'dev-sdk-demo.orderly.network': 'dev',
-	'qa-sdk-demo.orderly.network': 'qa',
-	'sdk-demo-iap.orderly.network': 'staging',
+	'dev-demo.orderly.network': 'dev',
+	'qa-demo.orderly.network': 'qa',
+	'demo-iap.orderly.network': 'staging',
 	'localhost': 'staging',
 };
 type OrderlyContainerProps = PropsWithChildren<{
