@@ -6,7 +6,8 @@ import { useNav } from '../common/useNav';
 import { CampaignPositionEnum, Scaffold } from '@orderly.network/ui-scaffold';
 
 const View = dynamic(() => import('./view'), { ssr: false });
-const PortfolioPage: React.FC = () => {
+
+const MarketsPage: React.FC = () => {
 	const { app } = OrderlyConfig();
 
 	const { onRouteChange, mainMenus, campaigns, initialProduct, products } = useNav();
@@ -33,4 +34,4 @@ const PortfolioPage: React.FC = () => {
 	);
 };
 
-export default PortfolioPage;
+export default MarketsPage;
