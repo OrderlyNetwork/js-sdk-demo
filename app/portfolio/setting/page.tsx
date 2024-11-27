@@ -1,16 +1,15 @@
 'use client';
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { PortfolioLayout } from './portfolioLayout';
-
+import { PortfolioLayout } from '../portfolioLayout';
 const View = dynamic(() => import('./view'), { ssr: false });
 
-const PortfolioPage: React.FC = () => {
+const SettingsPage: React.FC = () => {
 	return (
 		<PortfolioLayout>
-			<View />;
+			<View />
 		</PortfolioLayout>
 	);
 };
 
-export default PortfolioPage;
+export default SettingsPage;

@@ -1,4 +1,4 @@
-import { BaseContractManager } from '@orderly.network/core';
+import { BaseContractManager, ConfigStore } from '@orderly.network/core';
 
 const USDCAddress = {
 	ArbitrumSepolia: '0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d',
@@ -38,7 +38,7 @@ const MantleSepolia = {
 };
 
 export class CustomContractManager extends BaseContractManager {
-	constructor(props) {
+	constructor(props: any) {
 		super(props);
 	}
 

@@ -61,21 +61,23 @@ export function OrderlyConfig(ctx?: { url: string; domain: string }) {
 			enableSwapDeposit: false,
 			footerStatusBarProps: {
 				xUrl: 'https://twitter.com/OrderlyNetwork',
-				// telegramUrl: "https://orderly.network",
-				discordUrl: 'https://discord.com/invite/orderlynetwork',
+				telegramUrl: 'https://t.me/orderlyNetwork',
+				discordUrl: 'https://discord.com/invite/orderlyNetwork',
+				twitterUrl: 'https://twitter.com/orderlyNetwork',
 			},
-			shareOptions: {
-				pnl: {
-					backgroundImages: [
-						"/images/poster_bg_1.png",
-						"/images/poster_bg_2.png",
-						"/images/poster_bg_3.png",
-						"/images/poster_bg_4.png",
-						"/images/poster_bg_5.png",
-						"/images/poster_bg_6.png",
-					]
-				}
-			}
+			sharePnLConfig: {
+				backgroundImages: [
+					'/images/poster_bg_1.png',
+					'/images/poster_bg_2.jpg',
+					'/images/poster_bg_3.png',
+					'/images/poster_bg_4.png',
+					'/images/poster_bg_5.png',
+					'/images/poster_bg_6.png',
+				],
+				// ref
+				refSlogan: 'Try Orderly now with:',
+				refLink: 'https://demo.orderly.network/perp/PERP_ETH_USDC',
+			},
 		},
 		tradingViewConfig: {
 			scriptSRC: '/tradingview/charting_library/charting_library.js',

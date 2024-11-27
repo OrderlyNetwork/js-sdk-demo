@@ -1,8 +1,8 @@
+import { OverviewModule } from '@orderly.network/portfolio';
 import React from 'react';
-import { Portfolio } from '@orderly.network/react';
 
 const View: React.FC = () => {
-	return <Portfolio />;
+	return <OverviewModule.OverviewPage />;
 };
 
 export default View;
