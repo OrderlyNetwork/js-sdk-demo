@@ -54,7 +54,7 @@ const wallets = [
       solanaInitial={{ wallets: wallets, onError: handleSolanaError }}
     >
       <OrderlyAppProvider
-        brokerId="orderly"
+        brokerId="demo"
         brokerName="Orderly"
         networkId="testnet"
         appIcons={config.orderlyAppProvider.appIcons}
