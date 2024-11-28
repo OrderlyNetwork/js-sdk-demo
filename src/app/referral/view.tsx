@@ -4,7 +4,6 @@ import { Dashboard, ReferralProvider } from "@orderly.network/affiliate";
 import { Scaffold } from "@orderly.network/ui-scaffold";
 import config from "@/config";
 import { useNav } from "@/hooks/useNav";
-import { Box, Flex } from "@orderly.network/ui";
 export default function AffiliateView() {
   const { onRouteChange } = useNav();
 
