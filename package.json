@@ -1,0 +1,37 @@
+{
+  "name": "orderly-js-sdk-nextjs-template",
+  "description": "Template for Orderly SDK v2 based on Next.js",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 4567",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@orderly.network/affiliate": "2.0.1-developV2-1.5",
+    "@orderly.network/markets": "2.0.1-developV2-1.5",
+    "@orderly.network/portfolio": "2.0.1-developV2-1.5",
+    "@orderly.network/react-app": "2.0.1-developV2-1.5",
+    "@orderly.network/trading": "2.0.1-developV2-1.5",
+    "@orderly.network/types": "2.0.1-developV2-1.5",
+    "@orderly.network/ui": "2.0.1-developV2-1.5",
+    "@orderly.network/ui-scaffold": "2.0.1-developV2-1.5",
+    "@orderly.network/wallet-connector": "2.0.1-developV2-1.5",
+    "@solana-mobile/wallet-adapter-mobile": "2.1.4",
+    "@solana/wallet-adapter-base": "0.9.23",
+    "@solana/wallet-adapter-wallets": "0.19.32",
+    "next": "15.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.2",
+    "typescript": "^5"
+  }
+}
