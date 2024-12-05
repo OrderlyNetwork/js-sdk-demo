@@ -9,23 +9,23 @@ importers:
   .:
     dependencies:
       '@orderly.network/core':
-        specifier: 1.5.17-hotfix.0
-        version: 1.5.17-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+        specifier: 1.5.18-hotfix.0
+        version: 1.5.18-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@orderly.network/hooks':
-        specifier: 1.5.17-hotfix.0
-        version: 1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
+        specifier: 1.5.18-hotfix.0
+        version: 1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
       '@orderly.network/react':
-        specifier: 1.5.17-hotfix.0
-        version: 1.5.17-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)
+        specifier: 1.5.18-hotfix.0
+        version: 1.5.18-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)
       '@orderly.network/referral':
-        specifier: 1.5.17-hotfix.0
-        version: 1.5.17-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)
+        specifier: 1.5.18-hotfix.0
+        version: 1.5.18-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)
       '@orderly.network/types':
-        specifier: 1.5.17-hotfix.0
-        version: 1.5.17-hotfix.0
+        specifier: 1.5.18-hotfix.0
+        version: 1.5.18-hotfix.0
       '@orderly.network/web3-onboard':
-        specifier: 1.5.17-hotfix.0
-        version: 1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)
+        specifier: 1.5.18-hotfix.0
+        version: 1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)
       '@testing-library/jest-dom':
         specifier: ^5.16.2
         version: 5.16.2
@@ -1879,45 +1879,45 @@ packages:
     engines: {node: '>=10'}
     deprecated: This functionality has been moved to @npmcli/fs
 
-  '@orderly.network/core@1.5.17-hotfix.0':
-    resolution: {integrity: sha512-/Lu/+tJ9f9xDANiRt3xxb0CGedvy/ZvrQIAxo7tDuWrwiFL0jDBhu9nMd2S2UtvOXEnQYRt10FgREDq0qunY7Q==}
+  '@orderly.network/core@1.5.18-hotfix.0':
+    resolution: {integrity: sha512-JnafsHugDuR2/T79En//VxQxkRnvLxuDNvhh0PoF/dBmfBWhstyQNgVQvLwIvZ8DLzoZYHpsGWVkmSXYqlwfBg==}
 
-  '@orderly.network/hooks@1.5.17-hotfix.0':
-    resolution: {integrity: sha512-lCKxT0rj3IuU5l9DpebeAuXLsR6E2al1NVGyF+L9H6njtx8kAtaKsIuzzotu5oLAqVm+YBgckzwyvWDMeORa8g==}
+  '@orderly.network/hooks@1.5.18-hotfix.0':
+    resolution: {integrity: sha512-+y48OhT/K7pPg7SNQyVVRBhaW8POMqIm42WIJvUfLl/X5YaYRW5gFpS1ircRQFatSMz8vtstXp68XJBssFqq8A==}
     peerDependencies:
       react: ^18.2.0
 
-  '@orderly.network/net@1.5.17-hotfix.0':
-    resolution: {integrity: sha512-yeIahhjdTbc6bh9hJyqyXt4CsijuHxyzojRE2h5byr2Ud6FDNXKU6T5k1kzK39ti1HqDilpaNjXxrm52xdTFAA==}
+  '@orderly.network/net@1.5.18-hotfix.0':
+    resolution: {integrity: sha512-3DDMMDU9HY/vtr2lMiqI0pBO6dlN7aqZ0OBJyDvkVgFz4Z4NMXU6NJ5/Rujhd9wGEhpM/NVB+fyd6595S8zgzA==}
 
-  '@orderly.network/perp@3.3.17-hotfix.0':
-    resolution: {integrity: sha512-ifyiZTCu3+LQJ/Yz6Hv3Wkr03RxI4D/XCJfOFan8w/rT8Pcv1+0QGTbuSrpS4jNiBSI3b8j0RfkrP/3kaNiw9Q==}
+  '@orderly.network/perp@3.3.18-hotfix.0':
+    resolution: {integrity: sha512-eH3js2wEJkMxGKd3NHY0uJ7LYj5PAVYcldX/MNL8Kfr5hvts+Sxpga1lWCXDvs8uXIZXJYYVlFPblpkYbsXTqg==}
 
-  '@orderly.network/react@1.5.17-hotfix.0':
-    resolution: {integrity: sha512-hZ+k3w/xD06kDZsUD7U90CIF9xdO31mHODezwFse0TdexwNQB5LfhlL6YBd4JLXq4jz3Vmz7cCHkYo6MY/ncAQ==}
-    peerDependencies:
-      react: ^18.2.0
-      react-dom: 18.2.0
-
-  '@orderly.network/referral@1.5.17-hotfix.0':
-    resolution: {integrity: sha512-jTU4RWFm4fw7H7LXIOAUCm3lQIABoiYglDkZNFDuIV4ZTI4w0uEVnOP/flGo/Hl0VejfEpxiz4igYZUa66JGKQ==}
+  '@orderly.network/react@1.5.18-hotfix.0':
+    resolution: {integrity: sha512-N/YTF22kN+F4lUZoLfDBxGzfJbhOQoH2f8yZHKAX0gW/LCF6oji1BEcvynVItPH5G1xL0zDPGv2J3/hyjy/clA==}
     peerDependencies:
       react: ^18.2.0
       react-dom: 18.2.0
 
-  '@orderly.network/trading-view@1.5.17-hotfix.0':
-    resolution: {integrity: sha512-jzOOdR4t6i4CLR8ubg1cCD0GhDGXbaUfX+U8ofqy79UcuWu31GaS7UTi+3rrf1u4O02FGGCf5yNQomQ+UkNFTA==}
+  '@orderly.network/referral@1.5.18-hotfix.0':
+    resolution: {integrity: sha512-Bmmhmqw0PIcBD6gVqlGFeUxr+vUNKOHM0opH+wMUMPk+Uv6r1gugpmsxlDsy3td8MY8DYCkLmB54KLyFdtNyGg==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: 18.2.0
+
+  '@orderly.network/trading-view@1.5.18-hotfix.0':
+    resolution: {integrity: sha512-krbpotmJgHyzKS7T9Q3an4do63aEMDcz1NC2gGOqY8hDP1znwQ2li2U0PTxrxf/XFTPj1ZoPAZ0J75/PgMXkhg==}
     peerDependencies:
       react: ^18.2.0
 
-  '@orderly.network/types@1.5.17-hotfix.0':
-    resolution: {integrity: sha512-do3xvob6mx089AOTtJhwyOdfHXXEFWga7P15FHeaJg3fs+Hs3aJqNWwfQlid8Qj6X3tMdQLj52qPI6jPg5WJYA==}
+  '@orderly.network/types@1.5.18-hotfix.0':
+    resolution: {integrity: sha512-0T4CV9j+MzKoKsyNlQq38B/9aHMTLrHZg5KOw8uGg4LqstvKEbkEDpRP8JjE8WvwGZBXhS2MCZt7WZ1JnppBtA==}
 
-  '@orderly.network/utils@1.5.17-hotfix.0':
-    resolution: {integrity: sha512-noMQQmTMJy0UgIIt33WEljg/ahz5z1RDdkaWAh3/DSSnqih7RjJHwrHOaGcdSE7GJFAysCAvjtqpu8opxaLdBQ==}
+  '@orderly.network/utils@1.5.18-hotfix.0':
+    resolution: {integrity: sha512-VAgW0aJ3qTx3tnh09lGO7DyZ7VWBneQZEa5lsGvvHHM+1pXmp0CZbdVAqSQ6kCYM0q2ePbQCNF7F/HYzGuIcHA==}
 
-  '@orderly.network/web3-onboard@1.5.17-hotfix.0':
-    resolution: {integrity: sha512-LjFWrwgPW9mgJGCmi4M/Os/xgVq3DJj1W68MKI3iDQw5ryItHUX7/fvbQdw+zUdb4vw/CezydN9FPupSMafUYg==}
+  '@orderly.network/web3-onboard@1.5.18-hotfix.0':
+    resolution: {integrity: sha512-pkfQe5Rfm+dqdr2tqBJJ9LdNvRVZaQ2/vxGJisZZoFTc3B9bCXGJtFfPWwdlBLHTbZ9MGwajldTIYqY1RPkVgQ==}
     peerDependencies:
       react: ^18.2.0
 
@@ -12334,11 +12334,11 @@ snapshots:
       mkdirp: 1.0.4
       rimraf: 3.0.2
 
-  '@orderly.network/core@1.5.17-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@orderly.network/core@1.5.18-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
       '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.12.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))
       '@noble/ed25519': 2.1.0
-      '@orderly.network/types': 1.5.17-hotfix.0
+      '@orderly.network/types': 1.5.18-hotfix.0
       bs58: 5.0.0
       ethers: 6.12.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       eventemitter3: 5.0.1
@@ -12347,14 +12347,14 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@orderly.network/hooks@1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)':
+  '@orderly.network/hooks@1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@akamfoad/qr': 0.4.0
-      '@orderly.network/core': 1.5.17-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@orderly.network/net': 1.5.17-hotfix.0
-      '@orderly.network/perp': 3.3.17-hotfix.0
-      '@orderly.network/types': 1.5.17-hotfix.0
-      '@orderly.network/utils': 1.5.17-hotfix.0
+      '@orderly.network/core': 1.5.18-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@orderly.network/net': 1.5.18-hotfix.0
+      '@orderly.network/perp': 3.3.18-hotfix.0
+      '@orderly.network/types': 1.5.18-hotfix.0
+      '@orderly.network/utils': 1.5.18-hotfix.0
       ramda: 0.29.1
       react: 18.2.0
       swr: 2.2.4(react@18.2.0)
@@ -12364,22 +12364,22 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@orderly.network/net@1.5.17-hotfix.0': {}
+  '@orderly.network/net@1.5.18-hotfix.0': {}
 
-  '@orderly.network/perp@3.3.17-hotfix.0':
+  '@orderly.network/perp@3.3.18-hotfix.0':
     dependencies:
-      '@orderly.network/types': 1.5.17-hotfix.0
-      '@orderly.network/utils': 1.5.17-hotfix.0
+      '@orderly.network/types': 1.5.18-hotfix.0
+      '@orderly.network/utils': 1.5.18-hotfix.0
 
-  '@orderly.network/react@1.5.17-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)':
+  '@orderly.network/react@1.5.18-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)':
     dependencies:
       '@date-fns/utc': 1.2.0
-      '@orderly.network/core': 1.5.17-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@orderly.network/hooks': 1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
-      '@orderly.network/net': 1.5.17-hotfix.0
-      '@orderly.network/trading-view': 1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 1.5.17-hotfix.0
-      '@orderly.network/utils': 1.5.17-hotfix.0
+      '@orderly.network/core': 1.5.18-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@orderly.network/hooks': 1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
+      '@orderly.network/net': 1.5.18-hotfix.0
+      '@orderly.network/trading-view': 1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 1.5.18-hotfix.0
+      '@orderly.network/utils': 1.5.18-hotfix.0
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@17.0.13)(@types/react@17.0.40)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@17.0.13)(@types/react@17.0.40)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@radix-ui/react-collapsible': 1.0.3(@types/react-dom@17.0.13)(@types/react@17.0.40)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -12417,11 +12417,11 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/referral@1.5.17-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)':
+  '@orderly.network/referral@1.5.18-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
-      '@orderly.network/react': 1.5.17-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 1.5.17-hotfix.0
+      '@orderly.network/hooks': 1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
+      '@orderly.network/react': 1.5.18-hotfix.0(@types/react-dom@17.0.13)(@types/react@17.0.40)(bufferutil@4.0.8)(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 1.5.18-hotfix.0
       class-variance-authority: 0.6.1
       embla-carousel-react: 8.0.2(react@18.2.0)
       ethereum-blockies-base64: 1.0.2
@@ -12440,29 +12440,29 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/trading-view@1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)':
+  '@orderly.network/trading-view@1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/core': 1.5.17-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@orderly.network/hooks': 1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
-      '@orderly.network/net': 1.5.17-hotfix.0
-      '@orderly.network/types': 1.5.17-hotfix.0
-      '@orderly.network/utils': 1.5.17-hotfix.0
+      '@orderly.network/core': 1.5.18-hotfix.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@orderly.network/hooks': 1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
+      '@orderly.network/net': 1.5.18-hotfix.0
+      '@orderly.network/types': 1.5.18-hotfix.0
+      '@orderly.network/utils': 1.5.18-hotfix.0
       react: 18.2.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@orderly.network/types@1.5.17-hotfix.0': {}
+  '@orderly.network/types@1.5.18-hotfix.0': {}
 
-  '@orderly.network/utils@1.5.17-hotfix.0':
+  '@orderly.network/utils@1.5.18-hotfix.0':
     dependencies:
       dayjs: 1.11.10
       decimal.js-light: 2.5.1
 
-  '@orderly.network/web3-onboard@1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)':
+  '@orderly.network/web3-onboard@1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(typescript@4.5.5)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 1.5.17-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 1.5.17-hotfix.0
+      '@orderly.network/hooks': 1.5.18-hotfix.0(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 1.5.18-hotfix.0
       '@web3-onboard/bitget': 2.1.1(bufferutil@4.0.8)(typescript@4.5.5)(utf-8-validate@5.0.10)
       '@web3-onboard/core': 2.21.5(bufferutil@4.0.8)(typescript@4.5.5)(utf-8-validate@5.0.10)
       '@web3-onboard/injected-wallets': 2.10.16(bufferutil@4.0.8)(typescript@4.5.5)(utf-8-validate@5.0.10)
