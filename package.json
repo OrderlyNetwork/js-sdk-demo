@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@binance/w3w-blocknative-connector": "1.1.8-alpha.0",
+    "@binance/w3w-blocknative-connector": "1.1.7",
     "@orderly.network/affiliate": "2.0.1-developV2-1.14",
     "@orderly.network/hooks": "2.0.1-developV2-1.14",
     "@orderly.network/markets": "2.0.1-developV2-1.14",
@@ -25,10 +25,10 @@
     "@solana-mobile/wallet-adapter-mobile": "2.1.4",
     "@solana/wallet-adapter-base": "0.9.23",
     "@solana/wallet-adapter-wallets": "0.19.32",
-    "@web3-onboard/injected-wallets": "^2.11.2",
-    "@web3-onboard/ledger": "^2.7.1",
-    "@web3-onboard/trezor": "^2.4.6",
-    "@web3-onboard/walletconnect": "^2.5.9",
+    "@web3-onboard/injected-wallets": "^2.10.2",
+    "@web3-onboard/ledger": "^2.5.2",
+    "@web3-onboard/trezor": "^2.4.3",
+    "@web3-onboard/walletconnect": "^2.4.6",
     "next": "15.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

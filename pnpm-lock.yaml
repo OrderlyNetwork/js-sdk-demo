@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@binance/w3w-blocknative-connector':
-        specifier: 1.1.8-alpha.0
-        version: 1.1.8-alpha.0(@web3-onboard/common@2.4.2(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+        specifier: 1.1.7
+        version: 1.1.7(@web3-onboard/common@2.4.2(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@orderly.network/affiliate':
         specifier: 2.0.1-developV2-1.14
         version: 2.0.1-developV2-1.14(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
@@ -54,16 +54,16 @@ importers:
         specifier: 0.19.32
         version: 0.19.32(@babel/core@7.26.0)(@babel/runtime@7.26.0)(@react-native-async-storage/async-storage@1.24.0(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@5.0.10)))(@solana/web3.js@1.95.3(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bs58@5.0.0)(bufferutil@4.0.8)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tslib@2.8.1)(utf-8-validate@5.0.10)
       '@web3-onboard/injected-wallets':
-        specifier: ^2.11.2
+        specifier: ^2.10.2
         version: 2.11.2(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@web3-onboard/ledger':
-        specifier: ^2.7.1
+        specifier: ^2.5.2
         version: 2.7.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@5.0.10)))(bufferutil@4.0.8)(react@18.3.1)(rollup@3.29.5)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@web3-onboard/trezor':
-        specifier: ^2.4.6
+        specifier: ^2.4.3
         version: 2.4.6(@babel/core@7.26.0)(bufferutil@4.0.8)(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@web3-onboard/walletconnect':
-        specifier: ^2.5.9
+        specifier: ^2.4.6
         version: 2.6.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@5.0.10)))(@types/react@18.3.12)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
       next:
         specifier: 15.0.2
@@ -805,22 +805,11 @@ packages:
     peerDependencies:
       '@web3-onboard/common': ^2.3.3
 
-  '@binance/w3w-blocknative-connector@1.1.8-alpha.0':
-    resolution: {integrity: sha512-h3R7imf2SqyW2pqaAITpMjVLDdfV00ria1tk9ycWtwb0d3xxPpDcz/0zQ9JPPgDZsjL4AZsKdzeO4miCK1b8sg==}
-    peerDependencies:
-      '@web3-onboard/common': ^2.3.3
-
   '@binance/w3w-core@1.1.7':
     resolution: {integrity: sha512-Aipavg2sc8JyBsgvmdbpna0RmS1EVmaIIgZO3lQr+OV0Q2EKabAIZ5nZNQOEmhxAzOxcrCZAUaNu/tW17JfcGg==}
 
-  '@binance/w3w-core@1.1.8-alpha.0':
-    resolution: {integrity: sha512-fLTBqF4Yb7s4zFMhzHnmurQqszbiE9c8ZdmbELSkWgSwEHtEO7DAOAV61X9mCLLeCLpQkwz3sLULg/Agjr5iXA==}
-
   '@binance/w3w-ethereum-provider@1.1.7':
     resolution: {integrity: sha512-fHHifGDidtYaXoboe1FzLZ5wKk0FzIvgq8SCuEtibXZK3d+iITF28gmCKZnp7BCuCjvuNvOCp3GNHcvY4ARPJg==}
-
-  '@binance/w3w-ethereum-provider@1.1.8-alpha.0':
-    resolution: {integrity: sha512-pmJWrv1npmqYYz1M3wtaXVY4rSJh2GYjNgRXoFb9SUJOklO8zHqKUjRoPWcHtWQTnEHmwzE4e/dIzE3tecRAjg==}
 
   '@binance/w3w-http-client@1.1.4':
     resolution: {integrity: sha512-dovohLZThYNY2DNbM0XILjLsgo+ZMdMRRTkbdewrLcj1KkXwUn36K2tFsi/aDZXTBjWcNlziaGQYHmbuLEXTpw==}
@@ -830,9 +819,6 @@ packages:
 
   '@binance/w3w-sign-client@1.1.7':
     resolution: {integrity: sha512-KmuQCJ6g0L2LS0LEUQWbugqWiB6Nx+GMCEVuyRhl1AxzAiDybolpx8bIYAIinUeWoO2NcDJdzn971tX+QkhjoQ==}
-
-  '@binance/w3w-sign-client@1.1.8-alpha.0':
-    resolution: {integrity: sha512-p/p/aN6bwCko6X6SGvHGIEW/8ePx/2FWecnAwZaqWmglOdc3u632MWYgTj814Vn6tM36kntY5GoYbGVPMPtQ2w==}
 
   '@binance/w3w-socket-transport@1.1.4':
     resolution: {integrity: sha512-SFHknzRM74CMam95bcpcyGeYVHfET3vrANU6XROAVYTa+kCP2O6/tIZVO+WC5HyEJf2uNcJJAV1PVn3gq/3kKQ==}
@@ -8887,35 +8873,7 @@ snapshots:
       - ts-node
       - utf-8-validate
 
-  '@binance/w3w-blocknative-connector@1.1.8-alpha.0(@web3-onboard/common@2.4.2(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
-    dependencies:
-      '@binance/w3w-ethereum-provider': 1.1.8-alpha.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@binance/w3w-types': 1.1.4
-      '@binance/w3w-utils': 1.1.4
-      '@web3-onboard/common': 2.4.2(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10)
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - encoding
-      - ts-node
-      - utf-8-validate
-
   '@binance/w3w-core@1.1.7(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
-    dependencies:
-      '@binance/w3w-qrcode-modal': 1.1.5
-      '@binance/w3w-socket-transport': 1.1.4(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@binance/w3w-types': 1.1.4
-      '@binance/w3w-utils': 1.1.4
-      '@ethersproject/abi': 5.7.0
-      axios: 1.7.8
-      js-base64: 3.7.7
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - ts-node
-      - utf-8-validate
-
-  '@binance/w3w-core@1.1.8-alpha.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
       '@binance/w3w-qrcode-modal': 1.1.5
       '@binance/w3w-socket-transport': 1.1.4(bufferutil@4.0.8)(utf-8-validate@5.0.10)
@@ -8934,21 +8892,6 @@ snapshots:
     dependencies:
       '@binance/w3w-http-client': 1.1.4
       '@binance/w3w-sign-client': 1.1.7(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@binance/w3w-types': 1.1.4
-      '@binance/w3w-utils': 1.1.4
-      eip1193-provider: 1.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      eventemitter3: 5.0.1
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - encoding
-      - ts-node
-      - utf-8-validate
-
-  '@binance/w3w-ethereum-provider@1.1.8-alpha.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
-    dependencies:
-      '@binance/w3w-http-client': 1.1.4
-      '@binance/w3w-sign-client': 1.1.8-alpha.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@binance/w3w-types': 1.1.4
       '@binance/w3w-utils': 1.1.4
       eip1193-provider: 1.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
@@ -8984,17 +8927,6 @@ snapshots:
   '@binance/w3w-sign-client@1.1.7(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
       '@binance/w3w-core': 1.1.7(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@binance/w3w-types': 1.1.4
-      '@binance/w3w-utils': 1.1.4
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - ts-node
-      - utf-8-validate
-
-  '@binance/w3w-sign-client@1.1.8-alpha.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
-    dependencies:
-      '@binance/w3w-core': 1.1.8-alpha.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@binance/w3w-types': 1.1.4
       '@binance/w3w-utils': 1.1.4
     transitivePeerDependencies:

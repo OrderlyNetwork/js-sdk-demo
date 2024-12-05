@@ -55,7 +55,7 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     return <></>;
   }
   
-  let wallets = [injected, trezor, ledger, binance, walletConnect /* bitgetWallet */];
+  const wallets = [injected, trezor, ledger, binance, walletConnect /* bitgetWallet */];
   
 
   return (
