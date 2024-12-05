@@ -1,8 +1,16 @@
 "use client";
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode, useEffect, useMemo, useState } from "react";
 import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import { useLocalStorage } from "@orderly.network/hooks";
+import walletConnectModule, {
+  WalletConnectOptions,
+} from "@web3-onboard/walletconnect";
+import injectedModule from "@web3-onboard/injected-wallets";
+import ledgerModule, { LedgerOptionsWCv2 } from "@web3-onboard/ledger";
+import binanceModule from "@binance/w3w-blocknative-connector";
+import trezorModule from "@web3-onboard/trezor";
+
 import config from "@/config";
 
 const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
@@ -10,9 +18,54 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     "dmm-local-storage-network-id",
     "mainnet"
   );
+  const [wcOptions, setWcOptions] = useState();
+
+  useEffect(() => {
+    const wcV2InitOptions: WalletConnectOptions = {
+      version: 2,
+      projectId: "93dba83e8d9915dc6a65ffd3ecfd19fd",
+      requiredChains: [42161],
+      optionalChains: [42161, 10, 1, 56, 43114, 8453, 137, 59144, 421614, 420],
+      dappUrl: window.location.host,
+    };
+
+    setWcOptions(wcV2InitOptions);
+  }, []);
+
+  const walletConnect = useMemo(() => {
+    if (!wcOptions) return undefined;
+    return walletConnectModule(wcOptions ?? {});
+  }, [wcOptions]);
+
+  const trezor = trezorModule({
+    email: "<EMAIL_CONTACT>",
+    appUrl: "<APP_URL>",
+  });
+  const injected = injectedModule();
+  const ledgerInitOptions: LedgerOptionsWCv2 = {
+    walletConnectVersion: 2,
+    projectId: "93dba83e8d9915dc6a65ffd3ecfd19fd",
+  };
+  const ledger = ledgerModule(ledgerInitOptions);
+
+  const binance = binanceModule({ options: { lng: "en" } });
+
+  
+  if (!walletConnect) {
+    return <></>;
+  }
+  
+  let wallets = [injected, trezor, ledger, binance, walletConnect /* bitgetWallet */];
+  
 
   return (
-    <WalletConnectorProvider>
+    <WalletConnectorProvider
+      evmInitial={{
+        options: {
+          wallets,
+        },
+      }}
+    >
       <OrderlyAppProvider
         brokerId="orderly"
         brokerName="Orderly"
