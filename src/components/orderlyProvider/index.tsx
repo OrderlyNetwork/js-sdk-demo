@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, ReactNode, useEffect, useMemo, useState } from "react";
+import React, { FC, ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import { useLocalStorage } from "@orderly.network/hooks";
@@ -19,6 +19,7 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     "dmm-local-storage-network-id",
     "mainnet"
   );
+  const curChain = useRef<number | null>(null);
   const [wcOptions, setWcOptions] = useState();
 
   useEffect(() => {
@@ -75,6 +76,7 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
           networkId === "testnet"
             ? WalletAdapterNetwork.Devnet
             : WalletAdapterNetwork.Mainnet,
+            mainnetRpc: 'https://svc.blockdaemon.com/solana/mainnet/native?apiKey=zpka_bf36618cabbb4a1da77ff5febcacc7e7_1be39f2a',
       }}
     >
       <OrderlyAppProvider
@@ -89,9 +91,15 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
             isWalletConnected: boolean;
           }
         ) => {
+
+          console.log("on chain changed", chainId, state)
+          // const curChainId = curChain.current;
+          // const nextChainId = chainId;
+          // curChain.current = nextChainId;
           const nextState = state.isTestnet ? "testnet" : "mainnet";
           setNetworkId(nextState);
-          if (networkId !== nextState) window.location.reload();
+          // if (networkId !== nextState || (curChainId !== nextChainId))
+             window.location.reload();
         }}
       >
         {props.children}
