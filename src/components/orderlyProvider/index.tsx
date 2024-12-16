@@ -12,6 +12,7 @@ import binanceModule from "@binance/w3w-blocknative-connector";
 import trezorModule from "@web3-onboard/trezor";
 
 import config from "@/config";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 
 const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
   const [networkId, setNetworkId] = useLocalStorage(
@@ -50,13 +51,17 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
 
   const binance = binanceModule({ options: { lng: "en" } });
 
-  
   if (!walletConnect) {
     return <></>;
   }
-  
-  const wallets = [injected, trezor, ledger, binance, walletConnect /* bitgetWallet */];
-  
+
+  const wallets = [
+    injected,
+    trezor,
+    ledger,
+    binance,
+    walletConnect /* bitgetWallet */,
+  ];
 
   return (
     <WalletConnectorProvider
@@ -64,6 +69,12 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
         options: {
           wallets,
         },
+      }}
+      solanaInitial={{
+        network:
+          networkId === "testnet"
+            ? WalletAdapterNetwork.Devnet
+            : WalletAdapterNetwork.Mainnet,
       }}
     >
       <OrderlyAppProvider
@@ -78,7 +89,9 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
             isWalletConnected: boolean;
           }
         ) => {
-          setNetworkId(state.isTestnet ? "testnet" : "mainnet");
+          const nextState = state.isTestnet ? "testnet" : "mainnet";
+          setNetworkId(nextState);
+          if (networkId !== nextState) window.location.reload();
         }}
       >
         {props.children}
