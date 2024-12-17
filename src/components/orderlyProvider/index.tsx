@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import React, { FC, ReactNode, useEffect, useMemo, useState } from "react";
 import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import { useLocalStorage } from "@orderly.network/hooks";
@@ -19,7 +19,6 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     "dmm-local-storage-network-id",
     "mainnet"
   );
-  const curChain = useRef<number | null>(null);
   const [wcOptions, setWcOptions] = useState();
 
   useEffect(() => {
