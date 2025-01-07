@@ -26,7 +26,9 @@ export default function PortfolioLayout(props: { children: ReactNode }) {
       }}
       routerAdapter={{
         onRouteChange,
-        currentPath,
+      }}
+      leftSideProps={{
+        current: currentPath,
       }}
     >
       {props.children}

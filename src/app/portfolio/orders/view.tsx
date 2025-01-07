@@ -2,6 +2,7 @@
 import React from "react";
 import { OrdersModule } from "@orderly.network/portfolio";
 import { Box } from "@orderly.network/ui";
+import config from "@/config";
 
 export default function OrdersView() {
   return (
@@ -19,7 +20,9 @@ export default function OrdersView() {
         height: "calc(100vh - 48px - 29px - 48px)",
       }}
     >
-      <OrdersModule.OrdersPage />
+      <OrdersModule.OrdersPage
+        sharePnLConfig={config.tradingPage.sharePnLConfig}
+      />
     </Box>
   );
 }
