@@ -75,7 +75,8 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
           networkId === "testnet"
             ? WalletAdapterNetwork.Devnet
             : WalletAdapterNetwork.Mainnet,
-            mainnetRpc: 'https://svc.blockdaemon.com/solana/mainnet/native?apiKey=zpka_dbb6d1ce22654830860472b76acf15db_62182ef5',
+        mainnetRpc:
+          "https://svc.blockdaemon.com/solana/mainnet/native?apiKey=zpka_3364c31a98764e07854a6ab742ecf599_7eda2f53",
       }}
     >
       <OrderlyAppProvider
@@ -90,15 +91,14 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
             isWalletConnected: boolean;
           }
         ) => {
-
-          console.log("on chain changed", chainId, state)
+          console.log("on chain changed", chainId, state);
           // const curChainId = curChain.current;
           // const nextChainId = chainId;
           // curChain.current = nextChainId;
           const nextState = state.isTestnet ? "testnet" : "mainnet";
           setNetworkId(nextState);
           // if (networkId !== nextState || (curChainId !== nextChainId))
-             window.location.reload();
+          window.location.reload();
         }}
       >
         {props.children}
