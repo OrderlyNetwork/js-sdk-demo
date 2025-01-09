@@ -80,7 +80,7 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
       }}
     >
       <OrderlyAppProvider
-        brokerId="demo"
+        brokerId="orderly"
         brokerName="Orderly"
         networkId={networkId}
         appIcons={config.orderlyAppProvider.appIcons}
