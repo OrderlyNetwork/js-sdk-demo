@@ -3,7 +3,9 @@ import React, { FC, ReactNode, useEffect, useMemo, useState } from "react";
 import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import { useLocalStorage } from "@orderly.network/hooks";
-import walletConnectModule from "@web3-onboard/walletconnect";
+import walletConnectModule, {
+  type WalletConnectOptions,
+} from "@web3-onboard/walletconnect";
 import injectedModule from "@web3-onboard/injected-wallets";
 import ledgerModule, { LedgerOptionsWCv2 } from "@web3-onboard/ledger";
 import binanceModule from "@binance/w3w-blocknative-connector";
@@ -23,8 +25,9 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     "mainnet"
   );
   const [wcOptions, setWcOptions] = useState();
+
   useEffect(() => {
-    const wcV2InitOptions: any = {
+    const wcV2InitOptions: WalletConnectOptions = {
       version: 2,
       projectId: "93dba83e8d9915dc6a65ffd3ecfd19fd",
       requiredChains: [42161],
