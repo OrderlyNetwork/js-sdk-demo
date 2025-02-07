@@ -3,9 +3,7 @@ import React, { FC, ReactNode, useEffect, useMemo, useState } from "react";
 import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import { useLocalStorage } from "@orderly.network/hooks";
-import walletConnectModule, {
-  WalletConnectOptions,
-} from "@web3-onboard/walletconnect";
+import walletConnectModule from "@web3-onboard/walletconnect";
 import injectedModule from "@web3-onboard/injected-wallets";
 import ledgerModule, { LedgerOptionsWCv2 } from "@web3-onboard/ledger";
 import binanceModule from "@binance/w3w-blocknative-connector";
@@ -13,6 +11,11 @@ import trezorModule from "@web3-onboard/trezor";
 
 import config from "@/config";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import {
+  LedgerWalletAdapter,
+  PhantomWalletAdapter,
+  SolflareWalletAdapter,
+} from "@solana/wallet-adapter-wallets";
 
 const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
   const [networkId, setNetworkId] = useLocalStorage(
@@ -20,9 +23,8 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     "mainnet"
   );
   const [wcOptions, setWcOptions] = useState();
-
   useEffect(() => {
-    const wcV2InitOptions: WalletConnectOptions = {
+    const wcV2InitOptions: any = {
       version: 2,
       projectId: "93dba83e8d9915dc6a65ffd3ecfd19fd",
       requiredChains: [42161],
@@ -63,6 +65,12 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     walletConnect /* bitgetWallet */,
   ];
 
+  const solWallets = [
+    new PhantomWalletAdapter(),
+    new SolflareWalletAdapter(),
+    new LedgerWalletAdapter(),
+  ];
+
   return (
     <WalletConnectorProvider
       evmInitial={{
@@ -71,6 +79,7 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
         },
       }}
       solanaInitial={{
+        wallets: solWallets,
         network:
           networkId === "testnet"
             ? WalletAdapterNetwork.Devnet
