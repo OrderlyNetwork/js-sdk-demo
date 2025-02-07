@@ -76,7 +76,7 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
             ? WalletAdapterNetwork.Devnet
             : WalletAdapterNetwork.Mainnet,
         mainnetRpc:
-          "https://svc.blockdaemon.com/solana/mainnet/native?apiKey=zpka_715d966aa7fd4e57a75436149d8205dd_33f16b28",
+          "https://svc.blockdaemon.com/solana/mainnet/native?apiKey=zpka_381d681090f84230916faabd81615b10_74010639",
       }}
     >
       <OrderlyAppProvider
