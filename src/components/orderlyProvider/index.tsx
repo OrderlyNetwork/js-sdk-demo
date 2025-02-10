@@ -4,7 +4,7 @@ import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import { useLocalStorage } from "@orderly.network/hooks";
 import walletConnectModule, {
-  WalletConnectOptions,
+  type WalletConnectOptions,
 } from "@web3-onboard/walletconnect";
 import injectedModule from "@web3-onboard/injected-wallets";
 import ledgerModule, { LedgerOptionsWCv2 } from "@web3-onboard/ledger";
@@ -13,6 +13,11 @@ import trezorModule from "@web3-onboard/trezor";
 
 import config from "@/config";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import {
+  LedgerWalletAdapter,
+  PhantomWalletAdapter,
+  SolflareWalletAdapter,
+} from "@solana/wallet-adapter-wallets";
 
 const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
   const [networkId, setNetworkId] = useLocalStorage(
@@ -63,6 +68,12 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     walletConnect /* bitgetWallet */,
   ];
 
+  const solWallets = [
+    new PhantomWalletAdapter(),
+    new SolflareWalletAdapter(),
+    new LedgerWalletAdapter(),
+  ];
+
   return (
     <WalletConnectorProvider
       evmInitial={{
@@ -71,12 +82,13 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
         },
       }}
       solanaInitial={{
+        wallets: solWallets,
         network:
           networkId === "testnet"
             ? WalletAdapterNetwork.Devnet
             : WalletAdapterNetwork.Mainnet,
         mainnetRpc:
-          "https://svc.blockdaemon.com/solana/mainnet/native?apiKey=zpka_715d966aa7fd4e57a75436149d8205dd_33f16b28",
+          "https://svc.blockdaemon.com/solana/mainnet/native?apiKey=zpka_381d681090f84230916faabd81615b10_74010639",
       }}
     >
       <OrderlyAppProvider
