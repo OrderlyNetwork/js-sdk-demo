@@ -57,7 +57,7 @@ const config: OrderlyConfig = {
   orderlyAppProvider: {
     appIcons: {
       main: {
-        img: "/orderly-logo.svg",
+        component: <img src="/orderly-logo.svg" style={{ height: 40 }} />,
       },
       secondary: {
         img: "/orderly-logo-secondary.svg",
