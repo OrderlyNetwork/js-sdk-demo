@@ -103,14 +103,18 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
             isWalletConnected: boolean;
           }
         ) => {
-          console.log("on chain changed", chainId, state);
           // const curChainId = curChain.current;
           // const nextChainId = chainId;
           // curChain.current = nextChainId;
           const nextState = state.isTestnet ? "testnet" : "mainnet";
+          // console.log("nextState", {
+          //   networkId,
+          //   nextState,
+          // });
           setNetworkId(nextState);
-          // if (networkId !== nextState || (curChainId !== nextChainId))
-          window.location.reload();
+          if (networkId !== nextState) {
+            window.location.reload();
+          }
         }}
       >
         {props.children}
