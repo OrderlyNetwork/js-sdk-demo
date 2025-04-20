@@ -10,16 +10,25 @@ import injectedModule from "@web3-onboard/injected-wallets";
 import ledgerModule, { LedgerOptionsWCv2 } from "@web3-onboard/ledger";
 import binanceModule from "@binance/w3w-blocknative-connector";
 import trezorModule from "@web3-onboard/trezor";
-
-import config from "@/config";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {
   LedgerWalletAdapter,
   PhantomWalletAdapter,
   SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
+import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
+import {
+  LocaleCode,
+  LocaleEnum,
+  LocaleProvider,
+  parseI18nLang,
+} from "@orderly.network/i18n";
+import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
 
 const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
+  const config = useOrderlyConfig();
+  const path = usePathWithoutLang();
+
   const [networkId, setNetworkId] = useLocalStorage(
     "dmm-local-storage-network-id",
     "mainnet"
@@ -74,52 +83,70 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     new LedgerWalletAdapter(),
   ];
 
+  const onLanguageChanged = async (lang: LocaleCode) => {
+    window.history.replaceState({}, "", `/${lang}${path}`);
+  };
+
+  const loadPath = (lang: LocaleCode) => {
+    const _lang = parseI18nLang(lang);
+    if (_lang === LocaleEnum.en) {
+      // because en is built-in, we need to load the en extend only
+      return `/locales/extend/${_lang}.json`;
+    }
+    return [`/locales/${_lang}.json`, `/locales/extend/${_lang}.json`];
+  };
+
   return (
-    <WalletConnectorProvider
-      evmInitial={{
-        options: {
-          wallets,
-        },
-      }}
-      solanaInitial={{
-        wallets: solWallets,
-        network:
-          networkId === "testnet"
-            ? WalletAdapterNetwork.Devnet
-            : WalletAdapterNetwork.Mainnet,
-        mainnetRpc:
-          "https://svc.blockdaemon.com/solana/mainnet/native?apiKey=zpka_a8c397bf72c241bea3d5562b39797cfd_3acf7e3d",
-      }}
+    <LocaleProvider
+      onLanguageChanged={onLanguageChanged}
+      backend={{ loadPath }}
     >
-      <OrderlyAppProvider
-        brokerId="demo"
-        brokerName="Orderly"
-        networkId={networkId}
-        appIcons={config.orderlyAppProvider.appIcons}
-        onChainChanged={(
-          chainId: number,
-          state: {
-            isTestnet: boolean;
-            isWalletConnected: boolean;
-          }
-        ) => {
-          // const curChainId = curChain.current;
-          // const nextChainId = chainId;
-          // curChain.current = nextChainId;
-          const nextState = state.isTestnet ? "testnet" : "mainnet";
-          // console.log("nextState", {
-          //   networkId,
-          //   nextState,
-          // });
-          setNetworkId(nextState);
-          if (networkId !== nextState) {
-            window.location.reload();
-          }
+      <WalletConnectorProvider
+        evmInitial={{
+          options: {
+            wallets,
+          },
+        }}
+        solanaInitial={{
+          wallets: solWallets,
+          network:
+            networkId === "testnet"
+              ? WalletAdapterNetwork.Devnet
+              : WalletAdapterNetwork.Mainnet,
+          mainnetRpc:
+            "https://svc.blockdaemon.com/solana/mainnet/native?apiKey=zpka_a8c397bf72c241bea3d5562b39797cfd_3acf7e3d",
         }}
       >
-        {props.children}
-      </OrderlyAppProvider>
-    </WalletConnectorProvider>
+        <OrderlyAppProvider
+          brokerId="demo"
+          brokerName="Orderly"
+          networkId={networkId}
+          appIcons={config.orderlyAppProvider.appIcons}
+          onChainChanged={(
+            chainId: number,
+            state: {
+              isTestnet: boolean;
+              isWalletConnected: boolean;
+            }
+          ) => {
+            // const curChainId = curChain.current;
+            // const nextChainId = chainId;
+            // curChain.current = nextChainId;
+            const nextState = state.isTestnet ? "testnet" : "mainnet";
+            // console.log("nextState", {
+            //   networkId,
+            //   nextState,
+            // });
+            setNetworkId(nextState);
+            if (networkId !== nextState) {
+              window.location.reload();
+            }
+          }}
+        >
+          {props.children}
+        </OrderlyAppProvider>
+      </WalletConnectorProvider>
+    </LocaleProvider>
   );
 };
 
