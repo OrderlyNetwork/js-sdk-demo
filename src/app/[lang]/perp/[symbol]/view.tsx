@@ -8,7 +8,7 @@ import { useNav } from "@/hooks/useNav";
 import { updateSymbol } from "@/storage";
 import { PathEnum } from "@/constant";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
-import { i18n } from "@orderly.network/i18n";
+import { i18n, parseI18nLang } from "@orderly.network/i18n";
 
 export type PerpViewProps = Pick<TradingPageProps, "symbol">;
 
@@ -26,7 +26,7 @@ export default function PerpView(props: PerpViewProps) {
     (data: API.Symbol) => {
       const symbol = data.symbol;
       setSymbol(symbol);
-      router.push(`/${i18n.language}${PathEnum.Perp}/${symbol}`);
+      router.push(`/${parseI18nLang(i18n.language)}${PathEnum.Perp}/${symbol}`);
     },
     [router]
   );

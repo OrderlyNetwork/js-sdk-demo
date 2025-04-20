@@ -7,7 +7,7 @@ import {
   LeaderboardWidget,
 } from "@orderly.network/trading-leaderboard";
 import { PathEnum } from "@/constant";
-import { i18n } from "@orderly.network/i18n";
+import { i18n, parseI18nLang } from "@orderly.network/i18n";
 import { getSymbol } from "@/storage";
 
 const leaderboardCampaigns: Campaign[] = [
@@ -29,7 +29,7 @@ export default function LeaderboardView() {
 
   const tradingUrl = useMemo(() => {
     const symbol = getSymbol();
-    return `/${i18n.language}${PathEnum.Perp}/${symbol}`;
+    return `/${parseI18nLang(i18n.language)}${PathEnum.Perp}/${symbol}`;
   }, []);
 
   return (

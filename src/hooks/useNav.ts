@@ -4,7 +4,7 @@ import { RouteOption } from "@orderly.network/ui-scaffold";
 import { getSymbol } from "@/storage";
 import { PathEnum } from "@/constant";
 import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
-import { i18n } from "@orderly.network/i18n";
+import { i18n, parseI18nLang } from "@orderly.network/i18n";
 
 export function useNav() {
   const router = useRouter();
@@ -15,10 +15,11 @@ export function useNav() {
         window.open(option.href);
         return;
       }
+      const lang = parseI18nLang(i18n.language);
 
       if (option.href === "/") {
         const symbol = getSymbol();
-        router.push(`/${i18n.language}/${PathEnum.Perp}/${symbol}`);
+        router.push(`/${lang}/${PathEnum.Perp}/${symbol}`);
         return;
       }
 
@@ -30,7 +31,7 @@ export function useNav() {
 
       const path = routeMap[option.href] || option.href;
 
-      router.push(`/${i18n.language}${path}`);
+      router.push(`/${lang}${path}`);
     },
     [router]
   );
