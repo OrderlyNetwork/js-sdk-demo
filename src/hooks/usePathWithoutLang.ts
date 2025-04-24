@@ -1,9 +1,6 @@
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
-import {
-  getLocalePathFromPathname,
-  removeLangPrefix,
-} from "@orderly.network/i18n";
+import { removeLangPrefix } from "@orderly.network/i18n";
 
 /**
  * Get the pathname without the language prefix
@@ -13,8 +10,5 @@ import {
 export function usePathWithoutLang() {
   const pathname = usePathname();
 
-  return useMemo(() => {
-    const localePath = getLocalePathFromPathname(pathname);
-    return localePath ? removeLangPrefix(pathname) : pathname;
-  }, [pathname]);
+  return useMemo(() => removeLangPrefix(pathname), [pathname]);
 }
