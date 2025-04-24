@@ -10,17 +10,34 @@ import { PathEnum } from "@/constant";
 import { i18n, parseI18nLang } from "@orderly.network/i18n";
 import { getSymbol } from "@/storage";
 
-const leaderboardCampaigns: Campaign[] = [
-  {
-    title: "Berachain trading rush: $5,000 USDC reward pool",
-    description:
-      "To celebrate the powerhouse partnership between Berachain, Orderly, and WOOFi Pro, we’re giving you the chance to win from a $5,000 USDC reward pool just by trading on WOOFi Pro. Whether you’re a first-timer or a longtime user, rewards are up for grabs—don’t miss your shot!",
-    image: "/leaderboard/campaign1_bg.jpg",
-    startTime: new Date("2025-04-08T09:00:00Z"),
-    endTime: new Date("2025-04-14T09:00:00Z"),
-    href: "https://www.notion.so/Berachain-trading-rush-5-000-USDC-reward-pool-1b2afa8a243d801fa2bae0b3eb4fff21",
-  },
-];
+function getCampaigns() {
+  const addDays = (date: Date, days: number) => {
+    const result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+  };
+
+  const dateRange = [
+    // ongoing
+    { startTime: addDays(new Date(), -1), endTime: addDays(new Date(), 30) },
+    // future
+    { startTime: addDays(new Date(), 1), endTime: addDays(new Date(), 30) },
+    // past
+    { startTime: addDays(new Date(), -30), endTime: addDays(new Date(), -1) },
+  ];
+
+  return dateRange.map(
+    (date) =>
+      ({
+        title: "RISE ABOVE. OUTTRADE THE REST",
+        description:
+          "A new era of traders is rising. Are you the one leading the charge? Compete for your share of $10K by climbing the ranks. Only the bold will make it to the top.",
+        image: "/leaderboard/campaign.jpg",
+        href: "https://orderly.network/",
+        ...date,
+      } as Campaign)
+  );
+}
 
 export default function LeaderboardView() {
   const { isMobile } = useScreen();
@@ -46,7 +63,7 @@ export default function LeaderboardView() {
       }}
     >
       <LeaderboardWidget
-        campaigns={leaderboardCampaigns}
+        campaigns={getCampaigns()}
         href={{
           trading: tradingUrl,
         }}
