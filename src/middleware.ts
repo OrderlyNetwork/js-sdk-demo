@@ -4,7 +4,7 @@ import { type LocaleCode } from "@orderly.network/i18n";
 import { DEFAULT_SYMBOL } from "@/storage";
 import { PathEnum } from "@/constant";
 
-let localePaths = Object.values(PathEnum);
+const localePaths = Object.values(PathEnum);
 
 export const i18nCookieKey = "orderly_i18nLng";
 
