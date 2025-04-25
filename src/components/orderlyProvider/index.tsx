@@ -1,11 +1,10 @@
 "use client";
-import React, { FC, ReactNode, useEffect, useMemo, useState } from "react";
+import React, { FC, ReactNode } from "react";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import { useLocalStorage } from "@orderly.network/hooks";
-import { Network, WalletConnectorPrivyProvider, wagmiConnectors } from '@orderly.network/wallet-connector-privy';
+import { WalletConnectorPrivyProvider, wagmiConnectors } from '@orderly.network/wallet-connector-privy';
 import {
   Adapter,
-  WalletAdapterNetwork,
   WalletError,
 } from "@solana/wallet-adapter-base";
 import {
