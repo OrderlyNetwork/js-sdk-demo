@@ -1,7 +1,10 @@
+import { useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { RouteOption } from "@orderly.network/ui-scaffold";
-import { useCallback } from "react";
 import { getSymbol } from "@/storage";
+import { PathEnum } from "@/constant";
+import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
+import { i18n, parseI18nLang } from "@orderly.network/i18n";
 
 export function useNav() {
   const router = useRouter();
@@ -12,25 +15,23 @@ export function useNav() {
         window.open(option.href);
         return;
       }
+      const lang = parseI18nLang(i18n.language);
 
       if (option.href === "/") {
         const symbol = getSymbol();
-        router.push(`/perp/${symbol}`);
+        router.push(`/${lang}/${PathEnum.Perp}/${symbol}`);
         return;
       }
 
+      // if href not equal to the route path, we need to convert it to the route path
       const routeMap = {
-        //   "/portfolio": "/portfolio",
-        "/portfolio/feeTier": "/portfolio/fee",
-        "/portfolio/apiKey": "/portfolio/api-key",
-        //   "/portfolio/positions": "/portfolio/positions",
-        //   "/portfolio/orders": "/portfolio/orders",
-        //   "/portfolio/setting": "/portfolio/setting",
+        [PortfolioLeftSidebarPath.FeeTier]: PathEnum.FeeTier,
+        [PortfolioLeftSidebarPath.ApiKey]: PathEnum.ApiKey,
       } as Record<string, string>;
 
       const path = routeMap[option.href] || option.href;
 
-      router.push(path);
+      router.push(`/${lang}${path}`);
     },
     [router]
   );

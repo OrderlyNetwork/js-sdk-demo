@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/",
-        destination: "/perp/PERP_ETH_USDC",
+        destination: "/en/perp/PERP_ETH_USDC",
         permanent: false,
       },
     ];
