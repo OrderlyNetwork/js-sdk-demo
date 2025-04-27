@@ -5,14 +5,14 @@ FROM base AS deps
 WORKDIR /app
 
 WORKDIR /app
-COPY package.json package-lock.json .npmrc ./
-RUN npm install
+COPY package.json pnpm-lock.yaml .npmrc ./
+RUN pnpm install
 
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN npm run build
+RUN pnpm build
 
 FROM base AS runtime
 WORKDIR /app
