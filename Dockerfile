@@ -7,7 +7,7 @@ WORKDIR /app
 
 WORKDIR /app
 COPY package.json pnpm-lock.yaml .npmrc ./
-RUN npm install -g pnpm && pnpm install 
+RUN pnpm install 
 
 FROM base AS builder
 WORKDIR /app
