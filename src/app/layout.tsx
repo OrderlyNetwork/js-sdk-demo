@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import OrderlyProvider from "@/components/orderlyProvider";
 import "./globals.css";
+import { AppProvider } from "@/components/orderlyProvider/appProvider";
 
 export const metadata: Metadata = {
-  title: "Orderly SDK template",
-  description: "Orderly SDK template",
+  title: "Orderly SDK Demo",
+  description: "Orderly SDK Demo",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/favicon.png" />
       </head>
       <body>
-        <OrderlyProvider>{children}</OrderlyProvider>
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );
