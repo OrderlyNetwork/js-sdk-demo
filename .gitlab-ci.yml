@@ -17,7 +17,7 @@ deploy_dev_v2:
     entrypoint: [""]
   script:
     - echo "Trigger dev v2 helm deploying ... "
-    - curl -X POST --fail -F token=${DEPLOY_DMM_PRJ_TOKEN} -F "ref=dev-v2" -F "variables[SERVICE_NAME]=${SERVICE_NAME}" -F "variables[TAG]=${CI_COMMIT_TAG}" https://gitlab.com/api/v4/projects/${DEPLOY_DMM_PRJ_ID}/trigger/pipeline
+    - curl -X POST --fail -F token=${DEPLOY_DMM_PRJ_TOKEN} -F "ref=aliyun-dev" -F "variables[SERVICE_NAME]=${SERVICE_NAME}" -F "variables[TAG]=${CI_COMMIT_TAG}" https://gitlab.com/api/v4/projects/${DEPLOY_DMM_PRJ_ID}/trigger/pipeline
   when: manual
   only:
     - tags
@@ -32,7 +32,7 @@ deploy_qa_evm:
     entrypoint: [""]
   script:
     - echo "Trigger qa-evm helm deploying ... "
-    - curl -X POST --fail -F token=${DEPLOY_DMM_PRJ_TOKEN} -F "ref=qa-evm" -F "variables[SERVICE_NAME]=${SERVICE_NAME}" -F "variables[TAG]=${CI_COMMIT_TAG}" https://gitlab.com/api/v4/projects/${DEPLOY_DMM_PRJ_ID}/trigger/pipeline
+    - curl -X POST --fail -F token=${DEPLOY_DMM_PRJ_TOKEN} -F "ref=aliyun-qa" -F "variables[SERVICE_NAME]=${SERVICE_NAME}" -F "variables[TAG]=${CI_COMMIT_TAG}" https://gitlab.com/api/v4/projects/${DEPLOY_DMM_PRJ_ID}/trigger/pipeline
   when: manual
   only:
     - tags
