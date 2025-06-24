@@ -36,34 +36,5 @@ export function useNav() {
     [router]
   );
 
-  const campaigns = useMemo(() => {
-    return {
-        name: i18n.t('tradingRewards.rewards'),
-        href: PathEnum.Rewards,
-        // icon: `${process.env.PUBLIC_URL}/images/reward.gif`,
-        testid: 'oui-testid-main-nav-rewards',
-        isSubMenuInMobile: true,
-        subMenuBackNav: {
-            name: i18n.t('common.portfolio'),
-            href: PathEnum.Portfolio,
-        },
-        children: [
-            {
-                name: i18n.t('common.tradingRewards'),
-                href: PathEnum.RewardsTrading,
-                description: i18n.t('extend.tradingRewards.description'),
-                testid: 'oui-testid-main-nav-rewards-item-tradingRewards',
-            },
-            {
-                name: i18n.t('common.affiliate'),
-                href: PathEnum.RewardsAffiliate,
-                tag: i18n.t('extend.affiliate.tag'),
-                description: i18n.t('extend.affiliate.description'),
-                testid: 'oui-testid-main-nav-rewards-item-affiliate',
-            },
-        ],
-    };
-}, []);
-
-  return { onRouteChange, campaigns };
+  return { onRouteChange };
 }
