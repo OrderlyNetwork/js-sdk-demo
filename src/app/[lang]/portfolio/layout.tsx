@@ -12,7 +12,7 @@ import { PathEnum } from "@/constant";
 export default function PortfolioLayout(props: { children: ReactNode }) {
   const config = useOrderlyConfig();
   const path = usePathWithoutLang();
-
+  
   const { onRouteChange } = useNav();
 
   const currentPath = useMemo(() => {
@@ -26,6 +26,7 @@ export default function PortfolioLayout(props: { children: ReactNode }) {
 
   return (
     <PortfolioLayoutWidget
+      key={currentPath} // Force re-mount when path changes
       footerProps={config.scaffold.footerProps}
       mainNavProps={{
         ...config.scaffold.mainNavProps,
@@ -33,10 +34,12 @@ export default function PortfolioLayout(props: { children: ReactNode }) {
       }}
       routerAdapter={{
         onRouteChange,
+        currentPath,
       }}
       leftSideProps={{
         current: currentPath,
       }}
+      bottomNavProps={config.scaffold.bottomNavProps}
     >
       {props.children}
     </PortfolioLayoutWidget>
