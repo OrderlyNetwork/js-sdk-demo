@@ -1,5 +1,5 @@
 "use client";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Scaffold, ScaffoldProps } from "@orderly.network/ui-scaffold";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { useNav } from "@/hooks/useNav";
@@ -9,6 +9,7 @@ export type BaseLayoutProps = {
   children: React.ReactNode;
   initialMenu?: string;
   classNames?: ScaffoldProps["classNames"];
+  topBar?: ReactNode;
 };
 
 export const BaseLayout: FC<BaseLayoutProps> = (props) => {
@@ -18,6 +19,7 @@ export const BaseLayout: FC<BaseLayoutProps> = (props) => {
 
   return (
     <Scaffold
+      topBar={props.topBar}
       mainNavProps={{
         ...config.scaffold.mainNavProps,
         initialMenu: props.initialMenu || PathEnum.Root,
@@ -27,6 +29,7 @@ export const BaseLayout: FC<BaseLayoutProps> = (props) => {
         onRouteChange,
       }}
       classNames={props.classNames}
+      bottomNavProps={config.scaffold.bottomNavProps}
     >
       {props.children}
     </Scaffold>

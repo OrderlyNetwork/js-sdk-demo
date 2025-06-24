@@ -1,11 +1,25 @@
 import { useMemo } from "react";
 import { TradingPageProps } from "@orderly.network/trading";
-import { FooterProps, MainNavWidgetProps } from "@orderly.network/ui-scaffold";
+import {
+  BottomNavProps,
+  FooterProps,
+  MainNavWidgetProps,
+} from "@orderly.network/ui-scaffold";
 import { type RestrictedInfoOptions } from "@orderly.network/hooks";
 import { AppLogos } from "@orderly.network/react-app";
 import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
 import { useTranslation } from "@orderly.network/i18n";
 import { PathEnum } from "../constant";
+import {
+  LeaderboardInactiveIcon,
+  PortfolioInactiveIcon,
+  PortfolioActiveIcon,
+  LeaderboardActiveIcon,
+  MarketsActiveIcon,
+  MarketsInactiveIcon,
+  TradingInactiveIcon,
+  TradingActiveIcon,
+} from "@orderly.network/ui";
 
 export type OrderlyConfig = {
   orderlyAppProvider: {
@@ -15,6 +29,7 @@ export type OrderlyConfig = {
   scaffold: {
     mainNavProps: MainNavWidgetProps;
     footerProps: FooterProps;
+    bottomNavProps: BottomNavProps;
   };
   tradingPage: {
     tradingViewConfig: TradingPageProps["tradingViewConfig"];
@@ -30,7 +45,11 @@ export const useOrderlyConfig = () => {
       scaffold: {
         mainNavProps: {
           mainMenus: [
-            { name: t("common.trading"), href: PathEnum.Root },
+            {
+              name: t("common.trading"),
+              href: PathEnum.Root,
+              isHomePageInMobile: true,
+            },
             { name: t("common.portfolio"), href: PathEnum.Portfolio },
             { name: t("common.markets"), href: PathEnum.Markets },
             {
@@ -42,6 +61,7 @@ export const useOrderlyConfig = () => {
           campaigns: {
             name: t("tradingRewards.rewards"),
             href: PathEnum.Rewards,
+            isSubMenuInMobile: true,
             children: [
               {
                 name: t("common.tradingRewards"),
@@ -69,6 +89,34 @@ export const useOrderlyConfig = () => {
           telegramUrl: "https://orderly.network",
           discordUrl: "https://discord.com/invite/orderlynetwork",
           twitterUrl: "https://twitter.com/OrderlyNetwork",
+        },
+        bottomNavProps: {
+          mainMenus: [
+            {
+              name: t("common.markets"),
+              href: PathEnum.Markets,
+              activeIcon: <MarketsActiveIcon />,
+              inactiveIcon: <MarketsInactiveIcon />,
+            },
+            {
+              name: t("common.trading"),
+              href: PathEnum.Root,
+              activeIcon: <TradingActiveIcon />,
+              inactiveIcon: <TradingInactiveIcon />,
+            },
+            {
+              name: t("tradingLeaderboard.leaderboard"),
+              href: PathEnum.Leaderboard,
+              activeIcon: <LeaderboardActiveIcon />,
+              inactiveIcon: <LeaderboardInactiveIcon />,
+            },
+            {
+              name: t("common.portfolio"),
+              href: PathEnum.Portfolio,
+              activeIcon: <PortfolioActiveIcon />,
+              inactiveIcon: <PortfolioInactiveIcon />,
+            },
+          ],
         },
       },
       orderlyAppProvider: {

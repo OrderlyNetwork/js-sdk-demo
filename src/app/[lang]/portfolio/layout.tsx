@@ -37,6 +37,7 @@ export default function PortfolioLayout(props: { children: ReactNode }) {
       leftSideProps={{
         current: currentPath,
       }}
+      bottomNavProps={config.scaffold.bottomNavProps}
     >
       {props.children}
     </PortfolioLayoutWidget>

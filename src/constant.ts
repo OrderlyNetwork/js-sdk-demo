@@ -8,6 +8,8 @@ export enum PathEnum {
   FeeTier = "/portfolio/fee",
   ApiKey = "/portfolio/api-key",
   Setting = "/portfolio/setting",
+  Assets = "/portfolio/assets",
+  History = "/portfolio/history",
 
   Markets = "/markets",
   Leaderboard = "/leaderboard",
@@ -24,6 +26,8 @@ export const PageTitleMap = {
   [PathEnum.Orders]: "Orders",
   [PathEnum.Positions]: "Positions",
   [PathEnum.Setting]: "Settings",
+  [PathEnum.Assets]: "Assets",
+  [PathEnum.History]: "History",
   [PathEnum.Markets]: "Markets",
   [PathEnum.Leaderboard]: "Leaderboard",
   [PathEnum.RewardsTrading]: "Trading Rewards",
