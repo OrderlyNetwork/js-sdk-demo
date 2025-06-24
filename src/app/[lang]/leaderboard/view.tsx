@@ -1,75 +1,112 @@
 "use client";
-import { useMemo } from "react";
-import { useScaffoldContext } from "@orderly.network/ui-scaffold";
-import { Box, useScreen } from "@orderly.network/ui";
-import {
-  Campaign,
-  LeaderboardWidget,
-} from "@orderly.network/trading-leaderboard";
+import { LeaderboardPage, CampaignConfig } from '@orderly.network/trading-leaderboard';
 import { PathEnum } from "@/constant";
-import { i18n, parseI18nLang } from "@orderly.network/i18n";
-import { getSymbol } from "@/storage";
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
-function getCampaigns() {
-  const addDays = (date: Date, days: number) => {
-    const result = new Date(date);
-    result.setDate(result.getDate() + days);
-    return result;
-  };
-
-  const dateRange = [
-    // ongoing
-    { startTime: addDays(new Date(), -1), endTime: addDays(new Date(), 30) },
-    // future
-    { startTime: addDays(new Date(), 1), endTime: addDays(new Date(), 30) },
-    // past
-    { startTime: addDays(new Date(), -30), endTime: addDays(new Date(), -1) },
-  ];
-
-  return dateRange.map(
-    (date) =>
-      ({
-        title: "RISE ABOVE. OUTTRADE THE REST",
-        description:
-          "A new era of traders is rising. Are you the one leading the charge? Compete for your share of $10K by climbing the ranks. Only the bold will make it to the top.",
-        image: "/leaderboard/campaign.jpg",
-        href: "https://orderly.network/",
-        ...date,
-      } as Campaign)
-  );
-}
+const leaderboardCampaigns: CampaignConfig[] = [
+  {
+    campaign_id: '116',
+    title: 'DAWN OF DOMINANCE',
+    description: 'A new era begins. Outtrade the competition. Climb the ranks. Secure your legacy.',
+    image: '/leaderboard/woofi_leaderboard_test.jpeg',
+    start_time: new Date('2025-06-18T00:00:00Z').toISOString(),
+    end_time: new Date('2025-07-04T23:59:59Z').toISOString(),
+    reward_distribution_time: undefined,
+    volume_scope: undefined,
+    prize_pools: [
+      {
+        pool_id: 'trading',
+        label: 'Trading volume pool',
+        total_prize: 20000,
+        currency: 'USDC',
+        metric: 'volume' as const,
+        tiers: [
+          { position: 1, amount: 1400 },
+          { position: 2, amount: 1200 },
+          { position: 3, amount: 1000 },
+          { position_range: [4, 5], amount: 750 },
+          { position_range: [6, 10], amount: 440 },
+          { position_range: [11, 15], amount: 340 },
+          { position_range: [16, 25], amount: 275 },
+          { position_range: [26, 50], amount: 180 },
+          { position_range: [51, 75], amount: 75 },
+          { position_range: [76, 100], amount: 50 },
+          { position_range: [101, 125], amount: 25 },
+        ],
+      },
+      {
+        pool_id: 'raffle',
+        label: 'Raffle',
+        total_prize: 2500,
+        currency: 'USDC',
+        metric: 'volume' as const,
+        tiers: [],
+      },
+      {
+        pool_id: 'pnl',
+        label: 'Realized PnL',
+        total_prize: 1500,
+        currency: 'USDC',
+        metric: 'pnl' as const,
+        tiers: [],
+      },
+      {
+        pool_id: 'social',
+        label: 'Social ',
+        total_prize: 1000,
+        currency: 'USDC',
+        metric: 'volume' as const,
+        tiers: [],
+      },
+    ],
+    ticket_rules: {
+      total_prize: 2500,
+      currency: 'USDC',
+      metric: 'volume',
+      mode: 'tiered',
+      tiers: [
+        { value: 5000, tickets: 1 },
+        { value: 10000, tickets: 5 },
+        { value: 50000, tickets: 30 },
+        { value: 100000, tickets: 70 },
+        { value: 250000, tickets: 200 },
+      ],
+    },
+    rule_url: 'https://mirror.xyz/0x0a9eEddaa65546Ad35D3F0Ac9E6F09575E4C9297/y6MWoJ2gykjMCNlwRci4BgWYqlXN1O5wUs1tFQDxcmw',
+    trading_url: 'https://pro.woofi.com/en/trade/ETH_PERP',
+  },
+]
 
 export default function LeaderboardView() {
-  const { isMobile } = useScreen();
-  const { topNavbarHeight, footerHeight, announcementHeight } =
-    useScaffoldContext();
+  const [campaignId, setCampaignId] = useState<string | undefined>('116');
+  const searchParams = useSearchParams();
 
-  const tradingUrl = useMemo(() => {
-    const symbol = getSymbol();
-    return `/${parseI18nLang(i18n.language)}${PathEnum.Perp}/${symbol}`;
+  useEffect(() => {
+    const campaign_id = searchParams.get('campaign_id');
+    const campaign = leaderboardCampaigns.find((campaign) => campaign.campaign_id === String(campaign_id));
+    if (campaign_id && campaign) {
+      setCampaignId(campaign_id);
+    } else {
+      const now = new Date().toISOString();
+      const campaign = leaderboardCampaigns.find((campaign) => campaign.start_time < now && campaign.end_time > now);
+      if (campaign) {
+        setCampaignId(String(campaign.campaign_id));
+      }
+    }
   }, []);
 
   return (
-    <Box
-      style={{
-        minHeight: 379,
-        maxHeight: 2560,
-        overflow: "hidden",
-        height: isMobile
-          ? "100%"
-          : `calc(100vh - ${topNavbarHeight}px - ${footerHeight}px - ${
-              announcementHeight ? announcementHeight + 12 : 0
-            }px)`,
+    <LeaderboardPage
+      campaignId={campaignId}
+      // @ts-expect-error - onCampaignChange is not typed correctly
+      onCampaignChange={setCampaignId}
+      campaigns={leaderboardCampaigns}
+      href={{
+        trading: PathEnum.Root,
       }}
-    >
-      <LeaderboardWidget
-        campaigns={getCampaigns()}
-        href={{
-          trading: tradingUrl,
-        }}
-        backgroundSrc="/leaderboard/background.jpg"
-        className="oui-py-5"
-      />
-    </Box>
+      backgroundSrc="/leaderboard/background.webm"
+      className="oui-py-5"
+    />
   );
 }

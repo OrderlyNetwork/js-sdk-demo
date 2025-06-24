@@ -17,7 +17,7 @@ export default function TradingRewardsLayout(props: { children: ReactNode }) {
       footerProps={config.scaffold.footerProps}
       mainNavProps={{
         ...config.scaffold.mainNavProps,
-        initialMenu: PathEnum.Rewards,
+        initialMenu: [PathEnum.Rewards, path],
       }}
       routerAdapter={{
         onRouteChange,

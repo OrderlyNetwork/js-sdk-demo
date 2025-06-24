@@ -62,6 +62,10 @@ export const useOrderlyConfig = () => {
             name: t("tradingRewards.rewards"),
             href: PathEnum.Rewards,
             isSubMenuInMobile: true,
+            subMenuBackNav: {
+              name: t("common.portfolio"),
+              href: PathEnum.Portfolio,
+            },
             children: [
               {
                 name: t("common.tradingRewards"),

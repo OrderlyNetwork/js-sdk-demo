@@ -15,7 +15,7 @@ export type BaseLayoutProps = {
 export const BaseLayout: FC<BaseLayoutProps> = (props) => {
   const config = useOrderlyConfig();
 
-  const { onRouteChange } = useNav();
+  const { onRouteChange, campaigns } = useNav();
 
   return (
     <Scaffold
@@ -23,6 +23,7 @@ export const BaseLayout: FC<BaseLayoutProps> = (props) => {
       mainNavProps={{
         ...config.scaffold.mainNavProps,
         initialMenu: props.initialMenu || PathEnum.Root,
+        campaigns,
       }}
       footerProps={config.scaffold.footerProps}
       routerAdapter={{
