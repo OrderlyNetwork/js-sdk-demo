@@ -7,7 +7,8 @@
 		"dev": "next dev -p 4567",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"copyLocales": "node scripts/copyLocales.js"
 	},
 	"dependencies": {
 		"@orderly.network/affiliate": "2.3.0",
@@ -40,6 +41,7 @@
 		"@types/react-dom": "^18",
 		"eslint": "^8",
 		"eslint-config-next": "15.0.2",
+		"fs-extra": "^11.2.0",
 		"typescript": "^5"
 	}
 }
