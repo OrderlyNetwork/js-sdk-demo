@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from "react";
+import { useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { RouteOption } from "@orderly.network/ui-scaffold";
 import { getSymbol } from "@/storage";
