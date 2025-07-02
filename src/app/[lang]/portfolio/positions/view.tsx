@@ -7,6 +7,9 @@ import { PositionsModule } from "@orderly.network/portfolio";
 import { useTradingLocalStorage } from "@orderly.network/trading";
 import { updateSymbol } from "@/storage";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
+import { i18n, parseI18nLang } from "@orderly.network/i18n";
+import { PathEnum } from "@/constant";
+
 export default function PositionsView() {
   const config = useOrderlyConfig();
   const local = useTradingLocalStorage();
@@ -16,7 +19,7 @@ export default function PositionsView() {
     (data: API.Symbol) => {
       const symbol = data.symbol;
       updateSymbol(symbol);
-      router.push(`/perp/${symbol}`);
+      router.push(`/${parseI18nLang(i18n.language)}${PathEnum.Perp}/${symbol}`);
     },
     [router]
   );

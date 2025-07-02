@@ -19,7 +19,6 @@ import {
   LocaleCode,
   LocaleEnum,
   LocaleProvider,
-  parseI18nLang,
 } from "@orderly.network/i18n";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
 import { usePathname } from "next/navigation";
@@ -50,12 +49,11 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
   };
 
   const loadPath = (lang: LocaleCode) => {
-    const _lang = parseI18nLang(lang);
-    if (_lang === LocaleEnum.en) {
+    if (lang === LocaleEnum.en) {
       // because en is built-in, we need to load the en extend only
-      return `/locales/extend/${_lang}.json`;
+      return `/locales/extend/${lang}.json`;
     }
-    return [`/locales/${_lang}.json`, `/locales/extend/${_lang}.json`];
+    return [`/locales/${lang}.json`, `/locales/extend/${lang}.json`];
   };
 
   useEffect(() => {
