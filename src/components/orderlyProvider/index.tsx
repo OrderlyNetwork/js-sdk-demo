@@ -1,12 +1,12 @@
 "use client";
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode, useEffect } from "react";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import { useLocalStorage } from "@orderly.network/hooks";
-import { WalletConnectorPrivyProvider, wagmiConnectors } from '@orderly.network/wallet-connector-privy';
 import {
-  Adapter,
-  WalletError,
-} from "@solana/wallet-adapter-base";
+  WalletConnectorPrivyProvider,
+  wagmiConnectors,
+} from "@orderly.network/wallet-connector-privy";
+import { Adapter, WalletError } from "@solana/wallet-adapter-base";
 import {
   LedgerWalletAdapter,
   PhantomWalletAdapter,
@@ -14,30 +14,30 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import {
+  getLocalePathFromPathname,
+  i18n,
   LocaleCode,
   LocaleEnum,
   LocaleProvider,
   parseI18nLang,
 } from "@orderly.network/i18n";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
+import { usePathname } from "next/navigation";
 
 const getPrivyId = () => {
   // dev privy id
-  return 'cm86zfufk01n2ojo83s2becsr';
+  return "cm86zfufk01n2ojo83s2becsr";
 };
 
 const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
   const config = useOrderlyConfig();
   const path = usePathWithoutLang();
+  const pathname = usePathname();
 
   const [networkId, setNetworkId] = useLocalStorage(
     "dmm-local-storage-network-id",
     "mainnet"
   );
-
-
-
-
 
   const solWallets = [
     new PhantomWalletAdapter(),
@@ -57,6 +57,14 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
     }
     return [`/locales/${_lang}.json`, `/locales/extend/${_lang}.json`];
   };
+
+  useEffect(() => {
+    const lang = getLocalePathFromPathname(pathname);
+    // if url is include lang, and url lang is not the same as the i18n language, change the i18n language
+    if (lang && lang !== i18n.language) {
+      i18n.changeLanguage(lang);
+    }
+  }, [pathname]);
 
   return (
     <LocaleProvider
