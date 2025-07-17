@@ -79,6 +79,7 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
             console.error(error);
           },
         }}
+        enableSolanaWallet={true}
         wagmiConfig={{
           connectors: [
             wagmiConnectors.injected(),
@@ -113,6 +114,7 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
           networkId={networkId}
           appIcons={config.orderlyAppProvider.appIcons}
           enableSwapDeposit={false}
+          enableSolanaWallet={true}
           onChainChanged={(
             chainId: number,
             state: {
