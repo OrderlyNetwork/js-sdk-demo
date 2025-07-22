@@ -106,12 +106,14 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
             },
           },
         }}
+        enableSwapDeposit={true}
       >
         <OrderlyAppProvider
           brokerId="orderly"
           brokerName="Orderly"
           networkId={networkId}
           appIcons={config.orderlyAppProvider.appIcons}
+          enableSwapDeposit={true}
           onChainChanged={(
             chainId: number,
             state: {
