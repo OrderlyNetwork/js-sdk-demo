@@ -109,8 +109,8 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
         enableSwapDeposit={true}
       >
         <OrderlyAppProvider
-          brokerId="demo"
-          brokerName="Orderly"
+          brokerId="woofi_pro"
+          brokerName="WOOFi Pro"
           networkId={networkId}
           appIcons={config.orderlyAppProvider.appIcons}
           enableSwapDeposit={true}
