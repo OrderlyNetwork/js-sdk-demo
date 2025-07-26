@@ -9,41 +9,41 @@ importers:
   .:
     dependencies:
       '@orderly.network/affiliate':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@orderly.network/i18n':
-        specifier: 2.5.2
-        version: 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
       '@orderly.network/markets':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@orderly.network/portfolio':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@orderly.network/react-app':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@orderly.network/trading':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@orderly.network/trading-leaderboard':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@orderly.network/trading-rewards':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@orderly.network/types':
-        specifier: 2.5.2
-        version: 2.5.2
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19
       '@orderly.network/ui':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
       '@orderly.network/ui-scaffold':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@orderly.network/wallet-connector-privy':
-        specifier: 2.5.2
-        version: 2.5.2(x4xokavnnk7gzmyjxtuzpk5xmu)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(x4xokavnnk7gzmyjxtuzpk5xmu)
       '@solana-mobile/wallet-adapter-mobile':
         specifier: 2.1.4
         version: 2.1.4(@solana/web3.js@1.95.8(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)
@@ -57,7 +57,7 @@ importers:
         specifier: ^2.10.2
         version: 2.11.2(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10)(zod@3.24.3)
       '@web3-onboard/ledger':
-        specifier: ^2.5.2
+        specifier: ^2.5.3-internal-20250724-hotfix.19
         version: 2.7.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10)))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(rollup@3.29.5)(typescript@5.7.2)(utf-8-validate@5.0.10)(zod@3.24.3)
       '@web3-onboard/trezor':
         specifier: ^2.4.3
@@ -76,8 +76,8 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@orderly.network/hooks':
-        specifier: 2.5.2
-        version: 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+        specifier: 2.5.3-internal-20250724-hotfix.19
+        version: 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@types/node':
         specifier: ^20
         version: 20.17.9
@@ -1760,152 +1760,152 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@orderly.network/affiliate@2.5.2':
-    resolution: {integrity: sha512-O58K1dCu5IhH4X//LK1M+gZyicEJsSBPL3sc/6yZH508OhYtkyeEUsAK06aJ1R2nbCfcCArCPceRAVNPTB/t6Q==}
+  '@orderly.network/affiliate@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-1ecVE6rZ78z3X28mzumY1weuic5stN2N7LiwpIAofecE8W+gsRcNJoayEA0sCF14Ttn1fkhOxccQ8kly4KDHcw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/chart@2.5.2':
-    resolution: {integrity: sha512-pwq9+7cP3iY/TUnYwRYgfzSIvqI7yA8GVasOBprbsELOhIZYREWIwX2pkKXd0b2nq9atKlBWDQr/yU0V6sP/WQ==}
+  '@orderly.network/chart@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-ZZsrewQcwzOWqTO2z4vqVamJDDmNkZGtEkKpGk7sg/b8ZwHm5oIzZMIcMWQ7CufQ0bwrk2yAXl+6eQzKkxxaNA==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/core@2.5.2':
-    resolution: {integrity: sha512-7s7yjUgANmQAsxx9WEBVKkmc94IEiLoSKhbeD6aGr5pTJPZstmxoQ5fzYGEC9d7MgIMJVefY/idng0ZzTPaGGg==}
+  '@orderly.network/core@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-nP1MotsRpi18LQa30o55vahITb03ba+lbk/eWZAx7p6uu3BNy3+aRHAzgzEnJHHQn80pUEdSoplTMIRDCo2ZvA==}
 
-  '@orderly.network/default-evm-adapter@2.5.2':
-    resolution: {integrity: sha512-NQz6RyQXVAGdkWOsSLUWPZhf+VGltXet1EbWH1K1f7Z8FWDY+/WIleTON4sV8wdhGFrBiyBC9vlQHiwZt9b3FA==}
+  '@orderly.network/default-evm-adapter@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-5NrS/hvFztUB9oKTL+qZ3Rt6mzh3RdUabMTfgrG35KsUynq/UnVraT7d8Z6U8podFvk0N8ZBiyfJ3M+q7BA5kQ==}
 
-  '@orderly.network/default-solana-adapter@2.5.2':
-    resolution: {integrity: sha512-37olKP1L9vFn01cwUi3Z1eVbEMCmvaN8iwZfIO7tRl7HRPdmYrLZ7SP5c7RJdT1R3SF+GqxfsEQS0o+oU0Bndw==}
+  '@orderly.network/default-solana-adapter@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-egXzz5pvXkp9iRv0TeZy7WOB9NZQkFNnvW4Ga0kP5YGe+anSctM6sYbc2r5gZZ2+qW613O5qAz9dy8O04rbC4A==}
 
-  '@orderly.network/hooks@2.5.2':
-    resolution: {integrity: sha512-MrlB7ouy5WyLnMhg/0pbfIxsF0rYz9JSAdXqhKKIGVgbXHuNuJBco38FFf2ZIURM3WddUxT0anVZ5Hm7/TsZHg==}
+  '@orderly.network/hooks@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-sFY96+cJAObg9FWni4gIcnnIExGhooHuyRHLZBAtF/lpx9v496JGwD8ynoNWAJFAUtyGWX51ghD67d5IN/BIlw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/i18n@2.5.2':
-    resolution: {integrity: sha512-4cucqVrO6s40zS4VwCPbPgWyJ637sz+GI0eR+9+lMRyMSkFha63H0iNEJe+CsHxm7K3aPoja3qi+R90kwE8uZQ==}
+  '@orderly.network/i18n@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-qVjZkhQgfvlE9qs3MfOzCU1HmTs7G2ENHwsRP6km5OjTlGwBjQs7vM2UlxwYcfhUxoKynAkuVDjtq52XmchhyA==}
     hasBin: true
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/markets@2.5.2':
-    resolution: {integrity: sha512-yZwkGAjN9F68QPBKA+EneTpZqH+AaFV28Asov+ds8hrJuEN4/Qd8p2Ca9qgzN8uphr6UWhK2B6APxEbKH7emUQ==}
+  '@orderly.network/markets@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-rlqRabgrKHKTFlGCdhEm+FSabgMS7Ydl7BDgBEj4mCFShD1U4Rf0oscRb32JK3A3rqVGLUmekhD7M5Cg3WNXmg==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/net@2.5.2':
-    resolution: {integrity: sha512-ujvwENSyE9nDjdT74j3Cs6LL8XeB8Yi36kOoFwC7GPlaRREfiMTgCErl3XOXRprT17G0tKGbrt1SWGmVFQUuBw==}
+  '@orderly.network/net@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-9AzYbnUM5SSmrBDxb4wQ5oO3q9ikzSOve+khPvuEBBnlAdIYxdSMSFMthSnyE8Yad0RucE9bAxTNZ1loTHIbOw==}
 
-  '@orderly.network/perp@4.5.2':
-    resolution: {integrity: sha512-CMRg0vND3PWgNEPRBhHDE1atjFPCsqnyuvIFLDKJ/eS7OkdN2p5xQx6T2Oq6rFsBjJcAzpKwBoVdMLzn2NSnXQ==}
+  '@orderly.network/perp@4.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-pRenSyFZ5n9JXJmBfXdnhHg61WB04ILcte/uk9+1z/Lh1v4cWY75M6ZfGQQEQ2karakvAoNZbkOjhDxInJSMpQ==}
 
-  '@orderly.network/portfolio@2.5.2':
-    resolution: {integrity: sha512-0ozvQg2kJY6eiHlZHSyi54SNs6kQH1Q2w2rXj8hMT9fn1qx3PdHDahN4ARMEw5wrXZifXOTA6qY3p0Wj3kiz6A==}
+  '@orderly.network/portfolio@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-mKwgj5Ai7c4UDQ/fHxZXbhYqRAikpDDkdQ7rF1CaWD8QxlBvif5izv6sqhXq1sslne7bbit2JPTXhYPx1PXUcQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/react-app@2.5.2':
-    resolution: {integrity: sha512-qxz6TghRQ0bejf41fH9Rl4fZnmptM6YDMBF9RgKr6HuXKldf9LzeMosqnSus6CKZvLHFisNbYz13YPE1iM9yvg==}
+  '@orderly.network/react-app@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-DA4jWNJGNBGbd+qx5NRtP5oB/sZdYcaaaik9R7JBzOMAttDYCigC8/TkuojoseaD8g9KExwjoxS89GJeVQP/3Q==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/trading-leaderboard@2.5.2':
-    resolution: {integrity: sha512-RIkryUwhK5qFBWwQ3UbjQAo92zYExoNoxsrnjhjePGWWWI3TycBeBdwAQK2iubioHhBwflbnMqZO3VSrBdq1mA==}
+  '@orderly.network/trading-leaderboard@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-9rPhqDtSqJNbGBAQfr2U5I1obIXfTjKSFL9VP+GLwxNK6wdpLqeGJ3CTQT/kdaJZimeY5W/HwFHl1knhhO7J7g==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/trading-rewards@2.5.2':
-    resolution: {integrity: sha512-eglIuD8Oq5Jsig5ZZGybgE941bYItZ+ehSnDZqwfGiY+ObMpohSDDPviRMTDLEGRrSKkl/xYcxjDM/CdsDTN5g==}
+  '@orderly.network/trading-rewards@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-2UAlWwl8hTBTiAQU8W20BOJxd9bnZGDR8bMWqnVCXr1uVPRaqShxsVbN+sJdrIEmkDcSaObMuxxFUZpeocMbtQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/trading@2.5.2':
-    resolution: {integrity: sha512-j0F+7YY30BQJ5R5sRM2rShfofeGmZCPX0A5CphDRnMmjETUk8HRDx1ItQhqY+czNz0MyBegcw0Q7oT+D8QqLiA==}
+  '@orderly.network/trading@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-nXRum3XBDB590bqiy+DQ+S06exBBQ4Qc3JSlTxyvAfs87t1YG7fDwzXO0b07zP+3UAkDOPIUPm06XN5pC8XoFg==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/types@2.5.2':
-    resolution: {integrity: sha512-h7HYyWHZh24eSovJinI0g5lhIcueG8NYScYrrREIablLyYBax+rtMBzrrHHIWPWkucPsrNw+KeXnAMMSvjLJWw==}
+  '@orderly.network/types@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-b8u04fnGog8d6o4jTebiy+BqyEguGLfxwG3Cwu8BVJS8GaL4wzCj4VOWSxYVxpKxSn+kfa6XAEHoO7PE61/LeQ==}
 
-  '@orderly.network/ui-chain-selector@2.5.2':
-    resolution: {integrity: sha512-gWssaYPFIZkbs/WHD447CO3fDr9Rn7UT+VdUCXA7xEb4ftcv1uhaBZ5T0ttIT+X6H2e6URavnmJwCjRryDc9pw==}
+  '@orderly.network/ui-chain-selector@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-aaKk0Pha4ADrDPwquh1LMBN/dqd5g3MxSkYq9OfQuE2xuSKKCcpSg90plI2sPQw2x+6Hs4vcVC0qHeEEuAWpTA==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-connector@2.5.2':
-    resolution: {integrity: sha512-k39qn4thLHGJ8T2XuKrI8ThX3MUGpE2MVjyqTy9Td6IF33myNeeBoYsux3NfjhwJEwIj8S/SprvuR3ey/POpsg==}
+  '@orderly.network/ui-connector@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-+uUZbGXXMGLeSIfKHKDjts4xS6EtvNJ26nmIco3h422bG7SgG5cFJ5YKeJNe9Uae5eB+A6Qr4Pvo0Zk+KnIIsg==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-leverage@2.5.2':
-    resolution: {integrity: sha512-++UEgKa5VJl/4Qbd6kcYXpOqq+NdmDHhqCYJ91QYi8HitzmgiuTJCn2V3sbQgs1t7aapbdhSR25mZ0XPoNSDrQ==}
+  '@orderly.network/ui-leverage@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-vTYOuYsnTOPf/zzXQJIkqXmILZZ+0psxpbnzn4di0B3qLVd56jtC0xzu41CHiQkWK5rK3VjG/VbnBlUB8zV7mQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-order-entry@2.5.2':
-    resolution: {integrity: sha512-mwsJ3jWNS4HTVA+c+XpyK65OVTXp0Mxrrh9mgsqP1x7gkI82sRr2nc1OE9vWFd81wc9htYjyct6doTEtu1pWcQ==}
+  '@orderly.network/ui-order-entry@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-wTOdlU80B2uGK6aZYpbsVmvPjJFz5w3eKPigJfIX9dWvKyetCNBgMLSGtQKIB31yC0R+1IIwkcGPxcIvd1sAqg==}
 
-  '@orderly.network/ui-orders@2.5.2':
-    resolution: {integrity: sha512-X7orTfWulOkun2dl0A11Y00rWxx9Hd20xkifBHx/uHRIUn8AUymKxualDa9nV7UQp5BDuK6ohlwYpZCuaYIz2A==}
+  '@orderly.network/ui-orders@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-vUy8BEqIH8CWowkLs4KJZrBh24kutGB4AtrSkLdaK27Eu0qHWqeQ6/4neerafj2sgpN8uaECbyUlqZIEH98ruQ==}
 
-  '@orderly.network/ui-positions@2.5.2':
-    resolution: {integrity: sha512-KAmF4qg5dcT+VMbyJAfTMKqfdd2Yxr9JN7n6SnGqfM6kXwhNxYgnH3FOH1RBziEHVscLsARNpWtPJBhnU52IBg==}
+  '@orderly.network/ui-positions@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-kMI0+T4fsyC5eWBoMvjEzAJTowiMwA3/XllLpppSoilK/fQTn3ajyg7ZP66WyQI+xO9SXXV7ViC8PJunz8UfYA==}
 
-  '@orderly.network/ui-scaffold@2.5.2':
-    resolution: {integrity: sha512-QW3P0wFaseCKcHSSj/YpxWRQkpXN9R1WCoy7ApFlZUVH66YmwrmtAFM3qWP9I+sZQ8GBaLHNR2mOVofDWXTECQ==}
+  '@orderly.network/ui-scaffold@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-hlmINxrUDSxFFUnDbAQOIyxkYak8SC7wyVwy9Urc5eMulyjwXjOaBd2VYVc+OUGUwq0uW0da/0YtjLtSTqvUeQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-share@2.5.2':
-    resolution: {integrity: sha512-L0FOUu6k8Ls2p8FDoZlmmHQvcE0rK2eGWAXz5YPDJS0TEB67t30rHy1gpIzNDYevz9fbmqVJC7+qkp1CKDtuxA==}
+  '@orderly.network/ui-share@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-H+Of9Zuta5yzHcZwQ3esTfoNR0GSraklj7jn5PxBW96XGGSiEaw2KYN6h3vyRS1wxzXEcppuT7EKKnwTnSqlhg==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-tpsl@2.5.2':
-    resolution: {integrity: sha512-lUU5UGBAjZrIhW+MSR5AUAoQtTzT1EEVkRvVFf8ADF5WcSn7NNG015zKRAXD5Lc8NHIEgJm5R04d3jMQLqQoEg==}
+  '@orderly.network/ui-tpsl@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-2YZw+tZ9blu4x2Uvyg9+snj2/sKzx0GiALv+KQl3wIJDq7zwCrbiwtbYahVsY5ReQYsjOB5vSbS/tXu8z3KWPA==}
 
-  '@orderly.network/ui-tradingview@2.5.2':
-    resolution: {integrity: sha512-AxR2lUp4L9vXayauJNh6ECWTVKq3ZNMixYiFxHGK0MFrWwnMHasm/S6uh5LdakoXtTSmrnK8ggHrbIkJyjL0Gw==}
+  '@orderly.network/ui-tradingview@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-PxmJ54v8XL1XiWlpmgGrhmCJxTJL/QoQ5n3EnxFZI1tKfdXC02s8a3YY4tQPTO07x7YnV26xY2SD8o5xOsGEtA==}
 
-  '@orderly.network/ui-transfer@2.5.2':
-    resolution: {integrity: sha512-ItMNkuRIp0ypa3VtbvrAcvQ6CUyY9js+vG2n6LGcGR+lFO2UHGsFBnR4MrDRDDHGUgt6la2Hf2ScHxzDTOXjuw==}
+  '@orderly.network/ui-transfer@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-gmQDv5A+mf+8L9+SJGtTRpyIYULPqbEAKaTMiDhB610YSayOcA7r9XWYymDOF9yn/x9EPg7eBf35oD5k7TDqhQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui@2.5.2':
-    resolution: {integrity: sha512-xiCHVjykuWGib/jgRzTT4M3gU0gNXKzyCjd8ySWype/Num2wM0iGRehWkYQNpASJc4r/QHawzbvz584VOgfvsQ==}
+  '@orderly.network/ui@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-5Z662w4sc6o3i0zUgwz9W5Vk12FF+22mFYWclBnsw4G+HsIRLwSxYmuwpU9r3X4q8+mqvbezrannYYYtCsTfwA==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/utils@2.5.2':
-    resolution: {integrity: sha512-tciJ6xYA+hEbpO08to1YuVQBpv5gHxTbNBnM+PdysiKVKuZaRVQzMZPNNw+yThezAuSmsZjHh5lX/K+/0opLuA==}
+  '@orderly.network/utils@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-LOt34n2TU7htWPSW/LNV+9q05AKpQKWsteugucgM4B06+UhTj8Q9EFLVj1WWXxcLrHltiywex304/51Mct5npQ==}
 
-  '@orderly.network/wallet-connector-privy@2.5.2':
-    resolution: {integrity: sha512-sKdgYPjZeW3tA9chr+9LW7z7ulQE/8JIdWHzQiQ45kt3uvbsQ9JFyWHVOCeNeuj4a4KI7x4YuW/VeXfEB1iM3g==}
+  '@orderly.network/wallet-connector-privy@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-B2McwJ+qQdcS3WaxtC8Qs/pJvXo9Ne92SLwFnd/ENm+Q+9ZmdOjd6LyNEcDyrusL8T16HZTYuNLXGAaUU89EBg==}
     peerDependencies:
       react: '>=18'
 
-  '@orderly.network/web3-provider-ethers@2.5.2':
-    resolution: {integrity: sha512-wMWy0dCdyO6KIaRoPOwZsvN1JicKQei6eZ/QBnjebe+m9g0M+B43RVBe5HXoiDHM65wBTmBfUibhlAY+JGU4SQ==}
+  '@orderly.network/web3-provider-ethers@2.5.3-internal-20250724-hotfix.19':
+    resolution: {integrity: sha512-kep7jTiCRM/tOV2TDdypdVUAUO7H2JuILz+AqvXyML3e0F7QGOva+4xLgEzc9mezSuU7FjTlhk/FqeMiVqW/bw==}
 
   '@parcel/watcher-android-arm64@2.5.0':
     resolution: {integrity: sha512-qlX4eS28bUcQCdribHkg/herLe+0A9RyYC+mm2PXpncit8z5b3nSqGVzMNR3CmtAOgRutiZ02eIJJgP/b1iEFQ==}
@@ -3789,6 +3789,7 @@ packages:
 
   '@walletconnect/ethereum-provider@2.9.1':
     resolution: {integrity: sha512-JiMatBFVgzJSQrckpbOoOsmQmKnbTn9wzmU10MBPe9W6ZV2mf2JuxW0luWKLpQkuCmM9mL6+nCKX7nfW9V6qrQ==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
     peerDependencies:
       '@walletconnect/modal': '>=2'
     peerDependenciesMeta:
@@ -3863,6 +3864,7 @@ packages:
 
   '@walletconnect/modal@2.6.1':
     resolution: {integrity: sha512-G84tSzdPKAFk1zimgV7JzIUFT5olZUVtI3GcOk77OeLYjlMfnDT23RVRHm5EyCrjkptnvpD0wQScXePOFd2Xcw==}
+    deprecated: Please follow the migration guide on https://docs.reown.com/appkit/upgrade/wcm
 
   '@walletconnect/modal@2.7.0':
     resolution: {integrity: sha512-RQVt58oJ+rwqnPcIvRFeMGKuXb9qkgSmwz4noF8JZGUym3gUAzVs+uW2NQ1Owm9XOJAV+sANrtJ+VoVq1ftElw==}
@@ -3900,7 +3902,7 @@ packages:
 
   '@walletconnect/sign-client@2.9.1':
     resolution: {integrity: sha512-Z7tFRrJ9btA1vU427vsjUS6cPlHQVcTWdKH90khEc2lv3dB6mU8FNO0VJsw+I2D7CW7WaMWF3nnj6Z1FfotbDg==}
-    deprecated: Reliability and performance greatly improved - please see https://github.com/WalletConnect/walletconnect-monorepo/releases
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/socket-transport@1.8.0':
     resolution: {integrity: sha512-5DyIyWrzHXTcVp0Vd93zJ5XMW61iDM6bcWT4p8DTRfFsOtW46JquruMhxOLeCOieM4D73kcr3U7WtyR4JUsGuQ==}
@@ -10972,17 +10974,17 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@orderly.network/affiliate@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/affiliate@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/chart': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-scaffold': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/chart': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-scaffold': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       date-fns: 3.6.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11000,11 +11002,11 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/chart@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)':
+  '@orderly.network/chart@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)':
     dependencies:
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       d3-array: 3.2.4
       d3-axis: 3.0.0
       d3-scale: 4.0.2
@@ -11021,11 +11023,11 @@ snapshots:
       - tailwindcss
       - typescript
 
-  '@orderly.network/core@2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
+  '@orderly.network/core@2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
     dependencies:
       '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.13.4(bufferutil@4.0.8)(utf-8-validate@5.0.10))
       '@noble/ed25519': 2.1.0
-      '@orderly.network/types': 2.5.2
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
       '@solana/web3.js': 1.95.8(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
       bs58: 5.0.0
       ethers: 6.13.4(bufferutil@4.0.8)(utf-8-validate@5.0.10)
@@ -11036,25 +11038,25 @@ snapshots:
       - encoding
       - utf-8-validate
 
-  '@orderly.network/default-evm-adapter@2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
+  '@orderly.network/default-evm-adapter@2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
     dependencies:
       '@noble/ed25519': 2.1.0
-      '@orderly.network/core': 2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
+      '@orderly.network/core': 2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
       bs58: 5.0.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
       - utf-8-validate
 
-  '@orderly.network/default-solana-adapter@2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/default-solana-adapter@2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
       '@coral-xyz/anchor': 0.29.0(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
       '@layerzerolabs/lz-solana-sdk-v2': 2.3.45-oft-rc.0(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@layerzerolabs/lz-v2-utilities': 2.3.45-oft-rc.0
       '@noble/ed25519': 2.1.0
-      '@orderly.network/core': 2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
+      '@orderly.network/core': 2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
       '@solana/spl-token': 0.4.8(@solana/web3.js@1.95.8(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.2)(utf-8-validate@5.0.10)
       '@solana/wallet-adapter-base': 0.9.23(@solana/web3.js@1.95.8(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10))
       '@solana/web3.js': 1.95.8(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
@@ -11070,18 +11072,18 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/hooks@2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/hooks@2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
       '@akamfoad/qr': 0.4.0
       '@amplitude/analytics-browser': 2.11.13
-      '@orderly.network/core': 2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
-      '@orderly.network/default-evm-adapter': 2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
-      '@orderly.network/default-solana-adapter': 2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/net': 2.5.2
-      '@orderly.network/perp': 4.5.2
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/utils': 2.5.2
-      '@orderly.network/web3-provider-ethers': 2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@orderly.network/core': 2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@orderly.network/default-evm-adapter': 2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@orderly.network/default-solana-adapter': 2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/net': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/perp': 4.5.3-internal-20250724-hotfix.19
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/web3-provider-ethers': 2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
       immer: 10.1.1
       lodash: 4.17.21
       ramda: 0.29.1
@@ -11101,7 +11103,7 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/i18n@2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)':
+  '@orderly.network/i18n@2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)':
     dependencies:
       i18next: 24.2.3(typescript@5.7.2)
       i18next-browser-languagedetector: 8.0.4
@@ -11112,14 +11114,14 @@ snapshots:
       - react-native
       - typescript
 
-  '@orderly.network/markets@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/markets@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-scaffold': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-scaffold': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       embla-carousel-react: 8.5.1(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11137,31 +11139,33 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/net@2.5.2': {}
-
-  '@orderly.network/perp@4.5.2':
+  '@orderly.network/net@2.5.3-internal-20250724-hotfix.19':
     dependencies:
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/utils': 2.5.2
+      eventemitter3: 5.0.1
 
-  '@orderly.network/portfolio@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/perp@4.5.3-internal-20250724-hotfix.19':
     dependencies:
-      '@orderly.network/chart': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/perp': 4.5.2
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-chain-selector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-leverage': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-orders': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-positions': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-scaffold': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-share': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-transfer': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
+
+  '@orderly.network/portfolio@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@orderly.network/chart': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/perp': 4.5.3-internal-20250724-hotfix.19
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-chain-selector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-leverage': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-orders': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-positions': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-scaffold': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-share': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-transfer': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       date-fns: 3.6.0
       immer: 10.1.1
       lodash: 4.17.21
@@ -11183,13 +11187,13 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/react-app@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/react-app@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       date-fns: 3.6.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11207,15 +11211,15 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/trading-leaderboard@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/trading-leaderboard@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       date-fns: 3.6.0
       embla-carousel-react: 8.5.1(react@18.3.1)
       ramda: 0.29.1
@@ -11235,16 +11239,16 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/trading-rewards@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/trading-rewards@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-scaffold': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-scaffold': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       date-fns: 3.6.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11262,25 +11266,25 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/trading@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/trading@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/markets': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-chain-selector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-leverage': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-order-entry': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-orders': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-positions': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-scaffold': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-share': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-tradingview': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-transfer': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/markets': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-chain-selector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-leverage': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-order-entry': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-orders': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-positions': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-scaffold': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-share': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-tradingview': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-transfer': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       '@uiw/react-split': 5.9.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11299,17 +11303,17 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/types@2.5.2':
+  '@orderly.network/types@2.5.3-internal-20250724-hotfix.19':
     dependencies:
       superstruct: 2.0.2
 
-  '@orderly.network/ui-chain-selector@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-chain-selector@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -11326,14 +11330,14 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-connector@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-connector@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-chain-selector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-chain-selector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -11350,12 +11354,12 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-leverage@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-leverage@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -11372,17 +11376,17 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-order-entry@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-order-entry@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/perp': 4.5.2
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-leverage': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/perp': 4.5.3-internal-20250724-hotfix.19
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-leverage': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
@@ -11399,17 +11403,17 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-orders@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-orders@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-share': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-tpsl': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-share': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-tpsl': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       date-fns: 3.6.0
     transitivePeerDependencies:
       - '@types/react'
@@ -11427,18 +11431,18 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-positions@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-positions@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/perp': 4.5.2
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-share': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-tpsl': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/perp': 4.5.3-internal-20250724-hotfix.19
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-share': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-tpsl': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       date-fns: 3.6.0
       immer: 10.1.1
       ramda: 0.29.1
@@ -11458,18 +11462,18 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-scaffold@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-scaffold@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
       '@akamfoad/qr': 0.4.0
       '@date-fns/utc': 1.2.0
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-chain-selector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-chain-selector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       date-fns: 3.6.0
       immer: 10.1.1
       jsqr: 1.4.0
@@ -11489,13 +11493,13 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-share@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-share@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       embla-carousel-react: 8.5.1(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11513,14 +11517,14 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-tpsl@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-tpsl@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
@@ -11537,16 +11541,16 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-tradingview@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-tradingview@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/net': 2.5.2
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-positions': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/net': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-positions': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       date-fns: 3.6.0
     transitivePeerDependencies:
       - '@types/react'
@@ -11564,19 +11568,19 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-transfer@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
+  '@orderly.network/ui-transfer@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(axios@1.7.4)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)':
     dependencies:
       '@layerzerolabs/scan-client': 0.0.6(axios@1.7.4)
-      '@orderly.network/core': 2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/perp': 4.5.2
-      '@orderly.network/react-app': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-chain-selector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/core': 2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/perp': 4.5.3-internal-20250724-hotfix.19
+      '@orderly.network/react-app': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-chain-selector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       ramda: 0.29.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11595,9 +11599,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui@2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)':
+  '@orderly.network/ui@2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)':
     dependencies:
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       '@radix-ui/react-avatar': 1.1.1(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-checkbox': 1.1.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-collapsible': 1.1.1(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -11629,23 +11633,23 @@ snapshots:
       - csstype
       - tailwindcss
 
-  '@orderly.network/utils@2.5.2':
+  '@orderly.network/utils@2.5.3-internal-20250724-hotfix.19':
     dependencies:
-      '@orderly.network/types': 2.5.2
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
       dayjs: 1.11.13
       decimal.js-light: 2.5.1
 
-  '@orderly.network/wallet-connector-privy@2.5.2(x4xokavnnk7gzmyjxtuzpk5xmu)':
+  '@orderly.network/wallet-connector-privy@2.5.3-internal-20250724-hotfix.19(x4xokavnnk7gzmyjxtuzpk5xmu)':
     dependencies:
       '@abstract-foundation/agw-client': 1.8.5(abitype@1.0.8(typescript@5.7.2)(zod@3.24.3))(typescript@5.7.2)(viem@2.31.3(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10)(zod@3.24.3))
       '@abstract-foundation/agw-react': 1.8.5(pvfwd7skragplro3orws6fyjt4)
-      '@orderly.network/core': 2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
-      '@orderly.network/hooks': 2.5.2(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/i18n': 2.5.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
-      '@orderly.network/types': 2.5.2
-      '@orderly.network/ui': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
-      '@orderly.network/ui-connector': 2.5.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
-      '@orderly.network/utils': 2.5.2
+      '@orderly.network/core': 2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@orderly.network/hooks': 2.5.3-internal-20250724-hotfix.19(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/i18n': 2.5.3-internal-20250724-hotfix.19(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
+      '@orderly.network/ui': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      '@orderly.network/ui-connector': 2.5.3-internal-20250724-hotfix.19(@types/react-dom@18.3.1)(@types/react@18.3.12)(bufferutil@4.0.8)(csstype@3.1.3)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(tailwindcss@3.4.16)(typescript@5.7.2)(utf-8-validate@5.0.10)
+      '@orderly.network/utils': 2.5.3-internal-20250724-hotfix.19
       '@privy-io/react-auth': 2.4.5(@abstract-foundation/agw-client@1.8.5(abitype@1.0.8(typescript@5.7.2)(zod@3.24.3))(typescript@5.7.2)(viem@2.31.3(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10)(zod@3.24.3)))(@react-native-async-storage/async-storage@1.24.0(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10)))(@solana/web3.js@1.95.8(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10))(@types/react@18.3.12)(bs58@5.0.0)(bufferutil@4.0.8)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(use-sync-external-store@1.4.0(react@18.3.1))(utf-8-validate@5.0.10)(zod@3.24.3)
       '@solana-mobile/wallet-adapter-mobile': 2.1.4(@solana/web3.js@1.95.8(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10))(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)
       '@solana/wallet-adapter-base': 0.9.23(@solana/web3.js@1.95.8(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10))
@@ -11707,11 +11711,11 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@orderly.network/web3-provider-ethers@2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
+  '@orderly.network/web3-provider-ethers@2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)':
     dependencies:
       '@enzoferey/ethers-error-parser': 0.2.3(ethers@6.13.4(bufferutil@4.0.8)(utf-8-validate@5.0.10))
-      '@orderly.network/default-evm-adapter': 2.5.2(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
-      '@orderly.network/types': 2.5.2
+      '@orderly.network/default-evm-adapter': 2.5.3-internal-20250724-hotfix.19(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      '@orderly.network/types': 2.5.3-internal-20250724-hotfix.19
       ethers: 6.13.4(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
@@ -14595,7 +14599,7 @@ snapshots:
       '@walletconnect/keyvaluestorage': 1.1.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10)))
       '@walletconnect/logger': 2.1.2
       '@walletconnect/relay-api': 1.0.11
-      '@walletconnect/relay-auth': 1.0.4
+      '@walletconnect/relay-auth': 1.1.0
       '@walletconnect/safe-json': 1.0.2
       '@walletconnect/time': 1.0.2
       '@walletconnect/types': 2.9.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(bufferutil@4.0.8)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@5.0.10)))
@@ -16866,8 +16870,8 @@ snapshots:
       '@typescript-eslint/parser': 8.17.0(eslint@8.57.1)(typescript@5.7.2)
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.1)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.1)
       eslint-plugin-react: 7.37.2(eslint@8.57.1)
       eslint-plugin-react-hooks: 5.0.0(eslint@8.57.1)
@@ -16886,7 +16890,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1):
+  eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.1):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.3.7
@@ -16898,22 +16902,22 @@ snapshots:
       is-glob: 4.0.3
       stable-hash: 0.0.4
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.17.0(eslint@8.57.1)(typescript@5.7.2)
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -16924,7 +16928,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
