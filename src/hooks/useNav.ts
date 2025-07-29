@@ -6,7 +6,13 @@ import { PathEnum } from "@/constant";
 import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
 import { i18n, parseI18nLang } from "@orderly.network/i18n";
 
-export function useNav() {
+// if href not equal to the route path, we need to convert it to the route path
+const routeMap: Partial<Record<PortfolioLeftSidebarPath, PathEnum>> = {
+  [PortfolioLeftSidebarPath.FeeTier]: PathEnum.FeeTier,
+  [PortfolioLeftSidebarPath.ApiKey]: PathEnum.ApiKey,
+};
+
+export const useNav = () => {
   const router = useRouter();
 
   const onRouteChange = useCallback(
@@ -23,12 +29,6 @@ export function useNav() {
         return;
       }
 
-      // if href not equal to the route path, we need to convert it to the route path
-      const routeMap = {
-        [PortfolioLeftSidebarPath.FeeTier]: PathEnum.FeeTier,
-        [PortfolioLeftSidebarPath.ApiKey]: PathEnum.ApiKey,
-      } as Record<string, string>;
-
       const path = routeMap[option.href] || option.href;
 
       router.push(`/${lang}${path}`);
@@ -37,4 +37,4 @@ export function useNav() {
   );
 
   return { onRouteChange };
-}
+};

@@ -1,14 +1,14 @@
-'use client'
+"use client";
+
 import dynamic from "next/dynamic";
+import React from "react";
 
 const OrderlyProvider = dynamic(() => import("@/components/orderlyProvider"), {
   ssr: false, // Disable server-side rendering
 });
 
-export function AppProvider({ children }: { children: React.ReactNode }) {
-  return (
-    <OrderlyProvider >
-      {children}
-    </OrderlyProvider>
-  );
-}
+export const AppProvider: React.FC<React.PropsWithChildren> = ({
+  children,
+}) => {
+  return <OrderlyProvider>{children}</OrderlyProvider>;
+};
