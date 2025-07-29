@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "copyLocales": "node scripts/copyLocales.js"
+    "copyLocales": "node scripts/copyLocales.js",
+    "prepare": "husky"
   },
   "dependencies": {
     "@orderly.network/affiliate": "2.5.3",
@@ -42,6 +43,8 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.2",
     "fs-extra": "^11.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "typescript": "^5"
   }
 }
