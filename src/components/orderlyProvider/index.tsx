@@ -1,5 +1,6 @@
 "use client";
-import React, { FC, ReactNode, useEffect } from "react";
+
+import React, { FC, useEffect } from "react";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import { useLocalStorage } from "@orderly.network/hooks";
 import {
@@ -22,16 +23,18 @@ import {
 } from "@orderly.network/i18n";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
 import { usePathname } from "next/navigation";
+import { useNav } from "@/hooks/useNav";
 
 const getPrivyId = () => {
   // dev privy id
   return "cm86zfufk01n2ojo83s2becsr";
 };
 
-const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
+const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   const config = useOrderlyConfig();
   const path = usePathWithoutLang();
   const pathname = usePathname();
+  const { onRouteChange } = useNav();
 
   const [networkId, setNetworkId] = useLocalStorage(
     "dmm-local-storage-network-id",
@@ -106,14 +109,14 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
             },
           },
         }}
-        enableSwapDeposit={true}
+        enableSwapDeposit
       >
         <OrderlyAppProvider
           brokerId="orderly"
           brokerName="Orderly"
           networkId={networkId}
           appIcons={config.orderlyAppProvider.appIcons}
-          enableSwapDeposit={true}
+          enableSwapDeposit
           onChainChanged={(
             chainId: number,
             state: {
@@ -127,6 +130,7 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
               window.location.reload();
             }
           }}
+          onRouteChange={onRouteChange}
         >
           {props.children}
         </OrderlyAppProvider>
