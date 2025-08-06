@@ -25,7 +25,10 @@ export const useNav = () => {
 
       if (option.href === "/") {
         const symbol = getSymbol();
-        router.push(`/${lang}/${PathEnum.Perp}/${symbol}`);
+        // const path = `/${lang}/${PathEnum.Perp}/${symbol}`;
+        // router.push(path);
+        router.push(PathEnum.Root);
+
         return;
       }
 
