@@ -77,6 +77,14 @@ function removeLangPrefix(pathname: string, localeCodes?: string[]) {
 }
 
 export function middleware(request: NextRequest) {
+  // Skip middleware for static export
+  if (
+    process.env.NODE_ENV === "production" &&
+    process.env.NEXT_EXPORT === "true"
+  ) {
+    return;
+  }
+
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
 

@@ -127,11 +127,15 @@ export const useOrderlyConfig = () => {
         appIcons: {
           main: {
             component: (
-              <img src="/orderly-logo.svg" alt="logo" style={{ height: 40 }} />
+              <img
+                src="/images/orderly-logo.svg"
+                alt="logo"
+                style={{ height: 40 }}
+              />
             ),
           },
           secondary: {
-            img: "/orderly-logo-secondary.svg",
+            img: "/images/orderly-logo-secondary.svg",
           },
         },
         restrictedInfo: {
@@ -148,10 +152,10 @@ export const useOrderlyConfig = () => {
         },
         sharePnLConfig: {
           backgroundImages: [
-            "/pnl/poster_bg_1.png",
-            "/pnl/poster_bg_2.png",
-            "/pnl/poster_bg_3.png",
-            "/pnl/poster_bg_4.png",
+            "/images/pnl/poster_bg_1.png",
+            "/images/pnl/poster_bg_2.png",
+            "/images/pnl/poster_bg_3.png",
+            "/images/pnl/poster_bg_4.png",
           ],
 
           color: "rgba(255, 255, 255, 0.98)",

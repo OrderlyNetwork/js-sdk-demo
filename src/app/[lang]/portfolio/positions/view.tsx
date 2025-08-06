@@ -19,7 +19,8 @@ export default function PositionsView() {
     (data: API.Symbol) => {
       const symbol = data.symbol;
       updateSymbol(symbol);
-      router.push(`/${parseI18nLang(i18n.language)}${PathEnum.Perp}/${symbol}`);
+      // router.push(`/${parseI18nLang(i18n.language)}${PathEnum.Perp}/${symbol}`);
+      router.push(PathEnum.Root);
     },
     [router]
   );

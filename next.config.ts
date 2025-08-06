@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // output: "standalone",
+  output: "export",
+  // output: process.env.NODE_ENV === "production" ? "export" : "standalone",
+  // https://nextjs.org/docs/app/api-reference/config/next-config-js/trailingSlash
+  // when use export, trailingSlash must be true
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+
   webpack: (config) => {
     // fix Module not found: Can't resolve 'pino-pretty' warning https://github.com/pinojs/pino/issues/688
     config.externals = [...config.externals, "pino-pretty"];
@@ -14,15 +23,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: "/",
-  //       destination: "/en/perp/PERP_ETH_USDC",
-  //       permanent: false,
-  //     },
-  //   ];
-  // },
 };
 
 export default nextConfig;

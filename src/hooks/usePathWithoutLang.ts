@@ -10,5 +10,8 @@ import { removeLangPrefix } from "@orderly.network/i18n";
 export function usePathWithoutLang() {
   const pathname = usePathname();
 
-  return useMemo(() => removeLangPrefix(pathname), [pathname]);
+  return useMemo(() => {
+    const removedTrailingSlash = pathname.replace(/\/$/, "");
+    return removeLangPrefix(removedTrailingSlash);
+  }, [pathname]);
 }
