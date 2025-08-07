@@ -128,9 +128,9 @@ export const useOrderlyConfig = () => {
           main: {
             component: (
               <img
+                alt="Orderly logo"
                 src="/images/orderly-logo.svg"
-                alt="logo"
-                style={{ height: 40 }}
+                style={{ width: 100, height: 40 }}
               />
             ),
           },
