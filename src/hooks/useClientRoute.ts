@@ -10,12 +10,14 @@ import { PathEnum } from "@/constant";
 export function useClientRouting() {
   const router = useRouter();
   let currentLocale = parseI18nLang(i18n?.language);
-  // const pathname =
-  //   typeof window !== "undefined" ? window.location.pathname : "";
   const pathname = usePathname();
   const localePath = getLocalePathFromPathname(pathname);
 
-  if (!localePath && pathname !== PathEnum.Root && pathname !== "health") {
+  if (["/health", "/health/"].includes(pathname)) {
+    return;
+  }
+
+  if (!localePath && pathname !== PathEnum.Root) {
     // redirect to the current locale path
     // /perp/PERP_ETH_USDC => /en/perp/PERP_ETH_USDC
     const redirectPath = `/${currentLocale}${pathname}`;
