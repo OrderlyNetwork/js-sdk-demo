@@ -6,7 +6,7 @@ import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 
 export default function OrdersView() {
   const config = useOrderlyConfig();
-  
+
   return (
     <Box
       p={6}
