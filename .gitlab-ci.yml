@@ -1,41 +1,14 @@
 include:
   - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
     ref: main
+    file: '/common-orderly-network-evm-iap.yaml'
+  - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
+    ref: main
     file: '/common-orderly-network-dev-v2.yaml'
   - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
     ref: main
     file: '/common-orderly-network-qa-evm.yaml'
 
 variables:
-  SERVICE_NAME: dmm
-  IMAGE_NAME: dmm
-
-deploy_dev_v2:
-  stage: deploy
-  image:
-    name: asia-northeast1-docker.pkg.dev/woo-orderly/orderly-devops/curl
-    entrypoint: [""]
-  script:
-    - echo "Trigger dev v2 helm deploying ... "
-    - curl -X POST --fail -F token=${DEPLOY_DMM_PRJ_TOKEN} -F "ref=aliyun-dev" -F "variables[SERVICE_NAME]=${SERVICE_NAME}" -F "variables[TAG]=${CI_COMMIT_TAG}" https://gitlab.com/api/v4/projects/${DEPLOY_DMM_PRJ_ID}/trigger/pipeline
-  when: manual
-  only:
-    - tags
-  tags:
-    - dev
-    - build
-
-deploy_qa_evm:
-  stage: deploy
-  image:
-    name: asia-northeast1-docker.pkg.dev/woo-orderly/orderly-devops/curl
-    entrypoint: [""]
-  script:
-    - echo "Trigger qa-evm helm deploying ... "
-    - curl -X POST --fail -F token=${DEPLOY_DMM_PRJ_TOKEN} -F "ref=aliyun-qa" -F "variables[SERVICE_NAME]=${SERVICE_NAME}" -F "variables[TAG]=${CI_COMMIT_TAG}" https://gitlab.com/api/v4/projects/${DEPLOY_DMM_PRJ_ID}/trigger/pipeline
-  when: manual
-  only:
-    - tags
-  tags:
-    - dev
-    - build
+  SERVICE_NAME: sdk-demo
+  IMAGE_NAME: sdk-demo

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { usePathname } from "next/navigation";
+import { useLocation } from "react-router";
 import { removeLangPrefix } from "@orderly.network/i18n";
 
 /**
@@ -8,7 +8,8 @@ import { removeLangPrefix } from "@orderly.network/i18n";
  * /en/markets => /markets
  */
 export function usePathWithoutLang() {
-  const pathname = usePathname();
+  const location = useLocation();
+  const pathname = location.pathname;
 
   return useMemo(() => removeLangPrefix(pathname), [pathname]);
 }

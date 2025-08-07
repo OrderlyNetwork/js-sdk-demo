@@ -1,25 +1,11 @@
 import { useMemo } from "react";
 import { TradingPageProps } from "@orderly.network/trading";
-import {
-  BottomNavProps,
-  FooterProps,
-  MainNavWidgetProps,
-} from "@orderly.network/ui-scaffold";
+import { FooterProps, MainNavWidgetProps } from "@orderly.network/ui-scaffold";
 import { type RestrictedInfoOptions } from "@orderly.network/hooks";
 import { AppLogos } from "@orderly.network/react-app";
 import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
 import { useTranslation } from "@orderly.network/i18n";
 import { PathEnum } from "../constant";
-import {
-  LeaderboardInactiveIcon,
-  PortfolioInactiveIcon,
-  PortfolioActiveIcon,
-  LeaderboardActiveIcon,
-  MarketsActiveIcon,
-  MarketsInactiveIcon,
-  TradingInactiveIcon,
-  TradingActiveIcon,
-} from "@orderly.network/ui";
 
 export type OrderlyConfig = {
   orderlyAppProvider: {
@@ -29,11 +15,11 @@ export type OrderlyConfig = {
   scaffold: {
     mainNavProps: MainNavWidgetProps;
     footerProps: FooterProps;
-    bottomNavProps: BottomNavProps;
   };
   tradingPage: {
     tradingViewConfig: TradingPageProps["tradingViewConfig"];
     sharePnLConfig: TradingPageProps["sharePnLConfig"];
+    referral?: any;
   };
 };
 
@@ -45,91 +31,60 @@ export const useOrderlyConfig = () => {
       scaffold: {
         mainNavProps: {
           mainMenus: [
-            {
-              name: t("common.trading"),
-              href: PathEnum.Root,
-              isHomePageInMobile: true,
-            },
+            { name: t("common.trading"), href: PathEnum.Root },
             { name: t("common.portfolio"), href: PathEnum.Portfolio },
             { name: t("common.markets"), href: PathEnum.Markets },
             {
               name: t("tradingLeaderboard.leaderboard"),
               href: PathEnum.Leaderboard,
             },
+            {
+              name: t("tradingRewards.rewards"),
+              href: PathEnum.Rewards,
+              children: [
+                {
+                  name: t("common.tradingRewards"),
+                  href: PathEnum.RewardsTrading,
+                  description: t("extend.tradingRewards.description"),
+                },
+                {
+                  name: t("common.affiliate"),
+                  href: PathEnum.RewardsAffiliate,
+                  tag: t("extend.affiliate.tag"),
+                  description: t("extend.affiliate.description"),
+                },
+                {
+                  name: t("extend.staking"),
+                  href: "https://app.orderly.network/staking",
+                  description: t("extend.staking.description"),
+                  target: "_blank",
+                  icon: <OrderlyIcon size={14} />,
+                  activeIcon: <OrderlyActiveIcon size={14} />,
+                },
+              ],
+            },
           ],
           initialMenu: PathEnum.Root,
-          campaigns: {
-            name: t("tradingRewards.rewards"),
-            href: PathEnum.Rewards,
-            isSubMenuInMobile: true,
-            subMenuBackNav: {
-              name: t("common.portfolio"),
-              href: PathEnum.Portfolio,
-            },
-            children: [
-              {
-                name: t("common.tradingRewards"),
-                href: PathEnum.RewardsTrading,
-                description: t("extend.tradingRewards.description"),
-              },
-              {
-                name: t("common.affiliate"),
-                href: PathEnum.RewardsAffiliate,
-                tag: t("extend.affiliate.tag"),
-                description: t("extend.affiliate.description"),
-              },
-              {
-                name: t("extend.staking"),
-                href: "https://app.orderly.network/staking",
-                description: t("extend.staking.description"),
-                target: "_blank",
-                icon: <OrderlyIcon size={14} />,
-                activeIcon: <OrderlyActiveIcon size={14} />,
-              },
-            ],
-          },
         },
         footerProps: {
           telegramUrl: "https://orderly.network",
           discordUrl: "https://discord.com/invite/orderlynetwork",
           twitterUrl: "https://twitter.com/OrderlyNetwork",
         },
-        bottomNavProps: {
-          mainMenus: [
-            {
-              name: t("common.markets"),
-              href: PathEnum.Markets,
-              activeIcon: <MarketsActiveIcon />,
-              inactiveIcon: <MarketsInactiveIcon />,
-            },
-            {
-              name: t("common.trading"),
-              href: PathEnum.Root,
-              activeIcon: <TradingActiveIcon />,
-              inactiveIcon: <TradingInactiveIcon />,
-            },
-            {
-              name: t("tradingLeaderboard.leaderboard"),
-              href: PathEnum.Leaderboard,
-              activeIcon: <LeaderboardActiveIcon />,
-              inactiveIcon: <LeaderboardInactiveIcon />,
-            },
-            {
-              name: t("common.portfolio"),
-              href: PathEnum.Portfolio,
-              activeIcon: <PortfolioActiveIcon />,
-              inactiveIcon: <PortfolioInactiveIcon />,
-            },
-          ],
-        },
       },
       orderlyAppProvider: {
         appIcons: {
           main: {
-            component: <img src="/orderly-logo.svg" style={{ height: 40 }} />,
+            component: (
+              <img
+                alt="Orderly logo"
+                src="/images/orderly-logo.svg"
+                style={{ width: 100, height: 40 }}
+              />
+            ),
           },
           secondary: {
-            img: "/orderly-logo-secondary.svg",
+            img: "/images/orderly-logo-secondary.svg",
           },
         },
         restrictedInfo: {
@@ -146,10 +101,10 @@ export const useOrderlyConfig = () => {
         },
         sharePnLConfig: {
           backgroundImages: [
-            "/pnl/poster_bg_1.png",
-            "/pnl/poster_bg_2.png",
-            "/pnl/poster_bg_3.png",
-            "/pnl/poster_bg_4.png",
+            "/images/pnl/poster_bg_1.png",
+            "/images/pnl/poster_bg_2.png",
+            "/images/pnl/poster_bg_3.png",
+            "/images/pnl/poster_bg_4.png",
           ],
 
           color: "rgba(255, 255, 255, 0.98)",

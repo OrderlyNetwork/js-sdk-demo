@@ -1,13 +1,13 @@
 import { useCallback } from "react";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router";
 import { RouteOption } from "@orderly.network/ui-scaffold";
-import { getSymbol } from "@/storage";
-import { PathEnum } from "@/constant";
+import { getSymbol } from "../storage";
 import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
-import { i18n, parseI18nLang } from "@orderly.network/i18n";
+import { PathEnum } from "../constant";
+import { generateLocalePath } from "../utils";
 
 export function useNav() {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onRouteChange = useCallback(
     (option: RouteOption) => {
@@ -15,11 +15,10 @@ export function useNav() {
         window.open(option.href);
         return;
       }
-      const lang = parseI18nLang(i18n.language);
 
       if (option.href === "/") {
         const symbol = getSymbol();
-        router.push(`/${lang}/${PathEnum.Perp}/${symbol}`);
+        navigate(generateLocalePath(`${PathEnum.Perp}/${symbol}`));
         return;
       }
 
@@ -31,9 +30,9 @@ export function useNav() {
 
       const path = routeMap[option.href] || option.href;
 
-      router.push(`/${lang}${path}`);
+      navigate(generateLocalePath(path));
     },
-    [router]
+    [navigate]
   );
 
   return { onRouteChange };
