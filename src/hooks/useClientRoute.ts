@@ -15,7 +15,7 @@ export function useClientRouting() {
   const pathname = usePathname();
   const localePath = getLocalePathFromPathname(pathname);
 
-  if (!localePath && pathname !== PathEnum.Root) {
+  if (!localePath && pathname !== PathEnum.Root && pathname !== "health") {
     // redirect to the current locale path
     // /perp/PERP_ETH_USDC => /en/perp/PERP_ETH_USDC
     const redirectPath = `/${currentLocale}${pathname}`;
