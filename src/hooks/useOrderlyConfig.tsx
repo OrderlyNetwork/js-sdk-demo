@@ -88,6 +88,7 @@ export const useOrderlyConfig = () => {
               },
             ],
           },
+          trailing: "Next.js with nginx tempalte",
         },
         footerProps: {
           telegramUrl: "https://orderly.network",
