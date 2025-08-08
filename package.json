@@ -9,7 +9,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "copyLocales": "node scripts/copyLocales.js"
   },
   "dependencies": {
     "@orderly.network/affiliate": "2.5.3",
