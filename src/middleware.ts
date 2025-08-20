@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { type LocaleCode } from "@orderly.network/i18n";
-import { DEFAULT_SYMBOL } from "@/storage";
 import { PathEnum } from "@/constant";
+import { DEFAULT_SYMBOL } from "@/storage";
 
 const localePaths = Object.values(PathEnum);
 
@@ -30,7 +30,7 @@ enum LocaleEnum {
 export function parseI18nLang(
   lang: string,
   localeCodes?: LocaleCode[],
-  defaultLang?: LocaleCode
+  defaultLang?: LocaleCode,
 ) {
   localeCodes = localeCodes || Object.values(LocaleEnum);
   defaultLang = defaultLang || LocaleEnum.en;
@@ -55,7 +55,7 @@ export function parseI18nLang(
 
 export function getLocalePathFromPathname(
   pathname: string,
-  localeCodes?: string[]
+  localeCodes?: string[],
 ) {
   const locale = pathname.split("/")[1];
   localeCodes = localeCodes || Object.values(LocaleEnum);

@@ -1,4 +1,5 @@
 "use client";
+
 import React, { ReactNode } from "react";
 import { BaseLayout } from "@/components/baseLayout";
 import { PathEnum } from "@/constant";

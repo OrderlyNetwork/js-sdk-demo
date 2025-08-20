@@ -1,4 +1,5 @@
 "use client";
+
 import { Dashboard, ReferralProvider } from "@orderly.network/affiliate";
 
 export default function AffiliateView() {

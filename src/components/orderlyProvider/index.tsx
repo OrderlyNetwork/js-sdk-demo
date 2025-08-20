@@ -1,19 +1,14 @@
 "use client";
 
 import React, { FC, useEffect } from "react";
-import { OrderlyAppProvider } from "@orderly.network/react-app";
-import { useLocalStorage } from "@orderly.network/hooks";
-import {
-  WalletConnectorPrivyProvider,
-  wagmiConnectors,
-} from "@orderly.network/wallet-connector-privy";
 import { Adapter, WalletError } from "@solana/wallet-adapter-base";
 import {
   LedgerWalletAdapter,
   PhantomWalletAdapter,
   SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
-import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
+import { usePathname } from "next/navigation";
+import { useLocalStorage } from "@orderly.network/hooks";
 import {
   getLocalePathFromPathname,
   i18n,
@@ -21,9 +16,14 @@ import {
   LocaleEnum,
   LocaleProvider,
 } from "@orderly.network/i18n";
-import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
-import { usePathname } from "next/navigation";
+import { OrderlyAppProvider } from "@orderly.network/react-app";
+import {
+  WalletConnectorPrivyProvider,
+  wagmiConnectors,
+} from "@orderly.network/wallet-connector-privy";
 import { useNav } from "@/hooks/useNav";
+import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
+import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
 
 const getPrivyId = () => {
   // dev privy id
@@ -38,7 +38,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
 
   const [networkId, setNetworkId] = useLocalStorage(
     "dmm-local-storage-network-id",
-    "mainnet"
+    "mainnet",
   );
 
   const solWallets = [
@@ -122,7 +122,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
             state: {
               isTestnet: boolean;
               isWalletConnected: boolean;
-            }
+            },
           ) => {
             const nextState = state.isTestnet ? "testnet" : "mainnet";
             setNetworkId(nextState);

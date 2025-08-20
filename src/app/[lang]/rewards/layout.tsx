@@ -1,9 +1,10 @@
 "use client";
+
 import { ReactNode } from "react";
 import { TradingRewardsLayoutWidget } from "@orderly.network/trading-rewards";
-import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
-import { useNav } from "@/hooks/useNav";
 import { PathEnum } from "@/constant";
+import { useNav } from "@/hooks/useNav";
+import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
 
 export default function TradingRewardsLayout(props: { children: ReactNode }) {

@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { OrdersModule } from "@orderly.network/portfolio";
 import { Box } from "@orderly.network/ui";
@@ -6,7 +7,7 @@ import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 
 export default function OrdersView() {
   const config = useOrderlyConfig();
-  
+
   return (
     <Box
       p={6}

@@ -1,9 +1,10 @@
 "use client";
+
 import { FC, ReactNode } from "react";
 import { Scaffold, ScaffoldProps } from "@orderly.network/ui-scaffold";
-import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
-import { useNav } from "@/hooks/useNav";
 import { PathEnum } from "@/constant";
+import { useNav } from "@/hooks/useNav";
+import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 
 export type BaseLayoutProps = {
   children: React.ReactNode;

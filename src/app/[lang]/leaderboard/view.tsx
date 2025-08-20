@@ -1,11 +1,12 @@
 "use client";
+
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   LeaderboardPage,
   CampaignConfig,
 } from "@orderly.network/trading-leaderboard";
 import { PathEnum } from "@/constant";
-import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 
 const leaderboardCampaigns: CampaignConfig[] = [
   // {
@@ -88,14 +89,14 @@ export default function LeaderboardView() {
   useEffect(() => {
     const campaign_id = searchParams.get("campaign_id");
     const campaign = leaderboardCampaigns.find(
-      (campaign) => campaign.campaign_id === String(campaign_id)
+      (campaign) => campaign.campaign_id === String(campaign_id),
     );
     if (campaign_id && campaign) {
       setCampaignId(campaign_id);
     } else {
       const now = new Date().toISOString();
       const campaign = leaderboardCampaigns.find(
-        (campaign) => campaign.start_time < now && campaign.end_time > now
+        (campaign) => campaign.start_time < now && campaign.end_time > now,
       );
       if (campaign) {
         setCampaignId(String(campaign.campaign_id));
