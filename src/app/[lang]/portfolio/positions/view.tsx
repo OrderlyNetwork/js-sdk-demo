@@ -1,14 +1,15 @@
 "use client";
+
 import React, { useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { API } from "@orderly.network/types";
-import { Box } from "@orderly.network/ui";
+import { i18n, parseI18nLang } from "@orderly.network/i18n";
 import { PositionsModule } from "@orderly.network/portfolio";
 import { useTradingLocalStorage } from "@orderly.network/trading";
-import { updateSymbol } from "@/storage";
-import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
-import { i18n, parseI18nLang } from "@orderly.network/i18n";
+import { API } from "@orderly.network/types";
+import { Box } from "@orderly.network/ui";
 import { PathEnum } from "@/constant";
+import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
+import { updateSymbol } from "@/storage";
 
 export default function PositionsView() {
   const config = useOrderlyConfig();
@@ -21,7 +22,7 @@ export default function PositionsView() {
       updateSymbol(symbol);
       router.push(`/${parseI18nLang(i18n.language)}${PathEnum.Perp}/${symbol}`);
     },
-    [router]
+    [router],
   );
 
   return (

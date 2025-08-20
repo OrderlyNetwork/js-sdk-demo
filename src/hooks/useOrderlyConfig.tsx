@@ -1,15 +1,8 @@
 import { useMemo } from "react";
-import { TradingPageProps } from "@orderly.network/trading";
-import {
-  BottomNavProps,
-  FooterProps,
-  MainNavWidgetProps,
-} from "@orderly.network/ui-scaffold";
 import { type RestrictedInfoOptions } from "@orderly.network/hooks";
-import { AppLogos } from "@orderly.network/react-app";
-import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
 import { useTranslation } from "@orderly.network/i18n";
-import { PathEnum } from "../constant";
+import { AppLogos } from "@orderly.network/react-app";
+import { TradingPageProps } from "@orderly.network/trading";
 import {
   LeaderboardInactiveIcon,
   PortfolioInactiveIcon,
@@ -20,6 +13,13 @@ import {
   TradingInactiveIcon,
   TradingActiveIcon,
 } from "@orderly.network/ui";
+import {
+  BottomNavProps,
+  FooterProps,
+  MainNavWidgetProps,
+} from "@orderly.network/ui-scaffold";
+import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
+import { PathEnum } from "../constant";
 
 export type OrderlyConfig = {
   orderlyAppProvider: {

@@ -1,10 +1,10 @@
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { RouteOption } from "@orderly.network/ui-scaffold";
-import { getSymbol } from "@/storage";
-import { PathEnum } from "@/constant";
-import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
 import { i18n, parseI18nLang } from "@orderly.network/i18n";
+import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
+import { RouteOption } from "@orderly.network/ui-scaffold";
+import { PathEnum } from "@/constant";
+import { getSymbol } from "@/storage";
 
 // if href not equal to the route path, we need to convert it to the route path
 const routeMap: Partial<Record<PortfolioLeftSidebarPath, PathEnum>> = {
@@ -33,7 +33,7 @@ export const useNav = () => {
 
       router.push(`/${lang}${path}`);
     },
-    [router]
+    [router],
   );
 
   return { onRouteChange };

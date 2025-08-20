@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { AppProvider } from "@/components/orderlyProvider/appProvider";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Orderly SDK Demo",
