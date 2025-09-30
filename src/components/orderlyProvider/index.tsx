@@ -131,6 +131,13 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
             }
           }}
           onRouteChange={onRouteChange}
+          notification={{
+            orderFilled: {
+              media: "https://oss.orderly.network/static/sdk/coin.mp3",
+              defaultOpen: false,
+              displayInOrderEntry: true,
+            },
+          }}
         >
           {props.children}
         </OrderlyAppProvider>
