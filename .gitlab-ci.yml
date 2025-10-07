@@ -12,3 +12,24 @@ include:
 variables:
   SERVICE_NAME: sdk-demo
   IMAGE_NAME: sdk-demo
+
+stages:
+  - update_sdk_version
+
+
+# Update dependencies job triggered by SDK project
+update_sdk_version:
+  stage: update_sdk_version
+  image:
+    name: asia-northeast1-docker.pkg.dev/woo-orderly/orderly-devops/node:20 
+  script:
+    - |
+      npm install -g pnpm@9
+      pnpm install --frozen-lockfile
+      pnpm release
+  rules:
+    - if: '$PACKAGE_VERSION && $TRIGGER_BRANCH'
+      when: always
+  tags:
+    - dev
+    - build

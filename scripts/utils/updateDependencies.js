@@ -22,6 +22,7 @@ async function updateDependencies(packageVersion) {
     if (key.startsWith("@orderly.network/")) {
       if (
         packageJson.dependencies &&
+        packageJson.dependencies[key] &&
         packageJson.dependencies[key] !== packageVersion
       ) {
         packageJson.dependencies[key] = packageVersion;
@@ -29,6 +30,7 @@ async function updateDependencies(packageVersion) {
       }
       if (
         packageJson.devDependencies &&
+        packageJson.devDependencies[key] &&
         packageJson.devDependencies[key] !== packageVersion
       ) {
         packageJson.devDependencies[key] = packageVersion;
