@@ -10,22 +10,24 @@
     "lint": "next lint",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "copyLocales": "node scripts/copyLocales.js",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "node scripts/release.js",
+    "updateSdkVersion": "node scripts/updateSdkVersion.js"
   },
   "dependencies": {
-    "@orderly.network/affiliate": "2.7.4",
-    "@orderly.network/hooks": "2.7.4",
-    "@orderly.network/i18n": "2.7.4",
-    "@orderly.network/markets": "2.7.4",
-    "@orderly.network/portfolio": "2.7.4",
-    "@orderly.network/react-app": "2.7.4",
-    "@orderly.network/trading": "2.7.4",
-    "@orderly.network/trading-leaderboard": "2.7.4",
-    "@orderly.network/trading-rewards": "2.7.4",
-    "@orderly.network/types": "2.7.4",
-    "@orderly.network/ui": "2.7.4",
-    "@orderly.network/ui-scaffold": "2.7.4",
-    "@orderly.network/wallet-connector-privy": "2.7.4",
+    "@orderly.network/affiliate": "2.7.4-internal-20250925.4",
+    "@orderly.network/hooks": "2.7.4-internal-20250925.4",
+    "@orderly.network/i18n": "2.7.4-internal-20250925.4",
+    "@orderly.network/markets": "2.7.4-internal-20250925.4",
+    "@orderly.network/portfolio": "2.7.4-internal-20250925.4",
+    "@orderly.network/react-app": "2.7.4-internal-20250925.4",
+    "@orderly.network/trading": "2.7.4-internal-20250925.4",
+    "@orderly.network/trading-leaderboard": "2.7.4-internal-20250925.4",
+    "@orderly.network/trading-rewards": "2.7.4-internal-20250925.4",
+    "@orderly.network/types": "2.7.4-internal-20250925.4",
+    "@orderly.network/ui": "2.7.4-internal-20250925.4",
+    "@orderly.network/ui-scaffold": "2.7.4-internal-20250925.4",
+    "@orderly.network/wallet-connector-privy": "2.7.4-internal-20250925.4",
     "@solana-mobile/wallet-adapter-mobile": "2.1.4",
     "@solana/wallet-adapter-base": "0.9.23",
     "@solana/wallet-adapter-wallets": "0.19.32",
@@ -44,7 +46,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "zx": "^8.8.4"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
