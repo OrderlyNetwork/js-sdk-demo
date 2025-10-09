@@ -1,6 +1,8 @@
 const { $ } = require("zx");
 const { notifyTelegram } = require("./utils/notifyTelegram");
 const { updateDependencies } = require("./utils/updateDependencies");
+const fs = require("fs-extra");
+const path = require("path");
 
 // Enable verbose logging for shell commands executed via zx
 $.verbose = true;
@@ -74,11 +76,19 @@ async function checkBranch() {
 }
 
 async function installDependencies() {
+  const isInternal = isInternalVersion(packageVersion);
+  if (isInternal) {
+    await updateInternalNpmrc();
+  }
   // install dependencies and update pnpm-lock.yaml
   if (isCI) {
     await $`pnpm install --no-frozen-lockfile`;
   } else {
     await $`pnpm install`;
+  }
+
+  if (isInternal) {
+    await $`git restore .npmrc`;
   }
 }
 
@@ -124,6 +134,15 @@ function getInternalVersion(version) {
   const newPatch = parseInt(patch) - 1;
 
   return `${major}.${minor}.${newPatch > 0 ? newPatch : 0}`;
+}
+
+async function updateInternalNpmrc() {
+  const npmrcPath = path.join(process.cwd(), ".npmrc");
+  const npmrc = await fs.readFile(npmrcPath, "utf8");
+  const internalNpmrc = `@orderly.network:registry="http://npm.orderly.network"`;
+  if (!npmrc || (npmrc && npmrc.includes(`# ${internalNpmrc}`))) {
+    await fs.writeFile(npmrcPath, internalNpmrc);
+  }
 }
 
 async function createTag() {
