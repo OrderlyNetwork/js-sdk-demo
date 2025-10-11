@@ -24,6 +24,7 @@ import {
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
+import { widgetConfigs } from "../orderlyConfig/widgetConfigs";
 
 const getPrivyId = () => {
   // dev privy id
@@ -138,6 +139,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
               displayInOrderEntry: true,
             },
           }}
+          widgetConfigs={widgetConfigs}
         >
           {props.children}
         </OrderlyAppProvider>
