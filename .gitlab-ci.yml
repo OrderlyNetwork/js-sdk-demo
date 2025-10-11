@@ -44,8 +44,30 @@ deploy_qa_evm:
 stages:
   - check_tag
   - build_docker
+  - tg_bot
   - deploy
   - update_sdk_version
+
+tg_bot:
+  stage: tg_bot
+  image:
+    name: asia-northeast1-docker.pkg.dev/woo-orderly/orderly-devops/gcloud
+    entrypoint: [""]
+  script:
+    - echo ${CI_COMMIT_TAG}
+    - echo ${IMAGE_NAME}
+    - TAG_EXISTS=$(gcloud container images list-tags asia-northeast1-docker.pkg.dev/woo-orderly/orderly-network/${IMAGE_NAME} --filter="tags=${CI_COMMIT_TAG}" --format="value(tags)")
+    - echo ${TAG_EXISTS}
+    - |
+      if [ "${TAG_EXISTS}" ]; then
+        echo "done, send tg bot message"
+        curl -X POST "https://api.telegram.org/bot8337546037:AAGnHx9w_qVdiiqwYYQF7OQFcGkbd8-rDOs/sendMessage" -d "chat_id=-1002252117640&text=${IMAGE_NAME} tag: ${CI_COMMIT_TAG} done"
+      fi
+  only:
+    - tags
+  tags:
+    - dev
+    - build
 
 # Update dependencies job triggered by SDK project
 update_sdk_version:
