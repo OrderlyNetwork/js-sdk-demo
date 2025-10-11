@@ -10,7 +10,9 @@
     "lint": "next lint",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "copyLocales": "node scripts/copyLocales.js",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "node scripts/release.js",
+    "updateSdkVersion": "node scripts/updateSdkVersion.js"
   },
   "dependencies": {
     "@orderly.network/affiliate": "2.7.4-internal-20251009.9",
