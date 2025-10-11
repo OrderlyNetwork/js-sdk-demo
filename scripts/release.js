@@ -76,10 +76,10 @@ async function checkBranch() {
 }
 
 async function installDependencies() {
-  const isInternal = isInternalVersion(packageVersion);
-  if (isInternal) {
-    await updateInternalNpmrc();
-  }
+  // const isInternal = isInternalVersion(packageVersion);
+  // if (isInternal) {
+  //   await updateInternalNpmrc();
+  // }
   // install dependencies and update pnpm-lock.yaml
   if (isCI) {
     await $`pnpm install --no-frozen-lockfile`;
@@ -87,9 +87,9 @@ async function installDependencies() {
     await $`pnpm install`;
   }
 
-  if (isInternal) {
-    await $`git restore .npmrc`;
-  }
+  // if (isInternal) {
+  //   await $`git restore .npmrc`;
+  // }
 }
 
 async function commitChanges() {
@@ -177,7 +177,7 @@ async function createTag() {
 }
 
 function getInitialTag(version, suffix) {
-  return `${version}.0-${suffix}`;
+  return `v${version}.0-${suffix}`;
 }
 
 function getNextTag(tag, suffix) {
@@ -192,7 +192,7 @@ function getNextTag(tag, suffix) {
     throw new Error(`Invalid tag: ${tag}`);
   }
 
-  return `${version}.${parseInt(sequence) + 1}-${suffix}`;
+  return `v${version}.${parseInt(sequence) + 1}-${suffix}`;
 }
 
 async function getLatestTag(version, suffix) {
