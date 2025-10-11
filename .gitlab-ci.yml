@@ -42,6 +42,9 @@ deploy_qa_evm:
 
 
 stages:
+  - check_tag
+  - build_docker
+  - deploy
   - update_sdk_version
 
 # Update dependencies job triggered by SDK project

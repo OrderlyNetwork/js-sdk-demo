@@ -1,6 +1,8 @@
 const { $ } = require("zx");
 const { notifyTelegram } = require("./utils/notifyTelegram");
 const { updateDependencies } = require("./utils/updateDependencies");
+const fs = require("fs-extra");
+const path = require("path");
 
 // Enable verbose logging for shell commands executed via zx
 $.verbose = true;
@@ -74,12 +76,20 @@ async function checkBranch() {
 }
 
 async function installDependencies() {
+  // const isInternal = isInternalVersion(packageVersion);
+  // if (isInternal) {
+  //   await updateInternalNpmrc();
+  // }
   // install dependencies and update pnpm-lock.yaml
   if (isCI) {
     await $`pnpm install --no-frozen-lockfile`;
   } else {
     await $`pnpm install`;
   }
+
+  // if (isInternal) {
+  //   await $`git restore .npmrc`;
+  // }
 }
 
 async function commitChanges() {
@@ -126,6 +136,15 @@ function getInternalVersion(version) {
   return `${major}.${minor}.${newPatch > 0 ? newPatch : 0}`;
 }
 
+async function updateInternalNpmrc() {
+  const npmrcPath = path.join(process.cwd(), ".npmrc");
+  const npmrc = await fs.readFile(npmrcPath, "utf8");
+  const internalNpmrc = `@orderly.network:registry="http://npm.orderly.network"`;
+  if (!npmrc || (npmrc && npmrc.includes(`# ${internalNpmrc}`))) {
+    await fs.writeFile(npmrcPath, internalNpmrc);
+  }
+}
+
 async function createTag() {
   const suffix = triggerBranch;
   let newTag = "";
@@ -158,7 +177,7 @@ async function createTag() {
 }
 
 function getInitialTag(version, suffix) {
-  return `${version}.0-${suffix}`;
+  return `v${version}.0-${suffix}`;
 }
 
 function getNextTag(tag, suffix) {
@@ -173,7 +192,7 @@ function getNextTag(tag, suffix) {
     throw new Error(`Invalid tag: ${tag}`);
   }
 
-  return `${version}.${parseInt(sequence) + 1}-${suffix}`;
+  return `v${version}.${parseInt(sequence) + 1}-${suffix}`;
 }
 
 async function getLatestTag(version, suffix) {
