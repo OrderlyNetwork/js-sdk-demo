@@ -26,6 +26,7 @@ const git = {
 
 async function main() {
   try {
+    console.log("process.env", git, process.env);
     await checkBranch();
 
     await updateDependencies(packageVersion);
