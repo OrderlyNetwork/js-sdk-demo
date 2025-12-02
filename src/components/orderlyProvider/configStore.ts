@@ -12,10 +12,10 @@ const BROKER_ID = "zijun_b";
 const BROKER_NAME = "Orderly";
 
 const DOMAINS: Record<"prod" | "staging" | "qa" | "dev", string[]> = {
-  dev: ["dev-dmm.orderly.network", "localhost"],
-  qa: ["qa-dmm.orderly.network"],
-  staging: ["staging-dmm.orderly.network"],
-  prod: ["dmm.orderly.network"],
+  dev: ["dev-demo.orderly.network", "dev-dmm.orderly.network", "localhost"],
+  qa: ["qa-demo.orderly.network", "qa-dmm.orderly.network"],
+  staging: ["staging-demo.orderly.network", "staging-dmm.orderly.network"],
+  prod: ["demo.orderly.network", "dmm.orderly.network"],
 };
 
 export const useConfigStore = (params: ConfigStoreOptions) => {
