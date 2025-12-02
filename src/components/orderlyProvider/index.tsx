@@ -24,6 +24,7 @@ import {
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
+import { useConfigStore } from "./configStore";
 
 const getPrivyId = () => {
   // dev privy id
@@ -40,6 +41,10 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
     "dmm-local-storage-network-id",
     "mainnet",
   );
+
+  const configStore = useConfigStore({
+    networkId,
+  });
 
   const solWallets = [
     new PhantomWalletAdapter(),
@@ -112,9 +117,10 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
         enableSwapDeposit
       >
         <OrderlyAppProvider
-          brokerId="demo"
+          brokerId="zijun_b"
           brokerName="Orderly"
           networkId={networkId}
+          configStore={configStore}
           appIcons={config.orderlyAppProvider.appIcons}
           enableSwapDeposit
           onChainChanged={(
