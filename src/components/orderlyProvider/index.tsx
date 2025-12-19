@@ -110,6 +110,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
             },
           },
         }}
+        abstractConfig={{}}
         enableSwapDeposit
       >
         <OrderlyAppProvider
