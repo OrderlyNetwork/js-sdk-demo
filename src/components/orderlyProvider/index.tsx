@@ -1,7 +1,11 @@
 "use client";
 
-import React, { FC, useEffect } from "react";
-import { Adapter, WalletError } from "@solana/wallet-adapter-base";
+import React, { FC, useEffect, useState } from "react";
+import {
+  Adapter,
+  WalletError,
+  WalletAdapterNetwork,
+} from "@solana/wallet-adapter-base";
 import {
   LedgerWalletAdapter,
   PhantomWalletAdapter,
@@ -17,18 +21,11 @@ import {
   LocaleProvider,
 } from "@orderly.network/i18n";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
-import {
-  WalletConnectorPrivyProvider,
-  wagmiConnectors,
-} from "@orderly.network/wallet-connector-privy";
+import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
-
-const getPrivyId = () => {
-  // dev privy id
-  return "cm86zfufk01n2ojo83s2becsr";
-};
+import { initOnBoard } from "./web3OnboardConfig";
 
 const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   const config = useOrderlyConfig();
@@ -40,12 +37,24 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
     "dmm-local-storage-network-id",
     "mainnet",
   );
+  const [initWallet, setInitWallet] = useState(false);
+
+  const solanaNetwork =
+    networkId === "testnet"
+      ? WalletAdapterNetwork.Devnet
+      : WalletAdapterNetwork.Mainnet;
 
   const solWallets = [
     new PhantomWalletAdapter(),
     new SolflareWalletAdapter(),
     new LedgerWalletAdapter(),
   ];
+
+  useEffect(() => {
+    initOnBoard().then(() => {
+      setInitWallet(true);
+    });
+  }, []);
 
   const onLanguageChanged = async (lang: LocaleCode) => {
     window.history.replaceState({}, "", `/${lang}${path}`);
@@ -67,50 +76,27 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
     }
   }, [pathname]);
 
+  if (!initWallet) {
+    return null;
+  }
+
   return (
     <LocaleProvider
       onLanguageChanged={onLanguageChanged}
       backend={{ loadPath }}
     >
-      <WalletConnectorPrivyProvider
-        termsOfUse={"https://learn.woo.org/legal/terms-of-use"}
-        network={networkId}
-        solanaConfig={{
+      <WalletConnectorProvider
+        evmInitial={{
+          skipInit: true,
+        }}
+        solanaInitial={{
+          network: solanaNetwork,
           wallets: solWallets as Adapter[],
           onError: (error: WalletError, adapter?: Adapter) => {
             console.log("solana wallet error", error, adapter);
             console.error(error);
           },
         }}
-        wagmiConfig={{
-          connectors: [
-            wagmiConnectors.injected(),
-            wagmiConnectors.walletConnect({
-              projectId: "93dba83e8d9915dc6a65ffd3ecfd19fd",
-              showQrModal: true,
-              storageOptions: {},
-              metadata: {
-                name: "Orderly",
-                description: "Orderly",
-                url: "https://orderly.network",
-                icons: ["/orderly-logo.svg"],
-              },
-            }),
-          ],
-        }}
-        privyConfig={{
-          appid: getPrivyId(),
-          config: {
-            loginMethods: ["email", "google", "twitter"],
-            appearance: {
-              theme: "dark",
-              accentColor: "#181C23",
-              logo: "/orderly-logo.svg",
-            },
-          },
-        }}
-        abstractConfig={{}}
-        enableSwapDeposit
       >
         <OrderlyAppProvider
           brokerId="demo"
@@ -142,7 +128,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
         >
           {props.children}
         </OrderlyAppProvider>
-      </WalletConnectorPrivyProvider>
+      </WalletConnectorProvider>
     </LocaleProvider>
   );
 };
