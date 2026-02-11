@@ -18,6 +18,8 @@ import {
   FooterProps,
   MainNavWidgetProps,
 } from "@orderly.network/ui-scaffold";
+import { OrderlySecondaryLogo } from "@/components/icons/orderlySecondaryLogo";
+import { OrderlyTextIcon } from "@/components/icons/orderlyText";
 import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
 import { PathEnum } from "../constant";
 
@@ -127,11 +129,13 @@ export const useOrderlyConfig = () => {
         appIcons: {
           main: {
             component: (
-              <img src="/orderly-logo.svg" alt="logo" style={{ height: 40 }} />
+              <OrderlyTextIcon className="oui-w-[100px] oui-h-10 oui-fill-base-contrast" />
             ),
           },
           secondary: {
-            img: "/orderly-logo-secondary.svg",
+            component: (
+              <OrderlySecondaryLogo className="oui-text-base-contrast" />
+            ),
           },
         },
         restrictedInfo: {
