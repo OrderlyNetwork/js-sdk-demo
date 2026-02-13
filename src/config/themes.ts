@@ -1,4 +1,4 @@
-import { lightThemeCssVars, ThemeConfig } from "@orderly.network/ui";
+import { LIGHT_THEME_CSS_VARS, ThemeConfig } from "@orderly.network/ui";
 
 export const themes: ThemeConfig[] = [
   {
@@ -10,6 +10,6 @@ export const themes: ThemeConfig[] = [
     id: "light",
     displayName: "Light",
     mode: "light",
-    cssVars: lightThemeCssVars,
+    cssVars: LIGHT_THEME_CSS_VARS,
   },
 ];
