@@ -111,7 +111,6 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
           },
         }}
         abstractConfig={{}}
-        enableSwapDeposit
       >
         <OrderlyAppProvider
           brokerId="demo"
@@ -140,7 +139,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
               displayInOrderEntry: true,
             },
           }}
-          themes={themes}
+          // themes={themes}
         >
           {props.children}
         </OrderlyAppProvider>
