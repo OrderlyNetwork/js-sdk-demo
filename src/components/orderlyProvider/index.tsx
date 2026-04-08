@@ -21,6 +21,7 @@ import {
   WalletConnectorPrivyProvider,
   wagmiConnectors,
 } from "@orderly.network/wallet-connector-privy";
+import { plugins } from "@/config/plugins";
 import { themes } from "@/config/themes";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
@@ -140,6 +141,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
             },
           }}
           themes={themes}
+          plugins={plugins}
         >
           {props.children}
         </OrderlyAppProvider>
