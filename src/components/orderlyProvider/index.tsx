@@ -21,10 +21,10 @@ import {
   WalletConnectorPrivyProvider,
   wagmiConnectors,
 } from "@orderly.network/wallet-connector-privy";
+import { themes } from "@/config/themes";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
-import { widgetConfigs } from "../orderlyConfig/widgetConfigs";
 
 const getPrivyId = () => {
   // dev privy id
@@ -111,10 +111,9 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
           },
         }}
         abstractConfig={{}}
-        enableSwapDeposit
       >
         <OrderlyAppProvider
-          brokerId="orderly"
+          brokerId="demo"
           brokerName="Orderly"
           networkId={networkId}
           appIcons={config.orderlyAppProvider.appIcons}
@@ -140,7 +139,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
               displayInOrderEntry: true,
             },
           }}
-          widgetConfigs={widgetConfigs}
+          themes={themes}
         >
           {props.children}
         </OrderlyAppProvider>
