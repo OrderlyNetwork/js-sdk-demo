@@ -12,17 +12,6 @@ include:
     ref: main
     file: '/frontend-ci.yaml'
 
-stages:
-  - release_tag
-  - update_sdk_version # trigger only
-  - check_tag
-  - scan
-  - build_docker
-  - post-build-audit
-  - notify
-  - deploy
-
-
 variables:
   SERVICE_NAME: sdk-demo
   IMAGE_NAME: sdk-demo
@@ -36,19 +25,3 @@ auto_deploy_qa:
   extends: .auto_deploy_qa_base
   variables:
     DEPLOY_APP_URL: "https://qa-demo.orderly.network"
-
-update_sdk_version:
-  stage: update_sdk_version
-  image:
-    name: asia-northeast1-docker.pkg.dev/woo-orderly/orderly-devops/node:20
-  script:
-    - |
-      npm install -g pnpm@10
-      pnpm install --frozen-lockfile
-      pnpm release
-  rules:
-    - if: '$PACKAGE_VERSION && $TRIGGER_BRANCH'
-      when: always
-  tags:
-    - dev
-    - build
