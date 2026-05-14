@@ -1,14 +1,14 @@
 export default {
   environments: ["dev", "qa", "prod"],
   prodEnv: "prod",
-  prodBranch: "demo",
+  prodBranch: "dmm",
 
   releaseTagRule: {
-    pattern: /^v(\d+)\.(\d+)\.(\d+)\.(\d+)-demo$/,
-    description: "vX.Y.Z.W-demo",
-    example: "v3.0.4.1-demo",
+    pattern: /^v(\d+)\.(\d+)\.(\d+)\.(\d+)-dmm$/,
+    description: "vX.Y.Z.W-dmm",
+    example: "v3.0.4.1-dmm",
     format({ major, minor, patch, build }) {
-      return `v${major}.${minor}.${patch}.${build}-demo`;
+      return `v${major}.${minor}.${patch}.${build}-dmm`;
     },
   },
 
