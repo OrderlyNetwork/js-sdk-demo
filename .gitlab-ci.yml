@@ -1,7 +1,7 @@
 include:
-  # - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
-  #   ref: main
-  #   file: '/common-orderly-network-evm-iap.yaml'
+  - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
+    ref: main
+    file: '/common-orderly-network-evm-iap.yaml'
   - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
     ref: main
     file: '/common-orderly-network-dev-v2.yaml'
@@ -20,6 +20,8 @@ stages:
   - build_docker
   - post-build-audit
   - notify
+  - deploy
+
 
 variables:
   SERVICE_NAME: sdk-demo
