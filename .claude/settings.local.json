@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf node_modules/@orderly.network/onramper-plugin)",
+      "Bash(pnpm install *)",
+      "Bash(ls -d /Volumes/HIKSEMI/orderly/sdk-demo/node_modules/.pnpm/@orderly.network+onramper-plugin@file+*/)",
+      "Bash(git checkout *)"
+    ]
+  }
+}
