@@ -12,10 +12,18 @@ import {
   MarketsInactiveIcon,
   TradingInactiveIcon,
   TradingActiveIcon,
+  TradingIcon,
+  BarChartIcon,
+  PersonIcon,
+  AssetIcon,
+  SettingFillIcon,
+  EarnIcon,
+  AffiliateIcon,
 } from "@orderly.network/ui";
 import {
   BottomNavProps,
   FooterProps,
+  LeftNavProps,
   MainNavWidgetProps,
 } from "@orderly.network/ui-scaffold";
 import { OrderlySecondaryLogo } from "@/components/icons/orderlySecondaryLogo";
@@ -60,6 +68,7 @@ export const useOrderlyConfig = () => {
             },
           ],
           initialMenu: PathEnum.Root,
+          leftNav: getLeftNavMenus(t),
           campaigns: {
             name: t("tradingRewards.rewards"),
             href: PathEnum.Rewards,
@@ -171,3 +180,67 @@ export const useOrderlyConfig = () => {
     };
   }, [t]);
 };
+
+function getLeftNavMenus(
+  t: ReturnType<typeof useTranslation>["t"],
+): LeftNavProps {
+  return {
+    menus: [
+      {
+        name: t("common.trading"),
+        href: PathEnum.Root,
+        icon: <TradingIcon />,
+      },
+      {
+        name: t("common.portfolio"),
+        href: PathEnum.Portfolio,
+        icon: <PersonIcon />,
+      },
+      {
+        name: t("common.markets"),
+        href: PathEnum.Markets,
+        icon: <BarChartIcon />,
+      },
+      {
+        name: t("tradingLeaderboard.leaderboard"),
+        href: PathEnum.Leaderboard,
+        icon: <LeaderboardInactiveIcon />,
+      },
+      {
+        name: t("common.assets"),
+        href: PathEnum.Assets,
+        icon: <AssetIcon />,
+      },
+      {
+        name: t("common.affiliate"),
+        href: PathEnum.RewardsAffiliate,
+        icon: <AffiliateIcon />,
+        onlyInMainAccount: true,
+      },
+      {
+        name: t("portfolio.setting"),
+        href: PathEnum.Setting,
+        icon: <SettingFillIcon color="white" opacity={0.8} />,
+      },
+      {
+        name: t("extend.staking"),
+        href: "https://app.orderly.network/staking",
+        icon: <EarnIcon />,
+        target: "_blank",
+      },
+      {
+        name: t("portfolio.feeTier"),
+        href: PathEnum.FeeTier,
+        isSecondary: true,
+      },
+      {
+        name: t("portfolio.apiKeys"),
+        href: PathEnum.ApiKey,
+        isSecondary: true,
+      },
+    ],
+    telegramUrl: "https://orderly.network",
+    discordUrl: "https://discord.com/invite/orderlynetwork",
+    twitterUrl: "https://twitter.com/OrderlyNetwork",
+  };
+}
