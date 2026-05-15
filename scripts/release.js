@@ -15,6 +15,7 @@ const isCI = ciBranch;
 
 const packageVersion = process.env.PACKAGE_VERSION;
 const triggerBranch = process.env.TRIGGER_BRANCH;
+const appTarget = process.env.APP_TARGET || process.env.NEXT_PUBLIC_APP_TARGET;
 
 // Git user info and commit message for automated commits
 const git = {
@@ -26,6 +27,8 @@ const git = {
 
 async function main() {
   try {
+    validateAppTarget();
+
     await checkBranch();
 
     await updateDependencies(packageVersion);
@@ -38,7 +41,9 @@ async function main() {
   } catch (error) {
     const msg = `Pipeline trigger failed: ${error.message}`;
     console.error(msg);
-    await notifyTelegram(msg);
+    if (isCI) {
+      await notifyTelegram(msg);
+    }
     throw error;
   }
 }
@@ -146,7 +151,7 @@ async function updateInternalNpmrc() {
 }
 
 async function createTag() {
-  const suffix = triggerBranch;
+  const suffix = getTagSuffix();
   let newTag = "";
   let version = "";
 
@@ -178,6 +183,18 @@ async function createTag() {
 
 function getInitialTag(version, suffix) {
   return `v${version}.0-${suffix}`;
+}
+
+function validateAppTarget() {
+  if (!["demo", "dmm"].includes(appTarget)) {
+    throw new Error(
+      `APP_TARGET is required and must be "demo" or "dmm", received: ${appTarget}`,
+    );
+  }
+}
+
+function getTagSuffix() {
+  return appTarget;
 }
 
 function getNextTag(tag, suffix) {

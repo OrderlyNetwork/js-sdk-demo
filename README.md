@@ -33,6 +33,26 @@ npm run build
 docker build -t orderly-js-sdk-nextjs-template .
 ```
 
+## Release
+
+Release commands must specify the app target explicitly:
+
+```
+APP_TARGET=demo pnpm release
+APP_TARGET=dmm pnpm release
+```
+
+The release tag format must include the target suffix:
+
+```
+vX.Y.Z.W-demo
+vX.Y.Z.W-dmm
+vX.Y.Z.W-demo-dev-N
+vX.Y.Z.W-dmm-dev-N
+vX.Y.Z.W-demo-qa-N
+vX.Y.Z.W-dmm-qa-N
+```
+
 ## Docs
 
 For more information, please visit the following link:

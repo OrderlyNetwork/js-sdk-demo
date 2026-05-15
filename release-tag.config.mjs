@@ -1,14 +1,30 @@
-export default {
+const appTargets = ["demo", "dmm"];
+
+const getAppTarget = () => {
+  const appTarget = process.env.APP_TARGET ?? process.env.NEXT_PUBLIC_APP_TARGET;
+
+  if (!appTargets.includes(appTarget)) {
+    throw new Error(
+      `APP_TARGET is required and must be one of: ${appTargets.join(", ")}`,
+    );
+  }
+
+  return appTarget;
+};
+
+const appTarget = getAppTarget();
+
+const releaseTagConfig = {
   environments: ["dev", "qa", "prod"],
   prodEnv: "prod",
-  prodBranch: "dmm",
+  prodBranch: "main",
 
   releaseTagRule: {
-    pattern: /^v(\d+)\.(\d+)\.(\d+)\.(\d+)-dmm$/,
-    description: "vX.Y.Z.W-dmm",
-    example: "v3.0.4.1-dmm",
+    pattern: new RegExp(`^v(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)-${appTarget}$`),
+    description: `vX.Y.Z.W-${appTarget}`,
+    example: `v3.0.4.1-${appTarget}`,
     format({ major, minor, patch, build }) {
-      return `v${major}.${minor}.${patch}.${build}-dmm`;
+      return `v${major}.${minor}.${patch}.${build}-${appTarget}`;
     },
   },
 
@@ -18,3 +34,5 @@ export default {
       : `${releaseTag}-${nextNumber}`;
   },
 };
+
+export default releaseTagConfig;

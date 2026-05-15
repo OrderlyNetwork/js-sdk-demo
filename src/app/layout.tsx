@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { appTargetConfig } from "@/components/orderlyConfig/appTargetConfig";
 import { AppProvider } from "@/components/orderlyProvider/appProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Orderly SDK DMM",
-  description: "Orderly SDK DMM",
+  title: appTargetConfig.title,
+  description: appTargetConfig.description,
 };
 
 export default function RootLayout({
