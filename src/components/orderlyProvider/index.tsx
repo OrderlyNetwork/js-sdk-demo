@@ -114,7 +114,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
         abstractConfig={{}}
       >
         <OrderlyAppProvider
-          brokerId="demo"
+          brokerId="orderly"
           brokerName="Orderly"
           networkId={networkId}
           appIcons={config.orderlyAppProvider.appIcons}
