@@ -57,7 +57,7 @@ validate_release_tag:
     name: asia-northeast1-docker.pkg.dev/woo-orderly/orderly-devops/gcloud
     entrypoint: [""]
   script:
-    - echo "Invalid release tag: ${CI_COMMIT_TAG}"
+    - 'echo "Invalid release tag: ${CI_COMMIT_TAG}"'
     - echo "Release tags must match one of these formats:"
     - echo "  vX.Y.Z.W-demo"
     - echo "  vX.Y.Z.W-dmm"
