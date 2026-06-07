@@ -17,7 +17,8 @@ include:
 
 variables:
   APP_TARGET: "demo"
-  NEXT_PUBLIC_APP_TARGET: "demo"
+  VITE_APP_TARGET: "demo"
+  BUILD_ARG_NAMES: "VITE_APP_TARGET"
   SERVICE_NAME: "sdk-demo"
   IMAGE_NAME: "sdk-demo"
   ENABLE_PUBLISH: "false"
@@ -28,7 +29,7 @@ workflow:
     - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-dmm(-[0-9]+|-(dev|qa)-[0-9]+)?$/'
       variables:
         APP_TARGET: "dmm"
-        NEXT_PUBLIC_APP_TARGET: "dmm"
+        VITE_APP_TARGET: "dmm"
         SERVICE_NAME: "dmm"
         IMAGE_NAME: "dmm"
         DEPLOY_PRJ_TOKEN: ${DEPLOY_DMM_PRJ_TOKEN}

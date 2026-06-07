@@ -1,9 +1,6 @@
-// Telegram bot token and chat ID for sending notifications
 const telegram = {
-    /** Telegram bot token */
-    token: '8337546037:AAGnHx9w_qVdiiqwYYQF7OQFcGkbd8-rDOs' || process.env.TELEGRAM_TOKEN,
-    /** Chat ID to send messages to (get it via https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates) */
-    chatId: '-1002252117640' || process.env.TELEGRAM_CHAT_ID,
+    token: process.env.TELEGRAM_TOKEN || process.env.TELEGRAM_BOT_TOKEN,
+    chatId: process.env.TELEGRAM_CHAT_ID,
 };
 
 /**

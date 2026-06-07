@@ -1,32 +1,25 @@
-# https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile
-FROM node:18-slim AS base
-RUN npm install -g pnpm
+FROM node:22-alpine AS base
+RUN npm install -g pnpm@10
 
 FROM base AS deps
 WORKDIR /app
-
-WORKDIR /app
 COPY package.json pnpm-lock.yaml .npmrc ./
-RUN pnpm install 
+RUN pnpm install --frozen-lockfile
 
 FROM base AS builder
 WORKDIR /app
+
+ARG VITE_APP_TARGET=demo
+ENV VITE_APP_TARGET=${VITE_APP_TARGET}
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN pnpm build
 
-FROM base AS runtime
-WORKDIR /app
-ENV NODE_ENV=production
+FROM nginx:stable-alpine AS runtime
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-COPY --from=builder /app/public ./public
+EXPOSE 80
 
-EXPOSE 3000
-
-ENV PORT=3000
-# set hostname to localhost
-ENV HOSTNAME="0.0.0.0"
-
-CMD ["node", "server.js"]
+CMD ["nginx", "-g", "daemon off;"]

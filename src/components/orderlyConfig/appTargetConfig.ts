@@ -12,7 +12,7 @@ type AppTargetConfig = {
 };
 
 const getAppTarget = (): AppTarget => {
-  return process.env.NEXT_PUBLIC_APP_TARGET === "dmm" ? "dmm" : "demo";
+  return import.meta.env.VITE_APP_TARGET === "dmm" ? "dmm" : "demo";
 };
 
 export const appTargetConfigMap: Record<AppTarget, AppTargetConfig> = {

@@ -15,7 +15,7 @@ const isCI = ciBranch;
 
 const packageVersion = process.env.PACKAGE_VERSION;
 const triggerBranch = process.env.TRIGGER_BRANCH;
-const appTarget = process.env.APP_TARGET || process.env.NEXT_PUBLIC_APP_TARGET;
+const appTarget = process.env.APP_TARGET || process.env.VITE_APP_TARGET;
 
 // Git user info and commit message for automated commits
 const git = {

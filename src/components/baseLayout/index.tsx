@@ -1,5 +1,3 @@
-"use client";
-
 import { FC, ReactNode } from "react";
 import { Scaffold, ScaffoldProps } from "@orderly.network/ui-scaffold";
 import { PathEnum } from "@/constant";

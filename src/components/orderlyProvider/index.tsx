@@ -1,13 +1,11 @@
-"use client";
-
 import React, { FC, useEffect } from "react";
+import { Outlet, useLocation } from "react-router";
 import { Adapter, WalletError } from "@solana/wallet-adapter-base";
 import {
   LedgerWalletAdapter,
   PhantomWalletAdapter,
   SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
-import { usePathname } from "next/navigation";
 import { useLocalStorage } from "@orderly.network/hooks";
 import {
   getLocalePathFromPathname,
@@ -36,7 +34,7 @@ const getPrivyId = () => {
 const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   const config = useOrderlyConfig();
   const path = usePathWithoutLang();
-  const pathname = usePathname();
+  const { pathname } = useLocation();
   const { onRouteChange } = useNav();
 
   const [networkId, setNetworkId] = useLocalStorage(
@@ -145,7 +143,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
           themes={themes}
           plugins={plugins}
         >
-          {props.children}
+          {props.children || <Outlet />}
         </OrderlyAppProvider>
       </WalletConnectorPrivyProvider>
     </LocaleProvider>

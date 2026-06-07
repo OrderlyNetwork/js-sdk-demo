@@ -1,7 +1,7 @@
 const appTargets = ["demo", "dmm"];
 
 const getAppTarget = () => {
-  const appTarget = process.env.APP_TARGET ?? process.env.NEXT_PUBLIC_APP_TARGET;
+  const appTarget = process.env.APP_TARGET ?? process.env.VITE_APP_TARGET;
 
   if (!appTargets.includes(appTarget)) {
     throw new Error(
