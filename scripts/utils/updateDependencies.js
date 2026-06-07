@@ -1,6 +1,14 @@
 const fs = require("fs-extra");
 const path = require("path");
 
+/** Packages that should be excluded from version updates */
+const EXCLUDED_PACKAGES = [
+  "@orderly.network/release-tag",
+  "@orderly.network/fast-place-order-plugin",
+  "@orderly.network/onramper-plugin",
+  "@orderly.network/orderbook-shimmer-plugin",
+];
+
 /** Update all @orderly.network/* dependencies to the specified version */
 async function updateDependencies(packageVersion) {
   if (!packageVersion) {
@@ -19,7 +27,10 @@ async function updateDependencies(packageVersion) {
   let isUpdated = false;
 
   for (const key of Object.keys(allDeps)) {
-    if (key.startsWith("@orderly.network/")) {
+    if (
+      key.startsWith("@orderly.network/") &&
+      !EXCLUDED_PACKAGES.includes(key)
+    ) {
       if (
         packageJson.dependencies &&
         packageJson.dependencies[key] &&
