@@ -16,6 +16,10 @@ export default function PerpView(props: PerpViewProps) {
   const navigate = useNavigate();
 
   useEffect(() => {
+    setSymbol(props.symbol);
+  }, [props.symbol]);
+
+  useEffect(() => {
     updateSymbol(symbol);
   }, [symbol]);
 

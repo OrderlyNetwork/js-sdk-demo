@@ -1,36 +1,36 @@
-# Template for Orderly SDK v2 based on Next.js
+# Template for Orderly SDK v2 based on Vite
 
 ## Getting started
 
 1. Clone the code:
 
 ```
-git clone https://github.com/OrderlyNetwork/orderly-js-sdk-nextjs-template.git
-cd orderly-js-sdk-nextjs-template
+git clone https://github.com/OrderlyNetwork/orderly-js-sdk-vite-template.git
+cd orderly-js-sdk-vite-template
 ```
 
 2. Install the dependencies
 
 ```
-npm install
+pnpm install
 ```
 
 3. Run
 
 ```
-npm start
+pnpm dev
 ```
 
 4. Build
 
 ```
-npm run build
+pnpm build
 ```
 
 5. Create docker image
 
 ```
-docker build -t orderly-js-sdk-nextjs-template .
+docker build -t orderly-js-sdk-vite-template .
 ```
 
 ## Release

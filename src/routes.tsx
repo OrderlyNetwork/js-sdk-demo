@@ -71,11 +71,13 @@ const AppRoute = () => {
   let currentLocale = parseI18nLang(i18n?.language);
 
   const pathname = window.location.pathname;
+  const search = window.location.search;
+  const hash = window.location.hash;
   const localePath = getLocalePathFromPathname(pathname);
   const [, setReplaceKey] = useState(0);
 
   if (!localePath && pathname !== PathEnum.Root && pathname !== "/health") {
-    const redirectPath = `/${currentLocale}${pathname}`;
+    const redirectPath = `/${currentLocale}${pathname}${search}${hash}`;
     window.history.replaceState({}, "", redirectPath);
     queueMicrotask(() => setReplaceKey((key) => key + 1));
     return null;

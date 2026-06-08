@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from "react";
-import { Outlet, useLocation } from "react-router";
+import { Outlet, useLocation, useNavigate } from "react-router";
 import { Adapter, WalletError } from "@solana/wallet-adapter-base";
 import {
   LedgerWalletAdapter,
@@ -34,7 +34,9 @@ const getPrivyId = () => {
 const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   const config = useOrderlyConfig();
   const path = usePathWithoutLang();
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { pathname } = location;
   const { onRouteChange } = useNav();
 
   const [networkId, setNetworkId] = useLocalStorage(
@@ -49,7 +51,9 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   ];
 
   const onLanguageChanged = async (lang: LocaleCode) => {
-    window.history.replaceState({}, "", `/${lang}${path}`);
+    navigate(`/${lang}${path}${location.search}${location.hash}`, {
+      replace: true,
+    });
   };
 
   const loadPath = (lang: LocaleCode) => {
