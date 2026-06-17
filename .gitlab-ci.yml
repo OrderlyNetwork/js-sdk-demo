@@ -1,16 +1,4 @@
-include:
-  # 开发没有权限部署到 iap，点了也没有，所以注释掉
-  # - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
-  #   ref: main
-  #   file: '/common-orderly-network-evm-iap.yaml'
-  #   rules:
-  #     - if: '$CI_COMMIT_TAG =~ /-demo$/'
-  - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
-    ref: main
-    file: '/common-orderly-network-dev-v2.yaml'
-  - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
-    ref: main
-    file: '/common-orderly-network-qa-evm.yaml'
+include: 
   - project: 'orderlynetwork/orderly-fe/common-ci'
     ref: main
     file: '/frontend-ci.yaml'
