@@ -47,6 +47,8 @@ The release tag format must include the target suffix:
 ```
 vX.Y.Z.W-demo
 vX.Y.Z.W-dmm
+vX.Y.Z.W-demo-BRANCH-N
+vX.Y.Z.W-dmm-BRANCH-N
 vX.Y.Z.W-demo-dev-N
 vX.Y.Z.W-dmm-dev-N
 vX.Y.Z.W-demo-qa-N
