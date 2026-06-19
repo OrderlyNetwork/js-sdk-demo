@@ -75,5 +75,14 @@
     "*.{ts,tsx}": [
       "prettier --write"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "@solana/wallet-adapter-walletconnect>@walletconnect/solana-adapter": "0.0.9",
+      "@trezor/protobuf>protobufjs": "7.6.3",
+      "@ethersproject/providers>ws": "8.21.0",
+      "socket.io-client>engine.io-client": "6.6.6",
+      "viem>ws": "8.21.0"
+    }
   }
 }
