@@ -38,8 +38,8 @@ docker build -t orderly-js-sdk-vite-template .
 Release commands must specify the app target explicitly:
 
 ```
-APP_TARGET=demo pnpm release
-APP_TARGET=dmm pnpm release
+VITE_APP_TARGET=demo pnpm release
+VITE_APP_TARGET=dmm pnpm release
 ```
 
 The release tag format must include the target suffix:

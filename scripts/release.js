@@ -15,7 +15,7 @@ const isCI = ciBranch;
 
 const packageVersion = process.env.PACKAGE_VERSION;
 const triggerBranch = process.env.TRIGGER_BRANCH;
-const appTarget = process.env.APP_TARGET || process.env.VITE_APP_TARGET;
+const appTarget = process.env.VITE_APP_TARGET;
 
 // Git user info and commit message for automated commits
 const git = {
@@ -188,7 +188,7 @@ function getInitialTag(version, suffix) {
 function validateAppTarget() {
   if (!["demo", "dmm"].includes(appTarget)) {
     throw new Error(
-      `APP_TARGET is required and must be "demo" or "dmm", received: ${appTarget}`,
+      `VITE_APP_TARGET is required and must be "demo" or "dmm", received: ${appTarget}`,
     );
   }
 }

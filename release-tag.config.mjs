@@ -1,11 +1,11 @@
 const appTargets = ["demo", "dmm"];
 
 const getAppTarget = () => {
-  const appTarget = process.env.APP_TARGET ?? process.env.VITE_APP_TARGET;
+  const appTarget = process.env.VITE_APP_TARGET;
 
   if (!appTargets.includes(appTarget)) {
     throw new Error(
-      `APP_TARGET is required and must be one of: ${appTargets.join(", ")}`,
+      `VITE_APP_TARGET is required and must be one of: ${appTargets.join(", ")}`,
     );
   }
 
@@ -18,6 +18,7 @@ const releaseTagConfig = {
   environments: ["dev", "qa", "prod"],
   prodEnv: "prod",
   prodBranch: "main",
+  triggerVariables: ["VITE_APP_TARGET"],
 
   releaseTagRule: {
     pattern: new RegExp(`^v(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)-${appTarget}$`),

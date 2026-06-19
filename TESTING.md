@@ -78,7 +78,7 @@
 | T-036 | 默认 target | 不设置环境变量执行 `pnpm build` | 使用 `demo` 配置 |
 | T-037 | Demo target | `VITE_APP_TARGET=demo pnpm build` | 使用 `demo` 配置 |
 | T-038 | DMM target | `VITE_APP_TARGET=dmm pnpm build` | 使用 `dmm` 配置，包含 DMM widget 配置 |
-| T-039 | Release target | `APP_TARGET=demo pnpm release`、`APP_TARGET=dmm pnpm release` | release 脚本识别对应 target |
+| T-039 | Release target | `VITE_APP_TARGET=demo pnpm release`、`VITE_APP_TARGET=dmm pnpm release` | release 脚本识别对应 target |
 
 ## 7. 静态资源与样式测试
 
