@@ -26,6 +26,7 @@ import { themes } from "@/config/themes";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
+import { chainFilter } from "./chains";
 
 const getPrivyId = () => {
   // dev privy id
@@ -142,6 +143,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
           }}
           themes={themes}
           plugins={plugins}
+          chainFilter={chainFilter}
         >
           {props.children}
         </OrderlyAppProvider>
