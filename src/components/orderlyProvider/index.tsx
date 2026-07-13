@@ -1,5 +1,5 @@
-import React, { FC, useEffect } from "react";
-import { Outlet, useLocation, useNavigate } from "react-router";
+import React, { FC } from "react";
+import { Outlet } from "react-router";
 import { Adapter, WalletError } from "@solana/wallet-adapter-base";
 import {
   LedgerWalletAdapter,
@@ -7,13 +7,6 @@ import {
   SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 import { useLocalStorage } from "@orderly.network/hooks";
-import {
-  getLocalePathFromPathname,
-  i18n,
-  LocaleCode,
-  LocaleEnum,
-  LocaleProvider,
-} from "@orderly.network/i18n";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import {
   WalletConnectorPrivyProvider,
@@ -24,8 +17,8 @@ import { plugins } from "@/config/plugins";
 import { themes } from "@/config/themes";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
-import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
 import { chainFilter } from "./chains";
+import { OrderlyLocaleProvider } from "./orderlyLocaleProvider";
 
 const getPrivyId = () => {
   // dev privy id
@@ -34,10 +27,6 @@ const getPrivyId = () => {
 
 const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   const config = useOrderlyConfig();
-  const path = usePathWithoutLang();
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { pathname } = location;
   const { onRouteChange } = useNav();
 
   const [networkId, setNetworkId] = useLocalStorage(
@@ -51,33 +40,8 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
     new LedgerWalletAdapter(),
   ];
 
-  const onLanguageChanged = async (lang: LocaleCode) => {
-    navigate(`/${lang}${path}${location.search}${location.hash}`, {
-      replace: true,
-    });
-  };
-
-  const loadPath = (lang: LocaleCode) => {
-    if (lang === LocaleEnum.en) {
-      // because en is built-in, we need to load the en extend only
-      return `/locales/extend/${lang}.json`;
-    }
-    return [`/locales/${lang}.json`, `/locales/extend/${lang}.json`];
-  };
-
-  useEffect(() => {
-    const lang = getLocalePathFromPathname(pathname);
-    // if url is include lang, and url lang is not the same as the i18n language, change the i18n language
-    if (lang && lang !== i18n.language) {
-      i18n.changeLanguage(lang);
-    }
-  }, [pathname]);
-
   return (
-    <LocaleProvider
-      onLanguageChanged={onLanguageChanged}
-      backend={{ loadPath }}
-    >
+    <OrderlyLocaleProvider>
       <WalletConnectorPrivyProvider
         termsOfUse={"https://learn.woo.org/legal/terms-of-use"}
         network={networkId}
@@ -152,7 +116,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
           {props.children || <Outlet />}
         </OrderlyAppProvider>
       </WalletConnectorPrivyProvider>
-    </LocaleProvider>
+    </OrderlyLocaleProvider>
   );
 };
 

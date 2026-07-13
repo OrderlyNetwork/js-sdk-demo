@@ -86,7 +86,7 @@
 | --- | --- | --- | --- |
 | T-040 | 全局样式 | 打开任意页面 | Orderly UI 样式、全局 CSS 正常生效 |
 | T-041 | favicon | 查看浏览器 tab 或访问 `/favicon.png` | favicon 正常加载 |
-| T-042 | locales | 运行 `pnpm copyLocales` | `public/locales/*.json` 正常生成或更新 |
+| T-042 | locales | 运行 `pnpm build` 并切换语言 | 语言资源生成按需 chunk，且不请求 `/locales/*.json` |
 | T-043 | TradingView 静态资源 | 打开交易页 | 图表相关资源正常加载 |
 
 ## 8. Docker 与部署测试

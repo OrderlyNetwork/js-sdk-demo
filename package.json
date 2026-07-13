@@ -10,7 +10,6 @@
     "preview": "vite preview",
     "lint": "eslint . && tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "copyLocales": "node scripts/copyLocales.js",
     "prepare": "husky",
     "release": "node scripts/release.js",
     "release:dev": "VITE_APP_TARGET=demo orderly-release-tag --env dev --project-id 34815052",

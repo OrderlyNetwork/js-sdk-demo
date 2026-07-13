@@ -109,7 +109,6 @@ Next.js middleware 被移除后，语言前缀补全逻辑迁移到 `src/routes.
 保留的框架无关脚本：
 
 - `format`
-- `copyLocales`
 - `prepare`
 - `release`
 - `release:*`
@@ -125,6 +124,7 @@ Next.js middleware 被移除后，语言前缀补全逻辑迁移到 `src/routes.
 - Node polyfill：`vite-plugin-node-polyfills`
 - 路径别名：`@ -> ./src`
 - JSON named export
+- 多语言资源通过 `AsyncResources` 和 `import.meta.glob` 从 SDK 与 `src/locales` 按需加载
 - `ENABLE_SOURCEMAP=true` 控制 sourcemap
 - `console.log`、`console.debug` 和 `debugger` 在生产构建中移除
 - sourcemap 中默认忽略大部分 `node_modules`，保留 `@orderly.network` 包映射
@@ -307,7 +307,6 @@ BUILD_ARG_NAMES: "VITE_APP_TARGET"
 - Prettier 配置与 import sort 规则
 - Husky pre-commit
 - `lint-staged`
-- `copyLocales`
 - release tag 规则
 - demo/dmm 多目标发布脚本
 - `strictNullChecks`
