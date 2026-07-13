@@ -1,14 +1,96 @@
-include:
-  - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
+include: 
+  - project: 'orderlynetwork/orderly-fe/common-ci'
     ref: main
-    file: '/common-orderly-network-evm-iap.yaml'
-  - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
-    ref: main
-    file: '/common-orderly-network-dev-v2.yaml'
-  - project: 'orderlynetwork/orderly-devops/orderly-common/common-ci'
-    ref: main
-    file: '/common-orderly-network-qa-evm.yaml'
+    file: '/frontend-ci.yaml'
 
 variables:
-  SERVICE_NAME: sdk-demo
-  IMAGE_NAME: sdk-demo
+  VITE_APP_TARGET: "demo"
+  BUILD_ARG_NAMES: "VITE_APP_TARGET"
+  SERVICE_NAME: "sdk-demo"
+  IMAGE_NAME: "sdk-demo"
+  ENABLE_PUBLISH: "false"
+  IMAGE_TAG: $CI_COMMIT_TAG
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-dmm(-[0-9]+|-[a-z0-9][a-z0-9-]*-[0-9]+)?$/'
+      variables:
+        VITE_APP_TARGET: "dmm"
+        SERVICE_NAME: "dmm"
+        IMAGE_NAME: "dmm"
+        DEPLOY_PRJ_TOKEN: ${DEPLOY_DMM_PRJ_TOKEN}
+        DEPLOY_PRJ_ID: ${DEPLOY_DMM_PRJ_ID}
+        DEPLOY_APP_URL_DEV: "https://dev-dmm.orderly.network"
+        DEPLOY_APP_URL_QA: "https://qa-dmm.orderly.network"
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-demo(-[0-9]+|-[a-z0-9][a-z0-9-]*-[0-9]+)?$/'
+      variables:
+        DEPLOY_APP_URL_DEV: "https://dev-demo.orderly.network"
+        DEPLOY_APP_URL_QA: "https://qa-demo.orderly.network"
+    - if: '$CI_COMMIT_TAG'
+      variables:
+        INVALID_RELEASE_TAG: "true"
+    - when: always
+      variables:
+        ENABLE_PUBLISH: "true"
+        IMAGE_TAG: "$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHORT_SHA"
+
+# This job does not replace the included `check_tag` job. It only fails invalid
+# release tag pipelines with a clear message about the supported tag formats.
+validate_release_tag:
+  stage: check_tag
+  image:
+    name: asia-northeast1-docker.pkg.dev/woo-orderly/orderly-devops/gcloud
+    entrypoint: [""]
+  script:
+    - 'echo "Invalid release tag: ${CI_COMMIT_TAG}"'
+    - echo "Release tags must match one of these formats:"
+    - echo "  vX.Y.Z.W-demo"
+    - echo "  vX.Y.Z.W-demo-N"
+    - echo "  vX.Y.Z.W-dmm"
+    - echo "  vX.Y.Z.W-dmm-N"
+    - echo "  vX.Y.Z.W-demo-BRANCH-N"
+    - echo "  vX.Y.Z.W-dmm-BRANCH-N"
+    - echo "  vX.Y.Z.W-demo-dev-N"
+    - echo "  vX.Y.Z.W-dmm-dev-N"
+    - echo "  vX.Y.Z.W-demo-qa-N"
+    - echo "  vX.Y.Z.W-dmm-qa-N"
+    - exit 1
+  rules:
+    - if: '$INVALID_RELEASE_TAG == "true"'
+      when: always
+    - when: never
+  tags:
+    - dev
+    - build
+
+generate-sbom:
+  rules:
+    - if: '$INVALID_RELEASE_TAG == "true"'
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "trigger"'
+      when: never
+    - when: always
+
+osv-audit:
+  rules:
+    - if: '$INVALID_RELEASE_TAG == "true"'
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "trigger"'
+      when: never
+    - when: always
+
+auto_deploy_dev:
+  extends: .auto_deploy_dev_base
+  variables:
+    DEPLOY_APP_URL: ${DEPLOY_APP_URL_DEV}
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-(demo|dmm)-dev-[0-9]+$/'
+    - when: never
+
+auto_deploy_qa:
+  extends: .auto_deploy_qa_base
+  variables:
+    DEPLOY_APP_URL: ${DEPLOY_APP_URL_QA}
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-(demo|dmm)-qa-[0-9]+$/'
+    - when: never

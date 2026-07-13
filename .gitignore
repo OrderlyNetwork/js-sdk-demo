@@ -22,6 +22,8 @@ yarn-debug.log*
 yarn-error.log*
 
 
-# next.js
+# build output
 /.next/
 /out/
+tsconfig.tsbuildinfo
+.claude/settings.local.json

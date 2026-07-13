@@ -1,15 +1,8 @@
 import { useMemo } from "react";
-import { TradingPageProps } from "@orderly.network/trading";
-import {
-  BottomNavProps,
-  FooterProps,
-  MainNavWidgetProps,
-} from "@orderly.network/ui-scaffold";
 import { type RestrictedInfoOptions } from "@orderly.network/hooks";
-import { AppLogos } from "@orderly.network/react-app";
-import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
 import { useTranslation } from "@orderly.network/i18n";
-import { PathEnum } from "../constant";
+import { AppLogos } from "@orderly.network/react-app";
+import { TradingPageProps } from "@orderly.network/trading";
 import {
   LeaderboardInactiveIcon,
   PortfolioInactiveIcon,
@@ -19,7 +12,24 @@ import {
   MarketsInactiveIcon,
   TradingInactiveIcon,
   TradingActiveIcon,
+  TradingIcon,
+  BarChartIcon,
+  PersonIcon,
+  AssetIcon,
+  SettingFillIcon,
+  EarnIcon,
+  AffiliateIcon,
 } from "@orderly.network/ui";
+import {
+  BottomNavProps,
+  FooterProps,
+  LeftNavProps,
+  MainNavWidgetProps,
+} from "@orderly.network/ui-scaffold";
+import { OrderlySecondaryLogo } from "@/components/icons/orderlySecondaryLogo";
+import { OrderlyTextIcon } from "@/components/icons/orderlyText";
+import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
+import { PathEnum } from "../constant";
 
 export type OrderlyConfig = {
   orderlyAppProvider: {
@@ -58,6 +68,7 @@ export const useOrderlyConfig = () => {
             },
           ],
           initialMenu: PathEnum.Root,
+          leftNav: getLeftNavMenus(t),
           campaigns: {
             name: t("tradingRewards.rewards"),
             href: PathEnum.Rewards,
@@ -67,11 +78,11 @@ export const useOrderlyConfig = () => {
               href: PathEnum.Portfolio,
             },
             children: [
-              {
-                name: t("common.tradingRewards"),
-                href: PathEnum.RewardsTrading,
-                description: t("extend.tradingRewards.description"),
-              },
+              // {
+              //   name: t("common.tradingRewards"),
+              //   href: PathEnum.RewardsTrading,
+              //   description: t("extend.tradingRewards.description"),
+              // },
               {
                 name: t("common.affiliate"),
                 href: PathEnum.RewardsAffiliate,
@@ -127,11 +138,13 @@ export const useOrderlyConfig = () => {
         appIcons: {
           main: {
             component: (
-              <img src="/orderly-logo.svg" alt="logo" style={{ height: 40 }} />
+              <OrderlyTextIcon className="oui-w-[100px] oui-h-10 oui-fill-base-contrast" />
             ),
           },
           secondary: {
-            img: "/orderly-logo-secondary.svg",
+            component: (
+              <OrderlySecondaryLogo className="oui-text-base-contrast" />
+            ),
           },
         },
         restrictedInfo: {
@@ -167,3 +180,67 @@ export const useOrderlyConfig = () => {
     };
   }, [t]);
 };
+
+function getLeftNavMenus(
+  t: ReturnType<typeof useTranslation>["t"],
+): LeftNavProps {
+  return {
+    menus: [
+      {
+        name: t("common.trading"),
+        href: PathEnum.Root,
+        icon: <TradingIcon />,
+      },
+      {
+        name: t("common.portfolio"),
+        href: PathEnum.Portfolio,
+        icon: <PersonIcon />,
+      },
+      {
+        name: t("common.markets"),
+        href: PathEnum.Markets,
+        icon: <BarChartIcon />,
+      },
+      {
+        name: t("tradingLeaderboard.leaderboard"),
+        href: PathEnum.Leaderboard,
+        icon: <LeaderboardInactiveIcon />,
+      },
+      {
+        name: t("common.assets"),
+        href: PathEnum.Assets,
+        icon: <AssetIcon />,
+      },
+      {
+        name: t("common.affiliate"),
+        href: PathEnum.RewardsAffiliate,
+        icon: <AffiliateIcon />,
+        onlyInMainAccount: true,
+      },
+      {
+        name: t("portfolio.setting"),
+        href: PathEnum.Setting,
+        icon: <SettingFillIcon color="white" opacity={0.8} />,
+      },
+      {
+        name: t("extend.staking"),
+        href: "https://app.orderly.network/staking",
+        icon: <EarnIcon />,
+        target: "_blank",
+      },
+      {
+        name: t("portfolio.feeTier"),
+        href: PathEnum.FeeTier,
+        isSecondary: true,
+      },
+      {
+        name: t("portfolio.apiKeys"),
+        href: PathEnum.ApiKey,
+        isSecondary: true,
+      },
+    ],
+    telegramUrl: "https://orderly.network",
+    discordUrl: "https://discord.com/invite/orderlynetwork",
+    twitterUrl: "https://twitter.com/OrderlyNetwork",
+  };
+}

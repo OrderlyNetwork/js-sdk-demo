@@ -1,19 +1,12 @@
-"use client";
-
 import React, { FC, useEffect } from "react";
-import { OrderlyAppProvider } from "@orderly.network/react-app";
-import { useLocalStorage } from "@orderly.network/hooks";
-import {
-  WalletConnectorPrivyProvider,
-  wagmiConnectors,
-} from "@orderly.network/wallet-connector-privy";
+import { Outlet, useLocation, useNavigate } from "react-router";
 import { Adapter, WalletError } from "@solana/wallet-adapter-base";
 import {
   LedgerWalletAdapter,
   PhantomWalletAdapter,
   SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
-import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
+import { useLocalStorage } from "@orderly.network/hooks";
 import {
   getLocalePathFromPathname,
   i18n,
@@ -21,9 +14,18 @@ import {
   LocaleEnum,
   LocaleProvider,
 } from "@orderly.network/i18n";
-import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
-import { usePathname } from "next/navigation";
+import { OrderlyAppProvider } from "@orderly.network/react-app";
+import {
+  WalletConnectorPrivyProvider,
+  wagmiConnectors,
+} from "@orderly.network/wallet-connector-privy";
+import { appTargetConfig } from "@/components/orderlyConfig/appTargetConfig";
+import { plugins } from "@/config/plugins";
+import { themes } from "@/config/themes";
 import { useNav } from "@/hooks/useNav";
+import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
+import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
+import { chainFilter } from "./chains";
 
 const getPrivyId = () => {
   // dev privy id
@@ -33,12 +35,14 @@ const getPrivyId = () => {
 const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   const config = useOrderlyConfig();
   const path = usePathWithoutLang();
-  const pathname = usePathname();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { pathname } = location;
   const { onRouteChange } = useNav();
 
   const [networkId, setNetworkId] = useLocalStorage(
     "dmm-local-storage-network-id",
-    "mainnet"
+    "mainnet",
   );
 
   const solWallets = [
@@ -48,7 +52,9 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   ];
 
   const onLanguageChanged = async (lang: LocaleCode) => {
-    window.history.replaceState({}, "", `/${lang}${path}`);
+    navigate(`/${lang}${path}${location.search}${location.hash}`, {
+      replace: true,
+    });
   };
 
   const loadPath = (lang: LocaleCode) => {
@@ -109,20 +115,21 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
             },
           },
         }}
-        enableSwapDeposit
+        abstractConfig={{}}
       >
         <OrderlyAppProvider
-          brokerId="demo"
-          brokerName="Orderly"
+          brokerId={appTargetConfig.brokerId}
+          brokerName={appTargetConfig.brokerName}
           networkId={networkId}
           appIcons={config.orderlyAppProvider.appIcons}
+          widgetConfigs={appTargetConfig.widgetConfigs}
           enableSwapDeposit
           onChainChanged={(
             chainId: number,
             state: {
               isTestnet: boolean;
               isWalletConnected: boolean;
-            }
+            },
           ) => {
             const nextState = state.isTestnet ? "testnet" : "mainnet";
             setNetworkId(nextState);
@@ -131,8 +138,18 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
             }
           }}
           onRouteChange={onRouteChange}
+          notification={{
+            orderFilled: {
+              media: "https://oss.orderly.network/static/sdk/coin.mp3",
+              defaultOpen: false,
+              displayInOrderEntry: true,
+            },
+          }}
+          themes={themes}
+          plugins={plugins}
+          chainFilter={chainFilter}
         >
-          {props.children}
+          {props.children || <Outlet />}
         </OrderlyAppProvider>
       </WalletConnectorPrivyProvider>
     </LocaleProvider>
