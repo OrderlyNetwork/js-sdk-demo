@@ -13,7 +13,7 @@ variables:
 
 workflow:
   rules:
-    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-dmm(-([A-Za-z0-9_][A-Za-z0-9._-]*-)?(dev|qa)-[0-9]+)?$/'
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-dmm(-[0-9]+|-[A-Za-z0-9_][A-Za-z0-9._-]*-[0-9]+)?$/'
       variables:
         VITE_APP_TARGET: "dmm"
         SERVICE_NAME: "dmm"
@@ -22,7 +22,7 @@ workflow:
         DEPLOY_PRJ_ID: ${DEPLOY_DMM_PRJ_ID}
         DEPLOY_APP_URL_DEV: "https://dmm.dev.orderly-i.network/"
         DEPLOY_APP_URL_QA: "https://dmm.qa.orderly-i.network/"
-    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-demo(-([A-Za-z0-9_][A-Za-z0-9._-]*-)?(dev|qa)-[0-9]+)?$/'
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-demo(-[0-9]+|-[A-Za-z0-9_][A-Za-z0-9._-]*-[0-9]+)?$/'
       variables:
         DEPLOY_APP_URL_DEV: "https://demo.dev.orderly-i.network/"
         DEPLOY_APP_URL_QA: "https://demo.qa.orderly-i.network/"
@@ -46,6 +46,10 @@ validate_release_tag:
     - echo "Release tags must match one of these formats:"
     - echo "  vX.Y.Z.W-demo"
     - echo "  vX.Y.Z.W-dmm"
+    - echo "  vX.Y.Z.W-demo-N"
+    - echo "  vX.Y.Z.W-dmm-N"
+    - echo "  vX.Y.Z.W-demo-BRANCH-N"
+    - echo "  vX.Y.Z.W-dmm-BRANCH-N"
     - echo "  vX.Y.Z.W-demo-dev-N"
     - echo "  vX.Y.Z.W-dmm-dev-N"
     - echo "  vX.Y.Z.W-demo-qa-N"

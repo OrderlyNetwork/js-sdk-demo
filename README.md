@@ -47,13 +47,24 @@ The release tag format must include the target suffix:
 ```
 vX.Y.Z.W-demo
 vX.Y.Z.W-dmm
+vX.Y.Z.W-demo-N
+vX.Y.Z.W-dmm-N
 vX.Y.Z.W-demo-BRANCH-N
 vX.Y.Z.W-dmm-BRANCH-N
 vX.Y.Z.W-demo-dev-N
 vX.Y.Z.W-dmm-dev-N
 vX.Y.Z.W-demo-qa-N
 vX.Y.Z.W-dmm-qa-N
+vX.Y.Z.W-demo-BRANCH-dev-N
+vX.Y.Z.W-dmm-BRANCH-dev-N
+vX.Y.Z.W-demo-BRANCH-qa-N
+vX.Y.Z.W-dmm-BRANCH-qa-N
 ```
+
+Tags ending in `dev-N` or `qa-N` trigger deployment to that environment, so
+`dev` and `qa` are reserved environment segments. Base tags, numeric suffix
+tags, and other branch suffix tags only build and publish the selected target
+without triggering an automatic deployment.
 
 ## Docs
 
