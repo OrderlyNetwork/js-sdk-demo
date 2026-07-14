@@ -21,18 +21,20 @@ const releaseTagConfig = {
   triggerVariables: ["VITE_APP_TARGET"],
 
   releaseTagRule: {
-    pattern: new RegExp(`^v(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)-${appTarget}$`),
-    description: `vX.Y.Z.W-${appTarget}`,
-    example: `v3.0.4.1-${appTarget}`,
-    format({ major, minor, patch, build }) {
+    pattern: new RegExp(
+      `^v(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)-${appTarget}(?:-\\d+)?$`,
+    ),
+    description: `vX.Y.Z.W-${appTarget} or vX.Y.Z.W-${appTarget}-N`,
+    example: `v3.2.1.0-${appTarget}`,
+    format({ major, minor, patch, build = 0 }) {
       return `v${major}.${minor}.${patch}.${build}-${appTarget}`;
     },
   },
 
-  formatPrereleaseTag({ releaseTag, branchPart, nextNumber }) {
+  formatPrereleaseTag({ releaseTag, branchPart, env, nextNumber }) {
     return branchPart
-      ? `${releaseTag}-${branchPart}-${nextNumber}`
-      : `${releaseTag}-${nextNumber}`;
+      ? `${releaseTag}-${branchPart}-${env}-${nextNumber}`
+      : `${releaseTag}-${env}-${nextNumber}`;
   },
 };
 
