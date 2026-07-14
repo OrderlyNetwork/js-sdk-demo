@@ -1,3 +1,4 @@
+@import "./tailwind.css";
 @import "@orderly.network/ui/dist/styles.css";
 /* 引入插件的时候就已经引入了styles.css文件，所以这里不需要再引入了 */
 /* @import "@orderly.network/fast-place-order-plugin/dist/styles.css";
