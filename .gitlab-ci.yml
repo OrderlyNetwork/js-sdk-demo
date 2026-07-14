@@ -13,19 +13,19 @@ variables:
 
 workflow:
   rules:
-    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-dmm(-[0-9]+|-[a-z0-9][a-z0-9-]*-[0-9]+)?$/'
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-dmm(-([A-Za-z0-9_][A-Za-z0-9._-]*-)?(dev|qa)-[0-9]+)?$/'
       variables:
         VITE_APP_TARGET: "dmm"
         SERVICE_NAME: "dmm"
         IMAGE_NAME: "dmm"
         DEPLOY_PRJ_TOKEN: ${DEPLOY_DMM_PRJ_TOKEN}
         DEPLOY_PRJ_ID: ${DEPLOY_DMM_PRJ_ID}
-        DEPLOY_APP_URL_DEV: "https://dev-dmm.orderly.network"
-        DEPLOY_APP_URL_QA: "https://qa-dmm.orderly.network"
-    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-demo(-[0-9]+|-[a-z0-9][a-z0-9-]*-[0-9]+)?$/'
+        DEPLOY_APP_URL_DEV: "https://dmm.dev.orderly-i.network/"
+        DEPLOY_APP_URL_QA: "https://dmm.qa.orderly-i.network/"
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-demo(-([A-Za-z0-9_][A-Za-z0-9._-]*-)?(dev|qa)-[0-9]+)?$/'
       variables:
-        DEPLOY_APP_URL_DEV: "https://dev-demo.orderly.network"
-        DEPLOY_APP_URL_QA: "https://qa-demo.orderly.network"
+        DEPLOY_APP_URL_DEV: "https://demo.dev.orderly-i.network/"
+        DEPLOY_APP_URL_QA: "https://demo.qa.orderly-i.network/"
     - if: '$CI_COMMIT_TAG'
       variables:
         INVALID_RELEASE_TAG: "true"
@@ -45,15 +45,15 @@ validate_release_tag:
     - 'echo "Invalid release tag: ${CI_COMMIT_TAG}"'
     - echo "Release tags must match one of these formats:"
     - echo "  vX.Y.Z.W-demo"
-    - echo "  vX.Y.Z.W-demo-N"
     - echo "  vX.Y.Z.W-dmm"
-    - echo "  vX.Y.Z.W-dmm-N"
-    - echo "  vX.Y.Z.W-demo-BRANCH-N"
-    - echo "  vX.Y.Z.W-dmm-BRANCH-N"
     - echo "  vX.Y.Z.W-demo-dev-N"
     - echo "  vX.Y.Z.W-dmm-dev-N"
     - echo "  vX.Y.Z.W-demo-qa-N"
     - echo "  vX.Y.Z.W-dmm-qa-N"
+    - echo "  vX.Y.Z.W-demo-BRANCH-dev-N"
+    - echo "  vX.Y.Z.W-dmm-BRANCH-dev-N"
+    - echo "  vX.Y.Z.W-demo-BRANCH-qa-N"
+    - echo "  vX.Y.Z.W-dmm-BRANCH-qa-N"
     - exit 1
   rules:
     - if: '$INVALID_RELEASE_TAG == "true"'
@@ -84,7 +84,7 @@ auto_deploy_dev:
   variables:
     DEPLOY_APP_URL: ${DEPLOY_APP_URL_DEV}
   rules:
-    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-(demo|dmm)-dev-[0-9]+$/'
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-(demo|dmm)(-[A-Za-z0-9_][A-Za-z0-9._-]*)?-dev-[0-9]+$/'
     - when: never
 
 auto_deploy_qa:
@@ -92,5 +92,5 @@ auto_deploy_qa:
   variables:
     DEPLOY_APP_URL: ${DEPLOY_APP_URL_QA}
   rules:
-    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-(demo|dmm)-qa-[0-9]+$/'
+    - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-(demo|dmm)(-[A-Za-z0-9_][A-Za-z0-9._-]*)?-qa-[0-9]+$/'
     - when: never
