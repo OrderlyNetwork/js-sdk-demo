@@ -7,7 +7,7 @@ import {
   SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 import { useLocalStorage } from "@orderly.network/hooks";
-import { OrderlyAppProvider } from "@orderly.network/react-app";
+import { ErrorBoundary, OrderlyAppProvider } from "@orderly.network/react-app";
 import {
   WalletConnectorPrivyProvider,
   wagmiConnectors,
@@ -81,40 +81,47 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
         }}
         abstractConfig={{}}
       >
-        <OrderlyAppProvider
-          brokerId={appTargetConfig.brokerId}
-          brokerName={appTargetConfig.brokerName}
-          networkId={networkId}
-          appIcons={config.orderlyAppProvider.appIcons}
-          widgetConfigs={appTargetConfig.widgetConfigs}
-          enableSwapDeposit
-          onChainChanged={(
-            chainId: number,
-            state: {
-              isTestnet: boolean;
-              isWalletConnected: boolean;
-            },
-          ) => {
-            const nextState = state.isTestnet ? "testnet" : "mainnet";
-            setNetworkId(nextState);
-            if (networkId !== nextState) {
-              window.location.reload();
-            }
+        <ErrorBoundary
+          onError={(error, errorInfo) => {
+            console.error("Application render error", error, errorInfo);
           }}
-          onRouteChange={onRouteChange}
-          notification={{
-            orderFilled: {
-              media: "https://oss.orderly.network/static/sdk/coin.mp3",
-              defaultOpen: false,
-              displayInOrderEntry: true,
-            },
-          }}
-          themes={themes}
-          plugins={plugins}
-          chainFilter={chainFilter}
+          onRefresh={() => window.location.reload()}
         >
-          {props.children || <Outlet />}
-        </OrderlyAppProvider>
+          <OrderlyAppProvider
+            brokerId={appTargetConfig.brokerId}
+            brokerName={appTargetConfig.brokerName}
+            networkId={networkId}
+            appIcons={config.orderlyAppProvider.appIcons}
+            widgetConfigs={appTargetConfig.widgetConfigs}
+            enableSwapDeposit
+            onChainChanged={(
+              chainId: number,
+              state: {
+                isTestnet: boolean;
+                isWalletConnected: boolean;
+              },
+            ) => {
+              const nextState = state.isTestnet ? "testnet" : "mainnet";
+              setNetworkId(nextState);
+              if (networkId !== nextState) {
+                window.location.reload();
+              }
+            }}
+            onRouteChange={onRouteChange}
+            notification={{
+              orderFilled: {
+                media: "https://oss.orderly.network/static/sdk/coin.mp3",
+                defaultOpen: false,
+                displayInOrderEntry: true,
+              },
+            }}
+            themes={themes}
+            plugins={plugins}
+            chainFilter={chainFilter}
+          >
+            {props.children || <Outlet />}
+          </OrderlyAppProvider>
+        </ErrorBoundary>
       </WalletConnectorPrivyProvider>
     </OrderlyLocaleProvider>
   );
