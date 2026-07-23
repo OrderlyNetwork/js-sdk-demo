@@ -1,4 +1,4 @@
-import { ComponentType, lazy, Suspense, useState } from "react";
+import { ComponentType, lazy, useState } from "react";
 import {
   Navigate,
   createBrowserRouter,
@@ -13,6 +13,7 @@ import {
 import { BaseLayout } from "@/components/baseLayout";
 import { PortfolioLayout, TradingRewardsLayout } from "@/components/layout";
 import OrderlyProvider from "@/components/orderlyProvider";
+import { LazyPage } from "@/components/pageLoading/LazyPage";
 import { PathEnum } from "@/constant";
 import { DEFAULT_SYMBOL, getSymbol } from "@/storage";
 
@@ -21,9 +22,9 @@ const lazyImportPage = (
 ): ComponentType<Record<string, unknown>> => {
   const LazyComponent = lazy(importFn);
   const WrappedComponent = (props: Record<string, unknown>) => (
-    <Suspense fallback={null}>
+    <LazyPage>
       <LazyComponent {...props} />
-    </Suspense>
+    </LazyPage>
   );
   return WrappedComponent;
 };
@@ -31,8 +32,12 @@ const lazyImportPage = (
 const LeaderboardPage = lazyImportPage(
   () => import("@/pages/leaderboard/page"),
 );
+const AnnouncementPage = lazyImportPage(
+  () => import("@/pages/announcement/page"),
+);
 const MarketsPage = lazyImportPage(() => import("@/pages/markets/page"));
 const PerpPage = lazyImportPage(() => import("@/pages/perp/page"));
+const VaultsPage = lazyImportPage(() => import("@/pages/vaults/page"));
 const APIKeyPage = lazyImportPage(
   () => import("@/pages/portfolio/api-key/page"),
 );
@@ -155,12 +160,24 @@ const AppRoute = () => {
       ),
     },
     {
+      path: "vaults",
+      element: (
+        <LayoutRoute initialMenu={PathEnum.Vaults}>
+          <VaultsPage />
+        </LayoutRoute>
+      ),
+    },
+    {
       path: "leaderboard",
       element: (
         <LayoutRoute initialMenu={PathEnum.Leaderboard}>
           <LeaderboardPage />
         </LayoutRoute>
       ),
+    },
+    {
+      path: "announcement",
+      element: <AnnouncementPage />,
     },
     {
       path: "rewards",
@@ -215,7 +232,11 @@ const AppRoute = () => {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <LazyPage>
+      <RouterProvider router={router} />
+    </LazyPage>
+  );
 };
 
 export default AppRoute;

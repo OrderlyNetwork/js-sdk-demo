@@ -12,13 +12,33 @@ const routeMap: Partial<Record<PortfolioLeftSidebarPath, PathEnum>> = {
   [PortfolioLeftSidebarPath.ApiKey]: PathEnum.ApiKey,
 };
 
+const openExternalUrl = (href: string) => {
+  try {
+    const url = new URL(href, window.location.origin);
+    if (url.protocol !== "http:" && url.protocol !== "https:") {
+      return;
+    }
+
+    const openedWindow = window.open(
+      url.toString(),
+      "_blank",
+      "noopener,noreferrer",
+    );
+    if (openedWindow) {
+      openedWindow.opener = null;
+    }
+  } catch {
+    // Ignore malformed external URLs.
+  }
+};
+
 export const useNav = () => {
   const navigate = useNavigate();
 
   const onRouteChange = useCallback(
     (option: RouteOption) => {
       if (option.target === "_blank") {
-        window.open(option.href);
+        openExternalUrl(option.href);
         return;
       }
       const lang = parseI18nLang(i18n.language);

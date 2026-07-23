@@ -19,6 +19,7 @@ import {
   SettingFillIcon,
   EarnIcon,
   AffiliateIcon,
+  LeftNavVaultsIcon,
 } from "@orderly.network/ui";
 import {
   BottomNavProps,
@@ -104,6 +105,7 @@ export const useOrderlyConfig = () => {
               href: PathEnum.Root,
               isHomePageInMobile: true,
             },
+            { name: t("common.vaults"), href: PathEnum.Vaults },
             { name: t("common.portfolio"), href: PathEnum.Portfolio },
             { name: t("common.markets"), href: PathEnum.Markets },
             {
@@ -195,6 +197,11 @@ function getLeftNavMenus(
         name: t("common.trading"),
         href: PathEnum.Root,
         icon: <TradingIcon />,
+      },
+      {
+        name: t("common.vaults"),
+        href: PathEnum.Vaults,
+        icon: <LeftNavVaultsIcon />,
       },
       {
         name: t("common.portfolio"),
