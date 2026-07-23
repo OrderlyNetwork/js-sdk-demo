@@ -1,11 +1,5 @@
-import React, { FC } from "react";
+import React, { FC, useMemo } from "react";
 import { Outlet } from "react-router";
-import { Adapter, WalletError } from "@solana/wallet-adapter-base";
-import {
-  LedgerWalletAdapter,
-  PhantomWalletAdapter,
-  SolflareWalletAdapter,
-} from "@solana/wallet-adapter-wallets";
 import { useLocalStorage } from "@orderly.network/hooks";
 import { ErrorBoundary, OrderlyAppProvider } from "@orderly.network/react-app";
 import {
@@ -19,6 +13,7 @@ import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { chainFilter } from "./chains";
 import { OrderlyLocaleProvider } from "./orderlyLocaleProvider";
+import { createSolanaWallets, handleSolanaWalletError } from "./solanaWallets";
 
 const getPrivyId = () => {
   // dev privy id
@@ -28,17 +23,21 @@ const getPrivyId = () => {
 const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   const config = useOrderlyConfig();
   const { onRouteChange } = useNav();
-
   const [networkId, setNetworkId] = useLocalStorage(
     "dmm-local-storage-network-id",
     "mainnet",
   );
 
-  const solWallets = [
-    new PhantomWalletAdapter(),
-    new SolflareWalletAdapter(),
-    new LedgerWalletAdapter(),
-  ];
+  const solWallets = useMemo(
+    () =>
+      createSolanaWallets({
+        networkId,
+        appName: appTargetConfig.title,
+        appOrigin: window.location.origin,
+        appIcon: "orderly-logo.svg",
+      }),
+    [networkId],
+  );
 
   return (
     <OrderlyLocaleProvider>
@@ -46,11 +45,8 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
         termsOfUse={"https://learn.woo.org/legal/terms-of-use"}
         network={networkId}
         solanaConfig={{
-          wallets: solWallets as Adapter[],
-          onError: (error: WalletError, adapter?: Adapter) => {
-            console.log("solana wallet error", error, adapter);
-            console.error(error);
-          },
+          wallets: solWallets,
+          onError: handleSolanaWalletError,
         }}
         wagmiConfig={{
           connectors: [

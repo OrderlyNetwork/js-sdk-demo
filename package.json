@@ -9,6 +9,8 @@
     "start": "vite preview",
     "preview": "vite preview",
     "lint": "eslint . && tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "prepare": "husky",
     "release": "node scripts/release.js",
@@ -42,9 +44,10 @@
     "@orderly.network/ui-scaffold": "3.1.6-internal-20260717.3",
     "@orderly.network/vaults": "3.1.6-internal-20260717.3",
     "@orderly.network/wallet-connector-privy": "3.1.6-internal-20260717.3",
-    "@solana-mobile/wallet-adapter-mobile": "2.1.4",
-    "@solana/wallet-adapter-base": "0.9.23",
-    "@solana/wallet-adapter-wallets": "0.19.32",
+    "@solana-mobile/wallet-adapter-mobile": "^2.1.4",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-wallets": "^0.19.38",
+    "@solana/web3.js": "^1.95.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^7.7.1"
@@ -74,6 +77,7 @@
     "typescript-eslint": "^8.60.1",
     "vite": "^7.0.4",
     "vite-plugin-node-polyfills": "^0.24.0",
+    "vitest": "^4.1.10",
     "zx": "^8.8.4"
   },
   "lint-staged": {
