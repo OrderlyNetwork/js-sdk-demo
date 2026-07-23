@@ -15,10 +15,44 @@ cd orderly-js-sdk-vite-template
 pnpm install
 ```
 
-3. Run
+3. Run the staging environment by default
 
 ```
 pnpm dev
+```
+
+Local development supports the same environment split as WOOFi Pro:
+
+| Command               | Vite mode  | Port | Orderly network | SDK env |
+| --------------------- | ---------- | ---: | --------------- | ------- |
+| `pnpm start:dev`      | `dev`      | 4564 | testnet         | dev     |
+| `pnpm start:qa`       | `qa`       | 4565 | testnet         | qa      |
+| `pnpm start:staging`  | `staging`  | 4567 | testnet         | staging |
+| `pnpm start:prod`     | `prod`     | 4568 | mainnet         | prod    |
+| `pnpm start:prod-iap` | `prod-iap` | 4569 | mainnet         | prod    |
+
+`pnpm dev` is an alias for `pnpm start:staging`. `dev` and `qa` use their
+matching Orderly internal API, WebSocket, and Operator endpoints. `staging`,
+`prod`, and `prod-iap` use the SDK testnet or mainnet endpoints.
+
+Vite loads the committed `env/.env.[mode]` file for each command.
+Machine-specific public URL overrides can be placed in an ignored
+`env/.env.[mode].local` file:
+
+```dotenv
+VITE_MAINNET_APP_URL=https://mainnet.example.com/app/
+VITE_TESTNET_APP_URL=https://testnet.example.com/app/
+```
+
+Orderly API, WebSocket, and Operator addresses are selected automatically from
+`VITE_APP_ENV`. The fixed dev and qa addresses live in the runtime mapping;
+staging and production reuse the SDK `API_URLS` defaults.
+
+Only public addresses belong in `VITE_*` variables. To start the DMM target in
+any local environment, keep using `VITE_APP_TARGET`, for example:
+
+```
+VITE_APP_TARGET=dmm pnpm start:qa
 ```
 
 4. Build
@@ -27,10 +61,58 @@ pnpm dev
 pnpm build
 ```
 
+Run the automated tests:
+
+```
+pnpm test
+```
+
 5. Create docker image
 
 ```
-docker build -t orderly-js-sdk-vite-template .
+docker build --build-arg VITE_APP_TARGET=demo -t orderly-js-sdk-vite-template .
+```
+
+6. Run the container with runtime environment configuration
+
+```
+docker run --rm -p 3000:3000 \
+  -e APP_ENV=dev \
+  -e MAINNET_APP_URL=https://mainnet.example.com \
+  -e TESTNET_APP_URL=https://testnet.example.com \
+  orderly-js-sdk-vite-template
+```
+
+## Runtime environment
+
+The same image can run in every deployment environment. The container startup
+script generates `runtime-env.js` from these required variables:
+
+- `APP_ENV`: `dev`, `qa`, `staging`, `prod`, or `prod-iap`
+- `MAINNET_APP_URL`: absolute URL used when switching to mainnet
+- `TESTNET_APP_URL`: absolute URL used when switching to testnet
+
+`prod` and `prod-iap` use Orderly mainnet. `dev`, `qa`, and `staging` use
+Orderly testnet. Missing or invalid runtime configuration prevents the
+container from starting.
+
+Outside the validated container startup path, a missing `APP_ENV` falls back
+to the SDK `prod` environment and Orderly mainnet endpoints.
+
+Local Vite development reads `VITE_APP_ENV` from the selected mode file before
+`public/runtime-env.js`, then selects the matching Orderly endpoints.
+Production builds ignore the Vite environment selection and continue to read
+the container-generated `window.__RUNTIME_CONFIG__`. The existing K8s and
+entrypoint contract is unchanged.
+
+For browser-only debugging, a non-empty `ENABLE_MAINNET` local storage value
+forces `networkId` to `mainnet`. It does not change `APP_ENV`, the SDK
+environment, or the API, WebSocket, and Operator endpoints selected by
+`APP_ENV`:
+
+```js
+localStorage.setItem("ENABLE_MAINNET", "1");
+localStorage.removeItem("ENABLE_MAINNET");
 ```
 
 ## Release

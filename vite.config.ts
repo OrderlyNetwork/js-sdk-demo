@@ -28,6 +28,7 @@ export default defineConfig({
     host: true,
     open: true,
   },
+  envDir: "./env",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

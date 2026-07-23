@@ -1,32 +1,39 @@
 import React, { FC, useMemo } from "react";
 import { Outlet } from "react-router";
-import { useLocalStorage } from "@orderly.network/hooks";
 import { ErrorBoundary, OrderlyAppProvider } from "@orderly.network/react-app";
 import {
+  Network,
   WalletConnectorPrivyProvider,
   wagmiConnectors,
 } from "@orderly.network/wallet-connector-privy";
 import { appTargetConfig } from "@/components/orderlyConfig/appTargetConfig";
 import { plugins } from "@/config/plugins";
+import { getOrderlyConfig, switchAppNetwork } from "@/config/runtime";
 import { themes } from "@/config/themes";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { chainFilter } from "./chains";
+import { useConfigStore } from "./configStore";
 import { OrderlyLocaleProvider } from "./orderlyLocaleProvider";
 import { createSolanaWallets, handleSolanaWalletError } from "./solanaWallets";
 
 const getPrivyId = () => {
-  // dev privy id
+  // All deployment environments and Orderly networks intentionally share one Privy app.
   return "cm86zfufk01n2ojo83s2becsr";
 };
 
 const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   const config = useOrderlyConfig();
   const { onRouteChange } = useNav();
-  const [networkId, setNetworkId] = useLocalStorage(
-    "dmm-local-storage-network-id",
-    "mainnet",
-  );
+  const orderlyConfig = useMemo(() => getOrderlyConfig(), []);
+  const { networkId } = orderlyConfig;
+  const configStore = useConfigStore({
+    brokerId: appTargetConfig.brokerId,
+    brokerName: appTargetConfig.brokerName,
+    networkId,
+    appEnv: orderlyConfig.appEnv,
+    urls: orderlyConfig.urls,
+  });
 
   const solWallets = useMemo(
     () =>
@@ -43,7 +50,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
     <OrderlyLocaleProvider>
       <WalletConnectorPrivyProvider
         termsOfUse={"https://learn.woo.org/legal/terms-of-use"}
-        network={networkId}
+        network={networkId as Network}
         solanaConfig={{
           wallets: solWallets,
           onError: handleSolanaWalletError,
@@ -84,23 +91,20 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
           onRefresh={() => window.location.reload()}
         >
           <OrderlyAppProvider
-            brokerId={appTargetConfig.brokerId}
-            brokerName={appTargetConfig.brokerName}
-            networkId={networkId}
+            configStore={configStore}
             appIcons={config.orderlyAppProvider.appIcons}
             widgetConfigs={appTargetConfig.widgetConfigs}
             enableSwapDeposit
             onChainChanged={(
-              chainId: number,
+              _chainId: number,
               state: {
                 isTestnet: boolean;
                 isWalletConnected: boolean;
               },
             ) => {
-              const nextState = state.isTestnet ? "testnet" : "mainnet";
-              setNetworkId(nextState);
-              if (networkId !== nextState) {
-                window.location.reload();
+              const nextNetworkId = state.isTestnet ? "testnet" : "mainnet";
+              if (networkId !== nextNetworkId) {
+                switchAppNetwork(nextNetworkId);
               }
             }}
             onRouteChange={onRouteChange}
