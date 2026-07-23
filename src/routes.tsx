@@ -16,11 +16,22 @@ import OrderlyProvider from "@/components/orderlyProvider";
 import { LazyPage } from "@/components/pageLoading/LazyPage";
 import { PathEnum } from "@/constant";
 import { DEFAULT_SYMBOL, getSymbol } from "@/storage";
+import { tryReloadForChunkError } from "@/utils/chunkLoadRecovery";
 
 const lazyImportPage = (
   importFn: () => Promise<{ default: ComponentType<Record<string, unknown>> }>,
 ): ComponentType<Record<string, unknown>> => {
-  const LazyComponent = lazy(importFn);
+  const LazyComponent = lazy(() =>
+    importFn().catch((error: unknown) => {
+      if (tryReloadForChunkError(error)) {
+        return new Promise<{
+          default: ComponentType<Record<string, unknown>>;
+        }>(() => {});
+      }
+
+      throw error;
+    }),
+  );
   const WrappedComponent = (props: Record<string, unknown>) => (
     <LazyPage>
       <LazyComponent {...props} />
