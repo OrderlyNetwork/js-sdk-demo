@@ -11,6 +11,33 @@ variables:
   ENABLE_PUBLISH: "false"
   IMAGE_TAG: $CI_COMMIT_TAG
 
+build_docker:
+  extends: .build_docker_base
+  variables:
+    BUILD_ARG_NAMES: "VITE_APP_TARGET ENABLE_SOURCEMAP SENTRY_AUTH_TOKEN SENTRY_ORG SENTRY_PROJECT SENTRY_RELEASE"
+  before_script:
+    - !reference [.build_docker_base, before_script]
+    - |
+      set -eu
+
+      if [[ "${CI_COMMIT_TAG:-}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-(demo|dmm)$ ]]; then
+        export ENABLE_SOURCEMAP="true"
+        export SENTRY_RELEASE="${CI_COMMIT_TAG}"
+        echo "Stable target tag ${CI_COMMIT_TAG}: enabling Sentry source maps."
+      else
+        export ENABLE_SOURCEMAP="false"
+        export SENTRY_RELEASE=""
+        echo "Non-production build: disabling Sentry source maps."
+      fi
+
+      if [ "${ENABLE_SOURCEMAP}" = "true" ]; then
+        : "${SENTRY_AUTH_TOKEN:?SENTRY_AUTH_TOKEN is required for source maps}"
+        : "${SENTRY_ORG:?SENTRY_ORG is required for source maps}"
+        : "${SENTRY_PROJECT:?SENTRY_PROJECT is required for source maps}"
+      fi
+  script:
+    - !reference [.build_docker_base, script]
+
 workflow:
   rules:
     - if: '$CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-dmm(-[0-9]+|-[A-Za-z0-9_][A-Za-z0-9._-]*-[0-9]+)?$/'

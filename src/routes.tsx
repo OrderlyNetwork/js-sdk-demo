@@ -1,10 +1,5 @@
 import { ComponentType, lazy, useState } from "react";
-import {
-  Navigate,
-  createBrowserRouter,
-  RouterProvider,
-  RouteObject,
-} from "react-router";
+import { Navigate, RouterProvider, RouteObject } from "react-router";
 import {
   getLocalePathFromPathname,
   i18n,
@@ -15,6 +10,7 @@ import { PortfolioLayout, TradingRewardsLayout } from "@/components/layout";
 import OrderlyProvider from "@/components/orderlyProvider";
 import { LazyPage } from "@/components/pageLoading/LazyPage";
 import { PathEnum } from "@/constant";
+import { getSentryCreateBrowserRouter } from "@/sentry";
 import { DEFAULT_SYMBOL, getSymbol } from "@/storage";
 import { tryReloadForChunkError } from "@/utils/chunkLoadRecovery";
 
@@ -210,7 +206,7 @@ const AppRoute = () => {
     },
   ];
 
-  const router = createBrowserRouter([
+  const router = getSentryCreateBrowserRouter()([
     {
       path: "/health",
       element: <HealthPage />,

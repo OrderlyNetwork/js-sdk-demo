@@ -115,6 +115,30 @@ localStorage.setItem("ENABLE_MAINNET", "1");
 localStorage.removeItem("ENABLE_MAINNET");
 ```
 
+## Sentry monitoring
+
+The browser application reports errors and performance traces to Sentry in
+every runtime environment. The active environment comes from `APP_ENV`, and a
+connected wallet address is used as the Sentry user ID. Default PII collection
+is disabled.
+
+Source maps are build-only data and use the following variables:
+
+| Variable            | Purpose                                                  | Required                                |
+| ------------------- | -------------------------------------------------------- | --------------------------------------- |
+| `ENABLE_SOURCEMAP`  | Generate, upload, and then delete hidden source maps     | No; CI resolves it from the release tag |
+| `SENTRY_AUTH_TOKEN` | Sentry token used by the Vite upload plugin              | For source map upload                   |
+| `SENTRY_ORG`        | Sentry organization slug                                 | For source map upload                   |
+| `SENTRY_PROJECT`    | Sentry project slug                                      | For source map upload                   |
+| `SENTRY_RELEASE`    | Release name shared by the bundle and uploaded artifacts | For source map upload; CI uses the tag  |
+
+GitLab must provide `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, and `SENTRY_PROJECT` as
+protected CI variables. Source maps are enabled only for stable target tags in
+the exact form `vX.Y.Z.W-demo` or `vX.Y.Z.W-dmm`. Tags with numeric, branch,
+dev, or qa suffixes skip source map generation and upload. The Vite plugin
+uploads maps during the Docker builder stage and removes them before the Nginx
+image is created.
+
 ## Release
 
 Release commands must specify the app target explicitly:

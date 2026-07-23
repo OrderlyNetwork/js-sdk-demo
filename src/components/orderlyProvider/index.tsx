@@ -1,5 +1,7 @@
-import React, { FC, useMemo } from "react";
+import React, { FC, useEffect, useMemo } from "react";
 import { Outlet } from "react-router";
+import * as Sentry from "@sentry/react";
+import { useAccount } from "@orderly.network/hooks";
 import { ErrorBoundary, OrderlyAppProvider } from "@orderly.network/react-app";
 import {
   Network,
@@ -12,6 +14,7 @@ import { getOrderlyConfig, switchAppNetwork } from "@/config/runtime";
 import { themes } from "@/config/themes";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
+import { setSentryUserAddress } from "@/sentry";
 import { chainFilter } from "./chains";
 import { useConfigStore } from "./configStore";
 import { OrderlyLocaleProvider } from "./orderlyLocaleProvider";
@@ -20,6 +23,19 @@ import { createSolanaWallets, handleSolanaWalletError } from "./solanaWallets";
 const getPrivyId = () => {
   // All deployment environments and Orderly networks intentionally share one Privy app.
   return "cm86zfufk01n2ojo83s2becsr";
+};
+
+const SentryUserSync = () => {
+  const { state } = useAccount();
+  const address = state.address;
+
+  useEffect(() => {
+    setSentryUserAddress(address);
+
+    return () => setSentryUserAddress();
+  }, [address]);
+
+  return null;
 };
 
 const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
@@ -86,6 +102,12 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
       >
         <ErrorBoundary
           onError={(error, errorInfo) => {
+            Sentry.withScope((scope) => {
+              scope.setContext("react", {
+                componentStack: errorInfo.componentStack,
+              });
+              Sentry.captureException(error);
+            });
             console.error("Application render error", error, errorInfo);
           }}
           onRefresh={() => window.location.reload()}
@@ -119,6 +141,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
             plugins={plugins}
             chainFilter={chainFilter}
           >
+            <SentryUserSync />
             {props.children || <Outlet />}
           </OrderlyAppProvider>
         </ErrorBoundary>
