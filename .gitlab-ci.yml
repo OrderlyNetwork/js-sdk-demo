@@ -20,7 +20,7 @@ build_docker:
     - |
       set -eu
 
-      if [[ "${CI_COMMIT_TAG:-}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-(demo|dmm)$ ]]; then
+      if echo "${CI_COMMIT_TAG:-}" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-(demo|dmm)$'; then
         export ENABLE_SOURCEMAP="true"
         export SENTRY_RELEASE="${CI_COMMIT_TAG}"
         echo "Stable target tag ${CI_COMMIT_TAG}: enabling Sentry source maps."
