@@ -96,6 +96,22 @@ script generates `runtime-env.js` from these required variables:
 Orderly testnet. Missing or invalid runtime configuration prevents the
 container from starting.
 
+The sdk-demo and DMM deployment environments and required K8s environment
+variables are:
+
+| Service | Environment | Current URL | `APP_ENV` | `MAINNET_APP_URL` | `TESTNET_APP_URL` |
+| ------- | ----------- | ----------- | --------- | ----------------- | ----------------- |
+| sdk-demo | dev | https://demo.dev.orderly-i.network/ | `dev` | https://demo.orderly.network/ | https://demo.dev.orderly-i.network/ |
+| sdk-demo | qa | https://demo.qa.orderly-i.network/ | `qa` | https://demo.orderly.network/ | https://demo.qa.orderly-i.network/ |
+| sdk-demo | staging-iap | https://testnet-iap-demo.orderly.network/ | `staging` | https://demo-iap.orderly.network/ | https://testnet-iap-demo.orderly.network/ |
+| sdk-demo | staging | https://testnet-demo.orderly.network/ | `staging` | https://demo.orderly.network/ | https://testnet-demo.orderly.network/ |
+| sdk-demo | prod-iap | https://demo-iap.orderly.network/ | `prod` | https://demo-iap.orderly.network/ | https://testnet-iap-demo.orderly.network/ |
+| sdk-demo | prod | https://demo.orderly.network/ | `prod` | https://demo.orderly.network/ | https://testnet-demo.orderly.network/ |
+| dmm | dev | https://dmm.dev.orderly-i.network/ | `dev` | https://dmm.orderly.network/ | https://dmm.dev.orderly-i.network/ |
+| dmm | qa | https://dmm.qa.orderly-i.network/ | `qa` | https://dmm.orderly.network/ | https://dmm.qa.orderly-i.network/ |
+| dmm | staging | https://testnet-dmm.orderly.network/ | `staging` | https://dmm.orderly.network/ | https://testnet-dmm.orderly.network/ |
+| dmm | prod | https://dmm.orderly.network/ | `prod` | https://dmm.orderly.network/ | https://testnet-dmm.orderly.network/ |
+
 Outside the validated container startup path, a missing `APP_ENV` falls back
 to the SDK `prod` environment and Orderly mainnet endpoints.
 
