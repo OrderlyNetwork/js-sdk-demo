@@ -40,9 +40,7 @@ describe("resolveNetworkId", () => {
 });
 
 describe("resolveRuntimeConfig", () => {
-  const containerConfig = createRuntimeConfig("prod", {
-    API_BASE_URL: "https://container.example.com",
-  });
+  const containerConfig = createRuntimeConfig("prod");
 
   it("uses Vite mode configuration during local development", () => {
     expect(
@@ -58,11 +56,6 @@ describe("resolveRuntimeConfig", () => {
       APP_ENV: "qa",
       MAINNET_APP_URL: "https://mainnet.example.com/app/",
       TESTNET_APP_URL: "",
-      API_BASE_URL: "https://api.qa.orderly-i.network",
-      PUBLIC_WS_URL: "wss://ws.qa.orderly-i.network",
-      PRIVATE_WS_URL: "wss://ws-private.qa.orderly-i.network",
-      OPERATOR_EVM_URL: "https://operator.qa.orderly-i.network",
-      OPERATOR_SOLANA_URL: "https://sol-operator.qa.orderly-i.network",
     });
   });
 
@@ -160,7 +153,7 @@ describe("resolveOrderlyConfig", () => {
       "https://operator-solana.orderly.org",
     ],
   ])(
-    "maps %s to its network, SDK env, and endpoints",
+    "maps %s to its network, SDK env, and endpoints from APP_ENV alone",
     (
       appEnv,
       networkId,
@@ -171,12 +164,7 @@ describe("resolveOrderlyConfig", () => {
       evmOperatorUrl,
       solanaOperatorUrl,
     ) => {
-      const runtimeConfig = resolveRuntimeConfig(
-        true,
-        { VITE_APP_ENV: appEnv },
-        undefined,
-      );
-      const result = resolveOrderlyConfig(runtimeConfig, false);
+      const result = resolveOrderlyConfig(createRuntimeConfig(appEnv), false);
 
       expect(result).toEqual({
         appEnv,
@@ -195,30 +183,8 @@ describe("resolveOrderlyConfig", () => {
     },
   );
 
-  it.each([
-    ["staging", "https://testnet-api.orderly.org"],
-    ["prod", "https://api.orderly.org"],
-  ] as const)(
-    "falls back to SDK defaults when %s has no local URL overrides",
-    (appEnv, expectedApiBaseUrl) => {
-      expect(
-        resolveOrderlyConfig(createRuntimeConfig(appEnv), false).urls
-          .apiBaseUrl,
-      ).toBe(expectedApiBaseUrl);
-    },
-  );
-
   it("changes only networkId when a testnet environment is overridden", () => {
-    const result = resolveOrderlyConfig(
-      createRuntimeConfig("qa", {
-        API_BASE_URL: "https://api.qa.orderly-i.network",
-        PUBLIC_WS_URL: "wss://ws.qa.orderly-i.network",
-        PRIVATE_WS_URL: "wss://ws-private.qa.orderly-i.network",
-        OPERATOR_EVM_URL: "https://operator.qa.orderly-i.network",
-        OPERATOR_SOLANA_URL: "https://sol-operator.qa.orderly-i.network",
-      }),
-      true,
-    );
+    const result = resolveOrderlyConfig(createRuntimeConfig("qa"), true);
 
     expect(result.networkId).toBe("mainnet");
     expect(result.sdkEnv).toBe("qa");

@@ -29,11 +29,10 @@ Local development supports the same environment split as WOOFi Pro:
 | `pnpm start:qa`       | `qa`       | 4565 | testnet         | qa      |
 | `pnpm start:staging`  | `staging`  | 4567 | testnet         | staging |
 | `pnpm start:prod`     | `prod`     | 4568 | mainnet         | prod    |
-| `pnpm start:prod-iap` | `prod-iap` | 4569 | mainnet         | prod    |
 
 `pnpm dev` is an alias for `pnpm start:staging`. `dev` and `qa` use their
-matching Orderly internal API, WebSocket, and Operator endpoints. `staging`,
-`prod`, and `prod-iap` use the SDK testnet or mainnet endpoints.
+matching Orderly internal API, WebSocket, and Operator endpoints. `staging`
+and `prod` use the SDK testnet or mainnet endpoints.
 
 Vite loads the committed `env/.env.[mode]` file for each command.
 Machine-specific public URL overrides can be placed in an ignored
@@ -96,6 +95,16 @@ script generates `runtime-env.js` from these required variables:
 Orderly testnet. Missing or invalid runtime configuration prevents the
 container from starting.
 
+`__RUNTIME_CONFIG__` does not include API, WebSocket, or Operator URLs. The
+frontend derives those endpoints from `APP_ENV`:
+
+| `APP_ENV` | Orderly API base URL |
+| --------- | -------------------- |
+| `dev` | `https://api.dev.orderly-i.network` |
+| `qa` | `https://api.qa.orderly-i.network` |
+| `staging` | `https://testnet-api.orderly.org` |
+| `prod` / `prod-iap` | `https://api.orderly.org` |
+
 The sdk-demo and DMM deployment environments and required K8s environment
 variables are:
 
@@ -103,9 +112,8 @@ variables are:
 | ------- | ----------- | ----------- | --------- | ----------------- | ----------------- |
 | sdk-demo | dev | https://demo.dev.orderly-i.network/ | `dev` | https://demo.orderly.network/ | https://demo.dev.orderly-i.network/ |
 | sdk-demo | qa | https://demo.qa.orderly-i.network/ | `qa` | https://demo.orderly.network/ | https://demo.qa.orderly-i.network/ |
-| sdk-demo | staging-iap | https://testnet-iap-demo.orderly.network/ | `staging` | https://demo-iap.orderly.network/ | https://testnet-iap-demo.orderly.network/ |
 | sdk-demo | staging | https://testnet-demo.orderly.network/ | `staging` | https://demo.orderly.network/ | https://testnet-demo.orderly.network/ |
-| sdk-demo | prod-iap | https://demo-iap.orderly.network/ | `prod` | https://demo-iap.orderly.network/ | https://testnet-iap-demo.orderly.network/ |
+| sdk-demo | prod-iap | https://demo-iap.orderly.network/ | `prod` | https://demo-iap.orderly.network/ | https://testnet-demo.orderly.network/ |
 | sdk-demo | prod | https://demo.orderly.network/ | `prod` | https://demo.orderly.network/ | https://testnet-demo.orderly.network/ |
 | dmm | dev | https://dmm.dev.orderly-i.network/ | `dev` | https://dmm.orderly.network/ | https://dmm.dev.orderly-i.network/ |
 | dmm | qa | https://dmm.qa.orderly-i.network/ | `qa` | https://dmm.orderly.network/ | https://dmm.qa.orderly-i.network/ |
@@ -116,10 +124,11 @@ Outside the validated container startup path, a missing `APP_ENV` falls back
 to the SDK `prod` environment and Orderly mainnet endpoints.
 
 Local Vite development reads `VITE_APP_ENV` from the selected mode file before
-`public/runtime-env.js`, then selects the matching Orderly endpoints.
-Production builds ignore the Vite environment selection and continue to read
-the container-generated `window.__RUNTIME_CONFIG__`. The existing K8s and
-entrypoint contract is unchanged.
+`public/runtime-env.js`. Both local and production builds resolve Orderly
+endpoints from `APP_ENV` the same way. Production builds ignore the Vite
+environment selection and continue to read the container-generated
+`window.__RUNTIME_CONFIG__`. The existing K8s and entrypoint contract is
+unchanged.
 
 For browser-only debugging, a non-empty `ENABLE_MAINNET` local storage value
 forces `networkId` to `mainnet`. It does not change `APP_ENV`, the SDK

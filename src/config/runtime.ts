@@ -10,11 +10,6 @@ export type RuntimeConfig = {
   APP_ENV: AppEnv;
   MAINNET_APP_URL: string;
   TESTNET_APP_URL: string;
-  API_BASE_URL?: string;
-  PUBLIC_WS_URL?: string;
-  PRIVATE_WS_URL?: string;
-  OPERATOR_EVM_URL?: string;
-  OPERATOR_SOLANA_URL?: string;
 };
 
 export type ViteRuntimeEnv = {
@@ -33,7 +28,7 @@ const MAINNET_APP_ENVS: ReadonlySet<AppEnv> = new Set(["prod", "prod-iap"]);
 const APP_ENV_SET: ReadonlySet<string> = new Set(APP_ENVS);
 const MAINNET_OVERRIDE_KEY = "ENABLE_MAINNET";
 
-const LOCAL_ENV_URLS: Record<AppEnv, URLS> = {
+const APP_ENV_URLS: Record<AppEnv, URLS> = {
   dev: {
     apiBaseUrl: "https://api.dev.orderly-i.network",
     publicWsUrl: "wss://ws.dev.orderly-i.network",
@@ -61,10 +56,6 @@ const isAppEnv = (value: string | undefined): value is AppEnv => {
   return value !== undefined && APP_ENV_SET.has(value);
 };
 
-const optionalValue = (value: string | undefined): string | undefined => {
-  return value?.trim() || undefined;
-};
-
 export const resolveRuntimeConfig = (
   isViteDev: boolean,
   viteEnv: ViteRuntimeEnv,
@@ -78,17 +69,10 @@ export const resolveRuntimeConfig = (
     return undefined;
   }
 
-  const urls = LOCAL_ENV_URLS[viteEnv.VITE_APP_ENV];
-
   return {
     APP_ENV: viteEnv.VITE_APP_ENV,
     MAINNET_APP_URL: viteEnv.VITE_MAINNET_APP_URL?.trim() || "",
     TESTNET_APP_URL: viteEnv.VITE_TESTNET_APP_URL?.trim() || "",
-    API_BASE_URL: urls.apiBaseUrl,
-    PUBLIC_WS_URL: urls.publicWsUrl,
-    PRIVATE_WS_URL: urls.privateWsUrl,
-    OPERATOR_EVM_URL: urls.operatorUrl.EVM,
-    OPERATOR_SOLANA_URL: urls.operatorUrl.SOL,
   };
 };
 
@@ -138,30 +122,6 @@ export const resolveSdkEnv = (appEnv: AppEnv | undefined): SdkEnv => {
   return appEnv ?? "prod";
 };
 
-type OrderlyUrlOverrides = Partial<Omit<URLS, "operatorUrl">> & {
-  operatorUrl?: Partial<URLS["operatorUrl"]>;
-};
-
-const getOrderlyUrlOverrides = (
-  config: RuntimeConfig | undefined,
-): OrderlyUrlOverrides => {
-  if (!config) {
-    return {};
-  }
-
-  const operatorUrl = {
-    EVM: optionalValue(config.OPERATOR_EVM_URL),
-    SOL: optionalValue(config.OPERATOR_SOLANA_URL),
-  };
-
-  return {
-    apiBaseUrl: optionalValue(config.API_BASE_URL),
-    publicWsUrl: optionalValue(config.PUBLIC_WS_URL),
-    privateWsUrl: optionalValue(config.PRIVATE_WS_URL),
-    operatorUrl: operatorUrl.EVM || operatorUrl.SOL ? operatorUrl : undefined,
-  };
-};
-
 export type ResolvedOrderlyConfig = {
   appEnv: AppEnv | undefined;
   networkId: NetworkId;
@@ -174,25 +134,14 @@ export const resolveOrderlyConfig = (
   mainnetOverrideEnabled: boolean,
 ): ResolvedOrderlyConfig => {
   const appEnv = config?.APP_ENV;
-  const appEnvNetworkId = resolveNetworkId(appEnv, false);
   const networkId = resolveNetworkId(appEnv, mainnetOverrideEnabled);
-  const defaults = API_URLS[appEnvNetworkId];
-  const overrides = getOrderlyUrlOverrides(config);
-  const operatorOverrides = overrides.operatorUrl ?? {};
+  const urls = appEnv ? APP_ENV_URLS[appEnv] : API_URLS.mainnet;
 
   return {
     appEnv,
     networkId,
     sdkEnv: resolveSdkEnv(appEnv),
-    urls: {
-      apiBaseUrl: overrides.apiBaseUrl ?? defaults.apiBaseUrl,
-      publicWsUrl: overrides.publicWsUrl ?? defaults.publicWsUrl,
-      privateWsUrl: overrides.privateWsUrl ?? defaults.privateWsUrl,
-      operatorUrl: {
-        EVM: operatorOverrides.EVM ?? defaults.operatorUrl.EVM,
-        SOL: operatorOverrides.SOL ?? defaults.operatorUrl.SOL,
-      },
-    },
+    urls,
   };
 };
 

@@ -9,7 +9,6 @@
     "start:qa": "vite --mode qa --port 4565",
     "start:staging": "vite --mode staging --port 4567",
     "start:prod": "vite --mode prod --port 4568",
-    "start:prod-iap": "vite --mode prod-iap --port 4569",
     "build": "tsc --noEmit && vite build",
     "start": "vite preview",
     "preview": "vite preview",
