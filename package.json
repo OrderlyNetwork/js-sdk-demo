@@ -9,7 +9,7 @@
     "start:qa": "vite --mode qa --port 4565",
     "start:staging": "vite --mode staging --port 4567",
     "start:prod": "vite --mode prod --port 4568",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit &&NODE_OPTIONS=--max_old_space_size=7168 vite build",
     "start": "vite preview",
     "preview": "vite preview",
     "lint": "eslint . && tsc --noEmit",
