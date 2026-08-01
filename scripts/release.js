@@ -1,5 +1,5 @@
 const { $ } = require("zx");
-const { notifyTelegram } = require("./utils/notifyTelegram");
+const { notifySafely } = require("./utils/notify");
 const { updateDependencies } = require("./utils/updateDependencies");
 
 // Enable verbose logging for shell commands executed via zx
@@ -7,6 +7,7 @@ $.verbose = true;
 
 // Current branch in CI environment
 const ciBranch = process.env.CI_COMMIT_BRANCH;
+const ciPipelineUrl = process.env.CI_PIPELINE_URL;
 
 // Truthy if running in CI environment
 const isCI = ciBranch;
@@ -40,7 +41,11 @@ async function main() {
     const msg = `Pipeline trigger failed: ${error.message}`;
     console.error(msg);
     if (isCI) {
-      await notifyTelegram(msg);
+      await notifySafely(msg, {
+        link: ciPipelineUrl
+          ? { label: "View Pipeline", url: ciPipelineUrl }
+          : undefined,
+      });
     }
     throw error;
   }
