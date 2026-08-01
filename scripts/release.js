@@ -1,8 +1,6 @@
 const { $ } = require("zx");
 const { notifyTelegram } = require("./utils/notifyTelegram");
 const { updateDependencies } = require("./utils/updateDependencies");
-const fs = require("fs-extra");
-const path = require("path");
 
 // Enable verbose logging for shell commands executed via zx
 $.verbose = true;
@@ -15,13 +13,13 @@ const isCI = ciBranch;
 
 const packageVersion = process.env.PACKAGE_VERSION;
 const triggerBranch = process.env.TRIGGER_BRANCH;
-const appTarget = process.env.VITE_APP_TARGET;
+// Prefer APP_TARGET from orderly-web triggerPipeline; fall back to VITE_APP_TARGET.
+// CI yaml defaults VITE_APP_TARGET=demo, so trigger APP_TARGET must win when present.
+const appTarget = process.env.APP_TARGET || process.env.VITE_APP_TARGET;
 
-// Git user info and commit message for automated commits
+// Git user info for automated commits
 const git = {
-  /** Git username */
   username: process.env.GIT_USERNAME,
-  /** Git authentication token */
   token: process.env.GIT_TOKEN,
 };
 
@@ -50,67 +48,40 @@ async function main() {
 
 async function checkBranch() {
   const targetBranch = isCI ? triggerBranch : await getCurrentBranch();
-  // Check if target branch exists, create if not
   if (!targetBranch) {
-    throw new Error("TRIGGER_BRANCH environment variable is required");
+    throw new Error(
+      isCI
+        ? "TRIGGER_BRANCH environment variable is required"
+        : "Unable to determine the current git branch",
+    );
   }
 
   if (isCI) {
-    // config git user when commit
     await $`git config user.name "Gitlab CI"`;
     await $`git config user.email "gitlab-ci@orderly.network"`;
   }
 
   await $`git checkout ${targetBranch}`;
   await $`git pull origin ${targetBranch}`;
-
-  // Fetch latest changes
-  // await $`git fetch origin`;
-
-  // not need to check branch exists
-  // console.log(`Checking if branch ${releaseBranch} exists...`);
-  // try {
-  //     await $`git ls-remote --exit-code --heads origin ${releaseBranch}`;
-  //     console.log(`Branch ${releaseBranch} exists, checking out...`);
-  //     await $`git checkout ${releaseBranch}`;
-  //     await $`git pull origin ${releaseBranch}`;
-  // } catch (error) {
-  //     console.log(`Branch ${releaseBranch} does not exist, creating from orderly-v2...`);
-  //     await $`git checkout -b ${releaseBranch} origin/orderly-v2`;
-  // }
 }
 
 async function installDependencies() {
-  // const isInternal = isInternalVersion(packageVersion);
-  // if (isInternal) {
-  //   await updateInternalNpmrc();
-  // }
-  // install dependencies and update pnpm-lock.yaml
   if (isCI) {
     await $`pnpm install --no-frozen-lockfile`;
   } else {
     await $`pnpm install`;
   }
-
-  // if (isInternal) {
-  //   await $`git restore .npmrc`;
-  // }
 }
 
 async function commitChanges() {
-  try {
-    await $`git diff --quiet package.json pnpm-lock.yaml`;
+  const diff = await $`git diff --quiet package.json pnpm-lock.yaml`.nothrow();
+  if (diff.exitCode === 0) {
     throw new Error("No changes to commit");
-  } catch (error) {
-    await $`git add package.json pnpm-lock.yaml`;
-    await $`git commit -m "update sdk version to ${packageVersion}"`;
-    if (isCI) {
-      const remoteUrl = await getRemoteUrl();
-      await $`git push ${remoteUrl}`;
-    } else {
-      await $`git push origin`;
-    }
   }
+
+  await $`git add package.json pnpm-lock.yaml`;
+  await $`git commit -m "update sdk version to ${packageVersion}"`;
+  await pushToRemote();
 }
 
 function isStableVersion(version) {
@@ -127,56 +98,45 @@ function getInternalVersion(version) {
   const regex = /^(\d+)\.(\d+)\.(\d+)-(.+)\.\d+$/;
   const match = version.match(regex);
 
-  const major = match[1];
-  const minor = match[2];
-  const patch = match[3];
-  const suffix = match[4];
-
-  if (!major || !minor || !patch || !suffix) {
+  if (!match) {
     throw new Error(`Invalid version: ${version}`);
   }
 
-  const newPatch = parseInt(patch) - 1;
+  const [, major, minor, patch] = match;
+  const newPatch = parseInt(patch, 10) - 1;
 
   return `${major}.${minor}.${newPatch > 0 ? newPatch : 0}`;
 }
 
-async function updateInternalNpmrc() {
-  const npmrcPath = path.join(process.cwd(), ".npmrc");
-  const npmrc = await fs.readFile(npmrcPath, "utf8");
-  const internalNpmrc = `@orderly.network:registry="http://npm.orderly.network"`;
-  if (!npmrc || (npmrc && npmrc.includes(`# ${internalNpmrc}`))) {
-    await fs.writeFile(npmrcPath, internalNpmrc);
+function resolveTagVersion(version) {
+  if (isStableVersion(version)) {
+    return version;
   }
+
+  if (isInternalVersion(version)) {
+    return getInternalVersion(version);
+  }
+
+  throw new Error(
+    `Unsupported PACKAGE_VERSION "${version}". Expected a stable version (x.y.z) or an internal version (*-internal-*).`,
+  );
 }
 
 async function createTag() {
-  const suffix = getTagSuffix();
-  let newTag = "";
-  let version = "";
-
-  if (isStableVersion(packageVersion)) {
-    version = packageVersion;
-  } else if (isInternalVersion(packageVersion)) {
-    version = getInternalVersion(packageVersion);
-  }
+  const suffix = appTarget;
+  const version = resolveTagVersion(packageVersion);
 
   const latestTag = await getLatestTag(version, suffix);
   console.log("latestTag: ", latestTag);
 
-  newTag = latestTag
+  const newTag = latestTag
     ? getNextTag(latestTag, suffix)
     : getInitialTag(version, suffix);
 
   console.log(`Creating new tag: ${newTag}`);
 
   await $`git tag "${newTag}"`;
-  if (isCI) {
-    const remoteUrl = await getRemoteUrl();
-    await $`git push ${remoteUrl} "${newTag}"`;
-  } else {
-    await $`git push origin "${newTag}"`;
-  }
+  await pushToRemote(newTag);
 
   console.log(`Successfully created tag: ${newTag}`);
 }
@@ -188,13 +148,9 @@ function getInitialTag(version, suffix) {
 function validateAppTarget() {
   if (!["demo", "dmm"].includes(appTarget)) {
     throw new Error(
-      `VITE_APP_TARGET is required and must be "demo" or "dmm", received: ${appTarget}`,
+      `VITE_APP_TARGET or APP_TARGET is required and must be "demo" or "dmm", received: ${appTarget}`,
     );
   }
-}
-
-function getTagSuffix() {
-  return appTarget;
 }
 
 function getNextTag(tag, suffix) {
@@ -202,14 +158,12 @@ function getNextTag(tag, suffix) {
   const regex = new RegExp(`v(\\d+\\.\\d+\\.\\d+)\\.(\\d+)-${suffix}`);
   const match = tag.match(regex);
 
-  const version = match[1];
-  const sequence = match[2];
-
-  if (!version || !sequence) {
+  if (!match) {
     throw new Error(`Invalid tag: ${tag}`);
   }
 
-  return `v${version}.${parseInt(sequence) + 1}-${suffix}`;
+  const [, version, sequence] = match;
+  return `v${version}.${parseInt(sequence, 10) + 1}-${suffix}`;
 }
 
 async function getLatestTag(version, suffix) {
@@ -233,45 +187,61 @@ async function getLatestTag(version, suffix) {
 function getSeqFromTag(tag, suffix) {
   const regex = new RegExp(`v\\d+\\.\\d+\\.\\d+\\.(\\d+)-${suffix}`);
   const match = tag.match(regex);
-  return match ? parseInt(match[1]) : 0;
+  return match ? parseInt(match[1], 10) : 0;
+}
+
+async function pushToRemote(ref) {
+  if (isCI) {
+    const remoteUrl = await getRemoteUrl();
+    if (ref) {
+      await $`git push ${remoteUrl} "${ref}"`;
+    } else {
+      await $`git push ${remoteUrl}`;
+    }
+    return;
+  }
+
+  if (ref) {
+    await $`git push origin "${ref}"`;
+  } else {
+    await $`git push origin`;
+  }
 }
 
 /**
- * Construct the remote git repository URL with authentication token if provided.
- * Supports GitLab personal access token authentication format.
+ * Construct the remote git repository URL with authentication token.
+ * Format: https://<username>:<token>@gitlab.com/<repoPath>.git
  */
 async function getRemoteUrl() {
-  const repoPath = await getRepoPath();
-
-  if (git.token && git.username && repoPath) {
-    // Format: https://<username>:<token>@gitlab.com/<repoPath>.git
-    return `https://${git.username}:${git.token}@gitlab.com/${repoPath}.git`;
+  const missing = [];
+  if (!git.username) missing.push("GIT_USERNAME");
+  if (!git.token) missing.push("GIT_TOKEN");
+  if (missing.length > 0) {
+    throw new Error(
+      `Missing git credentials for CI push: ${missing.join(", ")}`,
+    );
   }
 
-  return "";
+  const repoPath = await getRepoPath();
+  if (!repoPath) {
+    throw new Error("Unable to resolve git remote repository path from origin");
+  }
+
+  return `https://${git.username}:${git.token}@gitlab.com/${repoPath}.git`;
 }
 
 /**
  * Extract the repository path (owner/name) from the git remote origin URL.
  * Supports HTTPS and SSH URLs for GitHub and GitLab.
- * Examples:
- * https://github.com/OrderlyNetwork/orderly-sdk-js.git => OrderlyNetwork/orderly-sdk-js
- * git@github.com:OrderlyNetwork/orderly-sdk-js.git => OrderlyNetwork/orderly-sdk-js
  */
 async function getRepoPath() {
   const res = await $`git remote get-url origin`;
-  // console.log("getRepoPath: ", res);
   const origin = res.stdout?.replace(/\s+/g, "");
   const regex = /(?:github\.com|gitlab\.com)[:/](.+?\/.+?)\.git/;
   const match = origin.match(regex);
-  const repoPath = match ? match[1] : null;
-  return repoPath;
+  return match ? match[1] : null;
 }
 
-/**
- * Retrieve the current git branch name.
- * Uses CI branch environment variable if available.
- */
 async function getCurrentBranch() {
   const res = await $`git branch --show-current`;
   const currentBranch = res.stdout?.trim();
@@ -279,4 +249,6 @@ async function getCurrentBranch() {
   return currentBranch;
 }
 
-main();
+main().catch(() => {
+  process.exitCode = 1;
+});
