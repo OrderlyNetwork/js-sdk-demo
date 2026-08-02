@@ -13,6 +13,7 @@ const {
   getInitialTag,
   getLatestRemoteTag,
   getNextTag,
+  getPathFromStatusLine,
   getReleaseConfig,
   main,
   parseReleaseTag,
@@ -198,6 +199,27 @@ describe("release Git safety", () => {
     await expect(assertOnlyReleaseFilesChanged(command)).rejects.toThrow(
       "Unexpected files changed during release: unexpected.txt",
     );
+  });
+
+  test("parses porcelain and short git status paths without slicing filenames", () => {
+    expect(getPathFromStatusLine(" M package.json")).toBe("package.json");
+    expect(getPathFromStatusLine("M  package.json")).toBe("package.json");
+    expect(getPathFromStatusLine("MM package.json")).toBe("package.json");
+    expect(getPathFromStatusLine("M package.json")).toBe("package.json");
+    expect(getPathFromStatusLine("?? pnpm-lock.yaml")).toBe("pnpm-lock.yaml");
+    expect(getPathFromStatusLine("R  old-package.json -> package.json")).toBe(
+      "package.json",
+    );
+  });
+
+  test("accepts only allowlisted release file changes", async () => {
+    const repository = await createRepository();
+    const command = $({ cwd: repository.local, quiet: true, verbose: false });
+
+    await commitFile(repository.local, "package.json", "{}\n", "add package.json");
+    await writeFile(path.join(repository.local, "package.json"), '{"name":"x"}\n');
+
+    await expect(assertOnlyReleaseFilesChanged(command)).resolves.toBeUndefined();
   });
 
   test("uses only exact remote tags to determine the latest sequence", async () => {
