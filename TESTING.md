@@ -78,7 +78,7 @@
 | T-036 | 默认 target | 不设置环境变量执行 `pnpm build` | 使用 `demo` 配置 |
 | T-037 | Demo target | `VITE_APP_TARGET=demo pnpm build` | 使用 `demo` 配置 |
 | T-038 | DMM target | `VITE_APP_TARGET=dmm pnpm build` | 使用 `dmm` 配置，包含 DMM widget 配置 |
-| T-039 | Release target | `VITE_APP_TARGET=demo pnpm release`、`VITE_APP_TARGET=dmm pnpm release` | release 脚本识别对应 target |
+| T-039 | Release tag | 分别为 demo、dmm 执行 `pnpm release:dev:<target> -- --dry-run`、`pnpm release:qa:<target> -- --dry-run`，并在 `main` 执行 `pnpm release:prod:<target> -- --dry-run` | `orderly-release-tag` 根据远端稳定 tag 计算对应 target 的环境 tag，且不读取 `PACKAGE_VERSION` |
 
 ## 7. 静态资源与样式测试
 
