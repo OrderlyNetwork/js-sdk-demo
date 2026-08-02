@@ -124,17 +124,17 @@ describe("notify", () => {
       return response();
     };
     const link = {
-      label: "View Pipeline",
-      url: "https://gitlab.com/example/pipeline?a=1&b=2",
+      label: "View Job",
+      url: "https://gitlab.com/example/jobs/123?a=1&b=2",
     };
 
-    await notify("pipeline failed", { link });
+    await notify("job failed", { link });
 
     expect(requests[0].body.text).toBe(
-      '<pre>pipeline failed</pre>\n<a href="https://gitlab.com/example/pipeline?a=1&amp;b=2">View Pipeline</a>',
+      '<pre>job failed</pre>\n<a href="https://gitlab.com/example/jobs/123?a=1&amp;b=2">View Job</a>',
     );
     expect(requests[1].body.text).toBe(
-      "pipeline failed\n<https://gitlab.com/example/pipeline?a=1&amp;b=2|View Pipeline>",
+      "job failed\n<https://gitlab.com/example/jobs/123?a=1&amp;b=2|View Job>",
     );
   });
 
@@ -259,14 +259,14 @@ describe("notify", () => {
       telegramBody = JSON.parse(options.body);
       return response();
     };
-    const link = { label: "Pipeline", url: "https://gitlab.com/pipeline" };
+    const link = { label: "Job", url: "https://gitlab.com/jobs/123" };
 
     await notify("a".repeat(4096), { link });
 
     const preformattedMessage = telegramBody.text.match(
       /^<pre>(.*)<\/pre>\n/,
     )[1];
-    expect(Array.from(preformattedMessage)).toHaveLength(4087);
+    expect(Array.from(preformattedMessage)).toHaveLength(4092);
   });
 
   it("truncates an oversized Telegram link label within the message limit", async () => {
@@ -280,7 +280,7 @@ describe("notify", () => {
     await notify("M".repeat(4096), {
       link: {
         label: "L".repeat(5000),
-        url: "https://gitlab.com/pipeline",
+        url: "https://gitlab.com/jobs/123",
       },
     });
 

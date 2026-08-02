@@ -99,6 +99,7 @@ describe("release configuration", () => {
 
   test("redacts release errors and preserves them when notification fails", async () => {
     const token = "git-secret-token";
+    const jobUrl = "https://gitlab.com/example/-/jobs/123";
     const notify = vi.fn().mockRejectedValue(new Error("notification failed"));
     const consoleError = vi
       .spyOn(console, "error")
@@ -109,6 +110,7 @@ describe("release configuration", () => {
         env: {
           APP_TARGET: "demo",
           CI_COMMIT_BRANCH: "release/next",
+          CI_JOB_URL: jobUrl,
           GIT_TOKEN: token,
           GIT_USERNAME: "release-user",
           PACKAGE_VERSION: token,
@@ -119,6 +121,9 @@ describe("release configuration", () => {
     ).rejects.toThrow(token);
 
     expect(notify).toHaveBeenCalledOnce();
+    expect(notify).toHaveBeenCalledWith(expect.any(String), {
+      link: { label: "View Job", url: jobUrl },
+    });
     expect(JSON.stringify(notify.mock.calls)).not.toContain(token);
     expect(JSON.stringify(consoleError.mock.calls)).not.toContain(token);
   });
