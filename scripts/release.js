@@ -221,7 +221,13 @@ async function assertOnlyReleaseFilesChanged(command = $) {
 }
 
 function getPathFromStatusLine(line) {
-  const statusPath = line.slice(3);
+  const raw = line.replace(/\r$/, "");
+  // Porcelain v1 is "XY PATH" (status occupies the first two columns).
+  // Fall back to short status prefixes like "M PATH" so we never slice into the filename.
+  const statusPath =
+    raw.length >= 3 && raw[2] === " "
+      ? raw.slice(3)
+      : raw.replace(/^\S{1,2}\s+/, "");
   const renameSeparator = " -> ";
   const renameIndex = statusPath.lastIndexOf(renameSeparator);
   return renameIndex >= 0
@@ -412,6 +418,7 @@ module.exports = {
   getInternalVersion,
   getLatestRemoteTag,
   getNextTag,
+  getPathFromStatusLine,
   getReleaseConfig,
   isInternalVersion,
   isStableVersion,
