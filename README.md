@@ -166,14 +166,32 @@ image is created.
 
 ## Release
 
-Release commands must specify the app target explicitly:
+Updating SDK dependencies and creating deployment tags are separate operations.
+Update the SDK dependency version first when needed:
 
 ```
-VITE_APP_TARGET=demo pnpm release
-VITE_APP_TARGET=dmm pnpm release
+pnpm updateSdkVersion <PACKAGE_VERSION>
 ```
 
-The release tag format must include the target suffix:
+Create deployment tags with `orderly-release-tag`. The aggregate commands create
+tags for both `demo` and `dmm`; target-specific commands create only one tag:
+
+```
+pnpm release:dev
+pnpm release:qa
+pnpm release:prod
+
+pnpm release:dev:demo
+pnpm release:qa:dmm
+pnpm release:prod:demo
+```
+
+Dev and QA tags may be created from any branch whose local HEAD matches the
+remote branch. Prod tags may be created only from `main`. `PACKAGE_VERSION` is
+not used to calculate tags: `orderly-release-tag` derives the base version from
+the latest matching stable tag on the configured remote.
+
+The release tag format includes the target suffix:
 
 ```
 vX.Y.Z.W-demo

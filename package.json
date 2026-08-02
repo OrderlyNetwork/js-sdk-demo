@@ -17,7 +17,6 @@
     "test:watch": "vitest",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "prepare": "husky",
-    "release": "node scripts/release.js",
     "release:dev:demo": "VITE_APP_TARGET=demo orderly-release-tag --env dev",
     "release:dev:dmm": "VITE_APP_TARGET=dmm orderly-release-tag --env dev",
     "release:qa:demo": "VITE_APP_TARGET=demo orderly-release-tag --env qa",
@@ -72,7 +71,6 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
-    "fs-extra": "^11.2.0",
     "globals": "^17.6.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
@@ -84,8 +82,7 @@
     "typescript-eslint": "^8.60.1",
     "vite": "^7.0.4",
     "vite-plugin-node-polyfills": "^0.24.0",
-    "vitest": "^4.1.10",
-    "zx": "^8.8.4"
+    "vitest": "^4.1.10"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
