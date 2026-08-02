@@ -18,7 +18,7 @@ function getReleaseConfig(env = process.env) {
   return {
     appTarget: env.APP_TARGET || env.VITE_APP_TARGET,
     ciBranch,
-    ciPipelineUrl: env.CI_PIPELINE_URL,
+    ciJobUrl: env.CI_JOB_URL,
     git: {
       token: env.GIT_TOKEN,
       username: env.GIT_USERNAME,
@@ -79,8 +79,8 @@ async function main({ env = process.env, notify = notifySafely } = {}) {
     if (config.isCI) {
       try {
         await notify(message, {
-          link: config.ciPipelineUrl
-            ? { label: "View Pipeline", url: config.ciPipelineUrl }
+          link: config.ciJobUrl
+            ? { label: "View Job", url: config.ciJobUrl }
             : undefined,
         });
       } catch (notificationError) {
