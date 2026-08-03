@@ -23,9 +23,9 @@ const releaseTagConfig = {
 
   releaseTagRule: {
     pattern: new RegExp(
-      `^v(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)-${appTarget}(?:-\\d+)?$`,
+      `^v(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)-${appTarget}(?:\\.\\d+)?$`,
     ),
-    description: `vX.Y.Z.W-${appTarget} or vX.Y.Z.W-${appTarget}-N`,
+    description: `vX.Y.Z.W-${appTarget} or vX.Y.Z.W-${appTarget}.N`,
     example: `v3.2.1.0-${appTarget}`,
     format({ major, minor, patch, build = 0 }) {
       return `v${major}.${minor}.${patch}.${build}-${appTarget}`;
@@ -34,8 +34,8 @@ const releaseTagConfig = {
 
   formatPrereleaseTag({ releaseTag, branchPart, env, nextNumber }) {
     return branchPart
-      ? `${releaseTag}-${branchPart}-${env}-${nextNumber}`
-      : `${releaseTag}-${env}-${nextNumber}`;
+      ? `${releaseTag}-${branchPart}-${env}.${nextNumber}`
+      : `${releaseTag}-${env}.${nextNumber}`;
   },
 };
 

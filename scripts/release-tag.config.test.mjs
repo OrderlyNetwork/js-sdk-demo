@@ -25,8 +25,11 @@ describe("release tag configuration", () => {
         true,
       );
       expect(
-        config.releaseTagRule.pattern.test(`v3.2.1.0-${appTarget}-7`),
+        config.releaseTagRule.pattern.test(`v3.2.1.0-${appTarget}.7`),
       ).toBe(true);
+      expect(
+        config.releaseTagRule.pattern.test(`v3.2.1.0-${appTarget}-7`),
+      ).toBe(false);
       expect(
         config.releaseTagRule.format({
           major: 3,
@@ -42,7 +45,7 @@ describe("release tag configuration", () => {
           nextNumber: 2,
           releaseTag: `v3.2.1.4-${appTarget}`,
         }),
-      ).toBe(`v3.2.1.4-${appTarget}-deploy-dev-2`);
+      ).toBe(`v3.2.1.4-${appTarget}-deploy-dev.2`);
       expect(
         config.formatPrereleaseTag({
           branchPart: "",
@@ -50,7 +53,7 @@ describe("release tag configuration", () => {
           nextNumber: 3,
           releaseTag: `v3.2.1.4-${appTarget}`,
         }),
-      ).toBe(`v3.2.1.4-${appTarget}-qa-3`);
+      ).toBe(`v3.2.1.4-${appTarget}-qa.3`);
     },
   );
 
