@@ -90,7 +90,8 @@ function installAndCommit(packageVersion) {
 
 function updateSdkVersion() {
   const args = process.argv.slice(2);
-  const packageVersion = args[0];
+  // Prefer CLI arg; fall back to PACKAGE_VERSION for CI trigger pipelines.
+  const packageVersion = args[0] || process.env.PACKAGE_VERSION;
   console.log("packageVersion: ", packageVersion);
   if (!packageVersion) {
     throw new Error("package version is required");
