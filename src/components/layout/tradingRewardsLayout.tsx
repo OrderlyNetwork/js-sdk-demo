@@ -15,7 +15,7 @@ export function TradingRewardsLayout() {
       footerProps={config.scaffold.footerProps}
       mainNavProps={{
         ...config.scaffold.mainNavProps,
-        initialMenu: [PathEnum.Rewards, path],
+        initialMenu: PathEnum.RewardsAffiliate,
       }}
       routerAdapter={{
         onRouteChange,

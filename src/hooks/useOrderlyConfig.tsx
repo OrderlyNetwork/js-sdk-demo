@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { type RestrictedInfoOptions } from "@orderly.network/hooks";
 import { useTranslation } from "@orderly.network/i18n";
+import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
 import { AppLogos } from "@orderly.network/react-app";
 import { TradingPageProps } from "@orderly.network/trading";
 import {
@@ -29,7 +30,6 @@ import {
 } from "@orderly.network/ui-scaffold";
 import { OrderlySecondaryLogo } from "@/components/icons/orderlySecondaryLogo";
 import { OrderlyTextIcon } from "@/components/icons/orderlyText";
-import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
 import { PathEnum } from "../constant";
 
 export type OrderlyConfig = {
@@ -106,45 +106,45 @@ export const useOrderlyConfig = () => {
               isHomePageInMobile: true,
             },
             { name: t("common.vaults"), href: PathEnum.Vaults },
-            { name: t("common.portfolio"), href: PathEnum.Portfolio },
             { name: t("common.markets"), href: PathEnum.Markets },
+            { name: t("common.portfolio"), href: PathEnum.Portfolio },
+            {
+              name: t("affiliate.referral"),
+              href: PathEnum.RewardsAffiliate,
+              onlyInMainAccount: true,
+              isSubMenuInMobile: true,
+              subMenuBackNav: {
+                name: t("common.portfolio"),
+                href: PathEnum.Portfolio,
+              },
+            },
             {
               name: t("tradingLeaderboard.leaderboard"),
               href: PathEnum.Leaderboard,
             },
+            {
+              name: t("tradingView.timeInterval.more"),
+              href: "",
+              disabled: true,
+              className: "oui-cursor-pointer",
+              children: [
+                {
+                  name: t("portfolio.feeTier"),
+                  href: PortfolioLeftSidebarPath.FeeTier,
+                },
+                {
+                  name: t("portfolio.apiKeys"),
+                  href: PortfolioLeftSidebarPath.ApiKey,
+                },
+                {
+                  name: t("portfolio.setting"),
+                  href: PortfolioLeftSidebarPath.Setting,
+                },
+              ],
+            },
           ],
           initialMenu: PathEnum.Root,
           leftNav: getLeftNavMenus(t),
-          campaigns: {
-            name: t("tradingRewards.rewards"),
-            href: PathEnum.Rewards,
-            isSubMenuInMobile: true,
-            subMenuBackNav: {
-              name: t("common.portfolio"),
-              href: PathEnum.Portfolio,
-            },
-            children: [
-              // {
-              //   name: t("common.tradingRewards"),
-              //   href: PathEnum.RewardsTrading,
-              //   description: t("extend.tradingRewards.description"),
-              // },
-              {
-                name: t("common.affiliate"),
-                href: PathEnum.RewardsAffiliate,
-                tag: t("extend.affiliate.tag"),
-                description: t("extend.affiliate.description"),
-              },
-              {
-                name: t("extend.staking"),
-                href: "https://app.orderly.network/staking",
-                description: t("extend.staking.description"),
-                target: "_blank",
-                icon: <OrderlyIcon size={14} />,
-                activeIcon: <OrderlyActiveIcon size={14} />,
-              },
-            ],
-          },
         },
         footerProps: FOOTER_PROPS,
         bottomNavProps: {
@@ -224,7 +224,7 @@ function getLeftNavMenus(
         icon: <AssetIcon />,
       },
       {
-        name: t("common.affiliate"),
+        name: t("affiliate.referral"),
         href: PathEnum.RewardsAffiliate,
         icon: <AffiliateIcon />,
         onlyInMainAccount: true,
