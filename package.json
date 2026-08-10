@@ -21,10 +21,13 @@
     "release:dev:dmm": "VITE_APP_TARGET=dmm orderly-release-tag --env dev",
     "release:qa:demo": "VITE_APP_TARGET=demo orderly-release-tag --env qa",
     "release:qa:dmm": "VITE_APP_TARGET=dmm orderly-release-tag --env qa",
+    "release:app:demo": "VITE_APP_TARGET=demo orderly-release-tag --env app",
+    "release:app:dmm": "VITE_APP_TARGET=dmm orderly-release-tag --env app",
     "release:prod:demo": "VITE_APP_TARGET=demo orderly-release-tag --env prod",
     "release:prod:dmm": "VITE_APP_TARGET=dmm orderly-release-tag --env prod",
     "release:dev": "pnpm release:dev:demo && pnpm release:dev:dmm",
     "release:qa": "pnpm release:qa:demo && pnpm release:qa:dmm",
+    "release:app": "pnpm release:app:demo && pnpm release:app:dmm",
     "release:prod": "pnpm release:prod:demo && pnpm release:prod:dmm",
     "updateSdkVersion": "node scripts/updateSdkVersion.js"
   },

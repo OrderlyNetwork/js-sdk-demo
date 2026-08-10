@@ -16,7 +16,7 @@ const appTarget = getAppTarget();
 
 const releaseTagConfig = {
   gitlabProjectId: 34815052,
-  environments: ["dev", "qa", "prod"],
+  environments: ["dev", "qa", "app", "prod"],
   prodEnv: "prod",
   prodBranch: "main",
   triggerVariables: ["VITE_APP_TARGET"],

@@ -13,11 +13,11 @@ afterEach(() => {
 
 describe("release tag configuration", () => {
   test.each(["demo", "dmm"])(
-    "configures %s tags for dev, qa, and prod",
+    "configures %s tags for dev, qa, app, and prod",
     async (appTarget) => {
       const config = await loadReleaseTagConfig(appTarget);
 
-      expect(config.environments).toEqual(["dev", "qa", "prod"]);
+      expect(config.environments).toEqual(["dev", "qa", "app", "prod"]);
       expect(config.prodEnv).toBe("prod");
       expect(config.prodBranch).toBe("main");
       expect(config.triggerVariables).toEqual(["VITE_APP_TARGET"]);
@@ -54,6 +54,22 @@ describe("release tag configuration", () => {
           releaseTag: `v3.2.1.4-${appTarget}`,
         }),
       ).toBe(`v3.2.1.4-${appTarget}-qa.3`);
+      expect(
+        config.formatPrereleaseTag({
+          branchPart: "deploy",
+          env: "app",
+          nextNumber: 1,
+          releaseTag: `v3.2.1.4-${appTarget}`,
+        }),
+      ).toBe(`v3.2.1.4-${appTarget}-deploy-app.1`);
+      expect(
+        config.formatPrereleaseTag({
+          branchPart: "",
+          env: "app",
+          nextNumber: 0,
+          releaseTag: `v3.2.1.4-${appTarget}`,
+        }),
+      ).toBe(`v3.2.1.4-${appTarget}-app.0`);
     },
   );
 
@@ -89,7 +105,7 @@ describe("release package scripts", () => {
 
     expect(packageJson.scripts.release).toBeUndefined();
 
-    for (const environment of ["dev", "qa", "prod"]) {
+    for (const environment of ["dev", "qa", "app", "prod"]) {
       expect(packageJson.scripts[`release:${environment}`]).toBe(
         `pnpm release:${environment}:demo && pnpm release:${environment}:dmm`,
       );

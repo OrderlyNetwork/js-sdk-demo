@@ -144,7 +144,7 @@ localStorage.removeItem("ENABLE_MAINNET");
 
 The browser application reports errors and performance traces to Sentry in
 every runtime environment. The active environment comes from `APP_ENV`, and a
-connected wallet address is used as the Sentry user ID. Default PII collection
+connected wallet address is used as the Sentry user ID. Default PII collection 
 is disabled.
 
 Source maps are build-only data and use the following variables:
@@ -160,7 +160,7 @@ Source maps are build-only data and use the following variables:
 GitLab must provide `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, and `SENTRY_PROJECT` as
 protected CI variables. Source maps are enabled only for stable target tags in
 the exact form `vX.Y.Z.W-demo` or `vX.Y.Z.W-dmm`. Tags with numeric, branch,
-dev, or qa suffixes skip source map generation and upload. The Vite plugin
+dev, qa, or app suffixes skip source map generation and upload. The Vite plugin
 uploads maps during the Docker builder stage and removes them before the Nginx
 image is created.
 
@@ -179,14 +179,16 @@ tags for both `demo` and `dmm`; target-specific commands create only one tag:
 ```
 pnpm release:dev
 pnpm release:qa
+pnpm release:app
 pnpm release:prod
 
 pnpm release:dev:demo
 pnpm release:qa:dmm
+pnpm release:app:demo
 pnpm release:prod:demo
 ```
 
-Dev and QA tags may be created from any branch whose local HEAD matches the
+Dev, QA, and app tags may be created from any branch whose local HEAD matches the
 remote branch. Prod tags may be created only from `main`. `PACKAGE_VERSION` is
 not used to calculate tags: `orderly-release-tag` derives the base version from
 the latest matching stable tag on the configured remote.
@@ -204,16 +206,24 @@ vX.Y.Z.W-demo-dev.N
 vX.Y.Z.W-dmm-dev.N
 vX.Y.Z.W-demo-qa.N
 vX.Y.Z.W-dmm-qa.N
+vX.Y.Z.W-demo-app.N
+vX.Y.Z.W-dmm-app.N
 vX.Y.Z.W-demo-BRANCH-dev.N
 vX.Y.Z.W-dmm-BRANCH-dev.N
 vX.Y.Z.W-demo-BRANCH-qa.N
 vX.Y.Z.W-dmm-BRANCH-qa.N
+vX.Y.Z.W-demo-BRANCH-app.N
+vX.Y.Z.W-dmm-BRANCH-app.N
 ```
 
-Tags ending in `dev.N` or `qa.N` trigger deployment to that environment, so
-`dev` and `qa` are reserved environment segments. Base tags, numeric suffix
-tags, and other branch suffix tags only build and publish the selected target
-without triggering an automatic deployment.
+Tags ending in `dev.N` or `qa.N` trigger deployment to that environment.
+Any tag ending in `app.N` (including `...-BRANCH-app.N`) deploys to both
+`dev` and `qa`. So `dev`, `qa`, and `app` are reserved environment segments:
+do not use a branch whose final path segment is `app` or ends with `-app`
+(for example `web-app`), or a branch-only tag such as `vX.Y.Z.W-demo-web-app.N`
+will be treated as an `app` release and dual-deployed. Base tags, numeric
+suffix tags, and other branch suffix tags only build and publish the selected
+target without triggering an automatic deployment.
 
 ## Docs
 
