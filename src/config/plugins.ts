@@ -1,6 +1,7 @@
 import { registerFastPlaceOrderPlugin } from "@orderly.network/fast-place-order-plugin";
 import { registerOnrampPlugin } from "@orderly.network/onramper-plugin";
-import { registerPlugin as registerOrderbookShimmerPlugin } from "@orderly.network/orderbook-shimmer-plugin";
+
+// import { registerPlugin as registerOrderbookShimmerPlugin } from "@orderly.network/orderbook-shimmer-plugin";
 
 /**
  * Plugins passed to `OrderlyAppProvider` in `orderlyProvider/index.tsx`.
@@ -8,7 +9,7 @@ import { registerPlugin as registerOrderbookShimmerPlugin } from "@orderly.netwo
  */
 export const plugins = [
   /** Desktop orderbook row shimmer / flash on updates (optional colors via partial options). */
-  registerOrderbookShimmerPlugin(),
+  // registerOrderbookShimmerPlugin(),
   registerFastPlaceOrderPlugin({
     // Same as package default; explicit so hosts can flip without re-reading README.
     autoShowOnFullscreen: true,
