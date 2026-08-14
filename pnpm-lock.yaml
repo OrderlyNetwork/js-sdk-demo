@@ -18,59 +18,59 @@ importers:
   .:
     dependencies:
       '@orderly.network/affiliate':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/core':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/fast-place-order-plugin':
         specifier: ^0.2.4
-        version: 0.2.4(@orderly.network/hooks@3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6))(@orderly.network/i18n@3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3))(@orderly.network/types@3.1.9-internal-20260813.1)(@orderly.network/ui@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 0.2.4(@orderly.network/hooks@3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6))(@orderly.network/i18n@3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3))(@orderly.network/types@3.1.9-internal-20260813.2)(@orderly.network/ui@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@orderly.network/hooks':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/i18n':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
       '@orderly.network/markets':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/onramper-plugin':
         specifier: ^0.3.1
-        version: 0.3.1(@orderly.network/hooks@3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6))(@orderly.network/i18n@3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3))(@orderly.network/types@3.1.9-internal-20260813.1)(@orderly.network/ui@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6))(bufferutil@4.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(utf-8-validate@6.0.6)
+        version: 0.3.1(@orderly.network/hooks@3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6))(@orderly.network/i18n@3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3))(@orderly.network/types@3.1.9-internal-20260813.2)(@orderly.network/ui@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6))(bufferutil@4.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(utf-8-validate@6.0.6)
       '@orderly.network/portfolio':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/react-app':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/trading':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/trading-leaderboard':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/trading-rewards':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/types':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2
       '@orderly.network/ui':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/ui-notification':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/ui-scaffold':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/vaults':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(immer@10.2.0)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(immer@10.2.0)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@orderly.network/wallet-connector-privy':
-        specifier: 3.1.9-internal-20260813.1
-        version: 3.1.9-internal-20260813.1(bfd0d802d6d45ae4fa3b2378ff020531)
+        specifier: 3.1.9-internal-20260813.2
+        version: 3.1.9-internal-20260813.2(bfd0d802d6d45ae4fa3b2378ff020531)
       '@sentry/react':
         specifier: ^10.67.0
         version: 10.67.0(react@18.3.1)
@@ -1773,26 +1773,26 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@orderly.network/affiliate@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-b8SssnJ11wyB8F5MKYra8vECniY5pj1GCn+lI0E1UdY3LjClrkXv6sjugQFoG1BbHlPxY7L2vr27u7nBDLFa6w==}
+  '@orderly.network/affiliate@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-bs1y5TGm0dR2B49NO37J2lxKAY9LQr/bIFnmivfB5/XpmwiYLX/InogZ6S27frxwrExw4gF5xH1TrQomUl7UAw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/chart@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-ACAZVST4pNNFhmHygunfgkzCimzCry/2j/rdm+soNGI9Zcucvg692w83z+4q1F5rQSA+0KBWqDzxWn8MdDmKag==}
+  '@orderly.network/chart@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-YwXRSIsflWPMpCJnmhXDKHgdGYI5kqh1xgLXg4EJCOLrLr7FIHg+YTWPJVEWBttrqPTL8EhYAMDwu6nKRoKS0A==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/core@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-jid/es9ye5tD8Hzvj8M0ZV/Q+sVDlt15SqK6EqvSUop2U2sTKE3WWd2lQJXxjBWOJMe1Kb1O5OKWWT9I8DzSSA==}
+  '@orderly.network/core@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-fiOAdo015xOrY/CJbGiDrqUflPbMl8I+q8CAb6B0biLza59LID2nXiuORplrTDuWiLCxjFad+K6UZtZ3KIdfKg==}
 
-  '@orderly.network/default-evm-adapter@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-6KZwGZO2JjhRgqnRbgMfO5fS+mEr1hM1a+raPy84qK9KcZFNb+GVyGBXrd+yOsLdna9L2sgHclhc/ZB67DsLgA==}
+  '@orderly.network/default-evm-adapter@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-4JylmHGBQts8S6Ln9Sr4cX9CMeRNX7ydn1jdN0rLBJ7srHh+MmI55/PAwHAkuhOP245Pf6odzybKdnhe7FMA2Q==}
 
-  '@orderly.network/default-solana-adapter@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-vxp568iysK/9y3UFdGS1ObSIvMNOE8lbcMOlmtW3+fu2jmmpYOVQE8W5r4n/lLx0GAhYjs1FDN/SegiqqNj6qg==}
+  '@orderly.network/default-solana-adapter@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-LHpHg8pULg5QW2ERjahFJnMX1EWZ+nPB+jHLibFju7HnrcruutmrcAz8JLNFnYThPAHlFfKlZoNZtGsH9sKQkw==}
 
   '@orderly.network/fast-place-order-plugin@0.2.4':
     resolution: {integrity: sha512-3lVxwFWhkKwe0WfBXGiXApgWl7Ho/PYHsIv9IDt3rejYWUs8a0k9OaPMvfHyynOURmDzmUsizBi29Qd58XyPWw==}
@@ -1806,27 +1806,27 @@ packages:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/hooks@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-R+1yI3vc6EEt+itll85T5y+CAQtZUYouf/Cy0z1TxLQJYZhEirPRQSLb/HCtXg7RIX6gnRJ8NSMSOoiOEIThTQ==}
+  '@orderly.network/hooks@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-r3j/HegrC4PLg4nJgCJcFMpoahbYs/07cCq1MJ5rCcyQbnoAi1Rt/D5J5bSp28XC2IKpVgulhtcUVSO++rt9DA==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/i18n@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-TOzoeFL1uyFD3klt7s0/E68xfC0VRBUxUnfbFCbaik9VK2XLJu7qbrQ9cNtG1Tq+E8kdxXmSKlbvgq0GqZsYNQ==}
+  '@orderly.network/i18n@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-AMcHo42Nf5ODY35S1e0Bymhpr+UvGxopSSeD6XReczTMidT9q8lUugvBCZMyh9s0+M1Rv0wkNNVZdNaD9TRpcQ==}
     hasBin: true
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/markets@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-h7wvMos6cQXqKDDJsCHQSxJKKYSxmH/K48fazb1SwVzZPjVITXLAkMNL6mIAWyl1tInJGzvdZaDpi5K90W1yxQ==}
+  '@orderly.network/markets@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-btR8EatgS7ZGx0CiYvjiDoltz5mbnMeIsd4J7eLxTvO497OH/oiwnp8qGh4v1/zLL39i4WXDu/aecybAt7MvxQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/net@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-B4lOJd9LUv1GgNf1PP/WN5JrWeFX1X4V9uxO0t3estQ1FyBGr8knmlPr4X9IUMiTb1BtxhjRvUUJAO9NxKcxYg==}
+  '@orderly.network/net@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-DqAg7QWwR7WWex/xNEbqiu7Q4dbe3hgLe8P45VkyCMg+ExNV9t7wUwRbLtubvVytsK3LC5X3ePGARZ97bI6lUg==}
 
   '@orderly.network/onramper-plugin@0.3.1':
     resolution: {integrity: sha512-rTB86vVreLABsun7ZnYgVEA+LyRbnWQ4BW5x2s8R+/krZwN0iI9wgblyYMF85r9uqjkuek/xKPD5xVaABEGv+g==}
@@ -1840,129 +1840,129 @@ packages:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/perp@5.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-ryFTrHtthtZWwBNtCnQOW1nTprm9OOw+KH4HzUHEWnw27VWMNzbQBwzUvXqKvZekIPg4lyN3Ri/cjfc2DRxb8g==}
+  '@orderly.network/perp@5.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-YxmtYDX5tK5RqSOhEymkN/iCZJYOU59jo+stYT1D5/i1qdGozkmwkZ4f2jJ+IZ7bDVehbnFXihByFVv+onTW0g==}
 
-  '@orderly.network/plugin-core@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-W39zRuAQe7NMIu+21cMut5r4x3sucDXr+lyqw6mugMwrajjlMWTBxFfJfB4ROAf1KVhZd5anyFlejGB7hVmY6w==}
+  '@orderly.network/plugin-core@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-GKpvDwySoDVtPURAwoEK4/1HHFUp5in4gKunwer+znsLheiAgiRYFxOOP0trtn+T8wPtOr3NAyXxSKbX5BpgKw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/portfolio@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-2Vcoyy7N3OCRt64yXcdT+w0YevQt8P82QPSkWnl+Mo/jnNen1z7cpD9DLn5wXcjzwZNY7Lf72XBEZhUZIIVHmg==}
+  '@orderly.network/portfolio@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-5wF0VCDMkQqN2kt1IEc9xIxF5ArIn99T7fd8ZjiOvtyKyFGuiidyJvDv8VdZ88L3RIpnZ89/bDgI40CGSK2VDw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/react-app@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-/+PD4hfnRTLn6i7LqEozHm7+TdkQ9YWtW1c9QYftatbaSa9QvVNYPpaRLco0B1E2aCmSVllGgXvpjtXbVOL4VQ==}
+  '@orderly.network/react-app@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-Ptzjz0tPaKbB3An1+YuCEQ9qX/vG2V/KslbPL5807CbmAC0NhaATRHzct+TPP0d+hu6CrKp/JsUovVTmn8/fpw==}
 
   '@orderly.network/release-tag@1.0.6':
     resolution: {integrity: sha512-Q8ABS53rzLAiYmpCIic5WgQLyEURZYhRcukvqiv+Cv8dvfgKo46UiZwfEBiY2S3LAv3eTlnmRWNmUbDkyAaa2g==}
     engines: {node: '>=18'}
     hasBin: true
 
-  '@orderly.network/trading-leaderboard@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-qGETuKcY3SO8lSfUiXOS3iiSuNGMCBm0OEuJ5cqKFMqjUVdJN7FsfCQ1+aILcDABExrJEkzN4CsQveDiQKWgpA==}
+  '@orderly.network/trading-leaderboard@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-JPILKOUqJYcfbtxiTxSacKow+dhp1VWhHTQZGaOA1HawiTRF1H0x68n2KshZ7G/xn5vfMbor8NdhoW1LklXJxQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/trading-rewards@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-b6p9h6rrcdEvOxjW3TITU27GFfrujItqHCqnlCqj0J/2lRc6PaZVlOYw35S0sR8UrzC+us+/ADSP4keiqt3M4g==}
+  '@orderly.network/trading-rewards@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-a2MEu5G6cGwMiuPflyjJdAbQ1uzf3tOchN5gk9omPI0EGjYeT78fPui7FI/mOfpsh36ksClpB+oZ9FGzqfAV6g==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/trading@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-h5KfIcHkjY/LlyVcSgMzF5MAtpc/LVtfs/rG0CVzw5UX5U1FF8MQGxNt5RMIZ/zOP5EsPH4vRRktngZdS/lPcA==}
+  '@orderly.network/trading@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-FWEMshRZ2LKsdjPn0u4ybz2XGu3vWhRuOigf8pJ6ERZwdSsthMTsCBRT57RIF5PkPWhwAGaA+tqjcD83bfonGg==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/types@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-vm5WVMK70+JlnOlSWdvtkthaTbadX+6szP+t1OBY7dDh3rl82pPV2mbB6jUHjRETf8zX8DUqTos/6A5A7HocPg==}
+  '@orderly.network/types@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-DLzFELDrqGzS/xYfZz5icL6hl5klfEtlKGi/lf3KBSsfjxokt/wEp6TOpXtZhLnqDJADbPKn/k5v+r5IunOO6A==}
 
-  '@orderly.network/ui-chain-selector@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-NGTSVjniTE+xofdBjdk7vp42RdBkaah9mNuhidV2HZVabqe1z+hocz7IClKbfetn4IuvpU+aXbmBPJWePy7GxQ==}
+  '@orderly.network/ui-chain-selector@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-xIU0EXpHKNk1nMEoFheI2XD/IVRjCb+e5/AmNdQcmpOiecfaOCmgRZGrzy54rAxTKEk6K7RnzUUWn+CeosYu0A==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-connector@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-Ck2BcY5mGha1QEelMjnJeR7DgGdiE7MxM2XDKKbwK9pLPqtTx+rVd9a2IwSfCXI8dVZTW3f9+xHdIVHNdq8BAw==}
+  '@orderly.network/ui-connector@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-iOvgAbFpxw/6jH4XKcXOyZFlcgI/lPfrEccuvE0FHl4rwquLv1aOeUCGfvVlsWR6vPziC2lrcmeuSXlwgbrERg==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-leverage@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-XtVotuoQo8yjSLdLJpea4wwX42FqofgkeQkjiNLSHmo1C3buzdLbBYsngc8ZiMyi27nW1XwRZ939LWVgoFWtXw==}
+  '@orderly.network/ui-leverage@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-XqfA/MXsbA6wuhddvY1emDyH5bhZV7XyrjMuioBYr/kq57k5y/uZAzFZ1fTXzL+NkG10O86U8K3laC18jdEe9A==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-notification@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-eeAS362bNiaymCfRc1ZqK3fhlwqw/G5AxvbyNXmbct2hVJV8vLqrSWBLjxnYLGTJ+W73mXvzqrxmu0j+GAF4Sw==}
+  '@orderly.network/ui-notification@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-+zFlzydiNthDVEmIQRHCm4OpQHh1FlDsj/R2IXBMw4QYvGcyuelRESJDESOi0eHd8YFdwcRYqa7kVz4hiymErw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-order-entry@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-pFlBag0GSI8/k7FkD1Gbke7O2FyBP8gDSBYgpd+gpmn/xEV7F+pHX8C5/8iLKVL8WmnIhFmZI+i7DIG94Zn57Q==}
+  '@orderly.network/ui-order-entry@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-CDNN0jvghWhAVgkcsPJ/sSuvKn1ucUT+c4IhDxj+/6UxcQ3rMxu4tMUeF72ueZYTJeUPxNZOwHIYjL/ZywnWdw==}
 
-  '@orderly.network/ui-orders@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-ltC8ANJQpCh/UViPclJKIzmal4JvG2zUcVrMn1sWmZlaZoYfHX0AJV3MyB47ePDZSKnfINstlZh7gSNV/SYZYg==}
+  '@orderly.network/ui-orders@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-s5FZ3v92AMuE+imQ49cQWmk8L7sxFF/YURP9xZFVPmP8mjJ9zpz+aGlz0QRyY0E1bAXfx2k4qW/yw+3qBwizcA==}
 
-  '@orderly.network/ui-positions@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-LKsfmq19/AuI9n7D/Yl19Qjjn3B/xlktszQ4A1acNN+HQzoSCV9BrunF8YqSZpOl+dTQPkF1Ys9ndl7/OTGRvQ==}
+  '@orderly.network/ui-positions@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-0a8ER9SdQosWiY7+rweCkGB7Sec6EqoZP7TcKB0/zWGDnVAOraZIODi31gwOihn7+6hnr5LyrzDy6FE97qa11w==}
 
-  '@orderly.network/ui-scaffold@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-NTTbqx+3Xsqtzg3IpnfYvbKpUHI9yoee0wTP/n+MNnMtpgYwyeQnEmY6yT5gSusWsGsYls/uCuX9wH/spk06BA==}
+  '@orderly.network/ui-scaffold@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-erpS11Q2c1FIhN7TfjSTZRhvYUkXgubJ4CAITPJGo8PC8iVoQ5L3l8ZhjB4q/ahijLUSMmU1MC+/Au1A2Ld92w==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-share@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-QkJicnyNTQcIHr4rON1WLtsyLHqPtIKlG4qRutxeNDw5YLFft2QJVdPvg+LUmYMiHvVavwfA+jjDifBSzBhqbA==}
+  '@orderly.network/ui-share@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-qoUz5dOTxJIImgroj8hNjwj+wY30KYyUjUTFvWdR5cFwKyv3xR1GF1D2lyjV0G8FAOX4OKBjKYzDHzpMkkMMZQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui-tpsl@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-y7xmEIYGTjkvVGGwWN6lkCcJuCNM/KFG0X1W695uQSsfXTv64hsM82jqNFOqjPo/3q3XBzTF6yoD8r9M6PVt7w==}
+  '@orderly.network/ui-tpsl@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-NWFoGxUnQ3T4TnsdQ+hiVRRKeI4sSi721i4XE1nwsaldxRURh3ONla7eSuJjjnKV73Shs8g1LZRRbHI5Y59dXw==}
 
-  '@orderly.network/ui-tradingview@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-zNYl68lgwAo1Lyo9sYYGxME6RkxVwLqZtkDJI27XbNpsNJV5T/rG6j9i8OvUm1OPPh3X/JzyEs0BL7rtBSzJTA==}
+  '@orderly.network/ui-tradingview@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-OBRiC0GaVNY4tuTJ+ceOznQZ2jb5SOyQ2dZ21Bj+pgOwOKnNNmIMy/TlVNJ79kHI8lK4FGscdoYORqYbqfK6Ug==}
 
-  '@orderly.network/ui-transfer@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-AkmsL/wwegs+1iVn6nVNMGYjWKoSPgb4HM0+qQvVM1t7YUgC0eQ3m5gSKJI54sc/kPnT0u+s8HbX40ooWZH90g==}
+  '@orderly.network/ui-transfer@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-RpSlcYZxREmo/wHYLXZClkWapP/Mhr2ipPPRC5WJPZHl9NkdkU+qD6WtNeRf28SMHlxRJKhg6/yIvDjqVkPGNw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/ui@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-SYBa70D7tUp5JHZA6/GKIm7VqPfVkRq5ImUHvYqo4bVCEgasNKsWS9Wjb1XvoKqcTUPuyhD23K1fC9itFxKxPQ==}
+  '@orderly.network/ui@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-vIML5bKnO44WOJs24stM6057cbF0o5Pt061ugsmJuCrTi0kh18pySk2sC6w92lo6Tzp+nOZDLXC61De+zehBUQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/utils@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-gBIGxx4TRxfHCLm0yDpEO0Sq+HuWEut4MizWlOcAPDxfWM68D3A9mw060H7Km39CiyJCbdJsl6Hms5SBoB2Hjg==}
+  '@orderly.network/utils@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-E4hSIHRZmUayLH9OHvrY3CfkA57owkhwZ449hurnv3ahP8pXkNAs+wnKOGiBcqq5nuVjH6PMeSNcSsVcjNz0sw==}
 
-  '@orderly.network/vaults@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-hzYbOlK6HJS0M2vXCcDNqFhf29uXGoZaRqD1n7StiFHZGujGA5wfeHa+f5s6+SYCJO/IUV0BDsaCPY1pdHUuXg==}
+  '@orderly.network/vaults@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-nkyDVqdUrw2q7Io6m7DNUeFwgJW3Z0O4PPRVKiUo+uB+hDgS6nICGyBFuYa38ZFctFZcfjMtHtFEFLy1zMdNSg==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@orderly.network/wallet-connector-privy@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-bMt+ZP66vL/V/WjqxcCp7iKkZ3mRusXVBafzTXluLAwuzkXRnqXgY7fQUZlpCXT59aM5JLWDHd5SarlmUFw6pQ==}
+  '@orderly.network/wallet-connector-privy@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-r6InsvshsDWlixZLEY2MqdX3PutPl7sRWiulAkCUo2TVOJq0Ah0xMTSfFFm9RJllCuiYzMUmeu8Bgkrx2TgO2Q==}
     peerDependencies:
       react: '>=18'
 
-  '@orderly.network/web3-provider-ethers@3.1.9-internal-20260813.1':
-    resolution: {integrity: sha512-fvjUcViBHek6hD8bfmxJnEASVuFSkPIt6RrsktLwBv83iYnLkkfQOhG9KCOO9uT5R+FkSX42Z4iQitrfHJxemg==}
+  '@orderly.network/web3-provider-ethers@3.1.9-internal-20260813.2':
+    resolution: {integrity: sha512-ubQtiGoRZX6JdRyqGbuY9Cgow2xlUuH2GBKTHYSJvi4vBGJjZGEthTn0vu9Xl1USkkxj0O2vIIWs4AK8buwuzA==}
 
   '@particle-network/analytics@1.0.2':
     resolution: {integrity: sha512-E4EpTRYcfNOkxj+bgNdQydBrvdLGo4HfVStZCuOr3967dYek30r6L7Nkaa9zJXRE2eGT4lPvcAXDV2WxDZl/Xg==}
@@ -12389,17 +12389,17 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
 
-  '@orderly.network/affiliate@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/affiliate@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/chart': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/chart': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -12417,11 +12417,11 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/chart@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/chart@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       d3-array: 3.2.4
       d3-axis: 3.0.0
       d3-scale: 4.0.2
@@ -12441,10 +12441,10 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/core@3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/core@3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
       '@noble/ed25519': 2.3.0
-      '@orderly.network/types': 3.1.9-internal-20260813.1
+      '@orderly.network/types': 3.1.9-internal-20260813.2
       '@solana/web3.js': 1.98.4(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
       bs58: 5.0.0
       ethers: 6.17.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)
@@ -12457,11 +12457,11 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/default-evm-adapter@3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/default-evm-adapter@3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
       '@noble/ed25519': 2.3.0
-      '@orderly.network/core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
+      '@orderly.network/core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
       bs58: 5.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -12469,14 +12469,14 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/default-solana-adapter@3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/default-solana-adapter@3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
       '@coral-xyz/anchor': 0.29.0(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@layerzerolabs/lz-solana-sdk-v2': 2.3.45-oft-rc.0(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@layerzerolabs/lz-v2-utilities': 2.3.45-oft-rc.0
       '@noble/ed25519': 2.3.0
-      '@orderly.network/core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
+      '@orderly.network/core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
       '@solana/spl-token': 0.4.8(@solana/web3.js@1.98.4(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6))(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@solana/wallet-adapter-base': 0.9.23(@solana/web3.js@1.98.4(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6))
       '@solana/web3.js': 1.98.4(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
@@ -12492,28 +12492,28 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/fast-place-order-plugin@0.2.4(@orderly.network/hooks@3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6))(@orderly.network/i18n@3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3))(@orderly.network/types@3.1.9-internal-20260813.1)(@orderly.network/ui@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@orderly.network/fast-place-order-plugin@0.2.4(@orderly.network/hooks@3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6))(@orderly.network/i18n@3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3))(@orderly.network/types@3.1.9-internal-20260813.2)(@orderly.network/ui@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@orderly.network/hooks@3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/hooks@3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
       '@akamfoad/qr': 0.4.0
       '@amplitude/analytics-browser': 2.11.13
-      '@orderly.network/core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/default-evm-adapter': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/default-solana-adapter': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/net': 3.1.9-internal-20260813.1
-      '@orderly.network/perp': 5.1.9-internal-20260813.1
-      '@orderly.network/plugin-core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
-      '@orderly.network/web3-provider-ethers': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/default-evm-adapter': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/default-solana-adapter': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/net': 3.1.9-internal-20260813.2
+      '@orderly.network/perp': 5.1.9-internal-20260813.2
+      '@orderly.network/plugin-core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
+      '@orderly.network/web3-provider-ethers': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
       immer: 10.2.0
       lodash: 4.18.1
       ramda: 0.29.1
@@ -12533,7 +12533,7 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/i18n@3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)':
+  '@orderly.network/i18n@3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)':
     dependencies:
       fs-extra: 11.3.5
       i18next: 24.2.3(typescript@5.9.3)
@@ -12546,14 +12546,14 @@ snapshots:
       - react-native
       - typescript
 
-  '@orderly.network/markets@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/markets@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       ramda: 0.31.3
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -12571,16 +12571,16 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/net@3.1.9-internal-20260813.1':
+  '@orderly.network/net@3.1.9-internal-20260813.2':
     dependencies:
       eventemitter3: 5.0.4
 
-  '@orderly.network/onramper-plugin@0.3.1(@orderly.network/hooks@3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6))(@orderly.network/i18n@3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3))(@orderly.network/types@3.1.9-internal-20260813.1)(@orderly.network/ui@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6))(bufferutil@4.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(utf-8-validate@6.0.6)':
+  '@orderly.network/onramper-plugin@0.3.1(@orderly.network/hooks@3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6))(@orderly.network/i18n@3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3))(@orderly.network/types@3.1.9-internal-20260813.2)(@orderly.network/ui@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6))(bufferutil@4.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       ethers: 6.17.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -12588,16 +12588,16 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@orderly.network/perp@5.1.9-internal-20260813.1':
+  '@orderly.network/perp@5.1.9-internal-20260813.2':
     dependencies:
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
 
-  '@orderly.network/plugin-core@3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/plugin-core@3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-error-boundary: 4.1.2(react@18.3.1)
@@ -12607,24 +12607,24 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/portfolio@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/portfolio@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/chart': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/perp': 5.1.9-internal-20260813.1
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-leverage': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-orders': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-positions': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-share': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-transfer': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/chart': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/perp': 5.1.9-internal-20260813.2
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-leverage': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-orders': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-positions': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-share': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-transfer': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
       immer: 10.2.0
       lodash: 4.18.1
@@ -12646,13 +12646,13 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/react-app@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/react-app@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
     transitivePeerDependencies:
       - '@types/react'
@@ -12672,15 +12672,15 @@ snapshots:
 
   '@orderly.network/release-tag@1.0.6': {}
 
-  '@orderly.network/trading-leaderboard@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/trading-leaderboard@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
       ramda: 0.29.1
       react: 18.3.1
@@ -12699,16 +12699,16 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/trading-rewards@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/trading-rewards@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
       ramda: 0.31.3
       react: 18.3.1
@@ -12727,30 +12727,30 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/trading@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/trading@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
       '@dnd-kit/core': 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@dnd-kit/modifiers': 9.0.0(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/markets': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/portfolio': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-leverage': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-order-entry': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-orders': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-positions': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-share': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-tradingview': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-transfer': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/markets': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/portfolio': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-leverage': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-order-entry': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-orders': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-positions': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-share': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-tradingview': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-transfer': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       '@uiw/react-split': 5.9.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -12769,17 +12769,17 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/types@3.1.9-internal-20260813.1':
+  '@orderly.network/types@3.1.9-internal-20260813.2':
     dependencies:
       superstruct: 2.0.2
 
-  '@orderly.network/ui-chain-selector@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-chain-selector@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -12796,14 +12796,14 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-connector@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-connector@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -12820,14 +12820,14 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-leverage@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-leverage@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/perp': 5.1.9-internal-20260813.1
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/perp': 5.1.9-internal-20260813.2
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -12844,15 +12844,15 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-notification@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-notification@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
       '@date-fns/utc': 1.2.0
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
       immer: 10.2.0
       react: 18.3.1
@@ -12871,19 +12871,19 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-order-entry@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-order-entry@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/perp': 5.1.9-internal-20260813.1
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-leverage': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-tpsl': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/perp': 5.1.9-internal-20260813.2
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-leverage': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-scaffold': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-tpsl': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       ramda: 0.31.3
     transitivePeerDependencies:
       - '@types/react'
@@ -12901,17 +12901,17 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-orders@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-orders@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-share': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-tpsl': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-share': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-tpsl': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
     transitivePeerDependencies:
       - '@types/react'
@@ -12929,19 +12929,19 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-positions@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-positions@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/perp': 5.1.9-internal-20260813.1
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-leverage': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-share': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-tpsl': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/perp': 5.1.9-internal-20260813.2
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-leverage': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-share': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-tpsl': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
       immer: 10.2.0
       ramda: 0.29.1
@@ -12961,20 +12961,20 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-scaffold@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-scaffold@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
       '@akamfoad/qr': 0.4.0
       '@date-fns/utc': 1.2.0
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/plugin-core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-notification': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/plugin-core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-notification': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
       immer: 10.2.0
       jsqr: 1.4.0
@@ -12994,13 +12994,13 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-share@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-share@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -13017,16 +13017,16 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-tpsl@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-tpsl@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/perp': 5.1.9-internal-20260813.1
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/perp': 5.1.9-internal-20260813.2
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
@@ -13043,18 +13043,18 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-tradingview@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-tradingview@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/net': 3.1.9-internal-20260813.1
-      '@orderly.network/plugin-core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-positions': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/net': 3.1.9-internal-20260813.2
+      '@orderly.network/plugin-core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-positions': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
     transitivePeerDependencies:
       - '@types/react'
@@ -13072,22 +13072,22 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui-transfer@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui-transfer@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
       '@akamfoad/qr': 0.4.0
       '@layerzerolabs/scan-client': 0.0.8(axios@1.19.0)
-      '@orderly.network/core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/default-solana-adapter': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/perp': 5.1.9-internal-20260813.1
-      '@orderly.network/plugin-core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/default-solana-adapter': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/perp': 5.1.9-internal-20260813.2
+      '@orderly.network/plugin-core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-chain-selector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       '@solana/web3.js': 1.98.4(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
       axios: 1.19.0
       ethers: 6.17.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)
@@ -13109,10 +13109,10 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/ui@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/ui@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/plugin-core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/plugin-core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       '@radix-ui/react-avatar': 1.1.12(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-checkbox': 1.3.4(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-collapsible': 1.1.13(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -13151,22 +13151,22 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/utils@3.1.9-internal-20260813.1':
+  '@orderly.network/utils@3.1.9-internal-20260813.2':
     dependencies:
-      '@orderly.network/types': 3.1.9-internal-20260813.1
+      '@orderly.network/types': 3.1.9-internal-20260813.2
       dayjs: 1.11.21
       decimal.js-light: 2.5.1
 
-  '@orderly.network/vaults@3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(immer@10.2.0)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/vaults@3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(immer@10.2.0)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/react-app': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-transfer': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/react-app': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-transfer': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       date-fns: 3.6.0
       ramda: 0.29.1
       react: 18.3.1
@@ -13188,17 +13188,17 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@orderly.network/wallet-connector-privy@3.1.9-internal-20260813.1(bfd0d802d6d45ae4fa3b2378ff020531)':
+  '@orderly.network/wallet-connector-privy@3.1.9-internal-20260813.2(bfd0d802d6d45ae4fa3b2378ff020531)':
     dependencies:
       '@abstract-foundation/agw-client': 1.12.3(typescript@5.9.3)(viem@2.55.13(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@6.0.6)(zod@3.25.76))
       '@abstract-foundation/agw-react': 1.13.0(9bc69978298e11cdcf96e1e5286edcd0)
-      '@orderly.network/core': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/hooks': 3.1.9-internal-20260813.1(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.1.9-internal-20260813.1(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
-      '@orderly.network/ui': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/ui-connector': 3.1.9-internal-20260813.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/utils': 3.1.9-internal-20260813.1
+      '@orderly.network/core': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/hooks': 3.1.9-internal-20260813.2(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/i18n': 3.1.9-internal-20260813.2(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
+      '@orderly.network/ui': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/ui-connector': 3.1.9-internal-20260813.2(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/utils': 3.1.9-internal-20260813.2
       '@privy-io/react-auth': 2.25.0(3e31b4c2c5a19927e0ef215e12c61fb3)
       '@solana-mobile/wallet-adapter-mobile': 2.2.9(@solana/web3.js@1.98.4(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6))(bufferutil@4.1.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(typescript@5.9.3)(utf-8-validate@6.0.6)
       '@solana/wallet-adapter-base': 0.9.27(@solana/web3.js@1.98.4(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6))
@@ -13264,10 +13264,10 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@orderly.network/web3-provider-ethers@3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)':
+  '@orderly.network/web3-provider-ethers@3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)':
     dependencies:
-      '@orderly.network/default-evm-adapter': 3.1.9-internal-20260813.1(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.1.9-internal-20260813.1
+      '@orderly.network/default-evm-adapter': 3.1.9-internal-20260813.2(bufferutil@4.1.0)(encoding@0.1.13)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@orderly.network/types': 3.1.9-internal-20260813.2
       ethers: 6.17.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)
       ethers-decode-error: 2.1.3(ethers@6.17.0(bufferutil@4.1.0)(utf-8-validate@6.0.6))
     transitivePeerDependencies:
