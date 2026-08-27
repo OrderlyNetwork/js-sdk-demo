@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { Outlet } from "react-router";
+import { useTranslation } from "@orderly.network/i18n";
 import {
   PortfolioLayoutWidget,
   PortfolioLeftSidebarPath,
@@ -10,6 +11,7 @@ import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { usePathWithoutLang } from "@/hooks/usePathWithoutLang";
 
 export function PortfolioLayout() {
+  const { t } = useTranslation();
   const config = useOrderlyConfig();
   const path = usePathWithoutLang();
   const { onRouteChange } = useNav();
@@ -40,6 +42,10 @@ export function PortfolioLayout() {
       }}
       leftSideProps={{
         current: currentPath,
+        className: "portfolio-left-sidebar",
+        title: (
+          <span className="oui-text-primary">{t("common.portfolio")}</span>
+        ),
       }}
       bottomNavProps={config.scaffold.bottomNavProps}
     >

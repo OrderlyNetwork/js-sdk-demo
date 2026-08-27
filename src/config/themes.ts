@@ -6,6 +6,7 @@ export const themes: ThemeConfig[] = [
     id: "orderly",
     displayName: "Dark",
     mode: "dark",
+    cssVars: CUSTOM_DARK_THEME_CSS_VARS,
   },
   {
     id: "light",
@@ -15,7 +16,7 @@ export const themes: ThemeConfig[] = [
   },
   {
     id: "custom-dark",
-    displayName: "Dark (Custom)",
+    displayName: "Orderly Purple",
     mode: "dark",
     cssVars: CUSTOM_DARK_THEME_CSS_VARS,
   },

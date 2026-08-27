@@ -111,8 +111,8 @@ export default function LeaderboardView() {
       href={{
         trading: PathEnum.Root,
       }}
-      backgroundSrc="/leaderboard/background.webm"
-      className="oui-py-5"
+      backgroundSrc="/leaderboard/background.png"
+      className="leaderboard-page oui-py-5"
     />
   );
 }

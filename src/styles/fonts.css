@@ -1,4 +1,20 @@
 @font-face {
+  font-family: 'Atyp BL Text';
+  src: url('/fonts/AtypBL/AtypBLText-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atyp BL Display';
+  src: url('/fonts/AtypBL/AtypBLDisplay-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Manrope';
   src: url('/fonts/Manrope/Manrope-Medium.ttf') format('truetype');
   font-weight: 500;
