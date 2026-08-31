@@ -7,6 +7,21 @@
 @import "./theme.css";
 @import "./fonts.css";
 
+/* Dark (Custom) promotes semantic primary text to the preset's native cyan-blue brand gradient. */
+html[data-oui-theme="custom-dark"] .oui-text-primary:not(svg):not(:has(svg)) {
+  background-image:
+    linear-gradient(
+      var(--oui-gradient-brand-angle),
+      rgb(var(--oui-gradient-brand-start)) var(--oui-gradient-brand-stop-start),
+      rgb(var(--oui-gradient-brand-end)) var(--oui-gradient-brand-stop-end)
+    ),
+    linear-gradient(transparent, transparent);
+  background-clip: text, border-box;
+  color: transparent;
+  -webkit-background-clip: text, border-box;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Dark and Light use their approved solid button tokens; Dark (Custom) keeps the SDK's original cyan-blue brand gradient. */
 :where(html[data-oui-theme="orderly"], html[data-oui-theme="light"])
   .oui-button.oui-gradient-brand {
@@ -24,11 +39,17 @@
   color: rgb(var(--oui-color-primary-contrast)) !important;
 }
 
-/* Use the current solid theme accent for the trading faucet and active order type. */
+/* Use each preset's solid action accent for the trading faucet and active order type. */
 :where(html[data-oui-theme="orderly"], html[data-oui-theme="light"])
   [data-testid="oui-testid-assetView-getFaucet-button"] {
   border-color: rgb(var(--oui-color-primary));
   color: rgb(var(--oui-color-primary));
+}
+
+html[data-oui-theme="custom-dark"]
+  [data-testid="oui-testid-assetView-getFaucet-button"] {
+  border-color: rgb(var(--oui-color-primary-darken));
+  color: rgb(var(--oui-color-primary-darken));
 }
 
 :where(html[data-oui-theme="orderly"], html[data-oui-theme="light"])
