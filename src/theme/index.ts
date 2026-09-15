@@ -1,2 +1,1 @@
-export * from "./contrast";
-export * from "./customDark";
+export * from "./blueDarkTheme";

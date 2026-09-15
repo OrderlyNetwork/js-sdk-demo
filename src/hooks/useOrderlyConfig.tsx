@@ -30,6 +30,7 @@ import {
 } from "@orderly.network/ui-scaffold";
 import { OrderlySecondaryLogo } from "@/components/icons/orderlySecondaryLogo";
 import { OrderlyTextIcon } from "@/components/icons/orderlyText";
+import { useCustomRender } from "@/components/layout/useCustomRender";
 import { PathEnum } from "../constant";
 
 export type OrderlyConfig = {
@@ -94,11 +95,13 @@ const SHARE_PNL_CONFIG: TradingPageProps["sharePnLConfig"] = {
 
 export const useOrderlyConfig = () => {
   const { t } = useTranslation();
+  const customRender = useCustomRender();
 
   return useMemo<OrderlyConfig>(() => {
     return {
       scaffold: {
         mainNavProps: {
+          customRender,
           mainMenus: [
             {
               name: t("common.trading"),
@@ -185,7 +188,7 @@ export const useOrderlyConfig = () => {
         sharePnLConfig: SHARE_PNL_CONFIG,
       },
     };
-  }, [t]);
+  }, [t, customRender]);
 };
 
 function getLeftNavMenus(

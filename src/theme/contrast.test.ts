@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getContrastTextRgb } from "./contrast";
+import { getContrastTextRgb } from "@orderly.network/ui";
 
 describe("getContrastTextRgb", () => {
   it("uses white text on the current deep-purple button", () => {

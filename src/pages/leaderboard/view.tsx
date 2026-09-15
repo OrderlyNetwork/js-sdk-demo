@@ -4,6 +4,7 @@ import {
   LeaderboardPage,
   CampaignConfig,
 } from "@orderly.network/trading-leaderboard";
+import { LeaderboardDecorations } from "@/components/leaderboardDecorations";
 import { PathEnum } from "@/constant";
 
 const leaderboardCampaigns: CampaignConfig[] = [
@@ -103,16 +104,22 @@ export default function LeaderboardView() {
   }, []);
 
   return (
-    <LeaderboardPage
-      campaignId={campaignId}
-      // @ts-expect-error - onCampaignChange is not typed correctly
-      onCampaignChange={setCampaignId}
-      campaigns={leaderboardCampaigns}
-      href={{
-        trading: PathEnum.Root,
-      }}
-      backgroundSrc="/leaderboard/background.webm"
-      className="leaderboard-page oui-py-5"
-    />
+    // The wrapper owns the page background and the stacking context, so the
+    // demo-rendered artwork sits above the background but under the table
+    // without any CSS overrides on SDK DOM. The page root is transparent
+    // through its supported className prop.
+    <div className="oui-isolate oui-bg-base-10">
+      <LeaderboardDecorations />
+      <LeaderboardPage
+        campaignId={campaignId}
+        // @ts-expect-error - onCampaignChange is not typed correctly
+        onCampaignChange={setCampaignId}
+        campaigns={leaderboardCampaigns}
+        href={{
+          trading: PathEnum.Root,
+        }}
+        className="!oui-bg-transparent oui-py-5"
+      />
+    </div>
   );
 }
