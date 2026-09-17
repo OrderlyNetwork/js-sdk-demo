@@ -11,7 +11,11 @@ export const themes: ThemeConfig[] = [
     displayName: "Dark",
     mode: "dark",
     isDefault: true,
-    // Uses SDK default DARK_THEME_CSS_VARS (ODS v2).
+    // SDK default ODS v2 palette; demo loads Atyp BL and overrides the font.
+    cssVars: {
+      "--oui-font-family":
+        '"Atyp BL Text", "PingFang SC", "Noto Sans CJK SC", "Noto Sans", sans-serif',
+    },
   },
   {
     id: "classic-dark",

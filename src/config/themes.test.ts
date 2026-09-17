@@ -11,7 +11,8 @@ describe("theme presets", () => {
 
     expect(dark?.displayName).toBe("Dark");
     expect(dark?.isDefault).toBe(true);
-    expect(dark?.cssVars).toBeUndefined();
+    // Demo overrides only the font; palette still comes from SDK default.
+    expect(dark?.cssVars?.["--oui-font-family"]).toContain("Atyp BL Text");
     expect(DARK_THEME_CSS_VARS["--oui-color-primary"]).toBe("156 117 255");
     expect(DARK_THEME_CSS_VARS["--oui-color-primary-darken"]).toBe("103 0 206");
     // Gradient pairs are flat so gradient treatments render solid.
