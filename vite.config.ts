@@ -56,6 +56,9 @@ export default defineConfig({
   },
   envDir: "./env",
   resolve: {
+    // Keep a single copy of React (and the plugin's runtime deps) even if
+    // starchild-orderly-plugin resolves its own nested copies.
+    dedupe: ["react", "react-dom", "zustand", "@orderly.network/plugin-core"],
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
