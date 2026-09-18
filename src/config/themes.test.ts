@@ -1,8 +1,5 @@
 import { describe, expect, it } from "vitest";
-import {
-  DARK_THEME_CSS_VARS,
-  PURPLE_DARK_THEME_CSS_VARS,
-} from "@orderly.network/ui";
+import { DARK_THEME_CSS_VARS } from "@orderly.network/ui";
 import { SQUARE_DARK_THEME_CSS_VARS, TEAL_DARK_THEME_CSS_VARS } from "@/theme";
 import { themes } from "./themes";
 
@@ -27,24 +24,11 @@ describe("theme presets", () => {
       "orderly",
       "light",
       "square-dark",
-      "purple-dark",
       "blue-dark",
       "mint-dark",
-      "gold-dark",
       "cyan-dark",
-      "azure-dark",
       "teal-dark",
     ]);
-  });
-
-  it("registers Dark (Purple) as the retained previous dark preset", () => {
-    const purpleDark = themes.find((theme) => theme.id === "purple-dark");
-
-    expect(purpleDark?.displayName).toBe("Dark (Purple)");
-    expect(purpleDark?.cssVars).toBe(PURPLE_DARK_THEME_CSS_VARS);
-    expect(PURPLE_DARK_THEME_CSS_VARS["--oui-color-primary"]).toBe(
-      "176 132 233",
-    );
   });
 
   it("keeps Dark (Blue) as a distinct consumer preset", () => {
@@ -77,8 +61,6 @@ describe("theme presets", () => {
 
   it("attaches TradingView chart colors to the presets that define them", () => {
     const mint = themes.find((theme) => theme.id === "mint-dark");
-    const gold = themes.find((theme) => theme.id === "gold-dark");
-    const azure = themes.find((theme) => theme.id === "azure-dark");
     const cyan = themes.find((theme) => theme.id === "cyan-dark");
     const teal = themes.find((theme) => theme.id === "teal-dark");
 
@@ -88,17 +70,6 @@ describe("theme presets", () => {
       pnlUpColor: "#0FB276",
       pnlDownColor: "#F5464B",
     });
-    expect(gold?.tradingViewColorConfig).toEqual({
-      upColor: "#22E58A",
-      downColor: "#FF5F69",
-      pnlUpColor: "#22E58A",
-      pnlDownColor: "#FF5F69",
-    });
-    expect(azure?.tradingViewColorConfig).toMatchObject({
-      chartBG: "#111111",
-      upColor: "#0ad4a2",
-      downColor: "#e03a5a",
-    });
     // Raydium and What render SDK default chart colors.
     expect(cyan?.tradingViewColorConfig).toBeUndefined();
     expect(teal?.tradingViewColorConfig).toBeUndefined();
@@ -106,16 +77,11 @@ describe("theme presets", () => {
 
   it("extracts brand palettes from the source sites", () => {
     const mint = themes.find((theme) => theme.id === "mint-dark");
-    const gold = themes.find((theme) => theme.id === "gold-dark");
     const cyan = themes.find((theme) => theme.id === "cyan-dark");
-    const azure = themes.find((theme) => theme.id === "azure-dark");
     const teal = themes.find((theme) => theme.id === "teal-dark");
 
     expect(mint?.cssVars?.["--oui-color-primary"]).toBe("0 228 171");
-    expect(gold?.cssVars?.["--oui-color-primary"]).toBe("255 200 50");
-    expect(gold?.cssVars?.["--oui-color-primary-contrast"]).toBe("0 0 0");
     expect(cyan?.cssVars?.["--oui-color-primary"]).toBe("34 209 248");
-    expect(azure?.cssVars?.["--oui-color-primary"]).toBe("0 181 226");
     expect(teal?.cssVars).toBe(TEAL_DARK_THEME_CSS_VARS);
     expect(teal?.cssVars?.["--oui-color-primary"]).toBe("2 166 194");
     // What (teal-dark) removes every corner radius, like Dark (Square).
