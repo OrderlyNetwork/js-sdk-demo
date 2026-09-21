@@ -1,4 +1,4 @@
-export const CUSTOM_DARK_THEME_CSS_VARS = {
+export const BLUE_DARK_THEME_CSS_VARS = {
   "--oui-font-family":
     '"DIN2014", "PingFang SC", "Noto Sans CJK SC", "Noto Sans", sans-serif',
 
@@ -57,7 +57,7 @@ export const CUSTOM_DARK_THEME_CSS_VARS = {
   "--oui-gradient-primary-end": "24 40 195",
 
   "--oui-gradient-secondary-start": "189 107 237",
-  "--oui-gradient-secondary-end": "85 13 169",
+  "--oui-gradient-secondary-end": "45 0 97",
 
   "--oui-gradient-success-start": "0 180 158",
   "--oui-gradient-success-end": "0 90 79",
