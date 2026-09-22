@@ -21,6 +21,7 @@ import {
   EarnIcon,
   AffiliateIcon,
   LeftNavVaultsIcon,
+  PredictionIcon,
 } from "@orderly.network/ui";
 import {
   BottomNavProps,
@@ -30,6 +31,7 @@ import {
 } from "@orderly.network/ui-scaffold";
 import { OrderlySecondaryLogo } from "@/components/icons/orderlySecondaryLogo";
 import { OrderlyTextIcon } from "@/components/icons/orderlyText";
+import { customTradeSubMenuRender } from "@/components/layout/customTradeSubMenu";
 import { useCustomRender } from "@/components/layout/useCustomRender";
 import { PathEnum } from "../constant";
 
@@ -106,7 +108,9 @@ export const useOrderlyConfig = () => {
             {
               name: t("common.trading"),
               href: PathEnum.Root,
+              activeHrefs: [PathEnum.Prediction],
               isHomePageInMobile: true,
+              customSubMenuRender: customTradeSubMenuRender(),
             },
             { name: t("common.vaults"), href: PathEnum.Vaults },
             { name: t("common.markets"), href: PathEnum.Markets },
@@ -200,6 +204,11 @@ function getLeftNavMenus(
         name: t("common.trading"),
         href: PathEnum.Root,
         icon: <TradingIcon />,
+      },
+      {
+        name: t("prediction.title"),
+        href: PathEnum.Prediction,
+        icon: <PredictionIcon size={20} monochrome />,
       },
       {
         name: t("common.vaults"),

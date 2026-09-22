@@ -1,6 +1,7 @@
 export enum PathEnum {
   Root = "/",
   Perp = "/perp",
+  Prediction = "/prediction",
 
   Portfolio = "/portfolio",
   Positions = "/portfolio/positions",
@@ -22,6 +23,7 @@ export enum PathEnum {
 }
 
 export const PageTitleMap = {
+  [PathEnum.Prediction]: "Prediction",
   [PathEnum.Portfolio]: "Portfolio",
   [PathEnum.FeeTier]: "Fee tier",
   [PathEnum.ApiKey]: "API keys",

@@ -44,6 +44,7 @@ const AnnouncementPage = lazyImportPage(
 );
 const MarketsPage = lazyImportPage(() => import("@/pages/markets/page"));
 const PerpPage = lazyImportPage(() => import("@/pages/perp/page"));
+const PredictionPage = lazyImportPage(() => import("@/pages/prediction/page"));
 const VaultsPage = lazyImportPage(() => import("@/pages/vaults/page"));
 const APIKeyPage = lazyImportPage(
   () => import("@/pages/portfolio/api-key/page"),
@@ -119,6 +120,10 @@ const AppRoute = () => {
           element: <PerpPage />,
         },
       ],
+    },
+    {
+      path: "prediction",
+      element: <PredictionPage />,
     },
     {
       path: "portfolio",
