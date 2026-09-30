@@ -1,6 +1,5 @@
 import { registerStarchildPlugin } from "starchild-orderly-plugin";
 import { registerFastPlaceOrderPlugin } from "@orderly.network/fast-place-order-plugin";
-import { registerOnrampPlugin } from "@orderly.network/onramper-plugin";
 import "starchild-orderly-plugin/styles.css";
 
 // import { registerPlugin as registerOrderbookShimmerPlugin } from "@orderly.network/orderbook-shimmer-plugin";
@@ -15,11 +14,6 @@ export const plugins = [
   registerFastPlaceOrderPlugin({
     // Same as package default; explicit so hosts can flip without re-reading README.
     autoShowOnFullscreen: true,
-  }),
-  registerOnrampPlugin({
-    apiKey: "pk_prod_01JWTGETB1H32953X7KR3DSH1S",
-    secretKey: "01JWTGETB259KDVKEEVHBCGT7D",
-    // workerUrl: "https://gentle-butterfly-db9c.han-eff.workers.dev/",
   }),
   /** Starchild AI assistant: floating chat button + side panel with built-in one-click trading authorization. */
   registerStarchildPlugin(),
