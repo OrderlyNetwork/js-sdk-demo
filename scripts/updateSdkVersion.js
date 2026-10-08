@@ -6,7 +6,6 @@ const { execFileSync } = require("node:child_process");
 const EXCLUDED_PACKAGES = [
   "@orderly.network/release-tag",
   "@orderly.network/fast-place-order-plugin",
-  "@orderly.network/onramper-plugin",
   "@orderly.network/orderbook-shimmer-plugin",
 ];
 

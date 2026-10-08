@@ -39,9 +39,6 @@ importers:
       '@orderly.network/markets':
         specifier: 3.2.2-internal-prediction-prototype.5
         version: 3.2.2-internal-prediction-prototype.5(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/onramper-plugin':
-        specifier: ^0.3.1
-        version: 0.3.1(871dc44335f13974237852965319983a)
       '@orderly.network/plugin-core':
         specifier: 3.2.2-internal-prediction-prototype.5
         version: 3.2.2-internal-prediction-prototype.5(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
@@ -2062,17 +2059,6 @@ packages:
   '@orderly.network/net@3.2.2-internal-prediction-prototype.5':
     resolution: {integrity: sha512-hOb3J9TIR+XFDzC3GDbUNOQ9QNnFTBLpjFbQIyOSKqAG65Y0L4c5XITWHpRi0KYFu2HNMUDRiCcN1jklXr3WMg==}
 
-  '@orderly.network/onramper-plugin@0.3.1':
-    resolution: {integrity: sha512-rTB86vVreLABsun7ZnYgVEA+LyRbnWQ4BW5x2s8R+/krZwN0iI9wgblyYMF85r9uqjkuek/xKPD5xVaABEGv+g==}
-    peerDependencies:
-      '@orderly.network/hooks': 3.0.0
-      '@orderly.network/i18n': 3.0.0
-      '@orderly.network/plugin-core': 3.0.0
-      '@orderly.network/types': 3.0.0
-      '@orderly.network/ui': 3.0.0
-      '@orderly.network/utils': 3.0.0
-      react: '>=18'
-      react-dom: '>=18'
 
   '@orderly.network/perp@5.2.2-internal-prediction-prototype.5':
     resolution: {integrity: sha512-TsnH+0LNKbGitIbhA3hj01IB9TrHU/hADaN9x2Alb9BUQNIglBKxA0wt3aWVG/0hJHh7Cl5xEyP7YxrfJ7CsJQ==}
@@ -13270,19 +13256,6 @@ snapshots:
     dependencies:
       eventemitter3: 5.0.4
 
-  '@orderly.network/onramper-plugin@0.3.1(871dc44335f13974237852965319983a)':
-    dependencies:
-      '@orderly.network/hooks': 3.2.2-internal-prediction-prototype.5(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/i18n': 3.2.2-internal-prediction-prototype.5(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7)(@babel/preset-env@7.26.0(@babel/core@7.29.7))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(utf-8-validate@6.0.6))(react@18.3.1)(typescript@5.9.3)
-      '@orderly.network/plugin-core': 3.2.2-internal-prediction-prototype.5(bufferutil@4.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@orderly.network/types': 3.2.2-internal-prediction-prototype.5
-      '@orderly.network/ui': 3.2.2-internal-prediction-prototype.5(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@6.0.6)
-      ethers: 6.17.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
 
   '@orderly.network/perp@5.2.2-internal-prediction-prototype.5':
     dependencies:
