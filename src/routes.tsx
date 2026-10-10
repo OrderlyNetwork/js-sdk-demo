@@ -122,7 +122,7 @@ const AppRoute = () => {
       ],
     },
     {
-      path: "prediction",
+      path: "prediction/:symbol?",
       element: <PredictionPage />,
     },
     {
