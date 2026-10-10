@@ -2,7 +2,6 @@ import React, { FC, lazy, Suspense, useEffect, useMemo } from "react";
 import { Outlet } from "react-router";
 import * as Sentry from "@sentry/react";
 import { useAccount } from "@orderly.network/hooks";
-import { PredictionProvider } from "@orderly.network/prediction";
 import { ErrorBoundary, OrderlyAppProvider } from "@orderly.network/react-app";
 import { appTargetConfig } from "@/components/orderlyConfig/appTargetConfig";
 import PageLoading from "@/components/pageLoading/pageLoading";
@@ -105,7 +104,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
         chainFilter={chainFilter}
       >
         <SentryUserSync />
-        <PredictionProvider>{props.children || <Outlet />}</PredictionProvider>
+        {props.children || <Outlet />}
       </OrderlyAppProvider>
     </ErrorBoundary>
   );
