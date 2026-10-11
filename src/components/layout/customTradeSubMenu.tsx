@@ -101,16 +101,25 @@ const LeftSection = (props: {
   );
 };
 
-const RightSection = (props: { className?: string }) => {
+// Exported for tests: called directly with mocked hooks, matching the
+// useNav.test.ts convention of exercising components as plain functions.
+export const RightSection = (props: { className?: string }) => {
   const { className } = props;
   const params = useParams();
+  const { pathname } = useLocation();
   const { onRouteChange } = useNav();
-  const [symbol, setSymbol] = useState<string>(params.symbol || DEFAULT_SYMBOL);
+  // `:symbol` also exists on /prediction (a round contract, not a perps
+  // market); only perps routes may mirror their param into storage, other
+  // routes fall back to the remembered symbol.
+  const isPerpsRoute = getTradeSubMenuTab(pathname) === "perps";
+  const [symbol, setSymbol] = useState<string>(() =>
+    isPerpsRoute && params.symbol ? params.symbol : getSymbol(),
+  );
 
   useEffect(() => {
-    const next = params.symbol || DEFAULT_SYMBOL;
-    if (next !== symbol) setSymbol(next);
-  }, [params.symbol, symbol]);
+    if (!isPerpsRoute || params.symbol == null) return;
+    if (params.symbol !== symbol) setSymbol(params.symbol);
+  }, [params.symbol, isPerpsRoute, symbol]);
 
   useEffect(() => {
     updateSymbol(symbol);
