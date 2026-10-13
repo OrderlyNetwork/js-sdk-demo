@@ -206,7 +206,7 @@ function getLeftNavMenus(
         icon: <TradingIcon />,
       },
       {
-        name: t("prediction.title"),
+        name: t("common.predictions"),
         href: PathEnum.Prediction,
         icon: <PredictionIcon size={20} monochrome />,
       },
