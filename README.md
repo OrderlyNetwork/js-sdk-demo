@@ -222,6 +222,8 @@ The release tag format includes the target suffix:
 ```
 vX.Y.Z.W-demo
 vX.Y.Z.W-dmm
+vX.Y.Z.W-demo-BRANCH
+vX.Y.Z.W-dmm-BRANCH
 vX.Y.Z.W-demo.N
 vX.Y.Z.W-dmm.N
 vX.Y.Z.W-demo-BRANCH.N
