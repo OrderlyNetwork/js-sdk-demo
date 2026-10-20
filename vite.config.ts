@@ -61,11 +61,6 @@ export default defineConfig({
     dedupe: ["react", "react-dom", "zustand", "@orderly.network/plugin-core"],
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      // Local announcement page prototype until the next published SDK tag.
-      "@orderly.network/ui-notification": path.resolve(
-        __dirname,
-        "../orderly-web-main/packages/ui-notification/src/index.ts",
-      ),
     },
   },
   build: {
