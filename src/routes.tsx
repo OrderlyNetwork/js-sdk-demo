@@ -187,6 +187,10 @@ const AppRoute = () => {
       element: <AnnouncementPage />,
     },
     {
+      path: "announcement/:announcementId",
+      element: <AnnouncementPage />,
+    },
+    {
       path: "rewards",
       element: <TradingRewardsLayout />,
       children: [

@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -18,18 +14,15 @@
     "incremental": true,
     "jsx": "react-jsx",
     "types": ["vite/client"],
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
+      "@/*": ["./src/*"],
+      "@orderly.network/ui-notification": [
+        "../orderly-web-main/packages/ui-notification/src/index.ts"
       ]
     },
     "strictNullChecks": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

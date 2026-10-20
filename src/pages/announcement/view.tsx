@@ -1,3 +1,4 @@
+import { useParams } from "react-router";
 import { useTranslation } from "@orderly.network/i18n";
 import {
   ChevronLeftIcon,
@@ -12,6 +13,7 @@ import { useNav } from "@/hooks/useNav";
 
 export default function AnnouncementView() {
   const { t } = useTranslation();
+  const { announcementId } = useParams();
   const { onRouteChange } = useNav();
   const direction = useDocumentDirection();
   const backToTradingLabel = t("extend.backToTrading");
@@ -45,7 +47,7 @@ export default function AnnouncementView() {
         />
       </button>
       <Text className="oui-text-base oui-font-bold oui-text-base-contrast">
-        {t("notification.centerTitle")}
+        {t("notification.announcements")}
       </Text>
     </Flex>
   );
@@ -55,9 +57,13 @@ export default function AnnouncementView() {
       topBar={topBar}
       classNames={{
         bottomNav: "oui-hidden",
+        root: "lg:oui-overflow-y-scroll",
       }}
     >
-      <AnnouncementCenterPage routerAdapter={{ onRouteChange }} />
+      <AnnouncementCenterPage
+        announcementId={announcementId}
+        routerAdapter={{ onRouteChange }}
+      />
     </BaseLayout>
   );
 }
