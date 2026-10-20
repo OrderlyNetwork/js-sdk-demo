@@ -1,7 +1,7 @@
 // RightSection is exercised as a plain function with mocked hooks, matching
 // the useNav.test.ts convention; effects are collected and run in order.
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { ORDERLY_SYMBOL_KEY } from "@/storage";
+import { PERP_SYMBOL_STORAGE_KEY } from "@orderly.network/trading";
 import { RightSection } from "./customTradeSubMenu";
 
 const harness = vi.hoisted(() => {
@@ -85,22 +85,22 @@ describe("RightSection symbol mirroring", () => {
     harness.route.symbol = "PERP_BTC_USDC";
     harness.route.pathname = "/en/perp/PERP_BTC_USDC";
     renderRightSection();
-    expect(store.get(ORDERLY_SYMBOL_KEY)).toBe("PERP_BTC_USDC");
+    expect(store.get(PERP_SYMBOL_STORAGE_KEY)).toBe("PERP_BTC_USDC");
   });
 
   it("does not overwrite the remembered symbol with the prediction round symbol", () => {
-    store.set(ORDERLY_SYMBOL_KEY, "PERP_BTC_USDC");
+    store.set(PERP_SYMBOL_STORAGE_KEY, "PERP_BTC_USDC");
     harness.route.symbol = "PERP_BTC5M2608271200_USDC";
     harness.route.pathname = "/en/prediction/PERP_BTC5M2608271200_USDC";
     renderRightSection();
-    expect(store.get(ORDERLY_SYMBOL_KEY)).toBe("PERP_BTC_USDC");
+    expect(store.get(PERP_SYMBOL_STORAGE_KEY)).toBe("PERP_BTC_USDC");
   });
 
   it("keeps the remembered symbol on routes without a perps symbol param", () => {
-    store.set(ORDERLY_SYMBOL_KEY, "PERP_BTC_USDC");
+    store.set(PERP_SYMBOL_STORAGE_KEY, "PERP_BTC_USDC");
     harness.route.symbol = undefined;
     harness.route.pathname = "/en/markets";
     renderRightSection();
-    expect(store.get(ORDERLY_SYMBOL_KEY)).toBe("PERP_BTC_USDC");
+    expect(store.get(PERP_SYMBOL_STORAGE_KEY)).toBe("PERP_BTC_USDC");
   });
 });

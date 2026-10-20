@@ -1,10 +1,10 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { PERP_SYMBOL_STORAGE_KEY } from "@orderly.network/trading";
 import {
   DEFAULT_SYMBOL,
-  ORDERLY_SYMBOL_KEY,
-  getSymbol,
-  updateSymbol,
-} from "@/storage";
+  getPerpSymbol,
+  setPerpSymbol,
+} from "@/perpSymbolStorage";
 
 describe("symbol storage guards", () => {
   beforeEach(() => {
@@ -21,32 +21,32 @@ describe("symbol storage guards", () => {
   });
 
   it("round-trips a regular perps symbol", () => {
-    updateSymbol("PERP_BTC_USDC");
-    expect(getSymbol()).toBe("PERP_BTC_USDC");
+    setPerpSymbol("PERP_BTC_USDC");
+    expect(getPerpSymbol()).toBe("PERP_BTC_USDC");
   });
 
   it("falls back to the default symbol when nothing is stored", () => {
-    expect(getSymbol()).toBe(DEFAULT_SYMBOL);
+    expect(getPerpSymbol()).toBe(DEFAULT_SYMBOL);
   });
 
   it("stores the default symbol for an empty value", () => {
-    updateSymbol("");
-    expect(getSymbol()).toBe(DEFAULT_SYMBOL);
+    setPerpSymbol("");
+    expect(getPerpSymbol()).toBe(DEFAULT_SYMBOL);
   });
 
   it("refuses to persist a prediction round symbol over a stored value", () => {
-    updateSymbol("PERP_BTC_USDC");
-    updateSymbol("PERP_BTC5M2608271200_USDC");
-    expect(localStorage.getItem(ORDERLY_SYMBOL_KEY)).toBe("PERP_BTC_USDC");
+    setPerpSymbol("PERP_BTC_USDC");
+    setPerpSymbol("PERP_BTC5M2608271200_USDC");
+    expect(localStorage.getItem(PERP_SYMBOL_STORAGE_KEY)).toBe("PERP_BTC_USDC");
   });
 
   it("never stores a prediction round symbol, even from an empty store", () => {
-    updateSymbol("PERP_BTC5M2608271200_USDC");
-    expect(localStorage.getItem(ORDERLY_SYMBOL_KEY)).toBeNull();
+    setPerpSymbol("PERP_BTC5M2608271200_USDC");
+    expect(localStorage.getItem(PERP_SYMBOL_STORAGE_KEY)).toBeNull();
   });
 
   it("sanitizes a prediction round symbol stored before the guard existed", () => {
-    localStorage.setItem(ORDERLY_SYMBOL_KEY, "PERP_BTC5M2608271200_USDC");
-    expect(getSymbol()).toBe(DEFAULT_SYMBOL);
+    localStorage.setItem(PERP_SYMBOL_STORAGE_KEY, "PERP_BTC5M2608271200_USDC");
+    expect(getPerpSymbol()).toBe(DEFAULT_SYMBOL);
   });
 });

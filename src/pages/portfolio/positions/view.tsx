@@ -7,7 +7,7 @@ import { API } from "@orderly.network/types";
 import { Box } from "@orderly.network/ui";
 import { PathEnum } from "@/constant";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
-import { updateSymbol } from "@/storage";
+import { setPerpSymbol } from "@/perpSymbolStorage";
 
 export default function PositionsView() {
   const config = useOrderlyConfig();
@@ -17,7 +17,7 @@ export default function PositionsView() {
   const onSymbolChange = useCallback(
     (data: API.Symbol) => {
       const symbol = data.symbol;
-      updateSymbol(symbol);
+      setPerpSymbol(symbol);
       navigate(`/${parseI18nLang(i18n.language)}${PathEnum.Perp}/${symbol}`);
     },
     [navigate],

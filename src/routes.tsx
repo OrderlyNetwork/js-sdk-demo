@@ -10,8 +10,8 @@ import { PortfolioLayout, TradingRewardsLayout } from "@/components/layout";
 import OrderlyProvider from "@/components/orderlyProvider";
 import { LazyPage } from "@/components/pageLoading/LazyPage";
 import { PathEnum } from "@/constant";
+import { DEFAULT_SYMBOL, getPerpSymbol } from "@/perpSymbolStorage";
 import { getSentryCreateBrowserRouter } from "@/sentry";
-import { DEFAULT_SYMBOL, getSymbol } from "@/storage";
 import { tryReloadForChunkError } from "@/utils/chunkLoadRecovery";
 
 const lazyImportPage = (
@@ -111,7 +111,7 @@ const AppRoute = () => {
           index: true,
           element: (
             <Navigate
-              to={`${getSymbol() || DEFAULT_SYMBOL}${window.location.search}`}
+              to={`${getPerpSymbol() || DEFAULT_SYMBOL}${window.location.search}`}
             />
           ),
         },
@@ -225,7 +225,7 @@ const AppRoute = () => {
           element: (
             <Navigate
               to={`/${currentLocale}${PathEnum.Perp}/${
-                getSymbol() || DEFAULT_SYMBOL
+                getPerpSymbol() || DEFAULT_SYMBOL
               }${window.location.search}`}
             />
           ),

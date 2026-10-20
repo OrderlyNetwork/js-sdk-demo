@@ -8,7 +8,9 @@ vi.mock("@orderly.network/i18n", () => ({ generatePath: mocks.generatePath }));
 vi.mock("@orderly.network/portfolio", () => ({
   PortfolioLeftSidebarPath: { FeeTier: "/feeTier", ApiKey: "/apiKey" },
 }));
-vi.mock("@/storage", () => ({ getSymbol: () => "PERP_ETH_USDC" }));
+vi.mock("@/perpSymbolStorage", () => ({
+  getPerpSymbol: () => "PERP_ETH_USDC",
+}));
 
 beforeEach(() => {
   vi.clearAllMocks();

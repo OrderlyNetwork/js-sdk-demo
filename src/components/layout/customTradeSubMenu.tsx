@@ -10,7 +10,11 @@ import {
 } from "@orderly.network/ui";
 import { PathEnum } from "@/constant";
 import { useNav } from "@/hooks/useNav";
-import { DEFAULT_SYMBOL, getSymbol, updateSymbol } from "@/storage";
+import {
+  DEFAULT_SYMBOL,
+  getPerpSymbol,
+  setPerpSymbol,
+} from "@/perpSymbolStorage";
 import { MenuItemRow } from "./SubMenuComponents";
 
 type TradeSubMenuTab = "perps" | "prediction";
@@ -113,7 +117,7 @@ export const RightSection = (props: { className?: string }) => {
   // routes fall back to the remembered symbol.
   const isPerpsRoute = getTradeSubMenuTab(pathname) === "perps";
   const [symbol, setSymbol] = useState<string>(() =>
-    isPerpsRoute && params.symbol ? params.symbol : getSymbol(),
+    isPerpsRoute && params.symbol ? params.symbol : getPerpSymbol(),
   );
 
   useEffect(() => {
@@ -122,7 +126,7 @@ export const RightSection = (props: { className?: string }) => {
   }, [params.symbol, isPerpsRoute, symbol]);
 
   useEffect(() => {
-    updateSymbol(symbol);
+    setPerpSymbol(symbol);
   }, [symbol]);
 
   const onSymbolChange = useCallback(
@@ -159,7 +163,7 @@ export const customTradeSubMenuRender = () => {
 
     const handlePerpsClick = () => {
       onRouteChange({
-        href: `${PathEnum.Perp}/${getSymbol() || DEFAULT_SYMBOL}`,
+        href: `${PathEnum.Perp}/${getPerpSymbol() || DEFAULT_SYMBOL}`,
         name: "perps",
       });
     };
