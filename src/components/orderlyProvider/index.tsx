@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import * as Sentry from "@sentry/react";
 import { useAccount } from "@orderly.network/hooks";
 import { ErrorBoundary, OrderlyAppProvider } from "@orderly.network/react-app";
+import { AnnouncementPrototypeProvider } from "@orderly.network/ui-notification";
 import { appTargetConfig } from "@/components/orderlyConfig/appTargetConfig";
 import PageLoading from "@/components/pageLoading/pageLoading";
 import { plugins } from "@/config/plugins";
@@ -104,8 +105,10 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
         chainFilter={chainFilter}
         dataAdapter={dataAdapter}
       >
-        <SentryUserSync />
-        {props.children || <Outlet />}
+        <AnnouncementPrototypeProvider brokerId={appTargetConfig.brokerId}>
+          <SentryUserSync />
+          {props.children || <Outlet />}
+        </AnnouncementPrototypeProvider>
       </OrderlyAppProvider>
     </ErrorBoundary>
   );
