@@ -11,7 +11,7 @@ import { themes } from "@/config/themes";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { setSentryUserAddress } from "@/sentry";
-import { chainFilter } from "./chains";
+import { chainFilter, dataAdapter } from "./chains";
 import { useConfigStore } from "./configStore";
 import { OrderlyLocaleProvider } from "./orderlyLocaleProvider";
 import { createSolanaWallets } from "./solanaWallets";
@@ -102,6 +102,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
         themes={themes}
         plugins={plugins}
         chainFilter={chainFilter}
+        dataAdapter={dataAdapter}
       >
         <SentryUserSync />
         {props.children || <Outlet />}
