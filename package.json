@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "pnpm start:staging",
     "start:dev": "vite --mode dev --port 4564",
     "start:qa": "vite --mode qa --port 4565",
@@ -96,19 +97,8 @@
       "prettier --write"
     ]
   },
-  "pnpm": {
-    "overrides": {
-      "@coinbase/cdp-sdk>axios": "1.18.0",
-      "@ethersproject/providers>ws": "8.21.0",
-      "@json-rpc-tools/provider>axios": "0.33.0",
-      "@solana/wallet-adapter-walletconnect>@walletconnect/solana-adapter": "0.0.9",
-      "@trezor/protobuf>protobufjs": "7.6.5",
-      "@web3-onboard/core>nanoid": "5.1.16",
-      "bnc-sdk>crypto-es": "2.1.0",
-      "viem@2.12.0>ws": "8.21.0",
-      "viem@2.23.2>ws": "8.21.0",
-      "viem@2.31.0>ws": "8.21.0",
-      "viem@2.52.2>ws": "8.21.0"
-    }
+  "packageManager": "pnpm@12.15.0",
+  "engines": {
+    "pnpm": ">=12.0.0 <13"
   }
 }
