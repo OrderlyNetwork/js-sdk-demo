@@ -10,8 +10,8 @@ import { PortfolioLayout, TradingRewardsLayout } from "@/components/layout";
 import OrderlyProvider from "@/components/orderlyProvider";
 import { LazyPage } from "@/components/pageLoading/LazyPage";
 import { PathEnum } from "@/constant";
+import { getPerpSymbol } from "@/perpSymbolStorage";
 import { getSentryCreateBrowserRouter } from "@/sentry";
-import { DEFAULT_SYMBOL, getSymbol } from "@/storage";
 import { tryReloadForChunkError } from "@/utils/chunkLoadRecovery";
 
 const lazyImportPage = (
@@ -44,6 +44,7 @@ const AnnouncementPage = lazyImportPage(
 );
 const MarketsPage = lazyImportPage(() => import("@/pages/markets/page"));
 const PerpPage = lazyImportPage(() => import("@/pages/perp/page"));
+const PredictionPage = lazyImportPage(() => import("@/pages/prediction/page"));
 const VaultsPage = lazyImportPage(() => import("@/pages/vaults/page"));
 const APIKeyPage = lazyImportPage(
   () => import("@/pages/portfolio/api-key/page"),
@@ -109,9 +110,7 @@ const AppRoute = () => {
         {
           index: true,
           element: (
-            <Navigate
-              to={`${getSymbol() || DEFAULT_SYMBOL}${window.location.search}`}
-            />
+            <Navigate to={`${getPerpSymbol()}${window.location.search}`} />
           ),
         },
         {
@@ -119,6 +118,10 @@ const AppRoute = () => {
           element: <PerpPage />,
         },
       ],
+    },
+    {
+      path: "prediction/:symbol?",
+      element: <PredictionPage />,
     },
     {
       path: "portfolio",
@@ -219,9 +222,9 @@ const AppRoute = () => {
           index: true,
           element: (
             <Navigate
-              to={`/${currentLocale}${PathEnum.Perp}/${
-                getSymbol() || DEFAULT_SYMBOL
-              }${window.location.search}`}
+              to={`/${currentLocale}${PathEnum.Perp}/${getPerpSymbol()}${
+                window.location.search
+              }`}
             />
           ),
         },
@@ -230,7 +233,11 @@ const AppRoute = () => {
           children: [
             {
               index: true,
-              element: <Navigate to={`perp/${DEFAULT_SYMBOL}`} />,
+              element: (
+                <Navigate
+                  to={`perp/${getPerpSymbol()}${window.location.search}`}
+                />
+              ),
             },
             ...baseRoutes,
           ],

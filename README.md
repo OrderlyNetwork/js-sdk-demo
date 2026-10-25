@@ -82,6 +82,34 @@ docker run --rm -p 3000:3000 \
   orderly-js-sdk-vite-template
 ```
 
+## Prediction integration
+
+Follow the [Prediction Quick Start](https://gitlab.com/orderlynetwork/orderly-fe/orderly-web/-/blob/feat/prediction-prototype/packages/prediction/docs/quick-start.md)
+for the SDK 3.3.0 integration target, provider setup, routing, navigation, styles,
+feature controls, and an acceptance checklist. The guide lives in orderly-web on
+the `feat/prediction-prototype` branch and requires repository access. This demo's
+temporary internal dependency pins are tracked separately in [package.json](package.json).
+
+<!-- After orderly-web feat/prediction-prototype merges, point the Quick Start link above at main. -->
+
+The corresponding implementation in this repository is:
+
+- [Provider composition](src/components/orderlyProvider/index.tsx),
+  [config store](src/components/orderlyProvider/configStore.ts), and
+  [environment mapping](src/config/runtime.ts).
+- [Route registration](src/routes.tsx), [Prediction page](src/pages/prediction/page.tsx),
+  and [navigation adapter](src/hooks/useNav.ts), including locale/query preservation
+  and replacement navigation.
+- [Trade sub menu](src/components/layout/customTradeSubMenu.tsx),
+  [navigation configuration](src/hooks/useOrderlyConfig.tsx), and
+  [shared layout](src/components/baseLayout/index.tsx).
+- [Guarded Perps symbol storage](src/perpSymbolStorage.ts) and
+  [global styles](src/styles/index.css).
+
+For example, run `pnpm start:qa` and open
+`http://localhost:4565/en/prediction`. Available markets and trading depend on the
+target backend. See the Quick Start for the full environment table and checks.
+
 ## Runtime environment
 
 The same image can run in every deployment environment. The container startup
@@ -222,6 +250,8 @@ The release tag format includes the target suffix:
 ```
 vX.Y.Z.W-demo
 vX.Y.Z.W-dmm
+vX.Y.Z.W-demo-BRANCH
+vX.Y.Z.W-dmm-BRANCH
 vX.Y.Z.W-demo.N
 vX.Y.Z.W-dmm.N
 vX.Y.Z.W-demo-BRANCH.N
