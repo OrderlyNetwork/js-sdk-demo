@@ -1,10 +1,10 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router";
-import { i18n, parseI18nLang } from "@orderly.network/i18n";
+import { generatePath } from "@orderly.network/i18n";
 import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
-import { RouteOption } from "@orderly.network/types";
+import { perpRoute, type RouteOption } from "@orderly.network/types";
 import { PathEnum } from "@/constant";
-import { getSymbol } from "@/storage";
+import { getPerpSymbol } from "@/perpSymbolStorage";
 
 // if href not equal to the route path, we need to convert it to the route path
 const routeMap: Partial<Record<PortfolioLeftSidebarPath, PathEnum>> = {
@@ -41,17 +41,17 @@ export const useNav = () => {
         openExternalUrl(option.href);
         return;
       }
-      const lang = parseI18nLang(i18n.language);
 
       if (option.href === "/") {
-        const symbol = getSymbol();
-        navigate(`/${lang}${PathEnum.Perp}/${symbol}`);
+        navigate(generatePath({ path: perpRoute(getPerpSymbol()).href }), {
+          replace: option.replace,
+        });
         return;
       }
 
       const path = routeMap[option.href] || option.href;
 
-      navigate(`/${lang}${path}`);
+      navigate(generatePath({ path }), { replace: option.replace });
     },
     [navigate],
   );
