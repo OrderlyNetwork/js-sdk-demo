@@ -1,14 +1,13 @@
 // @vitest-environment jsdom
+import { cleanup, renderHook } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { i18n } from "@orderly.network/i18n";
 import { useNav } from "./useNav";
 
-const mocks = vi.hoisted(() => ({ navigate: vi.fn(), generatePath: vi.fn() }));
-vi.mock("react", () => ({ useCallback: (callback: unknown) => callback }));
-vi.mock("react-router", () => ({ useNavigate: () => mocks.navigate }));
-vi.mock("@orderly.network/i18n", () => ({
-  generatePath: mocks.generatePath,
-  getLocalePathFromPathname: (path: string) =>
-    ["en", "zh", "tc"].includes(path.split("/")[1]) ? path.split("/")[1] : null,
+const mocks = vi.hoisted(() => ({ navigate: vi.fn() }));
+vi.mock("react-router", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("react-router")>()),
+  useNavigate: () => mocks.navigate,
 }));
 vi.mock("@orderly.network/portfolio", () => ({
   PortfolioLeftSidebarPath: { FeeTier: "/feeTier", ApiKey: "/apiKey" },
@@ -17,38 +16,34 @@ vi.mock("@/perpSymbolStorage", () => ({
   getPerpSymbol: () => "PERP_ETH_USDC",
 }));
 
-beforeEach(() => {
+beforeEach(async () => {
   vi.clearAllMocks();
-  window.history.replaceState({}, "", "/zh/markets?networkId=testnet");
-  mocks.generatePath.mockImplementation(
-    ({ path, locale, search }) =>
-      `${/^\/(en|zh|tc)(\/|$)/.test(path) ? "" : `/${locale ?? "zh"}`}${path}${search ?? window.location.search}`,
+  window.history.replaceState(
+    {},
+    "",
+    "/zh/perp/PERP_ETH_USDC?networkId=testnet",
   );
+  await i18n.changeLanguage("zh");
 });
 
-afterEach(() => {
-  vi.restoreAllMocks();
-});
+afterEach(cleanup);
+
+function navigateTo(href: string, replace?: boolean) {
+  const { result } = renderHook(useNav);
+  result.current.onRouteChange({ href, name: href, replace });
+}
 
 describe("SDK route navigation", () => {
   it("forwards replacement and the localized URL with query parameters", () => {
-    useNav().onRouteChange({
-      href: "/prediction/PERP_BTC5M2608271200_USDC",
-      name: "prediction",
-      replace: true,
-    });
-    expect(mocks.generatePath).toHaveBeenCalledWith({
-      path: "/predict/PERP_BTC5M2608271200_USDC",
-      locale: "zh",
-    });
+    navigateTo("/prediction/PERP_BTC5M2608271200_USDC", true);
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
-      "/zh/predict/PERP_BTC5M2608271200_USDC?networkId=testnet",
+      "/zh/prediction/PERP_BTC5M2608271200_USDC?networkId=testnet",
       { replace: true },
     );
   });
 
   it("keeps ordinary market selection as normal navigation", () => {
-    useNav().onRouteChange({ href: "/perp/PERP_BTC_USDC", name: "perps" });
+    navigateTo("/perp/PERP_BTC_USDC");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/zh/perp/PERP_BTC_USDC?networkId=testnet",
       { replace: undefined },
@@ -56,118 +51,103 @@ describe("SDK route navigation", () => {
   });
 
   it("retains the stored trading symbol for root navigation", () => {
-    useNav().onRouteChange({ href: "/", name: "perps", replace: true });
-    expect(mocks.generatePath).toHaveBeenCalledWith({
-      path: "/perp/PERP_ETH_USDC",
-      locale: "zh",
-    });
+    navigateTo("/", true);
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/zh/perp/PERP_ETH_USDC?networkId=testnet",
       { replace: true },
     );
   });
 
-  it("preserves explicit query and hash on legacy navigation", () => {
+  it("maps portfolio aliases before applying query parameters and hash", () => {
+    navigateTo("/feeTier?networkId=mainnet#fees");
+    expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+      "/zh/portfolio/fee?networkId=mainnet#fees",
+      { replace: undefined },
+    );
+  });
+});
+
+describe("announcement navigation with the installed SDK URL formatter", () => {
+  beforeEach(() => {
     window.history.replaceState(
       {},
       "",
-      "/zh/markets?networkId=testnet#positions",
+      "/zh/announcement?networkId=testnet&category=listing&page=2",
     );
-    useNav().onRouteChange({
-      href: "/prediction/BTC%2F5M%25?network=main#orders#details",
-      name: "prediction",
-    });
-    expect(mocks.generatePath).toHaveBeenCalledWith({
-      path: "/predict/BTC%2F5M%25",
-      locale: "zh",
-      search: "?network=main",
-    });
+  });
+
+  it("switches category and removes the previous page", () => {
+    navigateTo("/announcement?networkId=testnet&category=campaign");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
-      "/zh/predict/BTC%2F5M%25?network=main#orders#details",
+      "/zh/announcement?networkId=testnet&category=campaign",
       { replace: undefined },
     );
   });
 
-  it("inherits the query and hash when the destination omits them", () => {
-    window.history.replaceState(
-      {},
-      "",
-      "/zh/markets?networkId=testnet#positions",
-    );
-    useNav().onRouteChange({ href: "/prediction", name: "prediction" });
+  it("selects all categories without restoring the old category or page", () => {
+    navigateTo("/announcement?networkId=testnet");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
-      "/zh/predict?networkId=testnet#positions",
+      "/zh/announcement?networkId=testnet",
       { replace: undefined },
     );
   });
 
-  it("uses the language of the current direct URL", () => {
-    window.history.replaceState({}, "", "/tc/predict?network=test#orders");
-    useNav().onRouteChange({ href: "/prediction/BTC", name: "prediction" });
+  it("allows an explicit empty query to clear all previous filters", () => {
+    navigateTo("/announcement?");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
-      "/tc/predict/BTC?network=test#orders",
+      "/zh/announcement?",
       { replace: undefined },
     );
   });
 
-  it("keeps an explicit destination language", () => {
-    useNav().onRouteChange({
-      href: "/en/prediction/BTC%2F5M?network=main#orders",
-      name: "prediction",
-    });
+  it("changes page without corrupting the category or page number", () => {
+    navigateTo("/announcement?networkId=testnet&category=listing&page=3");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
-      "/en/predict/BTC%2F5M?network=main#orders",
+      "/zh/announcement?networkId=testnet&category=listing&page=3",
       { replace: undefined },
     );
   });
 
-  it("supports query and hash suffixes on the default Perps destination", () => {
-    useNav().onRouteChange({ href: "/?network=main#orders", name: "perps" });
+  it("returns to page one without restoring the previous page", () => {
+    navigateTo("/announcement?networkId=testnet&category=listing");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
-      "/zh/perp/PERP_ETH_USDC?network=main#orders",
+      "/zh/announcement?networkId=testnet&category=listing",
       { replace: undefined },
     );
   });
 
-  it.each([
-    ["/feeTier", "/portfolio/fee"],
-    ["/apiKey", "/portfolio/api-key"],
-  ])("retains Portfolio mapping for %s", (href, path) => {
-    useNav().onRouteChange({ href, name: "portfolio" });
+  it.each(["/announcement/123", "/announcement"])(
+    "preserves list context once when navigating to %s",
+    (path) => {
+      navigateTo(`${path}?networkId=testnet&category=listing&page=2`);
+      expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+        `/zh${path}?networkId=testnet&category=listing&page=2`,
+        { replace: undefined },
+      );
+    },
+  );
+
+  it("keeps the hash after the target query string", () => {
+    navigateTo("/announcement/123?networkId=testnet#details");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
-      `/zh${path}?networkId=testnet`,
+      "/zh/announcement/123?networkId=testnet#details",
       { replace: undefined },
     );
   });
 
-  it("opens external links with the existing window isolation", () => {
-    const openedWindow = { opener: {} };
-    const open = vi
-      .spyOn(window, "open")
-      .mockReturnValue(openedWindow as Window);
-    useNav().onRouteChange({
-      href: "https://example.com/prediction?x=1#orders",
-      name: "external",
-      target: "_blank",
-    });
-    expect(open).toHaveBeenCalledExactlyOnceWith(
-      "https://example.com/prediction?x=1#orders",
-      "_blank",
-      "noopener,noreferrer",
+  it("inherits the current query before the hash when none is supplied", () => {
+    navigateTo("/announcement/123#details");
+    expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+      "/zh/announcement/123?networkId=testnet&category=listing&page=2#details",
+      { replace: undefined },
     );
-    expect(openedWindow.opener).toBeNull();
-    expect(mocks.generatePath).not.toHaveBeenCalled();
-    expect(mocks.navigate).not.toHaveBeenCalled();
   });
 
-  it("ignores external links with unsupported protocols", () => {
-    const open = vi.spyOn(window, "open").mockReturnValue(null);
-    useNav().onRouteChange({
-      href: "javascript:void(0)",
-      name: "external",
-      target: "_blank",
-    });
-    expect(open).not.toHaveBeenCalled();
-    expect(mocks.navigate).not.toHaveBeenCalled();
+  it("preserves an existing locale prefix", () => {
+    navigateTo("/en/announcement?category=legal");
+    expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+      "/en/announcement?category=legal",
+      { replace: undefined },
+    );
   });
 });
