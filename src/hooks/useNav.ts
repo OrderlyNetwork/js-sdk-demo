@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { useNavigate } from "react-router";
+import { parsePath, useNavigate } from "react-router";
 import { generatePath } from "@orderly.network/i18n";
 import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
 import { perpRoute, type RouteOption } from "@orderly.network/types";
@@ -42,16 +42,15 @@ export const useNav = () => {
         return;
       }
 
-      if (option.href === "/") {
-        navigate(generatePath({ path: perpRoute(getPerpSymbol()).href }), {
-          replace: option.replace,
-        });
-        return;
-      }
+      const { pathname = "/", search, hash = "" } = parsePath(option.href);
+      const path =
+        pathname === "/"
+          ? perpRoute(getPerpSymbol()).href
+          : routeMap[pathname] || pathname;
 
-      const path = routeMap[option.href] || option.href;
-
-      navigate(generatePath({ path }), { replace: option.replace });
+      navigate(`${generatePath({ path, search })}${hash}`, {
+        replace: option.replace,
+      });
     },
     [navigate],
   );
