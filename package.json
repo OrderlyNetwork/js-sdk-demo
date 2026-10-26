@@ -95,7 +95,8 @@
     "typescript-eslint": "^8.60.1",
     "vite": "^7.0.4",
     "vite-plugin-node-polyfills": "^0.24.0",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "zx": "8.8.5"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
