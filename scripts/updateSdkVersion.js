@@ -99,4 +99,8 @@ function updateSdkVersion() {
   // installAndCommit(packageVersion);
 }
 
-updateSdkVersion();
+if (require.main === module) {
+  updateSdkVersion();
+}
+
+module.exports = { updateDependencies };
