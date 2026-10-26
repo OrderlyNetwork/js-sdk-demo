@@ -13,7 +13,6 @@ export type BaseLayoutProps = {
 
 export const BaseLayout: FC<BaseLayoutProps> = (props) => {
   const config = useOrderlyConfig();
-
   const { onRouteChange } = useNav();
 
   return (
