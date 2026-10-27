@@ -107,8 +107,15 @@ The corresponding implementation in this repository is:
   [global styles](src/styles/index.css).
 
 For example, run `pnpm start:qa` and open
-`http://localhost:4565/en/prediction`. Available markets and trading depend on the
-target backend. See the Quick Start for the full environment table and checks.
+`http://localhost:4565/en/predict`. The canonical routes are `/predict` and
+`/predict/:symbol`, with the current language prefix. SDK navigation still emits
+legacy `/prediction` hrefs; the navigation adapter maps them to `/predict`.
+Direct legacy links use a replacement redirect that preserves the language,
+encoded symbol, query parameters, and hash. Entries without a language prefix
+receive the current language while preserving these URL suffixes.
+
+Available markets and trading depend on the target backend. See the Quick Start
+for the full environment table and checks.
 
 ## Runtime environment
 

@@ -22,7 +22,7 @@ function renderMenu(path: string) {
     <MemoryRouter initialEntries={[path]}>
       <Routes>
         <Route path="/perp/:symbol" element={<TradeSubMenu />} />
-        <Route path="/prediction/:symbol?" element={<TradeSubMenu />} />
+        <Route path="/predict/:symbol?" element={<TradeSubMenu />} />
         <Route path="*" element={<TradeSubMenu />} />
       </Routes>
     </MemoryRouter>,
@@ -38,7 +38,7 @@ afterEach(() => {
 });
 
 describe("getTradeSubMenuTab", () => {
-  it.each(["/prediction", "/prediction/PERP_BTC5M2608271200_USDC"])(
+  it.each(["/predict", "/predict/PERP_BTC5M2608271200_USDC"])(
     "treats %s as the prediction tab",
     (path) => {
       expect(getTradeSubMenuTab(path)).toBe("prediction");
@@ -48,7 +48,8 @@ describe("getTradeSubMenuTab", () => {
   it.each([
     "/perp/PERP_BTC_USDC",
     "/markets",
-    "/predictions",
+    "/predictionish",
+    "/predictish",
     "/portfolio/prediction",
   ])("treats %s as the perps tab", (path) => {
     expect(getTradeSubMenuTab(path)).toBe("perps");
@@ -64,7 +65,7 @@ describe("TradeSubMenu", () => {
   });
 
   it("passes the prediction round symbol for the widget to ignore", () => {
-    const props = renderMenu("/prediction/PERP_BTC5M2608271200_USDC");
+    const props = renderMenu("/predict/PERP_BTC5M2608271200_USDC");
     expect(props.activeKey).toBe("prediction");
     expect(props.symbol).toBe("PERP_BTC5M2608271200_USDC");
   });

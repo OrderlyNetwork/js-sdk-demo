@@ -1,4 +1,4 @@
-import { ComponentType, lazy, useState } from "react";
+import { ComponentType, lazy } from "react";
 import { Navigate, RouterProvider, RouteObject } from "react-router";
 import {
   getLocalePathFromPathname,
@@ -10,6 +10,8 @@ import { PortfolioLayout, TradingRewardsLayout } from "@/components/layout";
 import OrderlyProvider from "@/components/orderlyProvider";
 import { LazyPage } from "@/components/pageLoading/LazyPage";
 import { PathEnum } from "@/constant";
+import { LegacyPredictionRedirect } from "@/legacyPredictionRedirect";
+import { localizeEntryPath } from "@/navigationPaths";
 import { getPerpSymbol } from "@/perpSymbolStorage";
 import { getSentryCreateBrowserRouter } from "@/sentry";
 import { tryReloadForChunkError } from "@/utils/chunkLoadRecovery";
@@ -84,16 +86,12 @@ const AppRoute = () => {
   let currentLocale = parseI18nLang(i18n?.language);
 
   const pathname = window.location.pathname;
-  const search = window.location.search;
-  const hash = window.location.hash;
-  const localePath = getLocalePathFromPathname(pathname);
-  const [, setReplaceKey] = useState(0);
+  let localePath = getLocalePathFromPathname(pathname);
 
   if (!localePath && pathname !== PathEnum.Root && pathname !== "/health") {
-    const redirectPath = `/${currentLocale}${pathname}${search}${hash}`;
+    const redirectPath = localizeEntryPath(currentLocale, window.location);
     window.history.replaceState({}, "", redirectPath);
-    queueMicrotask(() => setReplaceKey((key) => key + 1));
-    return null;
+    localePath = currentLocale;
   }
 
   if (localePath && localePath !== currentLocale) {
@@ -121,6 +119,10 @@ const AppRoute = () => {
     },
     {
       path: "prediction/:symbol?",
+      element: <LegacyPredictionRedirect />,
+    },
+    {
+      path: "predict/:symbol?",
       element: <PredictionPage />,
     },
     {
