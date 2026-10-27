@@ -54,6 +54,26 @@ any local environment, keep using `VITE_APP_TARGET`, for example:
 VITE_APP_TARGET=dmm pnpm start:qa
 ```
 
+### Override broker via URL (testnet only)
+
+On testnet environments (`dev` / `qa` / `staging`), non-empty URL query params
+override the build-time broker from `VITE_APP_TARGET` and are written into the
+real SDK `configStore`:
+
+| Parameter    | Description            | Fallback              |
+| ------------ | ---------------------- | --------------------- |
+| `brokerId`   | Broker ID used by SDK  | `appTargetConfig`     |
+| `brokerName` | Broker display name    | `appTargetConfig`     |
+
+Example:
+
+```text
+http://localhost:4565/en/perp/PERP_ETH_USDC?brokerId=woofi_pro&brokerName=WOOFi
+```
+
+On mainnet (`prod` / `prod-iap`, or when `ENABLE_MAINNET` forces mainnet), URL
+broker params are ignored.
+
 4. Build
 
 ```

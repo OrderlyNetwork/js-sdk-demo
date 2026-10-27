@@ -1,4 +1,6 @@
 // @vitest-environment jsdom
+import { createElement } from "react";
+import { MemoryRouter } from "react-router";
 import { cleanup, renderHook } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { i18n } from "@orderly.network/i18n";
@@ -28,8 +30,19 @@ beforeEach(async () => {
 
 afterEach(cleanup);
 
-function navigateTo(href: string, replace?: boolean) {
-  const { result } = renderHook(useNav);
+function navigateTo(
+  href: string,
+  replace?: boolean,
+  preserveSearchParams = true,
+) {
+  const { result } = renderHook(() => useNav({ preserveSearchParams }), {
+    wrapper: ({ children }) =>
+      createElement(
+        MemoryRouter,
+        { initialEntries: [window.location.pathname + window.location.search] },
+        children,
+      ),
+  });
   result.current.onRouteChange({ href, name: href, replace });
 }
 
@@ -65,9 +78,93 @@ describe("SDK route navigation", () => {
       { replace: undefined },
     );
   });
+
+  it.each(["affiliate", "trader"])(
+    "preserves all current parameters when opening the %s referral tab",
+    (tab) => {
+      window.history.replaceState(
+        {},
+        "",
+        "/zh/portfolio?brokerId=woofi_pro&brokerName=WOOFi&networkId=testnet&campaign=autumn&feature=one&feature=two",
+      );
+      navigateTo(`/rewards/affiliate?tab=${tab}`);
+      expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+        `/zh/rewards/affiliate?brokerId=woofi_pro&brokerName=WOOFi&networkId=testnet&campaign=autumn&feature=one&feature=two&tab=${tab}`,
+        { replace: undefined },
+      );
+    },
+  );
+
+  it("replaces target keys with all target values, including empty values", () => {
+    window.history.replaceState(
+      {},
+      "",
+      "/zh/portfolio?campaign=autumn&tab=old&filter=old&filter=older&label=old",
+    );
+    navigateTo(
+      "/en/rewards/affiliate?tab=trader&filter=new&filter=next&label=#referral",
+      true,
+    );
+    expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+      "/en/rewards/affiliate?campaign=autumn&tab=trader&filter=new&filter=next&label=#referral",
+      { replace: true },
+    );
+  });
+
+  it("preserves current parameters for an empty target query", () => {
+    navigateTo("/markets?");
+    expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+      "/zh/markets?networkId=testnet",
+      { replace: undefined },
+    );
+  });
+
+  it("keeps encoded values intact when merging queries", () => {
+    window.history.replaceState(
+      {},
+      "",
+      "/zh/portfolio?brokerName=WOOFi%20Pro&context=a%26b%3Dc%2B&empty=",
+    );
+    navigateTo("/markets?campaign=%E7%A7%8B%E5%AD%A3");
+    const [href] = mocks.navigate.mock.calls[0];
+    const params = new URL(href, window.location.origin).searchParams;
+    expect(Array.from(params)).toEqual([
+      ["brokerName", "WOOFi Pro"],
+      ["context", "a&b=c+"],
+      ["empty", ""],
+      ["campaign", "秋季"],
+    ]);
+  });
+
+  it("opens external links without adding current parameters", () => {
+    const open = vi.spyOn(window, "open").mockReturnValue(null);
+    const { result } = renderHook(useNav, {
+      wrapper: ({ children }) => createElement(MemoryRouter, null, children),
+    });
+    try {
+      result.current.onRouteChange({
+        href: "https://orderly.network/docs?section=api",
+        name: "Docs",
+        target: "_blank",
+      });
+      expect(open).toHaveBeenCalledExactlyOnceWith(
+        "https://orderly.network/docs?section=api",
+        "_blank",
+        "noopener,noreferrer",
+      );
+      expect(mocks.navigate).not.toHaveBeenCalled();
+    } finally {
+      open.mockRestore();
+    }
+  });
 });
 
 describe("announcement navigation with the installed SDK URL formatter", () => {
+  function navigateToAnnouncement(href: string) {
+    // The announcement page opts into full query replacement for filter removal.
+    return navigateTo(href, undefined, false);
+  }
+
   beforeEach(() => {
     window.history.replaceState(
       {},
@@ -77,15 +174,28 @@ describe("announcement navigation with the installed SDK URL formatter", () => {
   });
 
   it("switches category and removes the previous page", () => {
-    navigateTo("/announcement?networkId=testnet&category=campaign");
+    navigateToAnnouncement("/announcement?networkId=testnet&category=campaign");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/zh/announcement?networkId=testnet&category=campaign",
       { replace: undefined },
     );
   });
 
+  it("preserves arbitrary context supplied by the SDK while removing filters", () => {
+    window.history.replaceState(
+      {},
+      "",
+      "/zh/announcement?brokerId=woofi_pro&campaign=autumn&category=listing&page=2",
+    );
+    navigateToAnnouncement("/announcement?brokerId=woofi_pro&campaign=autumn");
+    expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+      "/zh/announcement?brokerId=woofi_pro&campaign=autumn",
+      { replace: undefined },
+    );
+  });
+
   it("selects all categories without restoring the old category or page", () => {
-    navigateTo("/announcement?networkId=testnet");
+    navigateToAnnouncement("/announcement?networkId=testnet");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/zh/announcement?networkId=testnet",
       { replace: undefined },
@@ -93,7 +203,7 @@ describe("announcement navigation with the installed SDK URL formatter", () => {
   });
 
   it("allows an explicit empty query to clear all previous filters", () => {
-    navigateTo("/announcement?");
+    navigateToAnnouncement("/announcement?");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/zh/announcement?",
       { replace: undefined },
@@ -101,7 +211,9 @@ describe("announcement navigation with the installed SDK URL formatter", () => {
   });
 
   it("changes page without corrupting the category or page number", () => {
-    navigateTo("/announcement?networkId=testnet&category=listing&page=3");
+    navigateToAnnouncement(
+      "/announcement?networkId=testnet&category=listing&page=3",
+    );
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/zh/announcement?networkId=testnet&category=listing&page=3",
       { replace: undefined },
@@ -109,7 +221,7 @@ describe("announcement navigation with the installed SDK URL formatter", () => {
   });
 
   it("returns to page one without restoring the previous page", () => {
-    navigateTo("/announcement?networkId=testnet&category=listing");
+    navigateToAnnouncement("/announcement?networkId=testnet&category=listing");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/zh/announcement?networkId=testnet&category=listing",
       { replace: undefined },
@@ -119,7 +231,9 @@ describe("announcement navigation with the installed SDK URL formatter", () => {
   it.each(["/announcement/123", "/announcement"])(
     "preserves list context once when navigating to %s",
     (path) => {
-      navigateTo(`${path}?networkId=testnet&category=listing&page=2`);
+      navigateToAnnouncement(
+        `${path}?networkId=testnet&category=listing&page=2`,
+      );
       expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
         `/zh${path}?networkId=testnet&category=listing&page=2`,
         { replace: undefined },
@@ -128,7 +242,7 @@ describe("announcement navigation with the installed SDK URL formatter", () => {
   );
 
   it("keeps the hash after the target query string", () => {
-    navigateTo("/announcement/123?networkId=testnet#details");
+    navigateToAnnouncement("/announcement/123?networkId=testnet#details");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/zh/announcement/123?networkId=testnet#details",
       { replace: undefined },
@@ -136,7 +250,7 @@ describe("announcement navigation with the installed SDK URL formatter", () => {
   });
 
   it("inherits the current query before the hash when none is supplied", () => {
-    navigateTo("/announcement/123#details");
+    navigateToAnnouncement("/announcement/123#details");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/zh/announcement/123?networkId=testnet&category=listing&page=2#details",
       { replace: undefined },
@@ -144,7 +258,7 @@ describe("announcement navigation with the installed SDK URL formatter", () => {
   });
 
   it("preserves an existing locale prefix", () => {
-    navigateTo("/en/announcement?category=legal");
+    navigateToAnnouncement("/en/announcement?category=legal");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
       "/en/announcement?category=legal",
       { replace: undefined },
