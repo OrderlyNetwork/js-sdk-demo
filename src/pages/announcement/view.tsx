@@ -1,5 +1,6 @@
 import { useLocation, useParams } from "react-router";
 import { useTranslation } from "@orderly.network/i18n";
+import { useAppContext } from "@orderly.network/react-app";
 import {
   ChevronLeftIcon,
   Flex,
@@ -10,28 +11,32 @@ import {
 import { AnnouncementCenterPage } from "@orderly.network/ui-notification";
 import { BaseLayout } from "@/components/baseLayout";
 import { PathEnum } from "@/constant";
-import { useNav } from "@/hooks/useNav";
 
 export default function AnnouncementView() {
-  const { announcementId } = useParams();
+  const { slug } = useParams();
   const { search } = useLocation();
-  // The announcement SDK supplies the full query, including filter removals.
-  const { onRouteChange } = useNav({ preserveSearchParams: false });
+  const { onRouteChange } = useAppContext();
   const { t } = useTranslation();
   const { isMobile } = useScreen();
   const direction = useDocumentDirection();
-  const backLabel = announcementId
+  const backLabel = slug
     ? t("notification.announcements")
     : t("extend.backToTrading");
 
   const onBack = () => {
     const params = new URLSearchParams(search);
-    if (!announcementId) {
+    params.delete("is_official");
+    if (!slug) {
       params.delete("category");
       params.delete("page");
     }
-    const path = announcementId ? PathEnum.Announcement : PathEnum.Root;
-    onRouteChange({ href: `${path}?${params.toString()}`, name: backLabel });
+    const path = slug ? PathEnum.Announcement : PathEnum.Root;
+    const query = params.toString();
+    onRouteChange?.({
+      href: query ? `${path}?${query}` : path,
+      name: backLabel,
+      scope: "announcement",
+    });
   };
 
   const topBar = isMobile ? (
@@ -78,10 +83,7 @@ export default function AnnouncementView() {
           : undefined,
       }}
     >
-      <AnnouncementCenterPage
-        announcementId={announcementId}
-        routerAdapter={{ onRouteChange }}
-      />
+      <AnnouncementCenterPage slug={slug} />
     </BaseLayout>
   );
 }

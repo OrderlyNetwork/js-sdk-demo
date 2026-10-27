@@ -34,6 +34,7 @@ function navigateTo(
   href: string,
   replace?: boolean,
   preserveSearchParams = true,
+  scope?: string,
 ) {
   const { result } = renderHook(() => useNav({ preserveSearchParams }), {
     wrapper: ({ children }) =>
@@ -43,7 +44,7 @@ function navigateTo(
         children,
       ),
   });
-  result.current.onRouteChange({ href, name: href, replace });
+  result.current.onRouteChange({ href, name: href, replace, scope });
 }
 
 describe("SDK route navigation", () => {
@@ -136,33 +137,37 @@ describe("SDK route navigation", () => {
     ]);
   });
 
-  it("opens external links without adding current parameters", () => {
-    const open = vi.spyOn(window, "open").mockReturnValue(null);
-    const { result } = renderHook(useNav, {
-      wrapper: ({ children }) => createElement(MemoryRouter, null, children),
-    });
-    try {
-      result.current.onRouteChange({
-        href: "https://orderly.network/docs?section=api",
-        name: "Docs",
-        target: "_blank",
+  it.each([true, false])(
+    "opens external links unchanged when preservation is %s",
+    (preserveSearchParams) => {
+      const open = vi.spyOn(window, "open").mockReturnValue(null);
+      const { result } = renderHook(() => useNav({ preserveSearchParams }), {
+        wrapper: ({ children }) => createElement(MemoryRouter, null, children),
       });
-      expect(open).toHaveBeenCalledExactlyOnceWith(
-        "https://orderly.network/docs?section=api",
-        "_blank",
-        "noopener,noreferrer",
-      );
-      expect(mocks.navigate).not.toHaveBeenCalled();
-    } finally {
-      open.mockRestore();
-    }
-  });
+      try {
+        result.current.onRouteChange({
+          href: "https://orderly.network/docs?section=api",
+          name: "Docs",
+          target: "_blank",
+          scope: "announcement",
+        });
+        expect(open).toHaveBeenCalledExactlyOnceWith(
+          "https://orderly.network/docs?section=api",
+          "_blank",
+          "noopener,noreferrer",
+        );
+        expect(mocks.navigate).not.toHaveBeenCalled();
+      } finally {
+        open.mockRestore();
+      }
+    },
+  );
 });
 
 describe("announcement navigation with the installed SDK URL formatter", () => {
   function navigateToAnnouncement(href: string) {
-    // The announcement page opts into full query replacement for filter removal.
-    return navigateTo(href, undefined, false);
+    // The global callback recognizes complete announcement queries by scope.
+    return navigateTo(href, undefined, true, "announcement");
   }
 
   beforeEach(() => {
@@ -249,13 +254,46 @@ describe("announcement navigation with the installed SDK URL formatter", () => {
     );
   });
 
-  it("inherits the current query before the hash when none is supplied", () => {
+  it("clears the current query and preserves the hash when no target query is supplied", () => {
     navigateToAnnouncement("/announcement/123#details");
     expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
-      "/zh/announcement/123?networkId=testnet&category=listing&page=2#details",
+      "/zh/announcement/123?#details",
       { replace: undefined },
     );
   });
+
+  it.each(["category=legal", "page=2", "is_official=true"])(
+    "does not restore %s when the SDK supplies a query-free list URL",
+    (query) => {
+      window.history.replaceState({}, "", `/zh/announcement?${query}`);
+      navigateToAnnouncement("/announcement");
+      expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+        "/zh/announcement?",
+        { replace: undefined },
+      );
+    },
+  );
+
+  it.each([true, false])(
+    "overrides the previous official source with false when preservation is %s",
+    (preserveSearchParams) => {
+      window.history.replaceState(
+        {},
+        "",
+        "/zh/announcement?networkId=testnet&is_official=true",
+      );
+      navigateTo(
+        "/announcement/release-notes?networkId=testnet&is_official=false",
+        undefined,
+        preserveSearchParams,
+        "announcement",
+      );
+      expect(mocks.navigate).toHaveBeenCalledExactlyOnceWith(
+        "/zh/announcement/release-notes?networkId=testnet&is_official=false",
+        { replace: undefined },
+      );
+    },
+  );
 
   it("preserves an existing locale prefix", () => {
     navigateToAnnouncement("/en/announcement?category=legal");

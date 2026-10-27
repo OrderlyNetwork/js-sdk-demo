@@ -190,7 +190,7 @@ const AppRoute = () => {
       element: <AnnouncementPage />,
     },
     {
-      path: "announcement/:announcementId",
+      path: "announcement/:slug",
       element: <AnnouncementPage />,
     },
     {
