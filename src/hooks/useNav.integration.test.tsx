@@ -65,3 +65,62 @@ it("retains the broker store and arbitrary parameters across successive referral
   expect(result.current.location.hash).toBe("#rewards");
   expect(result.current.store).toBe(originalStore);
 });
+
+it("replaces announcement queries through the global adapter while retaining broker context", () => {
+  const initialEntry =
+    "/en/announcement/shared?brokerId=woofi_pro&brokerName=WOOFi&networkId=testnet&category=listing&page=2&is_official=true";
+  window.history.replaceState({}, "", "/?stale=window");
+  const { result } = renderHook(
+    () => {
+      const broker = useBrokerFromUrl("testnet");
+      return {
+        ...useNav(),
+        location: useLocation(),
+        store: useConfigStore({ ...broker, networkId: "testnet" }),
+      };
+    },
+    {
+      wrapper: ({ children }: PropsWithChildren) => (
+        <MemoryRouter initialEntries={[initialEntry]}>{children}</MemoryRouter>
+      ),
+    },
+  );
+  const originalStore = result.current.store;
+  act(() =>
+    result.current.onRouteChange({
+      href: "/announcement?brokerId=woofi_pro&brokerName=WOOFi&networkId=testnet&category=listing&page=2",
+      name: "Announcements",
+      scope: "announcement",
+    }),
+  );
+  expect(result.current.location.pathname).toBe("/en/announcement");
+  expect(result.current.location.search).toBe(
+    "?brokerId=woofi_pro&brokerName=WOOFi&networkId=testnet&category=listing&page=2",
+  );
+  expect(result.current.store).toBe(originalStore);
+
+  act(() =>
+    result.current.onRouteChange({
+      href: "/announcement?brokerId=woofi_pro&brokerName=WOOFi&networkId=testnet",
+      name: "All announcements",
+      scope: "announcement",
+    }),
+  );
+  expect(result.current.location.search).toBe(
+    "?brokerId=woofi_pro&brokerName=WOOFi&networkId=testnet",
+  );
+  expect(result.current.store).toBe(originalStore);
+
+  act(() =>
+    result.current.onRouteChange({
+      href: "/announcement/shared?brokerId=woofi_pro&brokerName=WOOFi&networkId=testnet&is_official=false#detail",
+      name: "Platform announcement",
+      scope: "announcement",
+    }),
+  );
+  expect(result.current.location.search).toBe(
+    "?brokerId=woofi_pro&brokerName=WOOFi&networkId=testnet&is_official=false",
+  );
+  expect(result.current.location.hash).toBe("#detail");
+  expect(result.current.store).toBe(originalStore);
+});

@@ -51,7 +51,9 @@ export const useNav = ({ preserveSearchParams = true } = {}) => {
           : routeMap[pathname] || pathname;
 
       const params = new URLSearchParams(
-        preserveSearchParams || search === undefined ? currentSearch : "",
+        preserveSearchParams && option.scope !== "announcement"
+          ? currentSearch
+          : "",
       );
       const targetParams = new URLSearchParams(search);
       // Replace all values for target keys while retaining unrelated parameters.
