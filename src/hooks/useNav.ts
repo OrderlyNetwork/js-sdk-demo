@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { parsePath, useNavigate } from "react-router";
+import { parsePath, useLocation, useNavigate } from "react-router";
 import { generatePath } from "@orderly.network/i18n";
 import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
 import { perpRoute, type RouteOption } from "@orderly.network/types";
@@ -32,8 +32,10 @@ const openExternalUrl = (href: string) => {
   }
 };
 
-export const useNav = () => {
+// Disable preservation when the caller supplies a complete query with removals.
+export const useNav = ({ preserveSearchParams = true } = {}) => {
   const navigate = useNavigate();
+  const { search: currentSearch } = useLocation();
 
   const onRouteChange = useCallback(
     (option: RouteOption) => {
@@ -48,11 +50,23 @@ export const useNav = () => {
           ? perpRoute(getPerpSymbol()).href
           : routeMap[pathname] || pathname;
 
-      navigate(`${generatePath({ path, search })}${hash}`, {
-        replace: option.replace,
-      });
+      const params = new URLSearchParams(
+        preserveSearchParams || search === undefined ? currentSearch : "",
+      );
+      const targetParams = new URLSearchParams(search);
+      // Replace all values for target keys while retaining unrelated parameters.
+      new Set(targetParams.keys()).forEach((key) => params.delete(key));
+      targetParams.forEach((value, key) => params.append(key, value));
+
+      // An explicit "?" prevents generatePath from restoring window.location.search.
+      navigate(
+        `${generatePath({ path, search: `?${params.toString()}` })}${hash}`,
+        {
+          replace: option.replace,
+        },
+      );
     },
-    [navigate],
+    [navigate, currentSearch, preserveSearchParams],
   );
 
   return { onRouteChange };

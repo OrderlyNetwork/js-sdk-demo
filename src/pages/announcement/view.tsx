@@ -14,7 +14,8 @@ import { useNav } from "@/hooks/useNav";
 export default function AnnouncementView() {
   const { t } = useTranslation();
   const { announcementId } = useParams();
-  const { onRouteChange } = useNav();
+  // The announcement SDK supplies the full query, including filter removals.
+  const { onRouteChange } = useNav({ preserveSearchParams: false });
   const direction = useDocumentDirection();
   const backToTradingLabel = t("extend.backToTrading");
 

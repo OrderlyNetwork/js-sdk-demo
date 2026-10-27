@@ -9,6 +9,7 @@ import PageLoading from "@/components/pageLoading/pageLoading";
 import { plugins } from "@/config/plugins";
 import { getOrderlyConfig, switchAppNetwork } from "@/config/runtime";
 import { themes } from "@/config/themes";
+import { useBrokerFromUrl } from "@/hooks/useBrokerFromUrl";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { setSentryUserAddress } from "@/sentry";
@@ -43,9 +44,10 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
     [],
   );
   const { networkId } = orderlyConfig;
+  const { brokerId, brokerName } = useBrokerFromUrl(networkId);
   const configStore = useConfigStore({
-    brokerId: appTargetConfig.brokerId,
-    brokerName: appTargetConfig.brokerName,
+    brokerId,
+    brokerName,
     networkId,
     appEnv: orderlyConfig.appEnv,
     urls: orderlyConfig.urls,
