@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "pnpm start:staging",
+    "dev": "pnpm start:qa",
     "start:dev": "vite --mode dev --port 4564",
     "start:qa": "vite --mode qa --port 4565",
     "start:staging": "vite --mode staging --port 4567",
