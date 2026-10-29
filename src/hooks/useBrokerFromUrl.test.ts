@@ -3,7 +3,7 @@ import { resolveBrokerConfig } from "./useBrokerFromUrl";
 
 const defaults = {
   brokerId: "demo",
-  brokerName: "Orderly",
+  brokerName: "Orderly Demo",
 };
 
 describe("resolveBrokerConfig", () => {
@@ -49,7 +49,7 @@ describe("resolveBrokerConfig", () => {
 
     expect(result).toEqual({
       brokerId: "woofi_pro",
-      brokerName: "Orderly",
+      brokerName: "Orderly Demo",
     });
   });
 
