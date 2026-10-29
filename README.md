@@ -23,12 +23,12 @@ pnpm dev
 
 Local development supports the same environment split as WOOFi Pro:
 
-| Command               | Vite mode  | Port | Orderly network | SDK env |
-| --------------------- | ---------- | ---: | --------------- | ------- |
-| `pnpm start:dev`      | `dev`      | 4564 | testnet         | dev     |
-| `pnpm start:qa`       | `qa`       | 4565 | testnet         | qa      |
-| `pnpm start:staging`  | `staging`  | 4567 | testnet         | staging |
-| `pnpm start:prod`     | `prod`     | 4568 | mainnet         | prod    |
+| Command              | Vite mode | Port | Orderly network | SDK env |
+| -------------------- | --------- | ---: | --------------- | ------- |
+| `pnpm start:dev`     | `dev`     | 4564 | testnet         | dev     |
+| `pnpm start:qa`      | `qa`      | 4565 | testnet         | qa      |
+| `pnpm start:staging` | `staging` | 4567 | testnet         | staging |
+| `pnpm start:prod`    | `prod`    | 4568 | mainnet         | prod    |
 
 `pnpm dev` is an alias for `pnpm start:staging`. `dev` and `qa` use their
 matching Orderly internal API, WebSocket, and Operator endpoints. `staging`
@@ -54,25 +54,33 @@ any local environment, keep using `VITE_APP_TARGET`, for example:
 VITE_APP_TARGET=dmm pnpm start:qa
 ```
 
-### Override broker via URL (testnet only)
+### Override broker and announcements via URL (testnet only)
 
 On testnet environments (`dev` / `qa` / `staging`), non-empty URL query params
 override the build-time broker from `VITE_APP_TARGET` and are written into the
-real SDK `configStore`:
+real SDK `configStore`. The announcement override is passed to
+`OrderlyAppProvider.widgetConfigs.announcement.excludeOfficial`:
 
-| Parameter    | Description            | Fallback              |
-| ------------ | ---------------------- | --------------------- |
-| `brokerId`   | Broker ID used by SDK  | `appTargetConfig`     |
-| `brokerName` | Broker display name    | `appTargetConfig`     |
+| Parameter         | Description                                       | Fallback                      |
+| ----------------- | ------------------------------------------------- | ----------------------------- |
+| `brokerId`        | Broker ID used by SDK                             | `appTargetConfig`             |
+| `brokerName`      | Broker display name                               | `appTargetConfig`             |
+| `excludeOfficial` | Exclude official announcements (`true` / `false`) | `false` for both demo and dmm |
 
 Example:
 
 ```text
-http://localhost:4565/en/perp/PERP_ETH_USDC?brokerId=woofi_pro&brokerName=WOOFi
+http://localhost:4565/en/perp/PERP_ETH_USDC?brokerId=woofi_pro&brokerName=WOOFi&excludeOfficial=true
 ```
 
 On mainnet (`prod` / `prod-iap`, or when `ENABLE_MAINNET` forces mainnet), URL
-broker params are ignored.
+broker and announcement params are ignored. Both targets default to
+`excludeOfficial=false`, including official announcements on either network.
+Only the exact, case-sensitive value `true` (after trimming surrounding
+whitespace) enables exclusion. Any other value — including `false`, missing,
+empty, or invalid — falls back to `false`. Changes follow the router query
+parameters and are not persisted to localStorage. Maintenance reminders remain
+independent of this setting.
 
 4. Build
 
@@ -153,27 +161,27 @@ container from starting.
 `__RUNTIME_CONFIG__` does not include API, WebSocket, or Operator URLs. The
 frontend derives those endpoints from `APP_ENV`:
 
-| `APP_ENV` | Orderly API base URL |
-| --------- | -------------------- |
-| `dev` | `https://api.dev.orderly-i.network` |
-| `qa` | `https://api.qa.orderly-i.network` |
-| `staging` | `https://testnet-api.orderly.org` |
-| `prod` / `prod-iap` | `https://api.orderly.org` |
+| `APP_ENV`           | Orderly API base URL                |
+| ------------------- | ----------------------------------- |
+| `dev`               | `https://api.dev.orderly-i.network` |
+| `qa`                | `https://api.qa.orderly-i.network`  |
+| `staging`           | `https://testnet-api.orderly.org`   |
+| `prod` / `prod-iap` | `https://api.orderly.org`           |
 
 The sdk-demo and DMM deployment environments and required K8s environment
 variables are:
 
-| Service | Environment | Current URL | `APP_ENV` | `MAINNET_APP_URL` | `TESTNET_APP_URL` |
-| ------- | ----------- | ----------- | --------- | ----------------- | ----------------- |
-| sdk-demo | dev | https://demo.dev.orderly-i.network/ | `dev` | https://demo.orderly.network/ | https://demo.dev.orderly-i.network/ |
-| sdk-demo | qa | https://demo.qa.orderly-i.network/ | `qa` | https://demo.orderly.network/ | https://demo.qa.orderly-i.network/ |
-| sdk-demo | staging | https://testnet-demo.orderly.network/ | `staging` | https://demo.orderly.network/ | https://testnet-demo.orderly.network/ |
-| sdk-demo | prod-iap | https://demo-iap.orderly.network/ | `prod` | https://demo-iap.orderly.network/ | https://testnet-demo.orderly.network/ |
-| sdk-demo | prod | https://demo.orderly.network/ | `prod` | https://demo.orderly.network/ | https://testnet-demo.orderly.network/ |
-| dmm | dev | https://dmm.dev.orderly-i.network/ | `dev` | https://dmm.orderly.network/ | https://dmm.dev.orderly-i.network/ |
-| dmm | qa | https://dmm.qa.orderly-i.network/ | `qa` | https://dmm.orderly.network/ | https://dmm.qa.orderly-i.network/ |
-| dmm | staging | https://testnet-dmm.orderly.network/ | `staging` | https://dmm.orderly.network/ | https://testnet-dmm.orderly.network/ |
-| dmm | prod | https://dmm.orderly.network/ | `prod` | https://dmm.orderly.network/ | https://testnet-dmm.orderly.network/ |
+| Service  | Environment | Current URL                           | `APP_ENV` | `MAINNET_APP_URL`                 | `TESTNET_APP_URL`                     |
+| -------- | ----------- | ------------------------------------- | --------- | --------------------------------- | ------------------------------------- |
+| sdk-demo | dev         | https://demo.dev.orderly-i.network/   | `dev`     | https://demo.orderly.network/     | https://demo.dev.orderly-i.network/   |
+| sdk-demo | qa          | https://demo.qa.orderly-i.network/    | `qa`      | https://demo.orderly.network/     | https://demo.qa.orderly-i.network/    |
+| sdk-demo | staging     | https://testnet-demo.orderly.network/ | `staging` | https://demo.orderly.network/     | https://testnet-demo.orderly.network/ |
+| sdk-demo | prod-iap    | https://demo-iap.orderly.network/     | `prod`    | https://demo-iap.orderly.network/ | https://testnet-demo.orderly.network/ |
+| sdk-demo | prod        | https://demo.orderly.network/         | `prod`    | https://demo.orderly.network/     | https://testnet-demo.orderly.network/ |
+| dmm      | dev         | https://dmm.dev.orderly-i.network/    | `dev`     | https://dmm.orderly.network/      | https://dmm.dev.orderly-i.network/    |
+| dmm      | qa          | https://dmm.qa.orderly-i.network/     | `qa`      | https://dmm.orderly.network/      | https://dmm.qa.orderly-i.network/     |
+| dmm      | staging     | https://testnet-dmm.orderly.network/  | `staging` | https://dmm.orderly.network/      | https://testnet-dmm.orderly.network/  |
+| dmm      | prod        | https://dmm.orderly.network/          | `prod`    | https://dmm.orderly.network/      | https://testnet-dmm.orderly.network/  |
 
 Outside the validated container startup path, a missing `APP_ENV` falls back
 to the SDK `prod` environment and Orderly mainnet endpoints.
@@ -223,7 +231,7 @@ by Privy, WalletConnect, or browser wallets.
 
 The browser application reports errors and performance traces to Sentry in
 every runtime environment. The active environment comes from `APP_ENV`, and a
-connected wallet address is used as the Sentry user ID. Default PII collection 
+connected wallet address is used as the Sentry user ID. Default PII collection
 is disabled.
 
 Source maps are build-only data and use the following variables:

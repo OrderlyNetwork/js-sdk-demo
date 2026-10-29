@@ -9,6 +9,7 @@ import PageLoading from "@/components/pageLoading/pageLoading";
 import { plugins } from "@/config/plugins";
 import { getOrderlyConfig, switchAppNetwork } from "@/config/runtime";
 import { themes } from "@/config/themes";
+import { useAnnouncementFromUrl } from "@/hooks/useAnnouncementFromUrl";
 import { useBrokerFromUrl } from "@/hooks/useBrokerFromUrl";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
@@ -45,6 +46,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   );
   const { networkId } = orderlyConfig;
   const { brokerId, brokerName } = useBrokerFromUrl(networkId);
+  const widgetConfigs = useAnnouncementFromUrl(networkId);
   const configStore = useConfigStore({
     brokerId,
     brokerName,
@@ -80,7 +82,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
       <OrderlyAppProvider
         configStore={configStore}
         appIcons={config.orderlyAppProvider.appIcons}
-        widgetConfigs={appTargetConfig.widgetConfigs}
+        widgetConfigs={widgetConfigs}
         enableSwapDeposit
         onChainChanged={(
           _chainId: number,

@@ -1,10 +1,15 @@
 // @vitest-environment jsdom
 import type { PropsWithChildren } from "react";
-import { MemoryRouter, useLocation } from "react-router";
+import { MemoryRouter, useLocation, useNavigate } from "react-router";
 import { act, cleanup, renderHook } from "@testing-library/react";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { i18n } from "@orderly.network/i18n";
+import {
+  appTargetConfig,
+  appTargetConfigMap,
+} from "@/components/orderlyConfig/appTargetConfig";
 import { useConfigStore } from "@/components/orderlyProvider/configStore";
+import { useAnnouncementFromUrl } from "./useAnnouncementFromUrl";
 import { useBrokerFromUrl } from "./useBrokerFromUrl";
 import { useNav } from "./useNav";
 
@@ -123,4 +128,115 @@ it("replaces announcement queries through the global adapter while retaining bro
   );
   expect(result.current.location.hash).toBe("#detail");
   expect(result.current.store).toBe(originalStore);
+});
+
+it.each(["demo", "dmm"] as const)(
+  "applies announcement URL configuration for %s without rebuilding the broker store",
+  (target) => {
+    const defaults = appTargetConfigMap[target].widgetConfigs ?? {};
+    window.history.replaceState({}, "", "/?excludeOfficial=false&stale=window");
+    const { result, rerender } = renderHook(
+      ({ networkId }) => {
+        const broker = useBrokerFromUrl(networkId);
+        return {
+          ...useNav(),
+          navigate: useNavigate(),
+          location: useLocation(),
+          widgets: useAnnouncementFromUrl(networkId, defaults),
+          store: useConfigStore({ ...broker, networkId }),
+        };
+      },
+      {
+        initialProps: { networkId: "testnet" as "testnet" | "mainnet" },
+        wrapper: ({ children }: PropsWithChildren) => (
+          <MemoryRouter
+            initialEntries={[
+              "/en/markets?brokerId=woofi_pro&brokerName=WOOFi&excludeOfficial=true&campaign=autumn",
+            ]}
+          >
+            {children}
+          </MemoryRouter>
+        ),
+      },
+    );
+    const originalStore = result.current.store;
+    expect(result.current.widgets.announcement?.excludeOfficial).toBe(true);
+    expect(result.current.widgets.subAccount).toEqual(defaults?.subAccount);
+    expect(defaults?.announcement).toBeUndefined();
+    if (target === "dmm")
+      expect(result.current.widgets.subAccount?.maxSubAccountCount).toBe(9999);
+
+    act(() =>
+      result.current.onRouteChange({
+        href: "/portfolio?tab=history",
+        name: "Portfolio",
+      }),
+    );
+    expect(
+      new URLSearchParams(result.current.location.search).get(
+        "excludeOfficial",
+      ),
+    ).toBe("true");
+    expect(result.current.widgets.announcement?.excludeOfficial).toBe(true);
+    expect(result.current.store).toBe(originalStore);
+
+    act(() =>
+      result.current.onRouteChange({
+        href: "/markets?excludeOfficial=false",
+        name: "Markets",
+      }),
+    );
+    expect(result.current.widgets.announcement?.excludeOfficial).toBe(false);
+    expect(result.current.store).toBe(originalStore);
+
+    act(() =>
+      result.current.onRouteChange({
+        href: "/announcement?brokerId=woofi_pro&brokerName=WOOFi&excludeOfficial=true&category=legal&page=2",
+        name: "Announcements",
+        scope: "announcement",
+      }),
+    );
+    expect(result.current.widgets.announcement?.excludeOfficial).toBe(true);
+    expect(
+      new URLSearchParams(result.current.location.search).get("page"),
+    ).toBe("2");
+    expect(result.current.store).toBe(originalStore);
+
+    rerender({ networkId: "mainnet" });
+    expect(result.current.widgets.announcement?.excludeOfficial).toBe(false);
+    expect(result.current.store.get("brokerId")).toBe(appTargetConfig.brokerId);
+    rerender({ networkId: "testnet" });
+    expect(result.current.widgets.announcement?.excludeOfficial).toBe(true);
+
+    const currentStore = result.current.store;
+    act(() =>
+      result.current.navigate(
+        "/en/announcement?brokerId=woofi_pro&brokerName=WOOFi",
+      ),
+    );
+    expect(result.current.widgets.announcement?.excludeOfficial).toBe(false);
+    expect(result.current.widgets.subAccount).toEqual(defaults?.subAccount);
+    expect(result.current.store).toBe(currentStore);
+  },
+);
+
+it("preserves nested announcement and target settings without mutating defaults", () => {
+  const defaults = {
+    subAccount: { maxSubAccountCount: 9999 },
+    announcement: { excludeOfficial: true, customOption: "preserved" },
+  };
+  const { result } = renderHook(
+    () => useAnnouncementFromUrl("testnet", defaults),
+    {
+      wrapper: ({ children }: PropsWithChildren) => (
+        <MemoryRouter>{children}</MemoryRouter>
+      ),
+    },
+  );
+  expect(result.current).toEqual({
+    subAccount: { maxSubAccountCount: 9999 },
+    announcement: { excludeOfficial: false, customOption: "preserved" },
+  });
+  expect(defaults.announcement.excludeOfficial).toBe(true);
+  expect(result.current.subAccount).toBe(defaults.subAccount);
 });
