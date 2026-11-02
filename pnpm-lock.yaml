@@ -179,6 +179,9 @@ importers:
 
   .:
     dependencies:
+      '@binance/w3w-blocknative-connector':
+        specifier: ^1.1.12
+        version: 1.1.12(@web3-onboard/common@2.4.2(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@4.4.3))(bufferutil@4.1.0)(debug@4.4.3(supports-color@8.1.1))(encoding@0.1.13)(utf-8-validate@5.0.10)
       '@orderly.network/affiliate':
         specifier: 3.3.2-internal-announcement.7
         version: 3.3.2-internal-announcement.7(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(bufferutil@4.1.0)(embla-carousel@8.6.0)(encoding@0.1.13)(fastestsmallesttextencoderdecoder@1.0.22)(got@11.8.6)(react-dom@18.3.1(react@18.3.1))(react-native@0.76.3(@babel/core@7.29.7(supports-color@8.1.1))(@babel/preset-env@7.26.0(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(@types/react@18.3.31)(bufferutil@4.1.0)(encoding@0.1.13)(react@18.3.1)(supports-color@8.1.1)(utf-8-validate@5.0.10))(react@18.3.1)(supports-color@8.1.1)(tailwindcss@3.4.19)(typescript@5.9.3)(utf-8-validate@5.0.10)
