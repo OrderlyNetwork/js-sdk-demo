@@ -1,4 +1,5 @@
 import { ReactNode, useMemo } from "react";
+import binanceModule from "@binance/w3w-blocknative-connector";
 import type { Adapter } from "@solana/wallet-adapter-base";
 import injectedWallets from "@web3-onboard/injected-wallets";
 import walletConnect from "@web3-onboard/walletconnect";
@@ -27,6 +28,7 @@ const LegacyWalletConnector = ({
   const evmWallets = useMemo(
     () => [
       injectedWallets(),
+      binanceModule({ options: { lng: "en" } }),
       walletConnect({
         projectId: WALLET_CONNECT_PROJECT_ID,
         dappUrl: window.location.origin,
