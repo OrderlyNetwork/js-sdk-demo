@@ -203,29 +203,28 @@ localStorage.setItem("ENABLE_MAINNET", "1");
 localStorage.removeItem("ENABLE_MAINNET");
 ```
 
-### Legacy wallet connector
+### Wallet modes
 
-Privy is the default wallet connector. For browser-only testing, set the
-`USE_LEGACY_WALLET_CONNECTOR` local storage value to the exact string `"true"`
-and reload the page to use the legacy Orderly wallet connector. The legacy
-connector includes injected EVM wallets, WalletConnect QR, and the configured
-Solana wallets:
+Privy is the default wallet connector. Switch modes with the `walletMode` URL
+query parameter on first load (reload after changing it):
 
-```js
-localStorage.setItem("USE_LEGACY_WALLET_CONNECTOR", "true");
-location.reload();
+| `walletMode` | Behavior |
+| ------------ | -------- |
+| `privy`      | Current wallet provider with Privy login enabled (default). |
+| `wallet`     | Current wallet provider with external wallets only. |
+| `legacy`     | Legacy Web3 Onboard provider (development builds only). |
+
+Examples:
+
+```text
+http://localhost:5173/?walletMode=privy
+http://localhost:5173/?walletMode=wallet
+http://localhost:5173/?walletMode=legacy
 ```
 
-Remove the value and reload to restore Privy:
-
-```js
-localStorage.removeItem("USE_LEGACY_WALLET_CONNECTOR");
-location.reload();
-```
-
-The values `"false"`, an empty string, and all other values also keep Privy as
-the active connector. Switching connectors does not clear sessions persisted
-by Privy, WalletConnect, or browser wallets.
+Missing or invalid values default to `privy`. In non-development builds,
+`legacy` falls back to `privy`. Switching modes does not clear sessions
+persisted by Privy, WalletConnect, or browser wallets.
 
 ## Sentry monitoring
 
