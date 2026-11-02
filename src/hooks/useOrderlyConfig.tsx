@@ -22,6 +22,7 @@ import {
   AffiliateIcon,
   LeftNavVaultsIcon,
   PredictionIcon,
+  BellIcon,
 } from "@orderly.network/ui";
 import {
   BottomNavProps,
@@ -233,6 +234,11 @@ function getLeftNavMenus(
         name: t("tradingLeaderboard.leaderboard"),
         href: PathEnum.Leaderboard,
         icon: <LeaderboardInactiveIcon />,
+      },
+      {
+        name: t("notification.announcements"),
+        href: PathEnum.Announcement,
+        icon: <BellIcon color="white" opacity={0.8} viewBox="0 0 20 20" />,
       },
       {
         name: t("common.assets"),

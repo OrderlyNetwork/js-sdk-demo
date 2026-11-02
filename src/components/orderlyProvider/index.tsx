@@ -3,11 +3,14 @@ import { Outlet } from "react-router";
 import * as Sentry from "@sentry/react";
 import { useAccount } from "@orderly.network/hooks";
 import { ErrorBoundary, OrderlyAppProvider } from "@orderly.network/react-app";
+import { AnnouncementProvider } from "@orderly.network/ui-notification";
 import { appTargetConfig } from "@/components/orderlyConfig/appTargetConfig";
 import PageLoading from "@/components/pageLoading/pageLoading";
 import { plugins } from "@/config/plugins";
 import { getOrderlyConfig, switchAppNetwork } from "@/config/runtime";
 import { themes } from "@/config/themes";
+import { useAnnouncementFromUrl } from "@/hooks/useAnnouncementFromUrl";
+import { useBrokerFromUrl } from "@/hooks/useBrokerFromUrl";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
 import { setSentryUserAddress } from "@/sentry";
@@ -42,9 +45,11 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
     [],
   );
   const { networkId } = orderlyConfig;
+  const { brokerId, brokerName } = useBrokerFromUrl(networkId);
+  const widgetConfigs = useAnnouncementFromUrl(networkId);
   const configStore = useConfigStore({
-    brokerId: appTargetConfig.brokerId,
-    brokerName: appTargetConfig.brokerName,
+    brokerId,
+    brokerName,
     networkId,
     appEnv: orderlyConfig.appEnv,
     urls: orderlyConfig.urls,
@@ -77,7 +82,7 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
       <OrderlyAppProvider
         configStore={configStore}
         appIcons={config.orderlyAppProvider.appIcons}
-        widgetConfigs={appTargetConfig.widgetConfigs}
+        widgetConfigs={widgetConfigs}
         enableSwapDeposit
         onChainChanged={(
           _chainId: number,
@@ -104,8 +109,10 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
         chainFilter={chainFilter}
         dataAdapter={dataAdapter}
       >
-        <SentryUserSync />
-        {props.children || <Outlet />}
+        <AnnouncementProvider>
+          <SentryUserSync />
+          {props.children || <Outlet />}
+        </AnnouncementProvider>
       </OrderlyAppProvider>
     </ErrorBoundary>
   );

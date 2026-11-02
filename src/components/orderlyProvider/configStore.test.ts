@@ -6,13 +6,13 @@ describe("createConfigStore", () => {
   it("stores the demo broker and uses the SDK testnet defaults", () => {
     const store = createConfigStore({
       brokerId: "demo",
-      brokerName: "Orderly",
+      brokerName: "Orderly Demo",
       networkId: "testnet",
       appEnv: "qa",
     });
 
     expect(store.get("brokerId")).toBe("demo");
-    expect(store.get("brokerName")).toBe("Orderly");
+    expect(store.get("brokerName")).toBe("Orderly Demo");
     expect(store.get("networkId")).toBe("testnet");
     expect(store.get("env")).toBe("qa");
     expect(store.get("apiBaseUrl")).toBe(API_URLS.testnet.apiBaseUrl);
@@ -24,7 +24,7 @@ describe("createConfigStore", () => {
   it("stores the dmm broker and normalizes prod-iap to prod", () => {
     const store = createConfigStore({
       brokerId: "orderly",
-      brokerName: "Orderly",
+      brokerName: "Orderly DMM",
       networkId: "mainnet",
       appEnv: "prod-iap",
     });
@@ -38,7 +38,7 @@ describe("createConfigStore", () => {
   it("falls back to the prod SDK environment", () => {
     const store = createConfigStore({
       brokerId: "demo",
-      brokerName: "Orderly",
+      brokerName: "Orderly Demo",
       networkId: "testnet",
     });
 
@@ -48,7 +48,7 @@ describe("createConfigStore", () => {
   it("applies resolved runtime endpoint overrides", () => {
     const store = createConfigStore({
       brokerId: "demo",
-      brokerName: "Orderly",
+      brokerName: "Orderly Demo",
       networkId: "testnet",
       appEnv: "qa",
       urls: {
@@ -63,7 +63,7 @@ describe("createConfigStore", () => {
     });
 
     expect(store.get("brokerId")).toBe("demo");
-    expect(store.get("brokerName")).toBe("Orderly");
+    expect(store.get("brokerName")).toBe("Orderly Demo");
     expect(store.get("networkId")).toBe("testnet");
     expect(store.get("env")).toBe("qa");
     expect(store.get("apiBaseUrl")).toBe("https://api.qa.orderly-i.network");

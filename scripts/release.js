@@ -5,7 +5,7 @@ const {
   redactSecrets,
   withGitAskPass,
 } = require("./utils/releaseCredentials");
-const { updateDependencies } = require("./utils/updateDependencies");
+const { updateDependencies } = require("./updateSdkVersion");
 
 $.verbose = true;
 

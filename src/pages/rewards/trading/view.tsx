@@ -1,11 +1,14 @@
+import { useConfig } from "@orderly.network/hooks";
 import { TradingRewards } from "@orderly.network/trading-rewards";
 
 export default function TradingRewardsView() {
+  const brokerName = useConfig("brokerName");
+
   return (
     <TradingRewards.HomePage
       className="oui-py-6 oui-px-4 lg:oui-px-6 xl:oui-pl-4 xl:oui-pr-6"
       titleConfig={{
-        brokerName: "Orderly",
+        brokerName,
         docOpenOptions: {
           target: "_blank",
           url: "https://orderly.network/docs/introduction/tokenomics/trading-rewards/trading-rewards",

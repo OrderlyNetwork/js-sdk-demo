@@ -1,14 +1,17 @@
 import { Dashboard, ReferralProvider } from "@orderly.network/affiliate";
+import { useConfig } from "@orderly.network/hooks";
 
 export default function AffiliateView() {
+  const brokerName = useConfig("brokerName");
+
   return (
     <ReferralProvider
       becomeAnAffiliateUrl="https://orderly.network/"
       learnAffiliateUrl="https://orderly.network/"
       referralLinkUrl={window?.location?.origin}
       overwrite={{
-        shortBrokerName: "Orderly",
-        brokerName: "Orderly",
+        shortBrokerName: brokerName,
+        brokerName,
       }}
     >
       <Dashboard.DashboardPage
