@@ -5,6 +5,7 @@ import type { API } from "@orderly.network/types";
 const X_LAYER_MAINNET_CHAINID = 196;
 const X_LAYER_TESTNET_CHAINID = 1952;
 const ROBINHOOD_TESTNET_CHAINID = 46630;
+const ETH_SEPOLIA_TESTNET_CHAINID = 11155111;
 
 export const dataAdapter = {
   chainsList: (chains: API.Chain[]) => [
@@ -23,5 +24,6 @@ export const chainFilter = {
     { id: ADI_TESTNET_CHAINID },
     { id: X_LAYER_TESTNET_CHAINID },
     { id: ROBINHOOD_TESTNET_CHAINID },
+    { id: ETH_SEPOLIA_TESTNET_CHAINID },
   ],
 };
