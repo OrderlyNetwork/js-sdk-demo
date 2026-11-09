@@ -16,6 +16,7 @@ type PrivyWalletConnectorProps = {
   children: ReactNode;
   networkId: NetworkId;
   solanaWallets: Adapter[];
+  enablePrivyLogin?: boolean;
 };
 
 const getPrivyId = () => {
@@ -27,6 +28,7 @@ const PrivyWalletConnector = ({
   children,
   networkId,
   solanaWallets,
+  enablePrivyLogin = true,
 }: PrivyWalletConnectorProps) => {
   return (
     <WalletConnectorPrivyProvider
@@ -52,17 +54,21 @@ const PrivyWalletConnector = ({
           }),
         ],
       }}
-      privyConfig={{
-        appid: getPrivyId(),
-        config: {
-          loginMethods: ["email", "google", "twitter"],
-          appearance: {
-            theme: "dark",
-            accentColor: "#181C23",
-            logo: "/orderly-logo.svg",
-          },
-        },
-      }}
+      privyConfig={
+        enablePrivyLogin
+          ? {
+              appid: getPrivyId(),
+              config: {
+                loginMethods: ["email", "google", "twitter"],
+                appearance: {
+                  theme: "dark",
+                  accentColor: "#181C23",
+                  logo: "/orderly-logo.svg",
+                },
+              },
+            }
+          : undefined
+      }
       abstractConfig={{}}
     >
       {children}

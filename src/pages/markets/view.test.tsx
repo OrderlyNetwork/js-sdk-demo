@@ -71,7 +71,7 @@ describe("MarketsView", () => {
     expect(mocks.setPerpSymbol).toHaveBeenCalledExactlyOnceWith(
       "PERP_BTC_USDC",
     );
-    expect(screen.getByTestId("location")).toHaveTextContent(
+    expect(screen.getByTestId("location").textContent).toBe(
       "/en/perp/PERP_BTC_USDC?networkId=testnet",
     );
   });

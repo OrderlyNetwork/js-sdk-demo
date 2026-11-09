@@ -1,4 +1,4 @@
-import React, { FC, lazy, Suspense, useEffect, useMemo } from "react";
+import React, { FC, lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { Outlet } from "react-router";
 import * as Sentry from "@sentry/react";
 import { useAccount } from "@orderly.network/hooks";
@@ -13,12 +13,13 @@ import { useAnnouncementFromUrl } from "@/hooks/useAnnouncementFromUrl";
 import { useBrokerFromUrl } from "@/hooks/useBrokerFromUrl";
 import { useNav } from "@/hooks/useNav";
 import { useOrderlyConfig } from "@/hooks/useOrderlyConfig";
+import { useWalletModeFromUrl } from "@/hooks/useWalletModeFromUrl";
 import { setSentryUserAddress } from "@/sentry";
 import { chainFilter, dataAdapter } from "./chains";
 import { useConfigStore } from "./configStore";
 import { OrderlyLocaleProvider } from "./orderlyLocaleProvider";
 import { createSolanaWallets } from "./solanaWallets";
-import { isLegacyWalletConnectorEnabled } from "./walletConnectorMode";
+import { DEFAULT_WALLET_MODE } from "./walletMode";
 
 const LegacyWalletConnector = lazy(() => import("./legacyWalletConnector"));
 const PrivyWalletConnector = lazy(() => import("./privyWalletConnector"));
@@ -40,9 +41,11 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
   const config = useOrderlyConfig();
   const { onRouteChange } = useNav();
   const orderlyConfig = useMemo(() => getOrderlyConfig(), []);
-  const useLegacyWalletConnector = useMemo(
-    () => isLegacyWalletConnectorEnabled(),
-    [],
+  const walletMode = useWalletModeFromUrl();
+  const [initialWalletMode] = useState(() =>
+    walletMode === "legacy" && !import.meta.env.DEV
+      ? DEFAULT_WALLET_MODE
+      : walletMode,
   );
   const { networkId } = orderlyConfig;
   const { brokerId, brokerName } = useBrokerFromUrl(networkId);
@@ -119,12 +122,16 @@ const OrderlyProvider: FC<React.PropsWithChildren> = (props) => {
 
   const walletProvider = (
     <Suspense fallback={<PageLoading />}>
-      {useLegacyWalletConnector ? (
+      {initialWalletMode === "legacy" ? (
         <LegacyWalletConnector networkId={networkId} solanaWallets={solWallets}>
           {appProvider}
         </LegacyWalletConnector>
       ) : (
-        <PrivyWalletConnector networkId={networkId} solanaWallets={solWallets}>
+        <PrivyWalletConnector
+          enablePrivyLogin={initialWalletMode === "privy"}
+          networkId={networkId}
+          solanaWallets={solWallets}
+        >
           {appProvider}
         </PrivyWalletConnector>
       )}
