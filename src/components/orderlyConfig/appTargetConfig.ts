@@ -1,5 +1,5 @@
 import type { OrderlyAppProviderProps } from "@orderly.network/react-app";
-import { widgetConfigs } from "./widgetConfigs";
+import { dmmWidgetConfigs } from "./widgetConfigs";
 
 /** Build target selected via `VITE_APP_TARGET`. */
 export type AppTarget = "demo" | "dmm";
@@ -34,7 +34,7 @@ export const appTargetConfigMap: Record<AppTarget, AppTargetConfig> = {
     description: "Orderly SDK DMM",
     brokerId: "orderly",
     brokerName: "Orderly DMM",
-    widgetConfigs,
+    widgetConfigs: dmmWidgetConfigs,
   },
 };
 
